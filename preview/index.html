@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css">
+<script src="../jio-theme/assets/js/site.js" defer></script>
+<title>Home | JIO Technologies (preview)</title>
+</head>
+<body class="home">
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="notice">
+	<div class="wrap notice__row">
+		<span>We are hiring in Abu Dhabi.</span>
+		<a href="about.html#careers">See open positions</a>
+	</div>
+</div>
+<header class="site-head" data-head>
+	<div class="wrap site-head__row">
+		<a class="brand" href="index.html" aria-label="JIO Technologies, home">
+			<img class="brand__logo" src="../jio-theme/assets/img/logo.webp" width="1282" height="262" alt="JIO Tech, JIO Technologies LLC">
+		</a>
+		<nav class="nav" aria-label="Primary">
+			<a href="solutions.html">Services</a>
+			<a href="industries.html">Industries</a>
+			<a href="about.html">Company</a>
+			<a href="faq.html">FAQ</a>
+			<a href="client-support.html">Support</a>
+			<a href="https://jiotech.ae/">B2B portal</a>
+		</nav>
+		<div class="site-head__act">
+			<a class="phone" href="tel:+971553440144">+971 55 344 0144</a>
+			<a class="btn btn--sm" href="contact.html">Get a quote</a>
+		</div>
+		<details class="menu">
+			<summary aria-label="Menu"><span></span></summary>
+			<div class="menu__panel">
+				<a href="solutions.html">Services</a>
+				<a href="industries.html">Industries</a>
+				<a href="about.html">Company</a>
+				<a href="faq.html">FAQ</a>
+				<a href="client-support.html">Client support</a>
+				<a href="https://jiotech.ae/">B2B portal</a>
+				<a href="tel:+971553440144">+971 55 344 0144</a>
+				<a class="btn" href="contact.html">Get a quote</a>
+			</div>
+		</details>
+	</div>
+</header>
+
+
+<main id="main">
+
+<!-- HERO: Ramp/Brex split with the visual bleeding off the right edge, Wise black-weight headline,
+     Mercury/Ramp joined email capture, Authkit mock frame with a floating inspector panel -->
+<section class="hero">
+	<div class="wrap hero__grid">
+		<div class="hero__copy">
+			<h1>One contractor for the servers and the <span class="hl-green">power</span> behind them.</h1>
+			<p class="hero__lede">JIO Technologies designs, supplies and maintains IT infrastructure and backup power for organisations across the UAE, from our office on Al Muroor Road, Abu Dhabi.</p>
+			<form class="capture" action="#quote" data-capture>
+				<label class="sr" for="cap-email">Work email</label>
+				<input id="cap-email" type="email" placeholder="Work email" autocomplete="email" required>
+				<button class="btn" type="submit">Get a quote</button>
+			</form>
+			<p class="hero__alt">Or call <a href="tel:+971553440144">+971 55 344 0144</a>.</p>
+		</div>
+
+		<figure class="frame" data-chain data-focus="all" aria-label="The six layers JIO supplies and supports, from mains supply to surveillance">
+			<div class="frame__bar">
+				<span class="frame__title">One site, six layers</span>
+				<div class="seg" role="radiogroup" aria-label="Show layer">
+					<button type="button" role="radio" aria-checked="true" data-focus-btn="all">All</button>
+					<button type="button" role="radio" aria-checked="false" data-focus-btn="power">Power</button>
+					<button type="button" role="radio" aria-checked="false" data-focus-btn="it">IT</button>
+					<button type="button" role="radio" aria-checked="false" data-focus-btn="security">Security</button>
+				</div>
+			</div>
+			<ol class="chain__list">
+				<li class="node node--power" data-layer="power">
+					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12c1.5-4.5 3-4.5 4.5 0s3 4.5 4.5 0 3-4.5 4.5 0 3 4.5 4.5 0"/></svg></span>
+					<span class="node__t">Mains and solar input</span>
+					<span class="node__m">Grid feed, renewable setups</span>
+				</li>
+				<li class="node node--power" data-layer="power">
+					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7.5h15v9H3zM18 10.5h2.5v3H18M10.5 9.5l-2 3h3l-2 3"/></svg></span>
+					<span class="node__t">UPS and battery</span>
+					<span class="node__m">VRLA, lithium-ion · Eaton, APC, Vertiv, BPC</span>
+				</li>
+				<li class="node node--power" data-layer="power it">
+					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5v5M5.5 8.5h13M5.5 8.5v4M12 8.5v4M18.5 8.5v4M3.5 12.5h4v6h-4zM10 12.5h4v6h-4zM16.5 12.5h4v6h-4z"/></svg></span>
+					<span class="node__t">Power distribution</span>
+					<span class="node__m">PDUs, rack power, cooling integration</span>
+				</li>
+				<li class="node node--it" data-layer="it">
+					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v7H4zM4 13h16v7H4zM7.5 7.5h3M7.5 16.5h3M16 7.5h1M16 16.5h1"/></svg></span>
+					<span class="node__t">Servers, storage, cloud</span>
+					<span class="node__m">Dell, HPE, Lenovo, Supermicro · AWS, Azure</span>
+				</li>
+				<li class="node node--it" data-layer="it security">
+					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.4-3 7.4-7 9-4-1.6-7-4.6-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+					<span class="node__t">Network and firewall</span>
+					<span class="node__m">Cisco, Fortinet, Aruba, Sophos</span>
+				</li>
+				<li class="node node--sec" data-layer="security">
+					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3.5 9 11-3 1.8 5-11 3z"/><path d="m16.3 9.6 3.7 1.4-1 2.6-3.6-1.3M8.5 12.6 7.5 19M4.5 19h6"/></svg></span>
+					<span class="node__t">Surveillance</span>
+					<span class="node__m">CCTV cameras and recorders · Hikvision</span>
+				</li>
+			</ol>
+			<figcaption class="inspector" aria-live="polite">
+				<span class="inspector__k" data-insp-k>All layers</span>
+				<span class="inspector__v" data-chain-cap>Six layers, one supplier. If the UPS fails, so does everything under it.</span>
+			</figcaption>
+		</figure>
+	</div>
+</section>
+
+<!-- LIVE STRIP (Ramp counter band) -->
+<div class="strip" aria-label="Contact status">
+	<div class="wrap strip__row">
+		<div><span class="label">Abu Dhabi</span><span class="strip__v"><time data-clock>--:--</time> GST</span></div>
+		<div><span class="label">Technical support</span><span class="strip__v"><i class="dot" aria-hidden="true"></i>24/7, remote and onsite</span></div>
+		<div><span class="label">Sales</span><span class="strip__v"><a href="tel:+971553440144">+971 55 344 0144</a></span></div>
+		<div><span class="label">Email</span><span class="strip__v"><a href="mailto:sales@jiotechuae.com">sales@jiotechuae.com</a></span></div>
+	</div>
+</div>
+
+<!-- VENDOR WALL (Brex logo band, Ramp hairline logo grid) -->
+<section class="vendors">
+	<div class="wrap">
+		<div class="sec-head">
+			<h2>Thirty manufacturers, one supplier.</h2>
+			<p>We supply, install and maintain equipment from these brands, grouped by the layer they sit in.</p>
+		</div>
+		
+<div class="wall">
+	<div class="wall__row">
+		<h3 class="wall__h">Power &amp; batteries</h3>
+		<ul class="wall__logos">
+			<li><img src="../jio-theme/assets/logos/apc.svg" alt="APC by Schneider Electric" style="--h:35px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/eaton.svg" alt="Eaton" style="--h:28px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/vertiv.svg" alt="Vertiv" style="--h:27px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/emerson.png" alt="Emerson" style="--h:36px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/bpc.png" alt="BPC Energy" style="--h:32px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/amaron.png" alt="Amaron" style="--h:25px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/sacredsun.png" alt="SacredSun" style="--h:31px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/extell.png" alt="ExTell" style="--h:46px" loading="lazy"></li>
+		</ul>
+	</div>
+	<div class="wall__row">
+		<h3 class="wall__h">Compute &amp; storage</h3>
+		<ul class="wall__logos">
+			<li><img src="../jio-theme/assets/logos/dell.svg" alt="Dell Technologies" style="--h:19px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/hpe.svg" alt="Hewlett Packard Enterprise" style="--h:35px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/hp.svg" alt="HP" style="--h:46px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/lenovo.svg" alt="Lenovo" style="--h:25px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/supermicro.png" alt="Supermicro" style="--h:38px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/intel.svg" alt="Intel" style="--h:33px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/synology.svg" alt="Synology" style="--h:28px" loading="lazy"></li>
+		</ul>
+	</div>
+	<div class="wall__row">
+		<h3 class="wall__h">Network &amp; security</h3>
+		<ul class="wall__logos">
+			<li><img src="../jio-theme/assets/logos/cisco.png" alt="Cisco" style="--h:41px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/aruba.svg" alt="HPE Aruba Networking" style="--h:26px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/fortinet.svg" alt="Fortinet" style="--h:18px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/huawei.png" alt="Huawei" style="--h:25px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/hikvision.png" alt="Hikvision" style="--h:21px" loading="lazy"></li>
+		</ul>
+	</div>
+	<div class="wall__row">
+		<h3 class="wall__h">Software &amp; cloud</h3>
+		<ul class="wall__logos">
+			<li><img src="../jio-theme/assets/logos/microsoft.png" alt="Microsoft" style="--h:26px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/vmware.png" alt="VMware" style="--h:21px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/aws.svg" alt="Amazon Web Services" style="--h:42px" loading="lazy"></li>
+		</ul>
+	</div>
+	<div class="wall__row">
+		<h3 class="wall__h">Print, AV &amp; devices</h3>
+		<ul class="wall__logos">
+			<li><img src="../jio-theme/assets/logos/xerox.png" alt="Xerox" style="--h:27px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/epson.png" alt="Epson" style="--h:27px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/canon.png" alt="Canon" style="--h:26px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/brother.png" alt="Brother" style="--h:34px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/zebra.svg" alt="Zebra Technologies" style="--h:31px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/poly.png" alt="Poly" style="--h:34px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/bose.svg" alt="Bose" style="--h:19px" loading="lazy"></li>
+		</ul>
+	</div>
+</div>
+
+	</div>
+</section>
+
+<!-- SERVICES BENTO (Wise pale band + dark card with accent headline, Brex flat bordered tiles) -->
+<section class="services band-green" id="chain">
+	<div class="wrap">
+		<div class="sec-head">
+			<h2>From the battery room to the browser tab.</h2>
+			<p>We cover every layer, so there is one contract and one number to call.</p>
+		</div>
+
+		<div class="bento">
+			<article class="tile tile--power">
+				<h3>Power &amp; energy</h3>
+				<p>UPS systems, battery banks and renewable setups, with installation, preventive maintenance, battery replacement and annual service contracts.</p>
+				<div class="tabs">
+					<input type="radio" name="pw" id="pw1" checked><label for="pw1">UPS</label>
+					<input type="radio" name="pw" id="pw2"><label for="pw2">VRLA</label>
+					<input type="radio" name="pw" id="pw3"><label for="pw3">Lithium-ion</label>
+					<input type="radio" name="pw" id="pw4"><label for="pw4">Renewables</label>
+					<div class="tabs__body">
+						<p data-for="pw1"><b>Online UPS.</b> Conditions the supply continuously and carries the load through an outage until generators start or systems shut down cleanly.</p>
+						<p data-for="pw2"><b>VRLA batteries.</b> Sealed lead-acid. Lower upfront cost and the long-standing default for UPS strings, but service life drops fast in hot plant rooms.</p>
+						<p data-for="pw3"><b>Lithium-ion.</b> Smaller footprint, better heat tolerance and a longer service life than lead-acid, at a higher purchase price.</p>
+						<p data-for="pw4"><b>Renewables.</b> Solar-assisted supply to offset grid draw at sites with the roof or land to use.</p>
+					</div>
+				</div>
+				<a class="link link--night" href="solutions.html#power">Compare battery types</a>
+			</article>
+
+			<article class="tile tile--dc">
+				<div>
+					<h3>Data center design &amp; hosting</h3>
+					<p>Built end to end: construction, cabling, power integration and cooling, from a single rack to an enterprise hall.</p>
+				</div>
+				<svg class="rack" viewBox="0 0 220 150" aria-hidden="true">
+					<rect x="1" y="1" width="218" height="148" />
+					<g><rect x="10" y="10" width="200" height="14" /><rect x="10" y="28" width="200" height="14" /><rect x="10" y="46" width="200" height="14" /><rect x="10" y="64" width="200" height="30" /><rect x="10" y="98" width="200" height="14" /><rect x="10" y="116" width="200" height="24" /></g>
+					<g class="led"><rect x="192" y="15" width="5" height="4"/><rect x="192" y="33" width="5" height="4"/><rect x="192" y="51" width="5" height="4"/><rect x="192" y="103" width="5" height="4"/></g>
+				</svg>
+			</article>
+
+			<article class="tile tile--sec">
+				<h3>Cybersecurity &amp; data protection</h3>
+				<p>Continuous monitoring and threat detection on the network edge and the endpoints behind it.</p>
+				<ul class="checks">
+					<li>Firewall and VPN edge</li>
+					<li>Endpoint protection</li>
+					<li>Email security</li>
+					<li>Backup and recovery</li>
+				</ul>
+			</article>
+
+			<article class="tile tile--net">
+				<h3>Network &amp; connectivity</h3>
+				<p>LAN and WAN design, wireless, and network security for hybrid workplaces.</p>
+				<ul class="pills pills--it"><li>LAN</li><li>WAN</li><li>Wi-Fi</li><li>Firewall</li><li>VPN</li></ul>
+			</article>
+
+			<article class="tile tile--msp">
+				<h3>Managed IT &amp; 24/7 support</h3>
+				<p>Round-the-clock monitoring, preventive maintenance and onsite response.</p>
+				<ul class="pills pills--it"><li>Servers</li><li>Endpoints</li><li>Backup</li><li>Microsoft 365</li></ul>
+			</article>
+
+			<article class="tile tile--con">
+				<h3>Consulting &amp; cloud</h3>
+				<p>IT planning, cloud migration and hybrid infrastructure across AWS, Azure and Google Cloud.</p>
+				<a class="link" href="solutions.html">All services</a>
+			</article>
+		</div>
+	</div>
+</section>
+
+<!-- WHY ONE SUPPLIER (Apple dark stage with a white comparison card as the reset) -->
+<section class="versus">
+	<div class="wrap">
+		<div class="versus__head">
+			<h2>Why one supplier for IT and power.</h2>
+			<p>When power and IT are bought separately, the gap between the two contracts is where outages start.</p>
+		</div>
+		<div class="versus__grid">
+			<div class="versus__col">
+				<h3>Separate IT and power contractors</h3>
+				<ul>
+					<li>Two contracts, two support numbers, two site visits.</li>
+					<li>UPS sized from a nameplate guess, not the rack load.</li>
+					<li>After an outage, each side points at the other.</li>
+					<li>Battery replacement falls between the two contracts.</li>
+				</ul>
+			</div>
+			<div class="versus__col versus__col--us">
+				<h3>JIO Technologies</h3>
+				<ul>
+					<li>One contract and one number for every layer.</li>
+					<li>UPS and battery runtime sized from the equipment we install.</li>
+					<li>One team owns the fault from the mains to the firewall.</li>
+					<li>Battery health is part of the same maintenance schedule.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- INDUSTRIES (Ramp horizontal card row with boxed arrow controls) -->
+<section class="industries">
+	<div class="wrap">
+		<div class="sec-head sec-head--row">
+			<div>
+				<h2>Built for organisations that cannot go offline.</h2>
+				<p>Nine sectors, each with its own mix of uptime, security and compliance pressure.</p>
+			</div>
+			<div class="rail__ctrl">
+				<button type="button" class="sqbtn" data-rail-prev aria-label="Previous industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+				<button type="button" class="sqbtn" data-rail-next aria-label="Next industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+			</div>
+		</div>
+	</div>
+	<div class="rail" data-rail tabindex="0" aria-label="Industries">
+		<ul class="rail__track">
+			<li class="ind-card"><a href="industries.html#government"><h3>Government &amp; public sector</h3><p>Secure, compliant systems for modernisation programmes.</p><ul class="pills"><li class="t-it">Data centers</li><li class="t-it">Secured networks</li><li class="t-power">Backup power</li></ul></a></li>
+			<li class="ind-card"><a href="industries.html#healthcare"><h3>Healthcare</h3><p>IT and power for medical devices, patient data and 24/7 care.</p><ul class="pills"><li class="t-power">Continuous power</li><li class="t-it">Network security</li><li class="t-sec">CCTV</li></ul></a></li>
+			<li class="ind-card"><a href="industries.html#finance"><h3>Banking &amp; financial services</h3><p>High-availability systems for mission-critical workloads.</p><ul class="pills"><li class="t-it">Resilient hosting</li><li class="t-it">Cybersecurity</li><li class="t-power">UPS</li></ul></a></li>
+			<li class="ind-card"><a href="industries.html#energy"><h3>Energy &amp; utilities</h3><p>Smart power systems and UPS integration for critical facilities.</p><ul class="pills"><li class="t-power">UPS integration</li><li class="t-power">Battery systems</li><li class="t-it">Monitoring</li></ul></a></li>
+			<li class="ind-card"><a href="industries.html#manufacturing"><h3>Manufacturing &amp; industrial</h3><p>Networks and backup power for continuous operations.</p><ul class="pills"><li class="t-it">Plant networks</li><li class="t-power">Backup power</li><li class="t-it">Automation-ready IT</li></ul></a></li>
+			<li class="ind-card"><a href="industries.html#construction"><h3>Construction &amp; engineering</h3><p>IT, surveillance and energy for project sites and offices.</p><ul class="pills"><li class="t-it">Site networks</li><li class="t-sec">Surveillance</li><li class="t-power">Site power</li></ul></a></li>
+			<li class="ind-card"><a href="industries.html#logistics"><h3>Logistics &amp; transportation</h3><p>Connected networks, IoT tracking and reliable power.</p><ul class="pills"><li class="t-it">Connected networks</li><li class="t-it">IoT tracking</li><li class="t-power">Reliable power</li></ul></a></li>
+			<li class="ind-card"><a href="industries.html#retail"><h3>Retail &amp; e-commerce</h3><p>Connectivity, cloud and security for store and online sales.</p><ul class="pills"><li class="t-it">Store connectivity</li><li class="t-it">Cloud</li><li class="t-it">Payment security</li></ul></a></li>
+			<li class="ind-card"><a href="industries.html#education"><h3>Education</h3><p>Secure campus networks and energy-efficient infrastructure.</p><ul class="pills"><li class="t-it">Campus networks</li><li class="t-it">Learning platforms</li><li class="t-power">Efficient power</li></ul></a></li>
+		</ul>
+	</div>
+</section>
+
+<!-- PROCESS + QUOTE (Authkit centred intro + square tiles joined by a thin line) -->
+<section class="quote" id="quote">
+	<div class="wrap">
+		<div class="intro">
+			<h2>Tell us what you run. We will come back with a proposal.</h2>
+			<p>Scope, equipment and a support plan, in writing.</p>
+		</div>
+		<ol class="steps">
+	<li>
+		<span class="steps__dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg></span>
+		<b>Schedule a call</b><span>At a time that suits you.</span>
+	</li>
+	<li>
+		<span class="steps__dot" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg></span>
+		<b>Discovery meeting</b><span>We review your sites, loads and systems.</span>
+	</li>
+	<li>
+		<span class="steps__dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></span>
+		<b>Proposal</b><span>Scope, equipment and a support plan in writing.</span>
+	</li>
+</ol>
+
+		<div class="quote__grid">
+			<form class="form" action="#" method="post" data-quote>
+	<div class="form__row">
+		<div class="field"><label for="fn">First name</label><input id="fn" name="first_name" autocomplete="given-name" required></div>
+		<div class="field"><label for="ln">Last name</label><input id="ln" name="last_name" autocomplete="family-name" required></div>
+	</div>
+	<div class="field"><label for="co">Company</label><input id="co" name="company" autocomplete="organization"></div>
+	<div class="form__row">
+		<div class="field"><label for="em">Work email</label><input id="em" type="email" name="email" autocomplete="email" required></div>
+		<div class="field"><label for="ph">Phone</label><input id="ph" type="tel" name="phone" autocomplete="tel"></div>
+	</div>
+	<div class="field"><label for="sv">Service</label>
+		<select id="sv" name="service">
+			<option>UPS solutions</option>
+			<option>Power &amp; energy</option>
+			<option>Cloud &amp; data services</option>
+			<option>Cybersecurity &amp; compliance</option>
+			<option>Digital transformation &amp; IT advisory</option>
+			<option>Smart infrastructure</option>
+			<option>Network &amp; connectivity</option>
+			<option>Data center design &amp; hosting</option>
+			<option>Maintenance &amp; managed support</option>
+			<option>IT procurement &amp; vendor management</option>
+			<option>Other</option>
+		</select>
+	</div>
+	<div class="field"><label for="ms">What do you need to keep running?</label><textarea id="ms" name="message" rows="4"></textarea></div>
+	<label class="check"><input type="checkbox" name="consent" required> <span>I agree to the <a href="#privacy-policy">privacy policy</a> and to JIO processing these details to reply.</span></label>
+	<button class="btn" type="submit">Request a quote</button>
+	<p class="form__note" data-form-msg>Connect this form to Contact Form 7, WPForms or your CRM before launch.</p>
+</form>
+
+			<dl class="direct">
+	<div><dt>Phone</dt><dd><a href="tel:+971553440144">+971 55 344 0144</a></dd></div>
+	<div><dt>Email</dt><dd><a href="mailto:sales@jiotechuae.com">sales@jiotechuae.com</a></dd></div>
+	<div><dt>WhatsApp</dt><dd><a href="https://wa.me/971553440144">Message us</a></dd></div>
+	<div><dt>Office</dt><dd>Al Muroor Road, Abu Dhabi, UAE</dd></div>
+	<div><dt>Existing client?</dt><dd><a href="client-support.html">Raise a support request</a></dd></div>
+</dl>
+
+		</div>
+	</div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+	<div class="foot__cta">
+		<div class="wrap foot__cta-row">
+			<p>Need a UPS sized, a network rebuilt or a <span>server room built?</span></p>
+			<a class="btn" href="contact.html">Get a quote</a>
+		</div>
+	</div>
+	<div class="wrap foot">
+		<div class="foot__id">
+			<img class="foot__logo" src="../jio-theme/assets/img/logo.webp" width="1282" height="262" alt="JIO Tech, JIO Technologies LLC" loading="lazy">
+			<address>Al Muroor Road<br>Abu Dhabi, United Arab Emirates</address>
+		</div>
+		<div class="foot__col">
+			<p class="label">Services</p>
+			<a href="solutions.html#power">Power &amp; energy</a>
+			<a href="solutions.html#datacenter">Data centers &amp; cloud</a>
+			<a href="solutions.html#network">Network &amp; security</a>
+			<a href="solutions.html#operations">Managed IT &amp; support</a>
+			<a href="solutions.html#equipment">Equipment supply</a>
+		</div>
+		<div class="foot__col">
+			<p class="label">Company</p>
+			<a href="about.html">About</a>
+			<a href="industries.html">Industries</a>
+			<a href="#blog">Blog</a>
+			<a href="faq.html">FAQ</a>
+			<a href="client-support.html">Client support</a>
+			<a href="https://jiotech.ae/">B2B portal</a>
+		</div>
+		<div class="foot__col">
+			<p class="label">Contact</p>
+			<a href="tel:+971553440144">+971 55 344 0144</a>
+			<a href="mailto:sales@jiotechuae.com">sales@jiotechuae.com</a>
+			<a href="https://wa.me/971553440144">WhatsApp</a>
+		</div>
+	</div>
+	<div class="wrap foot__base">
+		<span>&copy; 2026 JIO Technologies LLC</span>
+		<span><a href="#privacy-policy">Privacy</a> &nbsp;/&nbsp; <a href="#terms-and-conditions">Terms</a></span>
+	</div>
+</footer>
+
+</body>
+</html>
+

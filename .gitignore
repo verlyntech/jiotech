@@ -1,0 +1,13 @@
+# Local tooling and machine-specific settings
+.claude/settings.local.json
+.claude/agents/
+.claude/skills/impeccable/
+.agents/
+skills-lock.json
+.impeccable/*.local.json
+.impeccable/hook.cache.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

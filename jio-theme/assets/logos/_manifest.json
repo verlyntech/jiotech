@@ -1,0 +1,140 @@
+{
+ "cisco": {
+  "file": "cisco.png",
+  "w": 192,
+  "h": 112,
+  "knockout": true
+ },
+ "supermicro": {
+  "file": "supermicro.png",
+  "w": 275,
+  "h": 141,
+  "knockout": true
+ },
+ "hikvision": {
+  "file": "hikvision.png",
+  "w": 327,
+  "h": 49,
+  "knockout": true
+ },
+ "microsoft": {
+  "file": "microsoft.png",
+  "w": 336,
+  "h": 80,
+  "knockout": true
+ },
+ "xerox": {
+  "file": "xerox.png",
+  "w": 346,
+  "h": 87,
+  "knockout": true
+ },
+ "epson": {
+  "file": "epson.png",
+  "w": 308,
+  "h": 80,
+  "knockout": true
+ },
+ "canon": {
+  "file": "canon.png",
+  "w": 318,
+  "h": 76,
+  "knockout": true
+ },
+ "brother": {
+  "file": "brother.png",
+  "w": 318,
+  "h": 129,
+  "knockout": true
+ },
+ "emerson": {
+  "file": "emerson.png",
+  "w": 292,
+  "h": 128,
+  "knockout": true
+ },
+ "bpc": {
+  "file": "bpc.png",
+  "w": 321,
+  "h": 112,
+  "knockout": true
+ },
+ "amaron": {
+  "file": "amaron.png",
+  "w": 419,
+  "h": 94,
+  "knockout": true
+ },
+ "sacredsun": {
+  "file": "sacredsun.png",
+  "w": 577,
+  "h": 197,
+  "knockout": false
+ },
+ "poly": {
+  "file": "poly.png",
+  "w": 288,
+  "h": 112,
+  "knockout": true
+ },
+ "huawei": {
+  "file": "huawei.png",
+  "w": 1600,
+  "h": 350,
+  "knockout": false
+ },
+ "extell": {
+  "file": "extell.png",
+  "w": 200,
+  "h": 188,
+  "knockout": true
+ },
+ "vmware": {
+  "file": "vmware.png",
+  "w": 288,
+  "h": 44,
+  "knockout": false
+ },
+ "aws": {
+  "file": "aws.png",
+  "w": 122,
+  "h": 46,
+  "knockout": false
+ },
+ "apc": {
+  "file": "apc.svg"
+ },
+ "aruba": {
+  "file": "aruba.svg"
+ },
+ "bose": {
+  "file": "bose.svg"
+ },
+ "dell": {
+  "file": "dell.svg"
+ },
+ "eaton": {
+  "file": "eaton.svg"
+ },
+ "hp": {
+  "file": "hp.svg"
+ },
+ "hpe": {
+  "file": "hpe.svg"
+ },
+ "lenovo": {
+  "file": "lenovo.svg"
+ },
+ "synology": {
+  "file": "synology.svg"
+ },
+ "vertiv": {
+  "file": "vertiv.svg"
+ },
+ "zebra": {
+  "file": "zebra.svg"
+ },
+ "fortinet": {
+  "file": "fortinet.svg"
+ }
+}

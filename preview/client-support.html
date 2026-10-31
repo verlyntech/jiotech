@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css">
+<script src="../jio-theme/assets/js/site.js" defer></script>
+<title>Client support | JIO Technologies (preview)</title>
+</head>
+<body >
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="notice">
+	<div class="wrap notice__row">
+		<span>We are hiring in Abu Dhabi.</span>
+		<a href="about.html#careers">See open positions</a>
+	</div>
+</div>
+<header class="site-head" data-head>
+	<div class="wrap site-head__row">
+		<a class="brand" href="index.html" aria-label="JIO Technologies, home">
+			<img class="brand__logo" src="../jio-theme/assets/img/logo.webp" width="1282" height="262" alt="JIO Tech, JIO Technologies LLC">
+		</a>
+		<nav class="nav" aria-label="Primary">
+			<a href="solutions.html">Services</a>
+			<a href="industries.html">Industries</a>
+			<a href="about.html">Company</a>
+			<a href="faq.html">FAQ</a>
+			<a href="client-support.html">Support</a>
+			<a href="https://jiotech.ae/">B2B portal</a>
+		</nav>
+		<div class="site-head__act">
+			<a class="phone" href="tel:+971553440144">+971 55 344 0144</a>
+			<a class="btn btn--sm" href="contact.html">Get a quote</a>
+		</div>
+		<details class="menu">
+			<summary aria-label="Menu"><span></span></summary>
+			<div class="menu__panel">
+				<a href="solutions.html">Services</a>
+				<a href="industries.html">Industries</a>
+				<a href="about.html">Company</a>
+				<a href="faq.html">FAQ</a>
+				<a href="client-support.html">Client support</a>
+				<a href="https://jiotech.ae/">B2B portal</a>
+				<a href="tel:+971553440144">+971 55 344 0144</a>
+				<a class="btn" href="contact.html">Get a quote</a>
+			</div>
+		</details>
+	</div>
+</header>
+
+
+<main id="main">
+
+<section class="phero">
+	<div class="wrap phero__grid">
+		<h1>Something is down. Here is the fastest way to reach us.</h1>
+		<div class="phero__side">
+			<p>Technical support runs 24/7, remote and onsite. Pick how urgent it is and we will route it.</p>
+		</div>
+	</div>
+</section>
+
+<section class="support">
+	<div class="wrap support__grid">
+
+		<!-- Priority selector: segmented pill (Wise) -->
+		<div class="support__route">
+			<div class="seg seg--light" role="radiogroup" aria-label="Priority" data-priority>
+				<button type="button" role="radio" aria-checked="true" data-p="normal">Normal</button>
+				<button type="button" role="radio" aria-checked="false" data-p="high">High</button>
+				<button type="button" role="radio" aria-checked="false" data-p="urgent">Urgent</button>
+			</div>
+			<div class="route" data-route="normal">
+				<h2>Normal</h2>
+				<p>A question, a change request, or a fault that is not stopping work. Use the form and we will schedule it.</p>
+			</div>
+			<div class="route" data-route="high" hidden>
+				<h2>High</h2>
+				<p>Part of the business is affected: one site, one system, or a UPS reporting a fault. Submit the form, then call to confirm.</p>
+				<a class="link" href="tel:+971553440144">Call +971 55 344 0144</a>
+			</div>
+			<div class="route route--urgent" data-route="urgent" hidden>
+				<h2>Urgent</h2>
+				<p>Systems are down, or a UPS is running on battery with no mains. Call now; do not wait for the form.</p>
+				<a class="btn" href="tel:+971553440144">Call +971 55 344 0144</a>
+			</div>
+			<dl class="direct direct--stack">
+				<div><dt>WhatsApp</dt><dd><a href="https://wa.me/971553440144">Message us</a></dd></div>
+				<div><dt>Email</dt><dd><a href="mailto:sales@jiotechuae.com">sales@jiotechuae.com</a></dd></div>
+				<div><dt>General questions</dt><dd><a href="faq.html">Read the FAQ</a></dd></div>
+			</dl>
+		</div>
+
+		<form class="form" action="#" method="post" data-support>
+			<h2 class="form__h">Submit a support request</h2>
+			<input type="hidden" name="priority" value="normal" data-priority-field>
+			<div class="form__row">
+				<div class="field"><label for="s-name">Your name</label><input id="s-name" name="name" autocomplete="name" required></div>
+				<div class="field"><label for="s-co">Company</label><input id="s-co" name="company" autocomplete="organization" required></div>
+			</div>
+			<div class="form__row">
+				<div class="field"><label for="s-em">Email</label><input id="s-em" type="email" name="email" autocomplete="email" required></div>
+				<div class="field"><label for="s-ph">Phone</label><input id="s-ph" type="tel" name="phone" autocomplete="tel" required></div>
+			</div>
+			<div class="field"><label for="s-sys">Affected system</label>
+				<select id="s-sys" name="system">
+					<option>UPS or batteries</option>
+					<option>Servers or storage</option>
+					<option>Network or Wi-Fi</option>
+					<option>Firewall or security</option>
+					<option>CCTV</option>
+					<option>Microsoft 365 or email</option>
+					<option>Other</option>
+				</select>
+			</div>
+			<div class="field"><label for="s-desc">What is happening?</label><textarea id="s-desc" name="description" rows="5" required placeholder="What stopped working, since when, and at which site"></textarea></div>
+			<label class="check"><input type="checkbox" name="consent" required> <span>I agree to JIO processing these details to handle this request. I can withdraw consent at any time.</span></label>
+			<button class="btn" type="submit">Submit request</button>
+			<p class="form__note" data-form-msg>Connect this form to your helpdesk before launch.</p>
+		</form>
+
+	</div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+	<div class="foot__cta">
+		<div class="wrap foot__cta-row">
+			<p>Need a UPS sized, a network rebuilt or a <span>server room built?</span></p>
+			<a class="btn" href="contact.html">Get a quote</a>
+		</div>
+	</div>
+	<div class="wrap foot">
+		<div class="foot__id">
+			<img class="foot__logo" src="../jio-theme/assets/img/logo.webp" width="1282" height="262" alt="JIO Tech, JIO Technologies LLC" loading="lazy">
+			<address>Al Muroor Road<br>Abu Dhabi, United Arab Emirates</address>
+		</div>
+		<div class="foot__col">
+			<p class="label">Services</p>
+			<a href="solutions.html#power">Power &amp; energy</a>
+			<a href="solutions.html#datacenter">Data centers &amp; cloud</a>
+			<a href="solutions.html#network">Network &amp; security</a>
+			<a href="solutions.html#operations">Managed IT &amp; support</a>
+			<a href="solutions.html#equipment">Equipment supply</a>
+		</div>
+		<div class="foot__col">
+			<p class="label">Company</p>
+			<a href="about.html">About</a>
+			<a href="industries.html">Industries</a>
+			<a href="#blog">Blog</a>
+			<a href="faq.html">FAQ</a>
+			<a href="client-support.html">Client support</a>
+			<a href="https://jiotech.ae/">B2B portal</a>
+		</div>
+		<div class="foot__col">
+			<p class="label">Contact</p>
+			<a href="tel:+971553440144">+971 55 344 0144</a>
+			<a href="mailto:sales@jiotechuae.com">sales@jiotechuae.com</a>
+			<a href="https://wa.me/971553440144">WhatsApp</a>
+		</div>
+	</div>
+	<div class="wrap foot__base">
+		<span>&copy; 2026 JIO Technologies LLC</span>
+		<span><a href="#privacy-policy">Privacy</a> &nbsp;/&nbsp; <a href="#terms-and-conditions">Terms</a></span>
+	</div>
+</footer>
+
+</body>
+</html>
+

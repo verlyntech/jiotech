@@ -80,6 +80,22 @@
 		sync();
 	}
 
+	// Hero photo carousel: boxed arrows step through three slides. No autoplay, so the headline stays put.
+	var car = document.querySelector('[data-carousel]');
+	if (car) {
+		var slides = car.querySelectorAll('[data-slide]');
+		var cur = 0;
+		var show = function (n) {
+			cur = (n + slides.length) % slides.length;
+			slides.forEach(function (sl, i) { sl.classList.toggle('is-on', i === cur); });
+			var c = car.querySelector('[data-car-count]');
+			if (c) c.textContent = (cur + 1) + ' / ' + slides.length;
+		};
+		var p = car.querySelector('[data-car-prev]'), nx = car.querySelector('[data-car-next]');
+		if (p) p.addEventListener('click', function () { show(cur - 1); });
+		if (nx) nx.addEventListener('click', function () { show(cur + 1); });
+	}
+
 	// Hero email capture hands the address to the quote form below.
 	var capture = document.querySelector('[data-capture]');
 	if (capture) {
@@ -88,6 +104,19 @@
 			var email = capture.querySelector('input').value;
 			var target = document.getElementById('em');
 			if (target) target.value = email;
+			// Say that the address was carried over, at the top of the form where the eye lands.
+			var form = target && target.form;
+			if (form && email) {
+				var carry = form.querySelector('[data-carry]');
+				if (!carry) {
+					carry = document.createElement('p');
+					carry.className = 'form__carry';
+					carry.setAttribute('data-carry', '');
+					carry.setAttribute('role', 'status');
+					form.insertBefore(carry, form.querySelector('.form__row'));
+				}
+				carry.textContent = 'Your email ' + email + ' is filled in below. Add your name and company to send the request.';
+			}
 			var quote = document.getElementById('quote');
 			if (quote) quote.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
 			var first = document.getElementById('fn');
@@ -128,13 +157,60 @@
 		links.forEach(function (a) { var s = document.querySelector(a.getAttribute('href')); if (s) obs.observe(s); });
 	}
 
-	// Forms are not wired to a backend yet: validate, then say so instead of failing silently.
-	document.querySelectorAll('[data-quote], [data-support]').forEach(function (form) {
-		form.addEventListener('submit', function (e) {
-			if (form.getAttribute('action') !== '#') return;
+	// Quote form: validate on submit, show the problem under each field and a summary at the top.
+	var quoteForm = document.querySelector('[data-quote]');
+	if (quoteForm) {
+		var summary = quoteForm.querySelector('[data-form-errors]');
+		var errFor = function (el) { var id = el.getAttribute('aria-describedby'); return id ? document.getElementById(id.split(' ')[0]) : null; };
+		var messageFor = function (el) {
+			if (el.type === 'email' && el.value && el.validity.typeMismatch) return 'That email address looks incomplete. Use the format name@company.ae.';
+			return el.getAttribute('data-err') || 'This field is required.';
+		};
+		var setError = function (el, text) {
+			var err = errFor(el);
+			el.setAttribute('aria-invalid', text ? 'true' : 'false');
+			if (err) { err.textContent = text || ''; err.hidden = !text; }
+			var field = el.closest('.field, .check');
+			if (field) field.classList.toggle('is-invalid', !!text);
+		};
+		var controls = Array.prototype.slice.call(quoteForm.querySelectorAll('[required]'));
+		controls.forEach(function (el) {
+			var evt = (el.type === 'checkbox' || el.tagName === 'SELECT') ? 'change' : 'input';
+			el.addEventListener(evt, function () { if (el.getAttribute('aria-invalid') === 'true' && el.checkValidity()) setError(el, ''); });
+		});
+		quoteForm.addEventListener('submit', function (e) {
+			var bad = controls.filter(function (el) { return !el.checkValidity(); });
+			controls.forEach(function (el) { setError(el, bad.indexOf(el) > -1 ? messageFor(el) : ''); });
+			var list = summary.querySelector('ul');
+			list.innerHTML = '';
+			if (bad.length) {
+				e.preventDefault();
+				bad.forEach(function (el) {
+					var li = document.createElement('li'), a = document.createElement('a');
+					a.href = '#' + el.id; a.textContent = messageFor(el);
+					a.addEventListener('click', function (ev) { ev.preventDefault(); el.focus(); });
+					li.appendChild(a); list.appendChild(li);
+				});
+				summary.hidden = false;
+				summary.focus();
+				return;
+			}
+			summary.hidden = true;
+			if (quoteForm.getAttribute('action') !== '#') return;
 			e.preventDefault();
-			var msg = form.querySelector('[data-form-msg]');
+			var msg = quoteForm.querySelector('[data-form-msg]');
 			if (msg) msg.textContent = 'Preview only: this form is not connected yet. Call +971 55 344 0144 or email sales@jiotechuae.com.';
 		});
-	});
+	}
+
+	// Support form is not wired to a backend yet: say so instead of failing silently.
+	var supportForm = document.querySelector('[data-support]');
+	if (supportForm) {
+		supportForm.addEventListener('submit', function (e) {
+			if (supportForm.getAttribute('action') !== '#') return;
+			e.preventDefault();
+			var msg = supportForm.querySelector('[data-form-msg]');
+			if (msg) msg.textContent = 'Preview only: this form is not connected yet. For anything urgent call +971 55 344 0144.';
+		});
+	}
 })();

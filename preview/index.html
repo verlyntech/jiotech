@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
-<link rel="stylesheet" href="../jio-theme/assets/css/main.css">
-<script src="../jio-theme/assets/js/site.js" defer></script>
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1793532794349">
+<script src="../jio-theme/assets/js/site.js?v=1793532794350" defer></script>
 <title>Home | JIO Technologies (preview)</title>
 </head>
 <body class="home">
@@ -53,12 +53,26 @@
 
 <main id="main">
 
-<!-- HERO: Ramp/Brex split with the visual bleeding off the right edge, Wise black-weight headline,
-     Mercury/Ramp joined email capture, Authkit mock frame with a floating inspector panel -->
+<!-- HERO: full-width photo band, headline below it (bar), Mercury/Ramp joined email capture, Authkit frame -->
 <section class="hero">
+	<div class="hero__carousel" data-carousel aria-roledescription="carousel" aria-label="Illustrative images: switchroom, data centre aisle, network cabinet">
+		<div class="hero__slides">
+		<figure class="slide is-on" data-slide="0"><img src="../jio-theme/assets/img/hero-switchroom.png" width="1344" height="752" alt="Battery cabinets, UPS units and server racks in a switchroom" loading="eager"><figcaption>UPS and battery, switchroom</figcaption></figure>
+		<figure class="slide" data-slide="1"><img src="../jio-theme/assets/img/hero-datacentre.png" width="1344" height="752" alt="Rows of server racks in a data centre aisle" loading="lazy"><figcaption>Data centre aisles</figcaption></figure>
+		<figure class="slide" data-slide="2"><img src="../jio-theme/assets/img/hero-network.png" width="1344" height="752" alt="Network switches and cabling in a server cabinet" loading="lazy"><figcaption>Network and connectivity</figcaption></figure>
+		</div>
+		<div class="hero__ctrl">
+			<button type="button" class="sqbtn" data-car-prev aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+			<button type="button" class="sqbtn" data-car-next aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+			<span class="hero__count" aria-live="polite" data-car-count>1 / 3</span>
+			<span class="hero__note">Illustrative images</span>
+		</div>
+	</div>
+	<div class="wrap hero__head">
+		<h1>One contractor for the servers and the <span class="hl-green">power</span> behind them.</h1>
+	</div>
 	<div class="wrap hero__grid">
 		<div class="hero__copy">
-			<h1>One contractor for the servers and the <span class="hl-green">power</span> behind them.</h1>
 			<p class="hero__lede">JIO Technologies designs, supplies and maintains IT infrastructure and backup power for organisations across the UAE, from our office on Al Muroor Road, Abu Dhabi.</p>
 			<form class="capture" action="#quote" data-capture>
 				<label class="sr" for="cap-email">Work email</label>
@@ -128,75 +142,6 @@
 	</div>
 </div>
 
-<!-- VENDOR WALL (Brex logo band, Ramp hairline logo grid) -->
-<section class="vendors">
-	<div class="wrap">
-		<div class="sec-head">
-			<h2>Thirty manufacturers, one supplier.</h2>
-			<p>We supply, install and maintain equipment from these brands, grouped by the layer they sit in.</p>
-		</div>
-		
-<div class="wall">
-	<div class="wall__row">
-		<h3 class="wall__h">Power &amp; batteries</h3>
-		<ul class="wall__logos">
-			<li><img src="../jio-theme/assets/logos/apc.svg" alt="APC by Schneider Electric" style="--h:35px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/eaton.svg" alt="Eaton" style="--h:28px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/vertiv.svg" alt="Vertiv" style="--h:27px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/emerson.png" alt="Emerson" style="--h:36px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/bpc.png" alt="BPC Energy" style="--h:32px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/amaron.png" alt="Amaron" style="--h:25px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/sacredsun.png" alt="SacredSun" style="--h:31px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/extell.png" alt="ExTell" style="--h:46px" loading="lazy"></li>
-		</ul>
-	</div>
-	<div class="wall__row">
-		<h3 class="wall__h">Compute &amp; storage</h3>
-		<ul class="wall__logos">
-			<li><img src="../jio-theme/assets/logos/dell.svg" alt="Dell Technologies" style="--h:19px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/hpe.svg" alt="Hewlett Packard Enterprise" style="--h:35px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/hp.svg" alt="HP" style="--h:46px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/lenovo.svg" alt="Lenovo" style="--h:25px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/supermicro.png" alt="Supermicro" style="--h:38px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/intel.svg" alt="Intel" style="--h:33px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/synology.svg" alt="Synology" style="--h:28px" loading="lazy"></li>
-		</ul>
-	</div>
-	<div class="wall__row">
-		<h3 class="wall__h">Network &amp; security</h3>
-		<ul class="wall__logos">
-			<li><img src="../jio-theme/assets/logos/cisco.png" alt="Cisco" style="--h:41px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/aruba.svg" alt="HPE Aruba Networking" style="--h:26px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/fortinet.svg" alt="Fortinet" style="--h:18px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/huawei.png" alt="Huawei" style="--h:25px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/hikvision.png" alt="Hikvision" style="--h:21px" loading="lazy"></li>
-		</ul>
-	</div>
-	<div class="wall__row">
-		<h3 class="wall__h">Software &amp; cloud</h3>
-		<ul class="wall__logos">
-			<li><img src="../jio-theme/assets/logos/microsoft.png" alt="Microsoft" style="--h:26px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/vmware.png" alt="VMware" style="--h:21px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/aws.svg" alt="Amazon Web Services" style="--h:42px" loading="lazy"></li>
-		</ul>
-	</div>
-	<div class="wall__row">
-		<h3 class="wall__h">Print, AV &amp; devices</h3>
-		<ul class="wall__logos">
-			<li><img src="../jio-theme/assets/logos/xerox.png" alt="Xerox" style="--h:27px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/epson.png" alt="Epson" style="--h:27px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/canon.png" alt="Canon" style="--h:26px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/brother.png" alt="Brother" style="--h:34px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/zebra.svg" alt="Zebra Technologies" style="--h:31px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/poly.png" alt="Poly" style="--h:34px" loading="lazy"></li>
-			<li><img src="../jio-theme/assets/logos/bose.svg" alt="Bose" style="--h:19px" loading="lazy"></li>
-		</ul>
-	</div>
-</div>
-
-	</div>
-</section>
-
 <!-- SERVICES BENTO (Wise pale band + dark card with accent headline, Brex flat bordered tiles) -->
 <section class="services band-green" id="chain">
 	<div class="wrap">
@@ -207,8 +152,8 @@
 
 		<div class="bento">
 			<article class="tile tile--power">
-				<h3>Power &amp; energy</h3>
-				<p>UPS systems, battery banks and renewable setups, with installation, preventive maintenance, battery replacement and annual service contracts.</p>
+				<figure class="tile__img"><img src="../jio-theme/assets/img/tile-power.png" width="1200" height="900" alt="UPS battery string in a plant room" loading="lazy"><figcaption><h3>Power &amp; energy</h3></figcaption></figure>
+				<p>UPS systems, battery banks and renewable setups, maintained for you.</p>
 				<div class="tabs">
 					<input type="radio" name="pw" id="pw1" checked><label for="pw1">UPS</label>
 					<input type="radio" name="pw" id="pw2"><label for="pw2">VRLA</label>
@@ -225,20 +170,15 @@
 			</article>
 
 			<article class="tile tile--dc">
+				<figure class="tile__img"><img src="../jio-theme/assets/img/tile-datacenter.png" width="1200" height="900" alt="Server racks in a data centre aisle" loading="lazy"><figcaption><h3>Data center design &amp; hosting</h3></figcaption></figure>
 				<div>
-					<h3>Data center design &amp; hosting</h3>
-					<p>Built end to end: construction, cabling, power integration and cooling, from a single rack to an enterprise hall.</p>
+					<p>Built end to end, from a single rack to an enterprise hall.</p>
 				</div>
-				<svg class="rack" viewBox="0 0 220 150" aria-hidden="true">
-					<rect x="1" y="1" width="218" height="148" />
-					<g><rect x="10" y="10" width="200" height="14" /><rect x="10" y="28" width="200" height="14" /><rect x="10" y="46" width="200" height="14" /><rect x="10" y="64" width="200" height="30" /><rect x="10" y="98" width="200" height="14" /><rect x="10" y="116" width="200" height="24" /></g>
-					<g class="led"><rect x="192" y="15" width="5" height="4"/><rect x="192" y="33" width="5" height="4"/><rect x="192" y="51" width="5" height="4"/><rect x="192" y="103" width="5" height="4"/></g>
-				</svg>
 			</article>
 
 			<article class="tile tile--sec">
-				<h3>Cybersecurity &amp; data protection</h3>
-				<p>Continuous monitoring and threat detection on the network edge and the endpoints behind it.</p>
+				<figure class="tile__img"><img src="../jio-theme/assets/img/tile-firewall.png" width="1200" height="900" alt="Firewall appliance in a server cabinet" loading="lazy"><figcaption><h3>Cybersecurity &amp; data protection</h3></figcaption></figure>
+				<p>Monitoring and threat detection, edge to endpoint.</p>
 				<ul class="checks">
 					<li>Firewall and VPN edge</li>
 					<li>Endpoint protection</li>
@@ -248,23 +188,93 @@
 			</article>
 
 			<article class="tile tile--net">
-				<h3>Network &amp; connectivity</h3>
-				<p>LAN and WAN design, wireless, and network security for hybrid workplaces.</p>
+				<figure class="tile__img"><img src="../jio-theme/assets/img/tile-network.png" width="1200" height="900" alt="Network switches and patch cabling" loading="lazy"><figcaption><h3>Network &amp; connectivity</h3></figcaption></figure>
+				<p>LAN, WAN, Wi-Fi and network security.</p>
 				<ul class="pills pills--it"><li>LAN</li><li>WAN</li><li>Wi-Fi</li><li>Firewall</li><li>VPN</li></ul>
 			</article>
 
 			<article class="tile tile--msp">
-				<h3>Managed IT &amp; 24/7 support</h3>
-				<p>Round-the-clock monitoring, preventive maintenance and onsite response.</p>
+				<figure class="tile__img"><img src="../jio-theme/assets/img/tile-msp.png" width="1200" height="900" alt="Operations desk with monitors and dashboards" loading="lazy"><figcaption><h3>Managed IT &amp; 24/7 support</h3></figcaption></figure>
+				<p>24/7 monitoring and onsite response.</p>
 				<ul class="pills pills--it"><li>Servers</li><li>Endpoints</li><li>Backup</li><li>Microsoft 365</li></ul>
 			</article>
 
 			<article class="tile tile--con">
-				<h3>Consulting &amp; cloud</h3>
-				<p>IT planning, cloud migration and hybrid infrastructure across AWS, Azure and Google Cloud.</p>
+				<figure class="tile__img"><img src="../jio-theme/assets/img/tile-consulting.png" width="1200" height="900" alt="Meeting table with architecture plans and a laptop" loading="lazy"><figcaption><h3>Consulting &amp; cloud</h3></figcaption></figure>
+				<p>IT planning and cloud migration.</p>
 				<a class="link" href="solutions.html">All services</a>
 			</article>
 		</div>
+		<p class="bento__note">Images are illustrative, not photographs of JIO projects.</p>
+	</div>
+</section>
+
+<!-- VENDOR WALL (Brex logo band, Ramp hairline logo grid) -->
+<section class="vendors">
+	<div class="wrap">
+		<div class="sec-head">
+			<h2>Thirty manufacturers, one supplier.</h2>
+			<p>We supply, install and maintain equipment from these brands, grouped by the layer they sit in.</p>
+		</div>
+		
+<div class="wall">
+	<div class="wall__row">
+		<h3 class="wall__h">Power &amp; batteries</h3>
+		<ul class="wall__logos">
+			<li><img src="../jio-theme/assets/logos/apc.svg" width="83" height="35" alt="APC by Schneider Electric" style="--h:35px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/eaton.svg" width="102" height="28" alt="Eaton" style="--h:28px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/vertiv.svg" width="109" height="27" alt="Vertiv" style="--h:27px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/emerson.png" width="82" height="36" alt="Emerson" style="--h:36px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/bpc.png" width="92" height="32" alt="BPC Energy" style="--h:32px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/amaron.png" width="112" height="25" alt="Amaron" style="--h:25px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/sacredsun.png" width="91" height="31" alt="SacredSun" style="--h:31px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/extell.png" width="49" height="46" alt="ExTell" style="--h:46px" loading="lazy"></li>
+		</ul>
+	</div>
+	<div class="wall__row">
+		<h3 class="wall__h">Compute &amp; storage</h3>
+		<ul class="wall__logos">
+			<li><img src="../jio-theme/assets/logos/dell.svg" width="150" height="19" alt="Dell Technologies" style="--h:19px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/hpe.svg" width="84" height="35" alt="Hewlett Packard Enterprise" style="--h:35px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/hp.svg" width="46" height="46" alt="HP" style="--h:46px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/lenovo.svg" width="119" height="25" alt="Lenovo" style="--h:25px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/supermicro.png" width="74" height="38" alt="Supermicro" style="--h:38px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/intel.svg" width="85" height="33" alt="Intel" style="--h:33px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/synology.svg" width="105" height="28" alt="Synology" style="--h:28px" loading="lazy"></li>
+		</ul>
+	</div>
+	<div class="wall__row">
+		<h3 class="wall__h">Network &amp; security</h3>
+		<ul class="wall__logos">
+			<li><img src="../jio-theme/assets/logos/cisco.png" width="70" height="41" alt="Cisco" style="--h:41px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/aruba.svg" width="115" height="26" alt="HPE Aruba Networking" style="--h:26px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/fortinet.svg" width="159" height="18" alt="Fortinet" style="--h:18px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/huawei.png" width="114" height="25" alt="Huawei" style="--h:25px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/hikvision.png" width="140" height="21" alt="Hikvision" style="--h:21px" loading="lazy"></li>
+		</ul>
+	</div>
+	<div class="wall__row">
+		<h3 class="wall__h">Software &amp; cloud</h3>
+		<ul class="wall__logos">
+			<li><img src="../jio-theme/assets/logos/microsoft.png" width="109" height="26" alt="Microsoft" style="--h:26px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/vmware.png" width="138" height="21" alt="VMware" style="--h:21px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/aws.svg" width="70" height="42" alt="Amazon Web Services" style="--h:42px" loading="lazy"></li>
+		</ul>
+	</div>
+	<div class="wall__row">
+		<h3 class="wall__h">Print, AV &amp; devices</h3>
+		<ul class="wall__logos">
+			<li><img src="../jio-theme/assets/logos/xerox.png" width="107" height="27" alt="Xerox" style="--h:27px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/epson.png" width="104" height="27" alt="Epson" style="--h:27px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/canon.png" width="109" height="26" alt="Canon" style="--h:26px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/brother.png" width="84" height="34" alt="Brother" style="--h:34px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/zebra.svg" width="94" height="31" alt="Zebra Technologies" style="--h:31px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/poly.png" width="87" height="34" alt="Poly" style="--h:34px" loading="lazy"></li>
+			<li><img src="../jio-theme/assets/logos/bose.svg" width="151" height="19" alt="Bose" style="--h:19px" loading="lazy"></li>
+		</ul>
+	</div>
+</div>
+
 	</div>
 </section>
 
@@ -306,10 +316,6 @@
 				<h2>Built for organisations that cannot go offline.</h2>
 				<p>Nine sectors, each with its own mix of uptime, security and compliance pressure.</p>
 			</div>
-			<div class="rail__ctrl">
-				<button type="button" class="sqbtn" data-rail-prev aria-label="Previous industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-				<button type="button" class="sqbtn" data-rail-next aria-label="Next industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-			</div>
 		</div>
 	</div>
 	<div class="rail" data-rail tabindex="0" aria-label="Industries">
@@ -324,6 +330,12 @@
 			<li class="ind-card"><a href="industries.html#retail"><h3>Retail &amp; e-commerce</h3><p>Connectivity, cloud and security for store and online sales.</p><ul class="pills"><li class="t-it">Store connectivity</li><li class="t-it">Cloud</li><li class="t-it">Payment security</li></ul></a></li>
 			<li class="ind-card"><a href="industries.html#education"><h3>Education</h3><p>Secure campus networks and energy-efficient infrastructure.</p><ul class="pills"><li class="t-it">Campus networks</li><li class="t-it">Learning platforms</li><li class="t-power">Efficient power</li></ul></a></li>
 		</ul>
+	</div>
+	<div class="wrap">
+		<div class="rail__ctrl">
+			<button type="button" class="sqbtn" data-rail-prev aria-label="Previous industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+			<button type="button" class="sqbtn" data-rail-next aria-label="Next industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+		</div>
 	</div>
 </section>
 
@@ -350,35 +362,44 @@
 </ol>
 
 		<div class="quote__grid">
-			<form class="form" action="#" method="post" data-quote>
-	<div class="form__row">
-		<div class="field"><label for="fn">First name</label><input id="fn" name="first_name" autocomplete="given-name" required></div>
-		<div class="field"><label for="ln">Last name</label><input id="ln" name="last_name" autocomplete="family-name" required></div>
+			<form class="form" action="#" method="post" enctype="multipart/form-data" novalidate data-quote>
+	<div class="form__errors" data-form-errors role="alert" tabindex="-1" hidden>
+		<p class="form__errors-h">Check these before sending:</p>
+		<ul></ul>
 	</div>
-	<div class="field"><label for="co">Company</label><input id="co" name="company" autocomplete="organization"></div>
 	<div class="form__row">
-		<div class="field"><label for="em">Work email</label><input id="em" type="email" name="email" autocomplete="email" required></div>
-		<div class="field"><label for="ph">Phone</label><input id="ph" type="tel" name="phone" autocomplete="tel"></div>
+		<div class="field"><label for="fn">First name</label><input id="fn" name="first_name" autocomplete="given-name" required aria-describedby="fn-err" data-err="Enter your first name."><p class="field__err" id="fn-err" hidden></p></div>
+		<div class="field"><label for="ln">Last name</label><input id="ln" name="last_name" autocomplete="family-name" required aria-describedby="ln-err" data-err="Enter your last name."><p class="field__err" id="ln-err" hidden></p></div>
 	</div>
-	<div class="field"><label for="sv">Service</label>
-		<select id="sv" name="service">
-			<option>UPS solutions</option>
-			<option>Power &amp; energy</option>
-			<option>Cloud &amp; data services</option>
-			<option>Cybersecurity &amp; compliance</option>
-			<option>Digital transformation &amp; IT advisory</option>
-			<option>Smart infrastructure</option>
-			<option>Network &amp; connectivity</option>
+	<div class="field"><label for="co">Company or organisation</label><input id="co" name="company" autocomplete="organization" required aria-describedby="co-err" data-err="Enter your company or organisation."><p class="field__err" id="co-err" hidden></p></div>
+	<div class="form__row">
+		<div class="field"><label for="em">Work email</label><input id="em" type="email" name="email" autocomplete="email" required aria-describedby="em-err" data-err="Enter a work email address, like name@company.ae."><p class="field__err" id="em-err" hidden></p></div>
+		<div class="field"><label for="ph">Phone <span class="field__opt">optional</span></label><input id="ph" type="tel" name="phone" autocomplete="tel" inputmode="tel" aria-describedby="ph-hint"><p class="field__hint" id="ph-hint">For a faster call back.</p></div>
+	</div>
+	<div class="field"><label for="sv">What do you need?</label>
+		<select id="sv" name="service" required aria-describedby="sv-err" data-err="Choose what you need, or pick &ldquo;Not sure, or several&rdquo;.">
+			<option value="" disabled selected>Choose one</option>
+			<option>Power &amp; energy (UPS, batteries, renewables)</option>
 			<option>Data center design &amp; hosting</option>
-			<option>Maintenance &amp; managed support</option>
-			<option>IT procurement &amp; vendor management</option>
-			<option>Other</option>
+			<option>Cybersecurity &amp; data protection</option>
+			<option>Network &amp; connectivity</option>
+			<option>Managed IT &amp; 24/7 support</option>
+			<option>Consulting &amp; cloud</option>
+			<option>Not sure, or several</option>
 		</select>
+		<p class="field__err" id="sv-err" hidden></p>
 	</div>
-	<div class="field"><label for="ms">What do you need to keep running?</label><textarea id="ms" name="message" rows="4"></textarea></div>
-	<label class="check"><input type="checkbox" name="consent" required> <span>I agree to the <a href="#privacy-policy">privacy policy</a> and to JIO processing these details to reply.</span></label>
-	<button class="btn" type="submit">Request a quote</button>
-	<p class="form__note" data-form-msg>Connect this form to Contact Form 7, WPForms or your CRM before launch.</p>
+	<div class="field"><label for="ms">What do you need to keep running? <span class="field__opt">optional</span></label><textarea id="ms" name="message" rows="4"></textarea></div>
+	<div class="field"><label for="rfq">Attach an RFQ or drawings <span class="field__opt">optional</span></label><input id="rfq" type="file" name="rfq" accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.zip" aria-describedby="rfq-hint"><p class="field__hint" id="rfq-hint">PDF, Word, Excel, DWG or ZIP, up to 10 MB.</p></div>
+	<label class="check"><input id="cn" type="checkbox" name="consent" required aria-describedby="cn-err" data-err="Tick the box so we can use these details to reply."> <span>I agree to the <a href="#privacy-policy">privacy policy</a> and to JIO processing these details to reply.</span></label>
+	<p class="field__err" id="cn-err" hidden></p>
+	<div class="form__send">
+		<button class="btn" type="submit">Request a call and quote</button>
+		<p class="form__reassure">We call you to schedule the discovery meeting. Your details are used only to reply to this request.</p>
+		<!-- Client to confirm before launch: add a reply-time commitment here, e.g. "We reply within one working day." Do not publish one that is not confirmed. -->
+	</div>
+	<!-- Developer: connect this form to Contact Form 7, WPForms or the CRM before launch (it includes a file upload, so the handler must accept multipart). -->
+	<p class="form__note" data-form-msg role="status" aria-live="polite"></p>
 </form>
 
 			<dl class="direct">

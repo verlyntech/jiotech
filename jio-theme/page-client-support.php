@@ -71,7 +71,8 @@ get_header(); ?>
 			<div class="field"><label for="s-desc">What is happening?</label><textarea id="s-desc" name="description" rows="5" required placeholder="What stopped working, since when, and at which site"></textarea></div>
 			<label class="check"><input type="checkbox" name="consent" required> <span>I agree to JIO processing these details to handle this request. I can withdraw consent at any time.</span></label>
 			<button class="btn" type="submit">Submit request</button>
-			<p class="form__note" data-form-msg>Connect this form to your helpdesk before launch.</p>
+			<!-- Developer: connect this form to the helpdesk before launch. -->
+			<p class="form__note" data-form-msg role="status" aria-live="polite"></p>
 		</form>
 
 	</div>

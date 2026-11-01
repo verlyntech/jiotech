@@ -6,12 +6,26 @@ get_header(); ?>
 
 <main id="main">
 
-<!-- HERO: Ramp/Brex split with the visual bleeding off the right edge, Wise black-weight headline,
-     Mercury/Ramp joined email capture, Authkit mock frame with a floating inspector panel -->
+<!-- HERO: full-width photo band, headline below it (bar), Mercury/Ramp joined email capture, Authkit frame -->
 <section class="hero">
+	<div class="hero__carousel" data-carousel aria-roledescription="carousel" aria-label="Illustrative images: switchroom, data centre aisle, network cabinet">
+		<div class="hero__slides">
+		<figure class="slide is-on" data-slide="0"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-switchroom.png" width="1344" height="752" alt="Battery cabinets, UPS units and server racks in a switchroom" loading="eager"><figcaption>UPS and battery, switchroom</figcaption></figure>
+		<figure class="slide" data-slide="1"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-datacentre.png" width="1344" height="752" alt="Rows of server racks in a data centre aisle" loading="lazy"><figcaption>Data centre aisles</figcaption></figure>
+		<figure class="slide" data-slide="2"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-network.png" width="1344" height="752" alt="Network switches and cabling in a server cabinet" loading="lazy"><figcaption>Network and connectivity</figcaption></figure>
+		</div>
+		<div class="hero__ctrl">
+			<button type="button" class="sqbtn" data-car-prev aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+			<button type="button" class="sqbtn" data-car-next aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+			<span class="hero__count" aria-live="polite" data-car-count>1 / 3</span>
+			<span class="hero__note">Illustrative images</span>
+		</div>
+	</div>
+	<div class="wrap hero__head">
+		<h1>One contractor for the servers and the <span class="hl-green">power</span> behind them.</h1>
+	</div>
 	<div class="wrap hero__grid">
 		<div class="hero__copy">
-			<h1>One contractor for the servers and the <span class="hl-green">power</span> behind them.</h1>
 			<p class="hero__lede">JIO Technologies designs, supplies and maintains IT infrastructure and backup power for organisations across the UAE, from our office on Al Muroor Road, Abu Dhabi.</p>
 			<form class="capture" action="#quote" data-capture>
 				<label class="sr" for="cap-email">Work email</label>
@@ -81,17 +95,6 @@ get_header(); ?>
 	</div>
 </div>
 
-<!-- VENDOR WALL (Brex logo band, Ramp hairline logo grid) -->
-<section class="vendors">
-	<div class="wrap">
-		<div class="sec-head">
-			<h2>Thirty manufacturers, one supplier.</h2>
-			<p>We supply, install and maintain equipment from these brands, grouped by the layer they sit in.</p>
-		</div>
-		<?php get_template_part( 'parts/logo-wall' ); ?>
-	</div>
-</section>
-
 <!-- SERVICES BENTO (Wise pale band + dark card with accent headline, Brex flat bordered tiles) -->
 <section class="services band-green" id="chain">
 	<div class="wrap">
@@ -102,8 +105,8 @@ get_header(); ?>
 
 		<div class="bento">
 			<article class="tile tile--power">
-				<h3>Power &amp; energy</h3>
-				<p>UPS systems, battery banks and renewable setups, with installation, preventive maintenance, battery replacement and annual service contracts.</p>
+				<figure class="tile__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/tile-power.png" width="1200" height="900" alt="UPS battery string in a plant room" loading="lazy"><figcaption><h3>Power &amp; energy</h3></figcaption></figure>
+				<p>UPS systems, battery banks and renewable setups, maintained for you.</p>
 				<div class="tabs">
 					<input type="radio" name="pw" id="pw1" checked><label for="pw1">UPS</label>
 					<input type="radio" name="pw" id="pw2"><label for="pw2">VRLA</label>
@@ -120,20 +123,15 @@ get_header(); ?>
 			</article>
 
 			<article class="tile tile--dc">
+				<figure class="tile__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/tile-datacenter.png" width="1200" height="900" alt="Server racks in a data centre aisle" loading="lazy"><figcaption><h3>Data center design &amp; hosting</h3></figcaption></figure>
 				<div>
-					<h3>Data center design &amp; hosting</h3>
-					<p>Built end to end: construction, cabling, power integration and cooling, from a single rack to an enterprise hall.</p>
+					<p>Built end to end, from a single rack to an enterprise hall.</p>
 				</div>
-				<svg class="rack" viewBox="0 0 220 150" aria-hidden="true">
-					<rect x="1" y="1" width="218" height="148" />
-					<g><rect x="10" y="10" width="200" height="14" /><rect x="10" y="28" width="200" height="14" /><rect x="10" y="46" width="200" height="14" /><rect x="10" y="64" width="200" height="30" /><rect x="10" y="98" width="200" height="14" /><rect x="10" y="116" width="200" height="24" /></g>
-					<g class="led"><rect x="192" y="15" width="5" height="4"/><rect x="192" y="33" width="5" height="4"/><rect x="192" y="51" width="5" height="4"/><rect x="192" y="103" width="5" height="4"/></g>
-				</svg>
 			</article>
 
 			<article class="tile tile--sec">
-				<h3>Cybersecurity &amp; data protection</h3>
-				<p>Continuous monitoring and threat detection on the network edge and the endpoints behind it.</p>
+				<figure class="tile__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/tile-firewall.png" width="1200" height="900" alt="Firewall appliance in a server cabinet" loading="lazy"><figcaption><h3>Cybersecurity &amp; data protection</h3></figcaption></figure>
+				<p>Monitoring and threat detection, edge to endpoint.</p>
 				<ul class="checks">
 					<li>Firewall and VPN edge</li>
 					<li>Endpoint protection</li>
@@ -143,23 +141,35 @@ get_header(); ?>
 			</article>
 
 			<article class="tile tile--net">
-				<h3>Network &amp; connectivity</h3>
-				<p>LAN and WAN design, wireless, and network security for hybrid workplaces.</p>
+				<figure class="tile__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/tile-network.png" width="1200" height="900" alt="Network switches and patch cabling" loading="lazy"><figcaption><h3>Network &amp; connectivity</h3></figcaption></figure>
+				<p>LAN, WAN, Wi-Fi and network security.</p>
 				<ul class="pills pills--it"><li>LAN</li><li>WAN</li><li>Wi-Fi</li><li>Firewall</li><li>VPN</li></ul>
 			</article>
 
 			<article class="tile tile--msp">
-				<h3>Managed IT &amp; 24/7 support</h3>
-				<p>Round-the-clock monitoring, preventive maintenance and onsite response.</p>
+				<figure class="tile__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/tile-msp.png" width="1200" height="900" alt="Operations desk with monitors and dashboards" loading="lazy"><figcaption><h3>Managed IT &amp; 24/7 support</h3></figcaption></figure>
+				<p>24/7 monitoring and onsite response.</p>
 				<ul class="pills pills--it"><li>Servers</li><li>Endpoints</li><li>Backup</li><li>Microsoft 365</li></ul>
 			</article>
 
 			<article class="tile tile--con">
-				<h3>Consulting &amp; cloud</h3>
-				<p>IT planning, cloud migration and hybrid infrastructure across AWS, Azure and Google Cloud.</p>
+				<figure class="tile__img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/tile-consulting.png" width="1200" height="900" alt="Meeting table with architecture plans and a laptop" loading="lazy"><figcaption><h3>Consulting &amp; cloud</h3></figcaption></figure>
+				<p>IT planning and cloud migration.</p>
 				<a class="link" href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">All services</a>
 			</article>
 		</div>
+		<p class="bento__note">Images are illustrative, not photographs of JIO projects.</p>
+	</div>
+</section>
+
+<!-- VENDOR WALL (Brex logo band, Ramp hairline logo grid) -->
+<section class="vendors">
+	<div class="wrap">
+		<div class="sec-head">
+			<h2>Thirty manufacturers, one supplier.</h2>
+			<p>We supply, install and maintain equipment from these brands, grouped by the layer they sit in.</p>
+		</div>
+		<?php get_template_part( 'parts/logo-wall' ); ?>
 	</div>
 </section>
 
@@ -201,10 +211,6 @@ get_header(); ?>
 				<h2>Built for organisations that cannot go offline.</h2>
 				<p>Nine sectors, each with its own mix of uptime, security and compliance pressure.</p>
 			</div>
-			<div class="rail__ctrl">
-				<button type="button" class="sqbtn" data-rail-prev aria-label="Previous industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-				<button type="button" class="sqbtn" data-rail-next aria-label="Next industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-			</div>
 		</div>
 	</div>
 	<div class="rail" data-rail tabindex="0" aria-label="Industries">
@@ -219,6 +225,12 @@ get_header(); ?>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#retail"><h3>Retail &amp; e-commerce</h3><p>Connectivity, cloud and security for store and online sales.</p><ul class="pills"><li class="t-it">Store connectivity</li><li class="t-it">Cloud</li><li class="t-it">Payment security</li></ul></a></li>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#education"><h3>Education</h3><p>Secure campus networks and energy-efficient infrastructure.</p><ul class="pills"><li class="t-it">Campus networks</li><li class="t-it">Learning platforms</li><li class="t-power">Efficient power</li></ul></a></li>
 		</ul>
+	</div>
+	<div class="wrap">
+		<div class="rail__ctrl">
+			<button type="button" class="sqbtn" data-rail-prev aria-label="Previous industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+			<button type="button" class="sqbtn" data-rail-next aria-label="Next industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+		</div>
 	</div>
 </section>
 

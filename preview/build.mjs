@@ -23,8 +23,8 @@ const slugToFile = Object.fromEntries(pages.map((p) => [p.slug, p.out]));
 
 function render(page) {
 	const head = `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
-<link rel="stylesheet" href="../jio-theme/assets/css/main.css">
-<script src="../jio-theme/assets/js/site.js" defer></script>
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=${Date.now()}">
+<script src="../jio-theme/assets/js/site.js?v=${Date.now()}" defer></script>
 <title>${page.title} | JIO Technologies (preview)</title>`;
 
 	const swaps = [

@@ -6,7 +6,7 @@ The JIO Technologies site, built as the WordPress theme in `jio-theme/`. Rules s
 2. No rounded corners on buttons, boxes, tags or any other element. Buttons are boxed or transparent.
 3. No gradients. The JIO logo keeps its own colour gradient, and is never converted to black and white.
 4. Palette: white is the primary colour. Secondaries are green `#4CBB17` and blue `#5F9BC6`.
-5. Typeface: Source Sans 3 is the only typeface.
+5. Typefaces: IBM Plex Sans for headings, Source Sans 3 for everything else (body, buttons, labels, forms).
 
 Inspiration comes from seven Refero reference styles. We take layouts and mechanics from them, not their palettes or type.
 
@@ -33,12 +33,12 @@ Inspiration comes from seven Refero reference styles. We take layouts and mechan
 
 ## Type
 
-- **Source Sans 3 only**, loaded from Google Fonts at weights 400, 700 and 900.
-- **The hero headline is the one exception to the bar.** It's `clamp(2.5rem, 5vw, 4rem)` (64px at 1280 wide, 40px on a phone), weight 900, tracking -0.035em, line-height 0.95. It sits in white over the photo hero, left-aligned, above the two hero buttons.
-- **Every other heading follows the Schneider Electric bar:** section H2s are 25px and H3s are 18px, both weight 700.
+- **Two typefaces.** IBM Plex Sans (weights 500 to 700) for headings, and Source Sans 3 (400, 600, 700) for body text, buttons, labels, forms and stats. The client asked for lighter headings, so headings use IBM Plex Sans at weight 600.
+- **The hero headline is the one exception to the bar's size.** It's `clamp(2.5rem, 5vw, 4rem)` (64px at 1280 wide, 40px on a phone), IBM Plex Sans 600, tracking -0.025em, line-height 1. It sits in white over the photo hero, above the two hero buttons.
+- **Every other heading follows the Schneider Electric bar:** section H2s are 25px and H3s are 18px, all IBM Plex Sans 600.
 - Body text is 16px at 1.6 line-height. Labels, tags, hints and small print are 14px. Nothing is below 14px.
-- Labels are weight 700, uppercase, with 0.08em tracking. They're sans-serif, not monospace.
-- Numbers use tabular figures so the strip and tables line up.
+- Labels are Source Sans 3 weight 700, uppercase, with 0.08em tracking. Nothing is monospace.
+- Numbers use tabular figures so the stats and tables line up.
 
 ## Forms
 

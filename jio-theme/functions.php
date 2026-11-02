@@ -17,7 +17,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	$ver = wp_get_theme()->get( 'Version' );
 	wp_enqueue_style(
 		'jio-fonts',
-		'https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap',
+		'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap',
 		array(),
 		null
 	);

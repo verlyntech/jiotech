@@ -21,6 +21,7 @@
 	--on-night-mute: #a9b3ad;
 
 	--sans: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+	--display: "IBM Plex Sans", "Source Sans 3", system-ui, sans-serif;
 	--gutter: clamp(1rem, 4vw, 3rem);
 	--max: 1240px;
 	--bleed: calc(var(--gutter) + max(0px, (100vw - var(--max)) / 2));
@@ -688,3 +689,13 @@ body:has(#quote) .foot__cta { display: none; }
 	.hero__stats li { padding: 0 1rem; }
 	.hero__card-foot { flex-wrap: wrap; }
 }
+
+/* ---------- headings: IBM Plex Sans at 600 (lighter than the old 700/900), body stays Source Sans 3 ---------- */
+h1, h2, h3 { font-family: var(--display); }
+.hero h1, .phero h1 { font-family: var(--display); font-weight: 600; letter-spacing: -.025em; line-height: 1; }
+.sec-head h2, .intro h2, .versus__head h2, .group h2, .sectors__more h2, .careers h2, .compare__head h3, .article__head h1,
+.tile h3, .tile--power h3, .versus__col h3, .ind-card h3, .office__card h2, .form__h, .rows h3,
+.compare__row--head span, .cat h3, .cat--4 h3, .sector-list h2, .route h2, .post-grid h2, .prose h2, .prose h3,
+.foot__cta p, .layers__copy h2, .wall__h, .chat__title,
+.tile__img figcaption h3, .tile--power .tile__img figcaption h3 { font-family: var(--display); font-weight: 600; }
+.sec-head h2, .intro h2, .versus__head h2, .group h2, .sectors__more h2, .careers h2, .compare__head h3, .tile--power h3, .foot__cta p { letter-spacing: -.02em; }

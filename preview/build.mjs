@@ -25,6 +25,7 @@ function render(page) {
 	const head = `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
 <link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=${Date.now()}">
 <script src="../jio-theme/assets/js/site.js?v=${Date.now()}" defer></script>
+<script src="../jio-theme/assets/js/chat.js?v=${Date.now()}" defer></script>
 <title>${page.title} | JIO Technologies (preview)</title>`;
 
 	const swaps = [
@@ -33,6 +34,7 @@ function render(page) {
 		[/<\?php get_template_part\( '([^']+)' \); \?>/g, (_, p) => read(p + '.php')],
 		[/<\?php wp_head\(\); \?>/g, () => head],
 		[/<\?php echo esc_url\( get_template_directory_uri\(\) \); \?>/g, () => '../jio-theme'],
+		[/<\?php echo esc_url\( rest_url\( 'jio\/v1\/chat' \) \); \?>/g, () => '/wp-json/jio/v1/chat'],
 		[/<\?php jio_head_class\(\); \?>/g, () => (page.front ? ' site-head--over' : '')],
 		[/<\?php echo esc_url\( home_url\( '([^']*)' \) \); \?>/g, (_, p) => {
 			const slug = p.replace(/\//g, '');

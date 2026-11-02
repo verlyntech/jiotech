@@ -6,35 +6,45 @@ get_header(); ?>
 
 <main id="main">
 
-<!-- HERO: full-width photo band, headline below it (bar), Mercury/Ramp joined email capture, Authkit frame -->
-<section class="hero">
-	<div class="hero__carousel" data-carousel aria-roledescription="carousel" aria-label="Illustrative images: UPS and battery room, rooftop solar, server room">
-		<div class="hero__slides">
-		<figure class="slide is-on" data-slide="0"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-ups-room.png" width="1344" height="752" alt="UPS units and battery cabinets in a plant room" loading="eager"><figcaption>UPS and battery room</figcaption></figure>
-		<figure class="slide" data-slide="1"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-solar.png" width="1344" height="752" alt="Rooftop solar panels with a city skyline at sunset" loading="lazy"><figcaption>Rooftop solar</figcaption></figure>
-		<figure class="slide" data-slide="2"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-server-room.png" width="1344" height="752" alt="Server racks and overhead cable trays in a server room" loading="lazy"><figcaption>Server room</figcaption></figure>
-		</div>
-		<div class="hero__ctrl">
-			<button type="button" class="sqbtn" data-car-prev aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-			<button type="button" class="sqbtn" data-car-next aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-			<span class="hero__count" aria-live="polite" data-car-count>1 / 3</span>
-			<span class="hero__note">Illustrative images</span>
-		</div>
-	</div>
-	<div class="wrap hero__head">
-		<h1>One contractor for the servers and the <span class="hl-green">power</span> behind them.</h1>
-	</div>
-	<div class="wrap hero__grid">
+<!-- HERO: full-bleed photo with a flat ink overlay, headline left, statement card right, stats along the bottom -->
+<section class="hero hero--photo">
+	<img class="hero__bg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-office.webp" width="2000" height="1131" alt="" loading="eager" fetchpriority="high">
+	<div class="wrap hero__inner">
 		<div class="hero__copy">
-			<p class="hero__lede">JIO Technologies designs, supplies and maintains IT infrastructure and backup power for organisations across the UAE, from our office on Al Muroor Road, Abu Dhabi.</p>
-			<form class="capture" action="#quote" data-capture>
-				<label class="sr" for="cap-email">Work email</label>
-				<input id="cap-email" type="email" placeholder="Work email" autocomplete="email" required>
-				<button class="btn" type="submit">Get a quote</button>
-			</form>
-			<p class="hero__alt">Or call <a href="tel:+971553440144">+971 55 344 0144</a>.</p>
+			<h1>One contractor for the servers and the <span class="hl-green">power</span> behind them.</h1>
+			<p class="hero__lede">JIO Technologies designs, supplies and maintains IT infrastructure and backup power for organisations across the UAE.</p>
+			<div class="hero__ctas">
+				<a class="btn-arrow" href="#quote"><span>Get a quote</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+				<a class="btn-line" href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">Explore services</a>
+			</div>
 		</div>
+		<aside class="hero__card" aria-label="About JIO Technologies">
+			<svg class="hero__quote" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18v-5.5C4 8.4 6 6 9.5 5.5M13.5 18v-5.5c0-4.1 2-6.5 5.5-7M4 12.5h5v5.5H4zM13.5 12.5h5v5.5h-5z"/></svg>
+			<p class="hero__card-text">IT and power under one contract, with one team accountable from the mains to the firewall.</p>
+			<div class="hero__card-foot">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo.webp" width="1282" height="262" alt="JIO Tech, JIO Technologies LLC" class="hero__card-logo">
+				<span>Al Muroor Road, Abu Dhabi</span>
+			</div>
+		</aside>
+	</div>
+	<div class="wrap hero__bottom">
+		<p class="hero__pitch"><span class="hero__pitch-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></span>One contract for IT and power across Abu Dhabi, Dubai and the GCC.</p>
+		<ul class="hero__stats">
+			<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM12 8v4l3 2"/></svg><span><b>24/7</b>Technical support</span></li>
+			<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg><span><b>30</b>Manufacturers supplied</span></li>
+			<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M6 20V10M10 20V10M14 20V10M18 20V10M3 10l9-6 9 6z"/></svg><span><b>9</b>Sectors served</span></li>
+		</ul>
+	</div>
+</section>
 
+<!-- LAYERS: the power chain, now its own section -->
+<section class="layers">
+	<div class="wrap layers__grid">
+		<div class="layers__copy">
+			<h2>Six layers, one supplier.</h2>
+			<p>If the UPS fails, so does everything under it. We supply and support every layer, so one team owns the fault from the mains to the firewall.</p>
+			<a class="link" href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">See every service</a>
+		</div>
 		<figure class="frame" data-chain data-focus="all" aria-label="The six layers JIO supplies and supports, from mains supply to surveillance">
 			<div class="frame__bar">
 				<span class="frame__title">One site, six layers</span>
@@ -84,16 +94,6 @@ get_header(); ?>
 		</figure>
 	</div>
 </section>
-
-<!-- LIVE STRIP (Ramp counter band) -->
-<div class="strip" aria-label="Contact status">
-	<div class="wrap strip__row">
-		<div><span class="label">Abu Dhabi</span><span class="strip__v"><time data-clock>--:--</time> GST</span></div>
-		<div><span class="label">Technical support</span><span class="strip__v"><i class="dot" aria-hidden="true"></i>24/7, remote and onsite</span></div>
-		<div><span class="label">Sales</span><span class="strip__v"><a href="tel:+971553440144">+971 55 344 0144</a></span></div>
-		<div><span class="label">Email</span><span class="strip__v"><a href="mailto:sales@jiotechuae.com">sales@jiotechuae.com</a></span></div>
-	</div>
-</div>
 
 <!-- SERVICES BENTO (Wise pale band + dark card with accent headline, Brex flat bordered tiles) -->
 <section class="services band-green" id="chain">

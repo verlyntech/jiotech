@@ -34,7 +34,7 @@ Inspiration comes from seven Refero reference styles. We take layouts and mechan
 ## Type
 
 - **Source Sans 3 only**, loaded from Google Fonts at weights 400, 700 and 900.
-- **The hero headline is the one exception to the bar.** It's `clamp(2.5rem, 5vw, 4rem)` (64px at 1280 wide, 40px on a phone), weight 900, tracking -0.035em, line-height 0.95. It spans the full content width under the photo carousel, so it sets on two lines on desktop and ends above the fold.
+- **The hero headline is the one exception to the bar.** It's `clamp(2.5rem, 5vw, 4rem)` (64px at 1280 wide, 40px on a phone), weight 900, tracking -0.035em, line-height 0.95. It sits in white over the photo hero, left-aligned, above the two hero buttons.
 - **Every other heading follows the Schneider Electric bar:** section H2s are 25px and H3s are 18px, both weight 700.
 - Body text is 16px at 1.6 line-height. Labels, tags, hints and small print are 14px. Nothing is below 14px.
 - Labels are weight 700, uppercase, with 0.08em tracking. They're sans-serif, not monospace.
@@ -50,8 +50,10 @@ Inspiration comes from seven Refero reference styles. We take layouts and mechan
 
 ## Imagery
 
-- The photography is generated, not taken at JIO sites. It's labelled as illustrative wherever it appears: "Illustrative images" beside the carousel controls, and a note under the service tiles. Never caption it as JIO's own infrastructure.
-- Replace it with client photography when that exists.
+- **Home hero:** the office reception photo (`hero-office.webp`) fills the hero behind a flat ink overlay (`rgba(10,14,12,.66)`), with no gradient. The headline, lede and buttons sit on the left. A statement card sits on the right, with the colour logo on a white strip so the logo is never recoloured. Three stats run along the bottom (24/7 support, 30 manufacturers, 9 sectors), using only figures the site already states.
+- **Buttons on the photo:** "Get a quote" is a white boxed button with an ink arrow box, and "Explore services" is a white outline button. The header CTA uses the same arrow-box button.
+- **Service tiles:** the photography is generated, not taken at JIO sites. It is labelled as illustrative ("Images are illustrative" under the tiles). Never caption it as JIO's own infrastructure.
+- Replace generated imagery with client photography when it exists.
 
 ## Shape
 
@@ -88,3 +90,12 @@ Inspiration comes from seven Refero reference styles. We take layouts and mechan
 - **One primary action per view.** On the homepage, that's the green "Get a quote" button.
 - **Claims trace to a source.** Every fact comes from the live site or from `PRODUCT.md`. Testimonials, ratings, years in business and satisfaction scores stay out until the client confirms them.
 - **The logo is never recoloured.** It keeps its gradient on every background it appears on.
+
+## Website assistant
+
+- A "Ask JIO" button sits bottom-right on every page and opens a square panel. It uses the same palette and type: green for the button, ink for controls, blue for the assistant's replies.
+- It answers from `jio-theme/inc/knowledge.json` only: services, industries, process, the FAQ and contact details. Anything listed under `not_confirmed` (certifications, licences, prices, ratings, response times, named clients) is never claimed. The assistant says so and points to the phone and email.
+- The model is reached through a server-side endpoint (`/wp-json/jio/v1/chat`), so the API key never reaches the browser. On WordPress, set `JIO_OPENROUTER_KEY` in `wp-config.php`. Locally the preview server reads `.env`, which is git-ignored.
+- Models are tried in order: Nemotron 3.5 Super VL, then Nemotron 3.5 Lightning, then Gemma 4 31B (all free on OpenRouter), so one busy or rate-limited endpoint does not end the conversation. Reasoning is turned off for faster, direct answers. Each failure is logged with its HTTP status.
+- Replies are shown as plain text, never HTML. Bullet lines ("- ") render as a list with blue square markers. Visitors are limited to 20 messages an hour, and each message to 800 characters.
+- The disclaimer on the panel states that messages go to an AI model provider. The free model may log submitted data, so visitors are told not to share personal or ID details.

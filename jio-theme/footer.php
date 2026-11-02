@@ -39,6 +39,36 @@
 		<span><a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">Privacy</a> &nbsp;/&nbsp; <a href="<?php echo esc_url( home_url( '/terms-and-conditions/' ) ); ?>">Terms</a></span>
 	</div>
 </footer>
+<div class="chat" data-chat data-endpoint="<?php echo esc_url( rest_url( 'jio/v1/chat' ) ); ?>">
+	<div class="chat__panel" id="chat-panel" data-chat-panel role="region" aria-label="JIO assistant" hidden>
+		<header class="chat__head">
+			<p class="chat__title"><span class="chat__dot" aria-hidden="true"></span>JIO assistant</p>
+			<button type="button" class="chat__icon-btn" data-chat-close aria-label="Close chat">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+			</button>
+		</header>
+		<div class="chat__log" data-chat-log role="log" aria-live="polite">
+			<div class="chat__msg chat__msg--assistant"><p class="chat__text">Hi. Ask about our power, IT, security or support services, or how to get a quote.</p></div>
+			<div class="chat__chips" data-chat-chips>
+				<button type="button" class="chat__chip" data-chat-chip>What do you offer?</button>
+				<button type="button" class="chat__chip" data-chat-chip>Do you work with government?</button>
+				<button type="button" class="chat__chip" data-chat-chip>How do I get a quote?</button>
+			</div>
+		</div>
+		<form class="chat__form" data-chat-form>
+			<label class="sr" for="chat-input">Your question</label>
+			<input id="chat-input" class="chat__input" data-chat-input type="text" maxlength="800" autocomplete="off" placeholder="Ask a question" required>
+			<button type="submit" class="chat__send" data-chat-send aria-label="Send">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+			</button>
+		</form>
+		<p class="chat__note">Answers come from an AI model. Don't share personal or ID details.</p>
+	</div>
+	<button type="button" class="chat__toggle" data-chat-toggle aria-expanded="false" aria-controls="chat-panel" aria-label="Open chat">
+		<svg class="chat__ico-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H10l-6 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>
+		<svg class="chat__ico-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+	</button>
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>

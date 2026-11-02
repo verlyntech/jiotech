@@ -29,7 +29,7 @@
 		</nav>
 		<div class="site-head__act">
 			<a class="phone" href="tel:+971553440144">+971 55 344 0144</a>
-			<a class="btn btn--sm" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Get a quote</a>
+			<a class="btn-arrow btn-arrow--sm" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><span>Get a quote</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
 		</div>
 		<details class="menu">
 			<summary aria-label="Menu"><span></span></summary>

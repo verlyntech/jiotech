@@ -8,11 +8,11 @@ get_header(); ?>
 
 <!-- HERO: full-width photo band, headline below it (bar), Mercury/Ramp joined email capture, Authkit frame -->
 <section class="hero">
-	<div class="hero__carousel" data-carousel aria-roledescription="carousel" aria-label="Illustrative images: switchroom, data centre aisle, network cabinet">
+	<div class="hero__carousel" data-carousel aria-roledescription="carousel" aria-label="Illustrative images: UPS and battery room, rooftop solar, server room">
 		<div class="hero__slides">
-		<figure class="slide is-on" data-slide="0"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-switchroom.png" width="1344" height="752" alt="Battery cabinets, UPS units and server racks in a switchroom" loading="eager"><figcaption>UPS and battery, switchroom</figcaption></figure>
-		<figure class="slide" data-slide="1"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-datacentre.png" width="1344" height="752" alt="Rows of server racks in a data centre aisle" loading="lazy"><figcaption>Data centre aisles</figcaption></figure>
-		<figure class="slide" data-slide="2"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-network.png" width="1344" height="752" alt="Network switches and cabling in a server cabinet" loading="lazy"><figcaption>Network and connectivity</figcaption></figure>
+		<figure class="slide is-on" data-slide="0"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-ups-room.png" width="1344" height="752" alt="UPS units and battery cabinets in a plant room" loading="eager"><figcaption>UPS and battery room</figcaption></figure>
+		<figure class="slide" data-slide="1"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-solar.png" width="1344" height="752" alt="Rooftop solar panels with a city skyline at sunset" loading="lazy"><figcaption>Rooftop solar</figcaption></figure>
+		<figure class="slide" data-slide="2"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-server-room.png" width="1344" height="752" alt="Server racks and overhead cable trays in a server room" loading="lazy"><figcaption>Server room</figcaption></figure>
 		</div>
 		<div class="hero__ctrl">
 			<button type="button" class="sqbtn" data-car-prev aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>

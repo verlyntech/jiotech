@@ -64,6 +64,14 @@
 	}
 
 	// Industries rail: boxed arrow buttons page through the cards.
+	var sectorMotion = document.querySelector('[data-sector-motion]');
+	if (sectorMotion && 'IntersectionObserver' in window) {
+		sectorMotion.setAttribute('data-motion', 'paused');
+		new IntersectionObserver(function (entries) {
+			sectorMotion.setAttribute('data-motion', entries[0].isIntersecting ? 'running' : 'paused');
+		}, { threshold: .15 }).observe(sectorMotion);
+	}
+
 	var rail = document.querySelector('[data-rail]');
 	if (rail) {
 		var prev = document.querySelector('[data-rail-prev]');

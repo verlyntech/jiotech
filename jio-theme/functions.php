@@ -21,9 +21,9 @@ add_action( 'wp_enqueue_scripts', function () {
 		array(),
 		null
 	);
-	wp_enqueue_style( 'jio-main', get_template_directory_uri() . '/assets/css/main.css', array( 'jio-fonts' ), $ver );
+	wp_enqueue_style( 'jio-main', get_template_directory_uri() . '/assets/css/main.css', array( 'jio-fonts' ), $ver . '.' . filemtime( get_template_directory() . '/assets/css/main.css' ) );
 	wp_enqueue_script( 'jio-chat', get_template_directory_uri() . '/assets/js/chat.js', array(), $ver, array( 'strategy' => 'defer' ) );
-	wp_enqueue_script( 'jio-site', get_template_directory_uri() . '/assets/js/site.js', array(), $ver, array( 'strategy' => 'defer' ) );
+	wp_enqueue_script( 'jio-site', get_template_directory_uri() . '/assets/js/site.js', array(), $ver . '.' . filemtime( get_template_directory() . '/assets/js/site.js' ), array( 'strategy' => 'defer' ) );
 } );
 
 /** Website assistant (server-side proxy to the model). */

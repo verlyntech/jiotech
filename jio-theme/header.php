@@ -20,6 +20,7 @@
 			<img class="brand__logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo.webp" width="1282" height="262" alt="JIO Tech, JIO Technologies LLC">
 		</a>
 		<nav class="nav" aria-label="Primary">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
 			<a href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">Services</a>
 			<a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>">Industries</a>
 			<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Company</a>
@@ -34,6 +35,7 @@
 		<details class="menu">
 			<summary aria-label="Menu"><span></span></summary>
 			<div class="menu__panel">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
 				<a href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">Services</a>
 				<a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>">Industries</a>
 				<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Company</a>

@@ -649,16 +649,11 @@ body:has(#quote) .foot__cta { display: none; }
 .hero--photo { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: flex-end; min-height: clamp(36rem, 86vh, 50rem); padding-block: clamp(3rem, 6vw, 5rem) 0; border-bottom: 0; color: var(--white); overflow: hidden; }
 .hero__bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
 .hero--photo::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(10, 14, 12, .66); }
-.hero__inner { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); gap: clamp(2rem, 5vw, 5rem); align-items: end; }
+.hero__inner { display: block; }
 .hero--photo h1 { color: var(--white); max-width: 15ch; }
 .hero--photo .hero__lede { margin-top: 1.25rem; max-width: 34rem; font-size: 18px; color: rgba(255,255,255,.88); }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
 .hero--photo .btn-arrow { border-color: var(--white); }
-.hero__card { align-self: end; display: grid; gap: 1rem; padding: 1.5rem 1.5rem 0; background: rgba(14, 21, 18, .62); border: 1px solid rgba(255,255,255,.3); }
-.hero__quote { width: 2rem; height: 2rem; fill: none; stroke: var(--green); stroke-width: 1.8; stroke-linecap: square; }
-.hero__card-text { font-size: 18px; line-height: 1.45; color: var(--white); }
-.hero__card-foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 0 -1.5rem; padding: .9rem 1.5rem; background: var(--white); color: var(--mute); font-size: 14px; }
-.hero__card-logo { height: 2.1rem; width: auto; }
 .hero__bottom { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem 3rem; flex-wrap: wrap; margin-top: clamp(2.5rem, 5vw, 4rem); padding-block: 1.4rem; border-top: 1px solid rgba(255,255,255,.28); }
 .hero__pitch { display: flex; align-items: center; gap: .75rem; max-width: 30rem; font-size: 15px; color: rgba(255,255,255,.88); }
 .hero__pitch-ico { flex: none; width: 2.4rem; height: 2.4rem; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.5); }
@@ -679,16 +674,14 @@ body:has(#quote) .foot__cta { display: none; }
 
 @media (max-width: 1080px) {
 	.hero__inner, .layers__grid { grid-template-columns: 1fr; }
-	.hero__card { max-width: 32rem; }
-	.hero__bottom { flex-direction: column; align-items: flex-start; }
+		.hero__bottom { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 720px) {
 	.hero--photo { min-height: 0; padding-top: 2.5rem; }
 	.hero__ctas a { flex: 1 1 auto; justify-content: center; }
 	.hero__stats { flex-wrap: wrap; gap: 1rem 0; }
 	.hero__stats li { padding: 0 1rem; }
-	.hero__card-foot { flex-wrap: wrap; }
-}
+	}
 
 /* ---------- headings: IBM Plex Sans at 600 (lighter than the old 700/900), body stays Source Sans 3 ---------- */
 h1, h2, h3 { font-family: var(--display); }
@@ -699,3 +692,6 @@ h1, h2, h3 { font-family: var(--display); }
 .foot__cta p, .layers__copy h2, .wall__h, .chat__title,
 .tile__img figcaption h3, .tile--power .tile__img figcaption h3 { font-family: var(--display); font-weight: 600; }
 .sec-head h2, .intro h2, .versus__head h2, .group h2, .sectors__more h2, .careers h2, .compare__head h3, .tile--power h3, .foot__cta p { letter-spacing: -.02em; }
+
+/* wide container: logo and hero copy sit near the left edge instead of the centred 1240px column */
+.wrap--wide { max-width: none; padding-inline: clamp(1.25rem, 3.5vw, 4rem); }

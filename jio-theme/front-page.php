@@ -9,7 +9,7 @@ get_header(); ?>
 <!-- HERO: full-bleed photo with a flat ink overlay, headline left, statement card right, stats along the bottom -->
 <section class="hero hero--photo">
 	<img class="hero__bg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-office.webp" width="2000" height="1131" alt="" loading="eager" fetchpriority="high">
-	<div class="wrap hero__inner">
+	<div class="wrap wrap--wide hero__inner">
 		<div class="hero__copy">
 			<h1>One contractor for the servers and the <span class="hl-green">power</span> behind them.</h1>
 			<p class="hero__lede">JIO Technologies designs, supplies and maintains IT infrastructure and backup power for organisations across the UAE.</p>
@@ -18,16 +18,8 @@ get_header(); ?>
 				<a class="btn-line" href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">Explore services</a>
 			</div>
 		</div>
-		<aside class="hero__card" aria-label="About JIO Technologies">
-			<svg class="hero__quote" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18v-5.5C4 8.4 6 6 9.5 5.5M13.5 18v-5.5c0-4.1 2-6.5 5.5-7M4 12.5h5v5.5H4zM13.5 12.5h5v5.5h-5z"/></svg>
-			<p class="hero__card-text">IT and power under one contract, with one team accountable from the mains to the firewall.</p>
-			<div class="hero__card-foot">
-				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo.webp" width="1282" height="262" alt="JIO Tech, JIO Technologies LLC" class="hero__card-logo">
-				<span>Al Muroor Road, Abu Dhabi</span>
-			</div>
-		</aside>
 	</div>
-	<div class="wrap hero__bottom">
+	<div class="wrap wrap--wide hero__bottom">
 		<p class="hero__pitch"><span class="hero__pitch-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></span>One contract for IT and power across Abu Dhabi, Dubai and the GCC.</p>
 		<ul class="hero__stats">
 			<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM12 8v4l3 2"/></svg><span><b>24/7</b>Technical support</span></li>

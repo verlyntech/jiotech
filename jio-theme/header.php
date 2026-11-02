@@ -15,7 +15,7 @@
 	</div>
 </div>
 <header class="site-head" data-head>
-	<div class="wrap site-head__row">
+	<div class="wrap wrap--wide site-head__row">
 		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="JIO Technologies, home">
 			<img class="brand__logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo.webp" width="1282" height="262" alt="JIO Tech, JIO Technologies LLC">
 		</a>

@@ -50,7 +50,8 @@ Inspiration comes from seven Refero reference styles. We take layouts and mechan
 
 ## Imagery
 
-- **Home hero:** the office reception photo (`hero-office.webp`) fills the hero behind a flat ink overlay (`rgba(10,14,12,.66)`), with no gradient. The headline, lede and buttons sit on the left. A statement card sits on the right, with the colour logo on a white strip so the logo is never recoloured. Three stats run along the bottom (24/7 support, 30 manufacturers, 9 sectors), using only figures the site already states.
+- **Home hero:** the storefront photo (`hero-office.webp`) fills the hero behind a flat ink overlay (`rgba(10,14,12,.66)`), with no gradient. The headline, lede and buttons sit on the left, with three stats along the bottom (24/7 support, 30 manufacturers, 9 sectors), using only figures the site already states. There is no testimonial or statement card on the photo.
+- **Left alignment:** the header and the hero use a wide container (`.wrap--wide`, 3.5vw side padding, up to 4rem) so the logo and the hero copy share one left edge near the page edge. The sections below keep the centred 1240px column.
 - **Buttons on the photo:** "Get a quote" is a white boxed button with an ink arrow box, and "Explore services" is a white outline button. The header CTA uses the same arrow-box button.
 - **Service tiles:** the photography is generated, not taken at JIO sites. It is labelled as illustrative ("Images are illustrative" under the tiles). Never caption it as JIO's own infrastructure.
 - Replace generated imagery with client photography when it exists.

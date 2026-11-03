@@ -316,6 +316,7 @@ section { padding-block: clamp(4rem, 8vw, 7rem); }
 .form__errors li { margin: .2rem 0; }
 .form__errors a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--blue); text-decoration-thickness: 2px; text-underline-offset: .2em; }
 .field__err { display: flex; gap: .45rem; align-items: baseline; font-size: 14px; font-weight: 700; color: var(--ink); }
+.field__err[hidden] { display: none; }
 .field__err::before { content: "!"; flex: none; display: inline-grid; place-items: center; width: 1rem; height: 1rem; background: var(--ink); color: var(--white); font-size: 12px; font-weight: 700; line-height: 1; }
 .field.is-invalid input, .field.is-invalid select, .field.is-invalid textarea { border: 2px solid var(--ink); }
 .field__opt { font-weight: 400; color: var(--mute); font-size: 14px; margin-left: .25rem; }

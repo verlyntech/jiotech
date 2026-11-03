@@ -1,0 +1,174 @@
+/* Dark mode uses separate canvas, section and card surfaces with the brand accents. */
+:root { color-scheme: light; --paper: #ffffff; --brand-ink: #0e1512; }
+.theme-toggle { flex: none; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; border: 1px solid var(--rule); background: var(--white); color: var(--ink); cursor: pointer; }
+.theme-toggle[hidden] { display: none; }
+.theme-toggle:hover { border-color: var(--ink); background: var(--fog); }
+.theme-toggle svg { grid-area: 1 / 1; width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: square; }
+.theme-toggle__sun { display: none; }
+[data-theme="dark"] .theme-toggle__moon { display: none; }
+[data-theme="dark"] .theme-toggle__sun { display: block; }
+
+html[data-theme="dark"] {
+	color-scheme: dark;
+	--white: #151719;
+	--fog: #2d3237;
+	--rule: #424a52;
+	--ink: #f1f2f3;
+	--ink-2: #d3d6d9;
+	--mute: #aeb5bc;
+	--night: #101214;
+	--night-2: #1d2125;
+	--rule-night: #384047;
+	--on-night: #f1f2f3;
+	--on-night-mute: #aeb5bc;
+	--surface: #23272b;
+	--surface-band: #1b1e21;
+	--surface-raised: #2d3237;
+}
+
+/* Keep sections, cards and image spaces visually separate rather than one dark fill. */
+[data-theme="dark"] .site-head,
+[data-theme="dark"] .site-foot,
+[data-theme="dark"] .band-green,
+[data-theme="dark"] .band-blue,
+[data-theme="dark"] .industries,
+[data-theme="dark"] .values,
+[data-theme="dark"] .solutions-intro,
+[data-theme="dark"] .solutions-next { background: var(--surface-band); }
+[data-theme="dark"] .site-head,
+[data-theme="dark"] .site-foot,
+[data-theme="dark"] .band-green,
+[data-theme="dark"] .band-blue,
+[data-theme="dark"] .phero,
+[data-theme="dark"] .industry-hero,
+[data-theme="dark"] .wall,
+[data-theme="dark"] .localnav,
+[data-theme="dark"] .cat,
+[data-theme="dark"] .rows,
+[data-theme="dark"] .post-grid,
+[data-theme="dark"] .form,
+[data-theme="dark"] .route,
+[data-theme="dark"] .menu__panel,
+[data-theme="dark"] .direct,
+[data-theme="dark"] .company-story__entry:last-child { border-color: var(--rule); }
+[data-theme="dark"] .steps::before { background: var(--rule); }
+[data-theme="dark"] .layer-card,
+[data-theme="dark"] .ind-card > a,
+[data-theme="dark"] .sector-list > li,
+[data-theme="dark"] .solution-card,
+[data-theme="dark"] .form,
+[data-theme="dark"] .route,
+[data-theme="dark"] .menu__panel,
+[data-theme="dark"] .chat__panel { background: var(--surface); }
+[data-theme="dark"] .tile--dc,
+[data-theme="dark"] .tile--sec,
+[data-theme="dark"] .tile--net,
+[data-theme="dark"] .tile--msp,
+[data-theme="dark"] .tile--con,
+[data-theme="dark"] .cap-gallery__tile { background: var(--surface); }
+[data-theme="dark"] .cap-gallery__tile[aria-current="location"],
+[data-theme="dark"] .cap-gallery__tile:hover { background: var(--surface-raised); }
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .chat__msg--assistant .chat__text { background: var(--surface-raised); }
+[data-theme="dark"] .theme-toggle:hover,
+[data-theme="dark"] .ind-card > a:hover { background: var(--surface-raised); }
+[data-theme="dark"] .pills li { background: transparent; }
+[data-theme="dark"] .solutions-hero__note { background: var(--surface); }
+[data-theme="dark"] .solutions-image--hero { background: var(--surface); border-color: var(--rule); }
+[data-theme="dark"] .company-story__media--placeholder,
+[data-theme="dark"] .industry-hero__media { background: var(--surface); }
+
+/* Supplied logos keep their original colours on a clean, light backing. */
+[data-theme="dark"] .brand { padding: .3rem .4rem; background: var(--paper); }
+[data-theme="dark"] .foot__logo { padding: .4rem; background: var(--paper); }
+[data-theme="dark"] .wall__logos li,
+[data-theme="dark"] .logos li { background: var(--paper); border-color: #dbe0dc; }
+[data-theme="dark"] .wall__logos li:hover,
+[data-theme="dark"] .logos li:hover { background: #f4f6f4; }
+
+/* Keep readable dark lettering on the fixed green and blue accent fills. */
+[data-theme="dark"] ::selection { color: var(--brand-ink); }
+[data-theme="dark"] .btn,
+[data-theme="dark"] .tabs input:checked + label,
+[data-theme="dark"] .chat__toggle,
+[data-theme="dark"] .chat__send,
+[data-theme="dark"] .chat__chip--go,
+[data-theme="dark"] .layer-card.is-open .layer-card__icon,
+[data-theme="dark"] .cap-gallery__tile[aria-current="location"] .cap-gallery__arrow,
+[data-theme="dark"] .solutions-hero .btn-arrow,
+[data-theme="dark"] .solutions-hero .btn-arrow__box,
+[data-theme="dark"] .solutions-next .btn-arrow { color: var(--brand-ink); }
+[data-theme="dark"] .btn--ghost { color: var(--ink); }
+[data-theme="dark"] .btn:hover,
+[data-theme="dark"] .btn--ghost:hover,
+[data-theme="dark"] .sqbtn:hover,
+[data-theme="dark"] .seg button[aria-checked="true"],
+[data-theme="dark"] .localnav a.is-active,
+[data-theme="dark"] .pager .current,
+[data-theme="dark"] .chat__toggle:hover,
+[data-theme="dark"] .chat__send:hover,
+[data-theme="dark"] .chat__chip:hover,
+[data-theme="dark"] .chat__msg--user .chat__text,
+[data-theme="dark"] .site-foot .btn:hover,
+[data-theme="dark"] .skip { color: var(--white); }
+[data-theme="dark"] .btn-arrow:hover,
+[data-theme="dark"] .btn-arrow:hover .btn-arrow__box { color: var(--brand-ink); }
+[data-theme="dark"] .btn-arrow:hover .btn-arrow__box { border-left-color: var(--brand-ink); }
+[data-theme="dark"] .solutions-hero .btn-arrow__box { border-left-color: var(--brand-ink); }
+[data-theme="dark"] .solutions-hero .btn-arrow:hover { background: var(--paper); border-color: var(--paper); }
+[data-theme="dark"] .layer-card--security.is-open .layer-card__icon { color: var(--white); }
+[data-theme="dark"] .sqbtn:disabled { color: var(--ink); }
+[data-theme="dark"] .steps li:nth-child(2) .steps__dot svg,
+[data-theme="dark"] .steps li:nth-child(3) .steps__dot svg { stroke: var(--brand-ink); }
+
+/* Elements that intentionally sit on a dark photograph or dark brand panel. */
+[data-theme="dark"] .hero--photo,
+[data-theme="dark"] .hero--photo h1,
+[data-theme="dark"] .hero__stats b,
+[data-theme="dark"] .btn-line,
+[data-theme="dark"] .solutions-hero h1,
+[data-theme="dark"] .solutions-hero__lead,
+[data-theme="dark"] .solutions-hero__explore,
+[data-theme="dark"] .solutions-delivery h2,
+[data-theme="dark"] .solutions-delivery h3 { color: var(--on-night); }
+[data-theme="dark"] .hero__pitch-ico svg,
+[data-theme="dark"] .hero__stats svg { stroke: var(--on-night); }
+[data-theme="dark"] .hero--photo .btn-arrow { border-color: var(--on-night); }
+[data-theme="dark"] .solutions-hero a:focus-visible { outline-color: var(--on-night); }
+[data-theme="dark"] .layer-card__detail { background: var(--surface); }
+[data-theme="dark"] .chat__msg--user .chat__text { background: var(--surface-raised); color: var(--ink); }
+
+/* Native fields and the menu need explicit colours beyond the shared tokens. */
+[data-theme="dark"] .field input,
+[data-theme="dark"] .field select,
+[data-theme="dark"] .field textarea { background-color: var(--white); border-color: #737d87; }
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder { color: var(--mute); opacity: 1; }
+[data-theme="dark"] .field select { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M6 9l6 6 6-6' fill='none' stroke='%23edf4ef' stroke-width='2'/></svg>"); }
+[data-theme="dark"] .menu[open] summary span,
+[data-theme="dark"] .menu[open] summary span::before { background: var(--white); }
+[data-theme="dark"] .menu[open] summary span::before { box-shadow: 0 12px 0 var(--white); }
+[data-theme="dark"] .careers { background: var(--surface-band); border-top: 3px solid var(--blue); color: var(--ink-2); }
+[data-theme="dark"] .careers h2 { color: var(--ink); }
+[data-theme="dark"] .careers p { color: var(--ink-2); }
+[data-theme="dark"] .careers .btn { background: var(--green); border-color: var(--green); color: var(--brand-ink); }
+[data-theme="dark"] .careers .btn:hover { background: var(--paper); border-color: var(--paper); color: var(--brand-ink); }
+[data-theme="dark"] .careers :focus-visible { outline-color: var(--ink); }
+
+/* Fit the theme control alongside the existing desktop navigation. */
+@media (min-width: 1241px) and (max-width: 1440px) {
+	.site-head__row { gap: 1rem; }
+	.nav { gap: 1.1rem; }
+	.site-head__act { gap: 1rem; }
+}
+@media (max-width: 1240px) {
+	.menu { margin-left: 0; }
+}
+@media (max-width: 720px) {
+	.theme-toggle { margin-left: auto; }
+	.site-head__row { gap: .75rem; }
+}
+@media (max-width: 400px) {
+	.site-head__row { gap: .5rem; }
+	.brand__logo { width: clamp(9rem, 44vw, 11rem); }
+}

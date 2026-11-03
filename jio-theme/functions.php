@@ -22,10 +22,12 @@ add_action( 'wp_enqueue_scripts', function () {
 		null
 	);
 	wp_enqueue_style( 'jio-main', get_template_directory_uri() . '/assets/css/main.css', array( 'jio-fonts' ), $ver . '.' . filemtime( get_template_directory() . '/assets/css/main.css' ) );
+	wp_enqueue_script( 'jio-theme', get_template_directory_uri() . '/assets/js/theme.js', array(), $ver . '.' . filemtime( get_template_directory() . '/assets/js/theme.js' ), false );
 	if ( is_page( 'solutions' ) ) {
 		wp_enqueue_style( 'jio-services', get_template_directory_uri() . '/assets/css/services.css', array( 'jio-main' ), $ver . '.' . filemtime( get_template_directory() . '/assets/css/services.css' ) );
 		wp_enqueue_script( 'jio-services', get_template_directory_uri() . '/assets/js/services.js', array(), $ver . '.' . filemtime( get_template_directory() . '/assets/js/services.js' ), array( 'strategy' => 'defer' ) );
 	}
+	wp_enqueue_style( 'jio-theme', get_template_directory_uri() . '/assets/css/theme.css', array( 'jio-main' ), $ver . '.' . filemtime( get_template_directory() . '/assets/css/theme.css' ) );
 	wp_enqueue_script( 'jio-chat', get_template_directory_uri() . '/assets/js/chat.js', array(), $ver, array( 'strategy' => 'defer' ) );
 	wp_enqueue_script( 'jio-site', get_template_directory_uri() . '/assets/js/site.js', array(), $ver . '.' . filemtime( get_template_directory() . '/assets/js/site.js' ), array( 'strategy' => 'defer' ) );
 } );

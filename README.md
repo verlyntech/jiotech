@@ -8,9 +8,11 @@ WordPress theme and a dependency-free local preview for the JIO Technologies LLC
 - **Services:** five clearly labelled areas—Power & energy, Data centers & cloud, Network & security, Managed IT & support, and Equipment supply. All twelve service descriptions stay visible on the page, with direct section links and a nine-category equipment catalogue.
 - **Company:** vertical Beginnings, Mission and Vision sections with image placeholders, plus icons for the existing company values.
 - **Industries:** sector blocks and a motion-aware enquiry callout.
-- **Shared header:** responsive logo and navigation. The hiring announcement banner has been removed.
+- **Shared header:** responsive logo, navigation and a keyboard-accessible dark-mode toggle. The hiring announcement banner has been removed.
 
 The design uses white, green (`#4CBB17`), blue (`#5F9BC6`) and dark ink, with square corners, IBM Plex Sans headings and Source Sans 3 body text. See [DESIGN.md](DESIGN.md) and [PRODUCT.md](PRODUCT.md) for the project context.
+
+Dark mode follows the device colour preference until a visitor uses the header toggle. The explicit choice is saved in the browser and shared across pages and tabs. If browser storage is unavailable, the toggle still works for the current page. Neutral charcoal surfaces, lighter cards and soft white text preserve the content hierarchy; green and blue remain accents on controls, headings and rules. Logos retain their supplied colours on light backings in dark mode.
 
 ## Local preview
 
@@ -39,6 +41,7 @@ After editing a template, stylesheet or script, rerun the build command and refr
 | `jio-theme/assets/css/services.css` | Services page styling. |
 | `jio-theme/assets/js/site.js` | Infrastructure interactions, industry arrows and shared page behaviour. |
 | `jio-theme/assets/js/services.js` | Navigation between the five visible service areas. |
+| `jio-theme/assets/js/theme.js`, `assets/css/theme.css` | Early theme selection, saved preference, header toggle and dark palette. |
 | `jio-theme/assets/img/` | Logo and website image assets. |
 | `preview/build.mjs` | Generates the eight preview HTML pages. |
 | `preview/serve.mjs` | Local preview server. |

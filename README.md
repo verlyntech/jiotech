@@ -1,0 +1,75 @@
+# JIO Technologies website
+
+WordPress theme and a dependency-free local preview for the JIO Technologies LLC website.
+
+## Current website
+
+- **Home:** responsive storefront hero, connected square infrastructure layers with image placeholders, coloured brand logos, and a horizontal industry carousel with previous/next arrows and green corner markers.
+- **Services:** five clearly labelled areas—Power & energy, Data centers & cloud, Network & security, Managed IT & support, and Equipment supply. All twelve service descriptions stay visible on the page, with direct section links and a nine-category equipment catalogue.
+- **Company:** vertical Beginnings, Mission and Vision sections with image placeholders, plus icons for the existing company values.
+- **Industries:** sector blocks and a motion-aware enquiry callout.
+- **Shared header:** responsive logo and navigation. The hiring announcement banner has been removed.
+
+The design uses white, green (`#4CBB17`), blue (`#5F9BC6`) and dark ink, with square corners, IBM Plex Sans headings and Source Sans 3 body text. See [DESIGN.md](DESIGN.md) and [PRODUCT.md](PRODUCT.md) for the project context.
+
+## Local preview
+
+Requires Node.js 18 or newer. Run these commands from the repository root:
+
+```sh
+node preview/build.mjs
+node preview/serve.mjs
+```
+
+Open [http://localhost:5173/preview/](http://localhost:5173/preview/). To choose another port, run `node preview/serve.mjs 5174` instead.
+
+After editing a template, stylesheet or script, rerun the build command and refresh the browser. The preview renders the PHP templates into HTML without running WordPress. Forms in this static preview are not connected to production submission handlers.
+
+## Project structure
+
+| Path | Purpose |
+| --- | --- |
+| `jio-theme/` | WordPress theme to install and activate. |
+| `jio-theme/front-page.php` | Homepage content and infrastructure/industry cards. |
+| `jio-theme/page-solutions.php` | Services introduction, five service areas and equipment catalogue. |
+| `jio-theme/page-about.php` | Company page. |
+| `jio-theme/page-industries.php` | Industries page. |
+| `jio-theme/header.php`, `footer.php` | Shared navigation and footer. |
+| `jio-theme/assets/css/main.css` | Shared styles and responsive layouts. |
+| `jio-theme/assets/css/services.css` | Services page styling. |
+| `jio-theme/assets/js/site.js` | Infrastructure interactions, industry arrows and shared page behaviour. |
+| `jio-theme/assets/js/services.js` | Navigation between the five visible service areas. |
+| `jio-theme/assets/img/` | Logo and website image assets. |
+| `preview/build.mjs` | Generates the eight preview HTML pages. |
+| `preview/serve.mjs` | Local preview server. |
+
+## WordPress installation
+
+1. Copy `jio-theme` into the WordPress installation’s `wp-content/themes/` directory.
+2. Activate **JIO Technologies** in Appearance → Themes.
+3. Use the page slugs `solutions`, `about`, `industries`, `contact`, `client-support` and `faq` so WordPress selects the corresponding templates.
+4. Configure the site’s homepage and verify navigation, contact forms and support integrations in WordPress before deployment.
+
+The static preview does not replace testing in a WordPress/PHP environment.
+
+## Content and images
+
+Image spaces on Home, Services and Company are deliberate placeholders for approved photography. Replace the placeholder markup in the corresponding template, add the image under `assets/img/`, and preserve responsive sizing and descriptive alternative text.
+
+Update the source templates rather than editing generated files in `preview/`. Rebuild the preview after every content change. Vendor logos retain their supplied colours.
+
+## Checks
+
+```sh
+node --check jio-theme/assets/js/site.js
+node --check jio-theme/assets/js/services.js
+node --check preview/build.mjs
+node preview/build.mjs
+git diff --check
+```
+
+For UI review, check phone, tablet and desktop widths; the header logo; infrastructure expansion; all nine industry cards through the arrow controls; and the links to all five service areas.
+
+## Secrets and backend configuration
+
+Keep API credentials in server-side configuration and out of templates, browser scripts, screenshots and commits. `.env` files are ignored by Git. The preview server is for development review; production should run through the WordPress installation. Chatbot configuration is separate from the website layout changes.

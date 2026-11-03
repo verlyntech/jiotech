@@ -26,6 +26,7 @@ function render(page) {
 <link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=${Date.now()}">
 <script src="../jio-theme/assets/js/site.js?v=${Date.now()}" defer></script>
 <script src="../jio-theme/assets/js/chat.js?v=${Date.now()}" defer></script>
+${page.slug === 'solutions' ? `<link rel="stylesheet" href="../jio-theme/assets/css/services.css?v=${Date.now()}">\n<script src="../jio-theme/assets/js/services.js?v=${Date.now()}" defer></script>` : ''}
 <title>${page.title} | JIO Technologies (preview)</title>`;
 
 	const swaps = [

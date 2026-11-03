@@ -8,12 +8,6 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <a class="skip" href="#main">Skip to content</a>
-<div class="notice">
-	<div class="wrap notice__row">
-		<span>We are hiring in Abu Dhabi.</span>
-		<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>#careers">See open positions</a>
-	</div>
-</div>
 <header class="site-head" data-head>
 	<div class="wrap wrap--wide site-head__row">
 		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="JIO Technologies, home">

@@ -6,9 +6,9 @@ get_header(); ?>
 
 <main id="main">
 
-<!-- HERO: full-bleed photo with a flat ink overlay, headline left, statement card right, stats along the bottom -->
+<!-- Hero: keep the storefront sign clear of copy; smaller screens place the photograph above the text. -->
 <section class="hero hero--photo">
-	<img class="hero__bg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-office.webp" width="2000" height="1131" alt="" loading="eager" fetchpriority="high">
+	<img class="hero__bg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-office.webp" width="2000" height="1131" alt="JIO Technologies LLC storefront with the company sign above the entrance" loading="eager" fetchpriority="high">
 	<div class="wrap wrap--wide hero__inner">
 		<div class="hero__copy">
 			<h1>One contractor for the servers and the <span class="hl-green">power</span> behind them.</h1>
@@ -29,61 +29,73 @@ get_header(); ?>
 	</div>
 </section>
 
-<!-- LAYERS: the power chain, now its own section -->
-<section class="layers">
-	<div class="wrap layers__grid">
-		<div class="layers__copy">
-			<h2>Six layers, one supplier.</h2>
-			<p>If the UPS fails, so does everything under it. We supply and support every layer, so one team owns the fault from the mains to the firewall.</p>
-			<a class="link" href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">See every service</a>
-		</div>
-		<figure class="frame" data-chain data-focus="all" aria-label="The six layers JIO supplies and supports, from mains supply to surveillance">
-			<div class="frame__bar">
-				<span class="frame__title">One site, six layers</span>
-				<div class="seg" role="radiogroup" aria-label="Show layer">
-					<button type="button" role="radio" aria-checked="true" data-focus-btn="all">All</button>
-					<button type="button" role="radio" aria-checked="false" data-focus-btn="power">Power</button>
-					<button type="button" role="radio" aria-checked="false" data-focus-btn="it">IT</button>
-					<button type="button" role="radio" aria-checked="false" data-focus-btn="security">Security</button>
-				</div>
+<!-- Connected infrastructure layers: square image placeholders expand one at a time. -->
+<section class="layers" id="infrastructure" aria-labelledby="layers-heading" data-layers>
+	<div class="wrap wrap--wide">
+		<div class="layers__head">
+			<div class="layers__copy">
+				<h2 id="layers-heading">Six layers, one supplier.</h2>
+				<p>From incoming power to the systems it supports, we bring every layer together. One team to supply, connect and maintain your infrastructure.</p>
 			</div>
-			<ol class="chain__list">
-				<li class="node node--power" data-layer="power">
-					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12c1.5-4.5 3-4.5 4.5 0s3 4.5 4.5 0 3-4.5 4.5 0 3 4.5 4.5 0"/></svg></span>
-					<span class="node__t">Mains and solar input</span>
-					<span class="node__m">Grid feed, renewable setups</span>
-				</li>
-				<li class="node node--power" data-layer="power">
-					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7.5h15v9H3zM18 10.5h2.5v3H18M10.5 9.5l-2 3h3l-2 3"/></svg></span>
-					<span class="node__t">UPS and battery</span>
-					<span class="node__m">VRLA, lithium-ion · Eaton, APC, Vertiv, BPC</span>
-				</li>
-				<li class="node node--power" data-layer="power it">
-					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5v5M5.5 8.5h13M5.5 8.5v4M12 8.5v4M18.5 8.5v4M3.5 12.5h4v6h-4zM10 12.5h4v6h-4zM16.5 12.5h4v6h-4z"/></svg></span>
-					<span class="node__t">Power distribution</span>
-					<span class="node__m">PDUs, rack power, cooling integration</span>
-				</li>
-				<li class="node node--it" data-layer="it">
-					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v7H4zM4 13h16v7H4zM7.5 7.5h3M7.5 16.5h3M16 7.5h1M16 16.5h1"/></svg></span>
-					<span class="node__t">Servers, storage, cloud</span>
-					<span class="node__m">Dell, HPE, Lenovo, Supermicro · AWS, Azure</span>
-				</li>
-				<li class="node node--it" data-layer="it security">
-					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.4-3 7.4-7 9-4-1.6-7-4.6-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
-					<span class="node__t">Network and firewall</span>
-					<span class="node__m">Cisco, Fortinet, Aruba, Sophos</span>
-				</li>
-				<li class="node node--sec" data-layer="security">
-					<span class="node__sym" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3.5 9 11-3 1.8 5-11 3z"/><path d="m16.3 9.6 3.7 1.4-1 2.6-3.6-1.3M8.5 12.6 7.5 19M4.5 19h6"/></svg></span>
-					<span class="node__t">Surveillance</span>
-					<span class="node__m">CCTV cameras and recorders · Hikvision</span>
-				</li>
-			</ol>
-			<figcaption class="inspector" aria-live="polite">
-				<span class="inspector__k" data-insp-k>All layers</span>
-				<span class="inspector__v" data-chain-cap>Six layers, one supplier. If the UPS fails, so does everything under it.</span>
-			</figcaption>
-		</figure>
+			<a class="link" href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">See every service <span aria-hidden="true">↗</span></a>
+		</div>
+		<ol class="layers__rail" id="layers-rail" aria-label="The six infrastructure layers" data-layers-rail>
+			<li class="layer-card layer-card--power" data-layer-card>
+				<div class="layer-card__head"><span class="layer-card__number" aria-hidden="true">01</span><h3>Mains and solar input</h3></div>
+				<div class="layer-card__visual">
+					<div class="layer-card__placeholder" role="img" aria-label="Image placeholder for mains and solar input"><svg viewBox="0 0 48 36" aria-hidden="true"><path d="M3 3h42v30H3zM3 26l12-12 10 10 7-7 13 13"/><path d="M30 10h5v5h-5z"/></svg><span>Image placeholder</span></div>
+					<div class="layer-card__detail" id="layer-solar-detail"><p>Grid supply and solar-assisted setups matched to your site’s energy requirements.</p><span>Grid feed · Renewables</span></div>
+				</div>
+				<button class="layer-card__toggle" type="button" aria-expanded="false" aria-controls="layer-solar-detail"><span class="sr">Details for mains and solar input</span><span class="layer-card__icon" aria-hidden="true"><span>+</span></span></button>
+			</li>
+			<li class="layer-card layer-card--power" data-layer-card>
+				<div class="layer-card__head"><span class="layer-card__number" aria-hidden="true">02</span><h3>UPS and battery</h3></div>
+				<div class="layer-card__visual">
+					<div class="layer-card__placeholder" role="img" aria-label="Image placeholder for UPS and battery"><svg viewBox="0 0 48 36" aria-hidden="true"><path d="M3 3h42v30H3zM3 26l12-12 10 10 7-7 13 13"/><path d="M30 10h5v5h-5z"/></svg><span>Image placeholder</span></div>
+					<div class="layer-card__detail" id="layer-ups-detail"><p>Keep essential equipment running with UPS systems and planned battery backup.</p><span>VRLA · Lithium-ion<br>Eaton · APC · Vertiv · BPC</span></div>
+				</div>
+				<button class="layer-card__toggle" type="button" aria-expanded="false" aria-controls="layer-ups-detail"><span class="sr">Details for UPS and battery</span><span class="layer-card__icon" aria-hidden="true"><span>+</span></span></button>
+			</li>
+			<li class="layer-card layer-card--power" data-layer-card>
+				<div class="layer-card__head"><span class="layer-card__number" aria-hidden="true">03</span><h3>Power distribution</h3></div>
+				<div class="layer-card__visual">
+					<div class="layer-card__placeholder" role="img" aria-label="Image placeholder for power distribution"><svg viewBox="0 0 48 36" aria-hidden="true"><path d="M3 3h42v30H3zM3 26l12-12 10 10 7-7 13 13"/><path d="M30 10h5v5h-5z"/></svg><span>Image placeholder</span></div>
+					<div class="layer-card__detail" id="layer-distribution-detail"><p>Deliver power from the UPS to each rack, with distribution and cooling integration.</p><span>PDUs · Rack power · Cooling</span></div>
+				</div>
+				<button class="layer-card__toggle" type="button" aria-expanded="false" aria-controls="layer-distribution-detail"><span class="sr">Details for power distribution</span><span class="layer-card__icon" aria-hidden="true"><span>+</span></span></button>
+			</li>
+			<li class="layer-card layer-card--it" data-layer-card>
+				<div class="layer-card__head"><span class="layer-card__number" aria-hidden="true">04</span><h3>Servers, storage and cloud</h3></div>
+				<div class="layer-card__visual">
+					<div class="layer-card__placeholder" role="img" aria-label="Image placeholder for servers, storage and cloud"><svg viewBox="0 0 48 36" aria-hidden="true"><path d="M3 3h42v30H3zM3 26l12-12 10 10 7-7 13 13"/><path d="M30 10h5v5h-5z"/></svg><span>Image placeholder</span></div>
+					<div class="layer-card__detail" id="layer-servers-detail"><p>Compute, storage and cloud for your applications.</p><span>Dell · HPE · Lenovo · Supermicro<br>AWS · Azure</span></div>
+				</div>
+				<button class="layer-card__toggle" type="button" aria-expanded="false" aria-controls="layer-servers-detail"><span class="sr">Details for servers, storage and cloud</span><span class="layer-card__icon" aria-hidden="true"><span>+</span></span></button>
+			</li>
+			<li class="layer-card layer-card--it" data-layer-card>
+				<div class="layer-card__head"><span class="layer-card__number" aria-hidden="true">05</span><h3>Network and firewall</h3></div>
+				<div class="layer-card__visual">
+					<div class="layer-card__placeholder" role="img" aria-label="Image placeholder for network and firewall"><svg viewBox="0 0 48 36" aria-hidden="true"><path d="M3 3h42v30H3zM3 26l12-12 10 10 7-7 13 13"/><path d="M30 10h5v5h-5z"/></svg><span>Image placeholder</span></div>
+					<div class="layer-card__detail" id="layer-network-detail"><p>Connect your sites securely with business networks and a protected firewall edge.</p><span>Cisco · Fortinet · Aruba · Sophos</span></div>
+				</div>
+				<button class="layer-card__toggle" type="button" aria-expanded="false" aria-controls="layer-network-detail"><span class="sr">Details for network and firewall</span><span class="layer-card__icon" aria-hidden="true"><span>+</span></span></button>
+			</li>
+			<li class="layer-card layer-card--security" data-layer-card>
+				<div class="layer-card__head"><span class="layer-card__number" aria-hidden="true">06</span><h3>Surveillance</h3></div>
+				<div class="layer-card__visual">
+					<div class="layer-card__placeholder" role="img" aria-label="Image placeholder for surveillance"><svg viewBox="0 0 48 36" aria-hidden="true"><path d="M3 3h42v30H3zM3 26l12-12 10 10 7-7 13 13"/><path d="M30 10h5v5h-5z"/></svg><span>Image placeholder</span></div>
+					<div class="layer-card__detail" id="layer-surveillance-detail"><p>Support site security with connected CCTV cameras, recorders and monitoring infrastructure.</p><span>Hikvision · Cameras · Recorders</span></div>
+				</div>
+				<button class="layer-card__toggle" type="button" aria-expanded="false" aria-controls="layer-surveillance-detail"><span class="sr">Details for surveillance</span><span class="layer-card__icon" aria-hidden="true"><span>+</span></span></button>
+			</li>
+		</ol>
+		<div class="layers__foot">
+			<p>Hover or select a layer to explore how it connects.</p>
+			<div class="layers__controls" aria-label="Browse infrastructure layers" hidden data-layers-controls>
+				<button class="sqbtn" type="button" aria-label="Previous infrastructure layer" aria-controls="layers-rail" data-layers-prev><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+				<button class="sqbtn" type="button" aria-label="Next infrastructure layer" aria-controls="layers-rail" data-layers-next><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -111,7 +123,7 @@ get_header(); ?>
 						<p data-for="pw4"><b>Renewables.</b> Solar-assisted supply to offset grid draw at sites with the roof or land to use.</p>
 					</div>
 				</div>
-				<a class="link link--night" href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>#power">Compare battery types</a>
+				<a class="link link--night" href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>#power">Explore power solutions</a>
 			</article>
 
 			<article class="tile tile--dc">
@@ -195,18 +207,15 @@ get_header(); ?>
 	</div>
 </section>
 
-<!-- INDUSTRIES (Ramp horizontal card row with boxed arrow controls) -->
-<section class="industries">
-	<div class="wrap">
-		<div class="sec-head sec-head--row">
-			<div>
-				<h2>Built for organisations that cannot go offline.</h2>
-				<p>Nine sectors, each with its own mix of uptime, security and compliance pressure.</p>
-			</div>
+<!-- INDUSTRIES: one horizontal row, advanced with the arrow controls. -->
+<section class="industries" id="home-industries" aria-labelledby="home-industries-title">
+	<div class="wrap wrap--wide">
+		<div class="industries__head">
+			<div><h2 id="home-industries-title">Built for organisations that cannot go offline.</h2><p>Nine sectors, each with its own mix of uptime, security and compliance pressure.</p></div>
+			<a class="link" href="<?php echo esc_url( home_url( '/industries/' ) ); ?>">Explore all industries <span aria-hidden="true">↗</span></a>
 		</div>
-	</div>
-	<div class="rail" data-rail tabindex="0" aria-label="Industries">
-		<ul class="rail__track">
+		<div class="industries__rail" id="industries-rail" data-industry-rail tabindex="0" role="region" aria-label="Industries we serve">
+		<ul class="industries__track">
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#government"><h3>Government &amp; public sector</h3><p>Secure, compliant systems for modernisation programmes.</p><ul class="pills"><li class="t-it">Data centers</li><li class="t-it">Secured networks</li><li class="t-power">Backup power</li></ul></a></li>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#healthcare"><h3>Healthcare</h3><p>IT and power for medical devices, patient data and 24/7 care.</p><ul class="pills"><li class="t-power">Continuous power</li><li class="t-it">Network security</li><li class="t-sec">CCTV</li></ul></a></li>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#finance"><h3>Banking &amp; financial services</h3><p>High-availability systems for mission-critical workloads.</p><ul class="pills"><li class="t-it">Resilient hosting</li><li class="t-it">Cybersecurity</li><li class="t-power">UPS</li></ul></a></li>
@@ -217,11 +226,13 @@ get_header(); ?>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#retail"><h3>Retail &amp; e-commerce</h3><p>Connectivity, cloud and security for store and online sales.</p><ul class="pills"><li class="t-it">Store connectivity</li><li class="t-it">Cloud</li><li class="t-it">Payment security</li></ul></a></li>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#education"><h3>Education</h3><p>Secure campus networks and energy-efficient infrastructure.</p><ul class="pills"><li class="t-it">Campus networks</li><li class="t-it">Learning platforms</li><li class="t-power">Efficient power</li></ul></a></li>
 		</ul>
-	</div>
-	<div class="wrap">
-		<div class="rail__ctrl">
-			<button type="button" class="sqbtn" data-rail-prev aria-label="Previous industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-			<button type="button" class="sqbtn" data-rail-next aria-label="Next industries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+		</div>
+		<div class="industries__controls" data-industry-controls hidden>
+			<p class="industries__position" data-industry-position aria-live="polite">1–3 of 9 industries</p>
+			<div class="industries__arrows">
+				<button class="sqbtn" type="button" aria-label="Previous industries" aria-controls="industries-rail" data-industry-prev><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+				<button class="sqbtn" type="button" aria-label="Next industries" aria-controls="industries-rail" data-industry-next><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+			</div>
 		</div>
 	</div>
 </section>

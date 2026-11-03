@@ -33,59 +33,124 @@
 		});
 	}
 
-	// Hero: focus one layer of the power chain.
-	var chain = document.querySelector('[data-chain]');
-	if (chain) {
-		var cap = chain.querySelector('[data-chain-cap]');
-		var key = chain.querySelector('[data-insp-k]');
-		var keys = { all: 'All layers', power: 'Power: 3 layers', it: 'IT: 3 layers', security: 'Security: 2 layers' };
-		var captions = {
-			all: 'Six layers, one supplier. If the UPS fails, so does everything under it.',
-			power: 'Power: mains and solar input, UPS and battery strings, and distribution to the racks.',
-			it: 'IT: power distribution, servers, storage and cloud, and the network that connects them.',
-			security: 'Security: the firewall at the network edge and CCTV on site.'
-		};
-		// Length of the spine the current travels along.
-		var list = chain.querySelector('.chain__list');
-		var setRun = function () {
-			if (!list) return;
-			var spine = getComputedStyle(list, '::before');
-			var run = list.offsetHeight - parseFloat(spine.top) - parseFloat(spine.bottom) - 48;
-			list.style.setProperty('--run', Math.max(0, run) + 'px');
-		};
-		setRun();
-		window.addEventListener('resize', setRun);
-		segmented(chain.querySelector('.seg'), function (btn) {
-			var f = btn.getAttribute('data-focus-btn');
-			chain.setAttribute('data-focus', f);
-			if (cap) cap.textContent = captions[f];
-			if (key) key.textContent = keys[f];
+	// Connected layers: only the active square expands; neighbours keep their size.
+	var layers = document.querySelector('[data-layers]');
+	if (layers) {
+		var layerRail = layers.querySelector('[data-layers-rail]');
+		var layerControls = layers.querySelector('[data-layers-controls]');
+		var layerPrev = layers.querySelector('[data-layers-prev]');
+		var layerNext = layers.querySelector('[data-layers-next]');
+		var activeLayer = null;
+		var layerStates = Array.prototype.map.call(layers.querySelectorAll('[data-layer-card]'), function (card) {
+			return { card: card, button: card.querySelector('.layer-card__toggle'), detail: card.querySelector('.layer-card__detail'), pinned: false, hovered: false, focused: false };
 		});
+		var setLayer = function (selected) {
+			activeLayer = selected;
+			layerStates.forEach(function (state) {
+				var open = state === selected;
+				if (!open) state.pinned = state.hovered = state.focused = false;
+				state.card.classList.toggle('is-open', open);
+				state.button.setAttribute('aria-expanded', String(open));
+				state.detail.setAttribute('aria-hidden', String(!open));
+			});
+		};
+		var syncLayers = function () {
+			layerControls.hidden = layerRail.scrollWidth <= layerRail.clientWidth + 2;
+			layerPrev.disabled = layerRail.scrollLeft <= 2;
+			layerNext.disabled = layerRail.scrollLeft + layerRail.clientWidth >= layerRail.scrollWidth - 2;
+		};
+		var revealLayer = function () {
+			if (!activeLayer) return;
+			var cardBox = activeLayer.card.getBoundingClientRect(), railBox = layerRail.getBoundingClientRect();
+			var distance = cardBox.left < railBox.left + 2 ? cardBox.left - railBox.left - 2 : cardBox.right > railBox.right - 2 ? cardBox.right - railBox.right + 2 : 0;
+			if (Math.abs(distance) > 1) layerRail.scrollBy({ left: distance, behavior: 'auto' });
+		};
+		layerStates.forEach(function (state) {
+			state.card.addEventListener('pointerenter', function (e) {
+				if (e.pointerType === 'touch') return;
+				state.hovered = true; setLayer(state);
+			});
+			state.card.addEventListener('pointerleave', function () {
+				state.hovered = false;
+				if (activeLayer === state && !state.pinned && !state.focused) setLayer(null);
+			});
+			state.button.addEventListener('focus', function () { state.focused = true; setLayer(state); });
+			state.button.addEventListener('blur', function () {
+				state.focused = state.pinned = false;
+				if (activeLayer === state && !state.hovered) setLayer(null);
+			});
+			state.button.addEventListener('click', function () {
+				state.pinned = !state.pinned;
+				setLayer(state.pinned ? state : null);
+			});
+			state.card.addEventListener('keydown', function (e) {
+				if (e.key === 'Escape') { e.preventDefault(); setLayer(null); }
+			});
+		});
+		document.addEventListener('pointerdown', function (e) { if (!e.target.closest('[data-layer-card]')) setLayer(null); });
+		setLayer(null);
+		layers.setAttribute('data-layers-ready', '');
+		if ('ResizeObserver' in window) {
+			var layerObserver = new ResizeObserver(function () { revealLayer(); syncLayers(); });
+			layerObserver.observe(layerRail);
+			layerStates.forEach(function (state) { layerObserver.observe(state.card); });
+		} else {
+			layerRail.addEventListener('transitionend', function () { revealLayer(); syncLayers(); });
+		}
+		var stepLayer = function (direction) {
+			var compact = layerRail.querySelector('.layer-card:not(.is-open)');
+			var distance = compact.offsetWidth + parseFloat(getComputedStyle(layerRail).columnGap);
+			setLayer(null);
+			layerRail.scrollBy({ left: direction * distance, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+		};
+		layerPrev.addEventListener('click', function () { stepLayer(-1); });
+		layerNext.addEventListener('click', function () { stepLayer(1); });
+		layerRail.addEventListener('scroll', syncLayers, { passive: true });
+		window.addEventListener('resize', syncLayers);
+		syncLayers();
 	}
 
-	// Industries rail: boxed arrow buttons page through the cards.
+	// Homepage industries: one row, moved one card at a time by the arrows.
+	var industryRail = document.querySelector('[data-industry-rail]');
+	if (industryRail) {
+		var industryCards = industryRail.querySelectorAll('.ind-card');
+		var industryPrev = document.querySelector('[data-industry-prev]');
+		var industryNext = document.querySelector('[data-industry-next]');
+		var industryPosition = document.querySelector('[data-industry-position]');
+		var industryStep = function () { return industryCards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(industryRail.querySelector('.industries__track')).columnGap); };
+		var syncIndustries = function () {
+			var step = industryStep();
+			var visible = Math.max(1, Math.round(industryRail.clientWidth / step));
+			var first = Math.min(industryCards.length - visible, Math.max(0, Math.round(industryRail.scrollLeft / step)));
+			industryPrev.disabled = industryRail.scrollLeft <= 2;
+			industryNext.disabled = industryRail.scrollLeft + industryRail.clientWidth >= industryRail.scrollWidth - 2;
+			var range = visible === 1 ? String(first + 1) : (first + 1) + '–' + Math.min(first + visible, industryCards.length);
+			var text = range + ' of ' + industryCards.length + ' industries';
+			if (industryPosition.textContent !== text) industryPosition.textContent = text;
+		};
+		var moveIndustry = function (direction) {
+			industryRail.scrollBy({ left: direction * industryStep(), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+		};
+		industryPrev.addEventListener('click', function () { moveIndustry(-1); });
+		industryNext.addEventListener('click', function () { moveIndustry(1); });
+		industryRail.addEventListener('keydown', function (event) {
+			if (event.target !== industryRail || (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft')) return;
+			event.preventDefault(); moveIndustry(event.key === 'ArrowRight' ? 1 : -1);
+		});
+		industryRail.addEventListener('scroll', syncIndustries, { passive: true });
+		window.addEventListener('resize', syncIndustries);
+		industryRail.setAttribute('data-ready', '');
+		document.querySelector('[data-industry-controls]').hidden = false;
+		syncIndustries();
+	}
+
+	// Pause decorative sector motion while it is off screen.
 	var sectorMotion = document.querySelector('[data-sector-motion]');
 	if (sectorMotion && 'IntersectionObserver' in window) {
 		sectorMotion.setAttribute('data-motion', 'paused');
 		new IntersectionObserver(function (entries) {
 			sectorMotion.setAttribute('data-motion', entries[0].isIntersecting ? 'running' : 'paused');
 		}, { threshold: .15 }).observe(sectorMotion);
-	}
-
-	var rail = document.querySelector('[data-rail]');
-	if (rail) {
-		var prev = document.querySelector('[data-rail-prev]');
-		var next = document.querySelector('[data-rail-next]');
-		var step = function () { var c = rail.querySelector('.ind-card'); return c ? c.offsetWidth + 16 : 320; };
-		var sync = function () {
-			if (prev) prev.disabled = rail.scrollLeft <= 2;
-			if (next) next.disabled = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 2;
-		};
-		if (prev) prev.addEventListener('click', function () { rail.scrollBy({ left: -step(), behavior: 'smooth' }); });
-		if (next) next.addEventListener('click', function () { rail.scrollBy({ left: step(), behavior: 'smooth' }); });
-		rail.addEventListener('scroll', sync, { passive: true });
-		window.addEventListener('resize', sync);
-		sync();
 	}
 
 	// Hero photo carousel: boxed arrows step through three slides. No autoplay, so the headline stays put.

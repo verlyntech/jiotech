@@ -94,9 +94,10 @@ Inspiration comes from seven Refero reference styles. We take layouts and mechan
 
 ## Website assistant
 
-- A "Ask JIO" button sits bottom-right on every page and opens a square panel. It uses the same palette and type: green for the button, ink for controls, blue for the assistant's replies.
+- A square chat button sits bottom-right on every page and opens a square panel. It uses the same palette and type: green for the button, ink for controls, blue for the assistant's replies.
+- It is intent-first: rules or the model classify each message against the catalog in `jio-theme/inc/intents.json` before any reply is chosen. The quote flow asks four questions with tap-to-answer chips, then fills in the quote form. Square chips under each answer offer the next step; the one that hands off to the form is green. Full design in `CHATBOT.md`.
 - It answers from `jio-theme/inc/knowledge.json` only: services, industries, process, the FAQ and contact details. Anything listed under `not_confirmed` (certifications, licences, prices, ratings, response times, named clients) is never claimed. The assistant says so and points to the phone and email.
 - The model is reached through a server-side endpoint (`/wp-json/jio/v1/chat`), so the API key never reaches the browser. On WordPress, set `JIO_OPENROUTER_KEY` in `wp-config.php`. Locally the preview server reads `.env`, which is git-ignored.
 - Models are tried in order: Nemotron 3.5 Super VL, then Nemotron 3.5 Lightning, then Gemma 4 31B (all free on OpenRouter), so one busy or rate-limited endpoint does not end the conversation. Reasoning is turned off for faster, direct answers. Each failure is logged with its HTTP status.
-- Replies are shown as plain text, never HTML. Bullet lines ("- ") render as a list with blue square markers. Visitors are limited to 20 messages an hour, and each message to 800 characters.
+- Replies are shown as plain text, never HTML. Simple questions get one or two plain sentences; bullets are used only for lists, and bullet lines ("- ") render with blue square markers. Visitors are limited to 20 model calls an hour (turns answered by rules don't count), and each message to 800 characters.
 - The disclaimer on the panel states that messages go to an AI model provider. The free model may log submitted data, so visitors are told not to share personal or ID details.

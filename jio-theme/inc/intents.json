@@ -1,0 +1,177 @@
+{
+  "_about": "Intent catalog for the website assistant (see CHATBOT.md). Read by inc/chatbot.php and preview/serve.mjs. Examples double as exact-match rules: a message that matches one after normalising (lower case, no punctuation) is routed without the model. Add real phrasings from the fallback log here.",
+  "intents": {
+    "greeting": {
+      "group": "Small talk",
+      "description": "Hello, thanks, or a sign-off with no question.",
+      "handler": "template",
+      "reply": "Hi. I can answer questions about JIO's power, IT, security and support services, or gather a few details and fill in the quote form for you.",
+      "chips": ["services", "quote", "contact"],
+      "examples": ["hi", "hello", "hey", "good morning", "salam", "assalamu alaikum", "thanks", "thank you", "ok thanks", "bye"]
+    },
+    "services_overview": {
+      "group": "Services",
+      "description": "What JIO does in general, or a list of all services.",
+      "handler": "model",
+      "offline": "JIO supplies and supports both IT and power: UPS and batteries, data centers, cloud, cybersecurity, networks, CCTV, managed IT and 24/7 support. One contract and one support number cover both.",
+      "chips": ["quote", "power", "support"],
+      "examples": ["what do you offer", "what do you do", "what services do you provide", "what are your services", "tell me about jio", "who are you", "what does jio technologies do", "list your services", "what can you help with", "are you an it company"]
+    },
+    "service_info": {
+      "group": "Services",
+      "description": "A question about one service: UPS, batteries, solar, data centers, cloud, cybersecurity, network, CCTV, managed IT, maintenance, consulting or hardware supply.",
+      "handler": "model",
+      "offline": "JIO covers UPS and batteries, data centers, cloud, cybersecurity, networks, CCTV, managed IT, maintenance, consulting and hardware supply. For the details of your site, call {phone} or start a quote.",
+      "chips": ["quote_this", "brands", "support"],
+      "examples": ["do you install ups systems", "can you design a data center", "do you do cctv", "can you set up our network", "do you offer cloud migration", "do you sell lithium batteries", "do you do solar", "can you manage our it", "do you offer cybersecurity", "what is the difference between vrla and lithium batteries", "do you do maintenance contracts", "can you supply servers"]
+    },
+    "vendors_brands": {
+      "group": "Services",
+      "description": "Which manufacturers or brands JIO supplies or works with.",
+      "handler": "model",
+      "offline": "JIO supplies around 30 manufacturers, among them APC by Schneider Electric, Eaton, Vertiv, Dell, HPE, Lenovo, Cisco, Fortinet and Microsoft. For a specific brand, call {phone}.",
+      "chips": ["quote", "services"],
+      "examples": ["which brands do you supply", "which brands do you work with", "do you sell apc", "are you a dell partner", "do you supply cisco", "what ups brands do you have", "do you work with schneider", "which vendors do you carry", "do you have eaton", "do you supply fortinet firewalls"]
+    },
+    "industries": {
+      "group": "About",
+      "description": "Which sectors or kinds of organisation JIO serves, including government and SMEs.",
+      "handler": "model",
+      "offline": "Yes, JIO works with government, healthcare, banking, energy, manufacturing, construction, logistics, retail and education, from SMEs to large enterprises, across the UAE and the GCC.",
+      "chips": ["quote", "services"],
+      "examples": ["do you work with government", "which industries do you serve", "do you work with hospitals", "do you work with banks", "do you work with small businesses", "do you serve schools", "who are your customers", "do you work outside the uae", "do you cover dubai", "do you work in the gcc"]
+    },
+    "process": {
+      "group": "Buying",
+      "description": "How an engagement works: the steps from first call to proposal.",
+      "handler": "model",
+      "offline": "- Schedule a call at a time that suits you.\n- Discovery meeting: JIO reviews your sites, loads and systems.\n- Proposal: scope, equipment and a support plan in writing.",
+      "chips": ["quote", "contact"],
+      "examples": ["how does it work","what is the process", "what happens after i contact you", "how do we start", "what are the steps", "do you do a site survey", "how long does a proposal take", "what do you need from us", "how do you work", "do you visit the site"]
+    },
+    "request_quote": {
+      "group": "Buying",
+      "description": "The visitor wants a quote, a price for their project, a proposal, or to start or continue a quote request. Extract any of the quote details they give.",
+      "handler": "quote",
+      "chips": [],
+      "examples": ["get a quote", "how do i get a quote", "i need a quote", "request a quote", "i want a proposal", "can you quote for a ups", "continue my quote", "start over", "i want to buy a ups", "we need a new data center", "quote please", "i need pricing for my project"]
+    },
+    "pricing_and_claims": {
+      "group": "Buying",
+      "description": "General prices, costs, discounts, certifications, licences, ratings, named clients, response times or SLAs: things JIO has not confirmed for the assistant.",
+      "handler": "model",
+      "offline": "I can't confirm that here. The team can answer on {phone} or {email}, and the quote form gets you a priced proposal.",
+      "chips": ["quote", "call"],
+      "examples": ["how much does a ups cost", "what are your prices", "are you iso certified", "what is your response time", "who are your clients", "do you have an sla", "how many years in business", "are you a certified partner", "do you give discounts", "what is your trade licence number"]
+    },
+    "existing_support": {
+      "group": "Support",
+      "description": "An existing customer reporting a fault, outage, alarm or urgent problem, or asking for technical support.",
+      "handler": "template",
+      "reply": "For an outage or urgent fault, call {phone}; support runs 24/7. For anything less urgent, use the client support page or email {email}.",
+      "chips": ["call", "support_page", "whatsapp"],
+      "examples": ["our ups is beeping", "we have an outage", "the server is down", "i need technical support", "our battery failed", "emergency", "i am an existing customer", "something is broken", "the network is down", "raise a support ticket"]
+    },
+    "contact_location": {
+      "group": "Contact",
+      "description": "Phone, email, WhatsApp, office address or location.",
+      "handler": "template",
+      "reply": "Call {phone} or email {email}; WhatsApp is on the same number. The office is on {office}.",
+      "chips": ["call", "email", "whatsapp"],
+      "examples": ["what is your phone number", "how do i contact you", "where are you located", "what is your email", "where is your office", "do you have whatsapp", "address", "contact", "phone number", "how can i reach you"]
+    },
+    "talk_to_human": {
+      "group": "Contact",
+      "description": "The visitor asks for a person, a salesperson, an engineer or a call back.",
+      "handler": "template",
+      "reply": "The team is on {phone} and {email}, or send the quote form and they will call you back.",
+      "chips": ["call", "email", "quote"],
+      "examples": ["talk to a human", "speak to someone", "i want to talk to sales", "call me back", "can someone call me", "real person", "agent", "connect me to an engineer", "i want to speak to a person", "human please"]
+    },
+    "careers_partners": {
+      "group": "About",
+      "description": "Jobs at JIO, or reseller and trade buying through the B2B portal.",
+      "handler": "model",
+      "offline": "JIO is hiring in Abu Dhabi; open roles are on its recruitment portal. Resellers and trade buyers use the B2B portal at jiotech.ae.",
+      "chips": ["b2b", "contact"],
+      "examples": ["are you hiring", "how do i apply for a job", "careers", "jobs", "i am a reseller", "do you sell to resellers", "trade prices", "b2b portal", "can i become a partner", "internship"]
+    },
+    "out_of_scope": {
+      "group": "Other",
+      "description": "Clearly unrelated to JIO: general knowledge, coding help, other companies, personal topics.",
+      "handler": "model",
+      "offline": "I can only help with JIO's services, quotes and support.",
+      "chips": ["services", "quote", "contact"],
+      "examples": ["what is the weather", "write me a poem", "who won the match", "help me with my homework", "tell me a joke", "what is bitcoin price", "translate this", "write python code", "recommend a restaurant in dubai", "what is the capital of france", "can you write my cv", "who is the president"]
+    },
+    "fallback": {
+      "group": "Other",
+      "description": "The message is unclear, too vague or garbled to place in any intent above.",
+      "handler": "fallback",
+      "chips": [],
+      "examples": []
+    }
+  },
+  "chips": {
+    "services": {"label": "What do you offer?", "send": "What do you offer?"},
+    "power": {"label": "UPS and batteries", "send": "Tell me about your UPS and battery services"},
+    "support": {"label": "24/7 support", "send": "Tell me about your 24/7 support"},
+    "brands": {"label": "Which brands?", "send": "Which brands do you supply?"},
+    "quote": {"label": "Get a quote", "send": "Get a quote"},
+    "quote_this": {"label": "Get a quote for this", "send": "Get a quote", "slots_from_turn": true},
+    "contact": {"label": "Contact details", "send": "How do I contact you?"},
+    "industries": {"label": "Industries you serve", "send": "Which industries do you serve?"},
+    "process": {"label": "How it works", "send": "How does it work?"},
+    "call": {"label": "Call {phone}", "href": "tel:{phone_raw}"},
+    "email": {"label": "Email the team", "href": "mailto:{email}"},
+    "whatsapp": {"label": "WhatsApp", "href": "{whatsapp}"},
+    "support_page": {"label": "Client support page", "href": "{home}client-support/"},
+    "b2b": {"label": "B2B portal", "href": "https://jiotech.ae/"},
+    "continue_quote": {"label": "Continue my quote", "send": "Continue my quote"},
+    "open_form": {"label": "Open the quote form", "action": "prefill"},
+    "restart_quote": {"label": "Start over", "send": "Start over", "reset": true}
+  },
+  "quote": {
+    "intro": "Happy to set that up. A few quick questions, then I'll fill in the quote form for you.",
+    "ack": "Got it.",
+    "slots": [
+      {
+        "key": "service",
+        "label": "Service",
+        "question": "What do you need?",
+        "options": ["Power & energy (UPS, batteries, renewables)", "Data center design & hosting", "Cybersecurity & data protection", "Network & connectivity", "Managed IT & 24/7 support", "Consulting & cloud", "Not sure, or several"],
+        "short": ["Power & UPS", "Data center", "Security & CCTV", "Network", "Managed IT & support", "Consulting & cloud", "Not sure"],
+        "covers": ["UPS, batteries, solar, renewables, power distribution", "data centers, racks, hosting, cooling, server rooms", "cybersecurity, firewalls, CCTV, cameras, physical security", "LAN, WAN, Wi-Fi, cabling, network security", "managed IT, maintenance contracts, 24/7 support", "cloud, migration, IT consulting, digital transformation", "several services at once, or hardware supply across categories"]
+      },
+      {
+        "key": "site",
+        "label": "Location",
+        "question": "Where is the site?",
+        "options": ["Abu Dhabi", "Dubai", "Elsewhere in the UAE", "Outside the UAE"]
+      },
+      {
+        "key": "scale",
+        "label": "Size",
+        "question": "Roughly how big is it? For example the load in kVA, the number of racks, users or sites.",
+        "options": []
+      },
+      {
+        "key": "timeline",
+        "label": "Timing",
+        "question": "When do you need it?",
+        "options": ["Urgently", "Within 3 months", "Later this year", "Just planning"]
+      }
+    ],
+    "skip": "Skip",
+    "confirm": "Here is what I have. Open the quote form with these details? You add your name and email there.",
+    "done": "The form is filled in below. Add your name, company and email, then send it."
+  },
+  "fallback": {
+    "first": "I'm not sure I understood that. Did you mean one of these?",
+    "second": "Sorry, I still can't place that. A person can help: call {phone} or email {email}.",
+    "default_suggest": ["services_overview", "request_quote", "contact_location"],
+    "suggest_chips": {"services_overview": "services", "service_info": "power", "vendors_brands": "brands", "industries": "industries", "process": "process", "request_quote": "quote", "pricing_and_claims": "quote", "existing_support": "support_page", "contact_location": "contact", "talk_to_human": "call", "careers_partners": "b2b"}
+  },
+  "unavailable": "The assistant can't answer right now. Call {phone} or email {email}, or use the quote form.",
+  "limit": "You have sent a lot of messages this hour. Call {phone} or email {email}."
+}

@@ -38,8 +38,9 @@ ${page.slug === 'solutions' ? `<link rel="stylesheet" href="../jio-theme/assets/
 		[/<\?php echo esc_url\( rest_url\( 'jio\/v1\/chat' \) \); \?>/g, () => '/wp-json/jio/v1/chat'],
 		[/<\?php jio_head_class\(\); \?>/g, () => (page.front ? ' site-head--over' : '')],
 		[/<\?php echo esc_url\( home_url\( '([^']*)' \) \); \?>/g, (_, p) => {
-			const slug = p.replace(/\//g, '');
-			return slugToFile[slug] || '#' + slug;
+			const [path, hash] = p.split('#');
+			const slug = path.replace(/\//g, '');
+			return (slugToFile[slug] || '#' + slug) + (hash ? '#' + hash : '');
 		}],
 		[/<\?php echo esc_html\( gmdate\( 'Y' \) \); \?>/g, () => String(new Date().getFullYear())],
 		[/<\?php language_attributes\(\); \?>/g, () => 'lang="en"'],

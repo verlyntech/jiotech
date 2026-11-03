@@ -39,7 +39,7 @@
 		<span><a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">Privacy</a> &nbsp;/&nbsp; <a href="<?php echo esc_url( home_url( '/terms-and-conditions/' ) ); ?>">Terms</a></span>
 	</div>
 </footer>
-<div class="chat" data-chat data-endpoint="<?php echo esc_url( rest_url( 'jio/v1/chat' ) ); ?>">
+<div class="chat" data-chat data-endpoint="<?php echo esc_url( rest_url( 'jio/v1/chat' ) ); ?>" data-quote-url="<?php echo esc_url( home_url( '/contact/#quote' ) ); ?>">
 	<div class="chat__panel" id="chat-panel" data-chat-panel role="region" aria-label="JIO assistant" hidden>
 		<header class="chat__head">
 			<p class="chat__title"><span class="chat__dot" aria-hidden="true"></span>JIO assistant</p>
@@ -48,11 +48,11 @@
 			</button>
 		</header>
 		<div class="chat__log" data-chat-log role="log" aria-live="polite">
-			<div class="chat__msg chat__msg--assistant"><p class="chat__text">Hi. Ask about our power, IT, security or support services, or how to get a quote.</p></div>
+			<div class="chat__msg chat__msg--assistant"><p class="chat__text">Hi. Ask about our power, IT, security or support services, or answer a few questions and I'll fill in the quote form for you.</p></div>
 			<div class="chat__chips" data-chat-chips>
-				<button type="button" class="chat__chip" data-chat-chip>What do you offer?</button>
-				<button type="button" class="chat__chip" data-chat-chip>Do you work with government?</button>
-				<button type="button" class="chat__chip" data-chat-chip>How do I get a quote?</button>
+				<button type="button" class="chat__chip chat__chip--go">Get a quote</button>
+				<button type="button" class="chat__chip">What do you offer?</button>
+				<button type="button" class="chat__chip">Do you work with government?</button>
 			</div>
 		</div>
 		<form class="chat__form" data-chat-form>

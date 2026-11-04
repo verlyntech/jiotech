@@ -11,22 +11,25 @@ get_header(); ?>
 	<img class="hero__bg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-office.webp" width="2000" height="1131" alt="JIO Technologies LLC storefront with the company sign above the entrance" loading="eager" fetchpriority="high">
 	<div class="wrap wrap--wide hero__inner">
 		<div class="hero__copy">
-			<h1>One contractor for the servers and the <span class="hl-green">power</span> behind them.</h1>
+			<h1>One contractor for IT and the <span class="hl-green">power</span> behind it.</h1>
 			<p class="hero__lede">JIO Technologies designs, supplies and maintains IT infrastructure and backup power for organisations across the UAE.</p>
 			<div class="hero__ctas">
 				<a class="btn-arrow" href="#quote"><span>Get a quote</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
 				<a class="btn-line" href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">Explore services</a>
 			</div>
+			<ul class="hero__metrics" aria-label="JIO at a glance">
+				<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM12 8v4l3 2"/></svg><span><b>24/7</b>Technical support</span></li>
+				<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg><span><b>30</b>Manufacturers supplied</span></li>
+				<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M6 20V10M10 20V10M14 20V10M18 20V10M3 10l9-6 9 6z"/></svg><span><b>9</b>Sectors served</span></li>
+			</ul>
 		</div>
 	</div>
-	<div class="wrap wrap--wide hero__bottom">
-		<p class="hero__pitch"><span class="hero__pitch-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></span>One contract for IT and power across Abu Dhabi, Dubai and the GCC.</p>
-		<ul class="hero__stats">
-			<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM12 8v4l3 2"/></svg><span><b>24/7</b>Technical support</span></li>
-			<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg><span><b>30</b>Manufacturers supplied</span></li>
-			<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M6 20V10M10 20V10M14 20V10M18 20V10M3 10l9-6 9 6z"/></svg><span><b>9</b>Sectors served</span></li>
-		</ul>
-	</div>
+
+</section>
+
+<!-- Manufacturer ribbon follows the hero. -->
+<section class="vendor-strip" id="technology-brands" aria-label="Manufacturers supplied by JIO" data-vendor-strip>
+<?php get_template_part( 'parts/logo-wall' ); ?>
 </section>
 
 <!-- SERVICES BENTO (Wise pale band + dark card with accent headline, Brex flat bordered tiles) -->
@@ -93,17 +96,6 @@ get_header(); ?>
 			</article>
 		</div>
 		<p class="bento__note">Images are illustrative, not photographs of JIO projects.</p>
-	</div>
-</section>
-
-<!-- VENDOR WALL (Brex logo band, Ramp hairline logo grid) -->
-<section class="vendors">
-	<div class="wrap">
-		<div class="sec-head">
-			<h2>Thirty manufacturers, one supplier.</h2>
-			<p>We supply, install and maintain equipment from these brands, grouped by the layer they sit in.</p>
-		</div>
-		<?php get_template_part( 'parts/logo-wall' ); ?>
 	</div>
 </section>
 

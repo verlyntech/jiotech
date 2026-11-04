@@ -33,6 +33,48 @@
 		});
 	}
 
+	// Company perspectives: the selected chapter changes both the copy and image space.
+	var company = document.querySelector('[data-company-perspectives]');
+	if (company) {
+		var companyTabs = Array.from(company.querySelectorAll('[data-company-tab]'));
+		var companyPanels = Array.from(company.querySelectorAll('[data-company-panel]'));
+		company.querySelector('[data-company-nav]').setAttribute('role', 'tablist');
+		companyTabs.forEach(function (tab) { tab.setAttribute('role', 'tab'); });
+		companyPanels.forEach(function (panel) {
+			panel.setAttribute('role', 'tabpanel'); panel.tabIndex = 0;
+			panel.setAttribute('aria-labelledby', 'company-tab-' + panel.dataset.companyPanel);
+		});
+		var selectCompany = function (tab, updateHash) {
+			companyTabs.forEach(function (item) {
+				item.setAttribute('aria-selected', String(item === tab)); item.tabIndex = item === tab ? 0 : -1;
+			});
+			companyPanels.forEach(function (panel) { panel.hidden = panel.dataset.companyPanel !== tab.dataset.companyTab; });
+			if (updateHash) history.replaceState(null, '', tab.getAttribute('href'));
+		};
+		companyTabs.forEach(function (tab, index) {
+			tab.addEventListener('click', function (event) {
+				if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+				event.preventDefault(); selectCompany(tab, true);
+			});
+			tab.addEventListener('keydown', function (event) {
+				var next;
+				if (event.key === 'ArrowRight') next = (index + 1) % companyTabs.length;
+				else if (event.key === 'ArrowLeft') next = (index - 1 + companyTabs.length) % companyTabs.length;
+				else if (event.key === 'Home') next = 0;
+				else if (event.key === 'End') next = companyTabs.length - 1;
+				else if (event.key === ' ') next = index;
+				else return;
+				event.preventDefault(); selectCompany(companyTabs[next], true); companyTabs[next].focus();
+			});
+		});
+		selectCompany(companyTabs.find(function (tab) { return tab.getAttribute('href') === location.hash; }) || companyTabs[0], false);
+		window.addEventListener('hashchange', function () {
+			var tab = companyTabs.find(function (item) { return item.getAttribute('href') === location.hash; });
+			if (tab) selectCompany(tab, false);
+		});
+		company.setAttribute('data-company-ready', '');
+	}
+
 	// Homepage industries: one row, moved one card at a time by the arrows.
 	var industryRail = document.querySelector('[data-industry-rail]');
 	if (industryRail) {
@@ -109,8 +151,22 @@
 		selectIndustryHash(); window.addEventListener('hashchange', selectIndustryHash);
 	}
 
+	// One continuous ribbon, with a hidden duplicate for a seamless loop.
+	var vendorStrip = document.querySelector('[data-vendor-strip]');
+	if (vendorStrip) {
+		var vendorLogos = vendorStrip.querySelector('[data-vendor-logos]');
+		var vendorCopy = vendorLogos.cloneNode(true);
+		vendorCopy.removeAttribute('data-vendor-logos');
+		vendorCopy.removeAttribute('aria-label');
+		vendorCopy.setAttribute('aria-hidden', 'true');
+		vendorCopy.querySelectorAll('img').forEach(function (img) { img.alt = ''; });
+		vendorStrip.querySelector('[data-vendor-track]').appendChild(vendorCopy);
+		vendorStrip.setAttribute('data-vendor-ready', '');
+
+	}
+
 	// Run decorative connector flow only while its section is visible.
-	var motionTargets = document.querySelectorAll('[data-sector-motion], .industry-orbit, .sector-list > li, [data-service-explorer]');
+	var motionTargets = document.querySelectorAll('[data-sector-motion], .industry-orbit, .sector-list > li, [data-service-explorer], [data-vendor-strip]');
 	if ('IntersectionObserver' in window) {
 		var motionObserver = new IntersectionObserver(function (entries) {
 			entries.forEach(function (entry) { entry.target.setAttribute('data-motion', entry.isIntersecting ? 'running' : 'paused'); });

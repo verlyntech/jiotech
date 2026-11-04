@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../jio-theme/assets/js/theme.js?v=1793776946223"></script>
+<script src="../jio-theme/assets/js/theme.js?v=1793781011365"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
-<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1793776946223">
-<script src="../jio-theme/assets/js/site.js?v=1793776946223" defer></script>
-<script src="../jio-theme/assets/js/chat.js?v=1793776946223" defer></script>
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1793781011365">
+<script src="../jio-theme/assets/js/site.js?v=1793781011365" defer></script>
+<script src="../jio-theme/assets/js/chat.js?v=1793781011365" defer></script>
 
-<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1793776946223">
+<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1793781011365">
 <title>Company | JIO Technologies (preview)</title>
 </head>
 <body >
@@ -60,55 +60,66 @@
 
 <section class="phero">
 	<div class="wrap phero__grid">
-		<h1>Started by engineers supplying IT hardware. Now we run the power under it too.</h1>
+		<h1>Engineering our next chapter.</h1>
 		<div class="phero__side">
 			<p>IT, power and industrial products. One team in Abu Dhabi, serving Dubai, Abu Dhabi and the wider GCC.</p>
 		</div>
 	</div>
 </section>
 
-<!-- Company story: stacked chapters with spaces reserved for the client's three photographs. -->
-<section class="company-story" aria-label="Our beginnings, mission and vision">
-	<div class="wrap">
-		<div class="company-story__list">
-			<article class="company-story__entry">
-				<span class="company-story__step" aria-hidden="true">01</span>
-				<div class="company-story__copy">
-					<h2>Our beginnings</h2>
-					<p>JIO Technologies began as a small team of engineers providing IT hardware and infrastructure. It has grown into a hybrid IT and energy provider based in Abu Dhabi, serving Dubai, Abu Dhabi and the wider GCC.</p>
-				</div>
-				<!-- Replace this placeholder with the beginnings photograph; keep the figure and image class. -->
-				<figure class="company-story__media company-story__media--placeholder" aria-label="Image space reserved for our beginnings">
-					<svg class="company-story__placeholder" viewBox="0 0 96 72" aria-hidden="true"><path d="M12 12h72v48H12z"/><circle cx="34" cy="29" r="5"/><path d="M12 50l20-14 17 13 15-21 20 22M23 6h50M23 66h50"/></svg>
-					<figcaption>Our beginnings</figcaption>
-				</figure>
-			</article>
-			<article class="company-story__entry company-story__entry--reverse">
-				<span class="company-story__step" aria-hidden="true">02</span>
-				<div class="company-story__copy">
-					<h2>Mission</h2>
-					<p>To be a leading distributor of IT, power and industrial products, known for innovation, reliability and customer service.</p>
-				</div>
-				<!-- Replace this placeholder with the mission photograph. -->
-				<figure class="company-story__media company-story__media--placeholder" aria-label="Image space reserved for our mission">
-					<svg class="company-story__placeholder" viewBox="0 0 96 72" aria-hidden="true"><path d="M12 12h72v48H12z"/><circle cx="34" cy="29" r="5"/><path d="M12 50l20-14 17 13 15-21 20 22M23 6h50M23 66h50"/></svg>
-					<figcaption>Our mission</figcaption>
-				</figure>
-			</article>
-			<article class="company-story__entry">
-				<span class="company-story__step" aria-hidden="true">03</span>
-				<div class="company-story__copy">
-					<h2>Vision</h2>
-					<p>To deliver high-quality products across IT, power, telecommunications, computing and machinery.</p>
-				</div>
-				<!-- Replace this placeholder with the vision photograph. -->
-				<figure class="company-story__media company-story__media--placeholder" aria-label="Image space reserved for our vision">
-					<svg class="company-story__placeholder" viewBox="0 0 96 72" aria-hidden="true"><path d="M12 12h72v48H12z"/><circle cx="34" cy="29" r="5"/><path d="M12 50l20-14 17 13 15-21 20 22M23 6h50M23 66h50"/></svg>
-					<figcaption>Our vision</figcaption>
-				</figure>
-			</article>
-		</div>
-	</div>
+<!-- Three perspectives: one image and one chapter at a time. -->
+<section class="company-perspectives" id="company-perspectives" aria-label="Our story, purpose and direction" data-company-perspectives>
+    <div class="wrap">
+        <div class="company-perspectives__view">
+            <nav class="company-perspectives__tabs" aria-label="Company perspectives" data-company-nav>
+            <a href="#beginnings" id="company-tab-beginnings" data-company-tab="beginnings" aria-controls="beginnings">Beginnings</a>
+            <a href="#mission" id="company-tab-mission" data-company-tab="mission" aria-controls="mission">Mission</a>
+            <a href="#vision" id="company-tab-vision" data-company-tab="vision" aria-controls="vision">Vision</a>
+            </nav>
+            <div class="company-perspectives__panels">
+            <article class="company-perspectives__panel" id="beginnings" data-company-panel="beginnings" aria-labelledby="company-title-beginnings">
+                <!-- Replace this figure's placeholder with the client's beginnings photograph. -->
+                <figure class="company-perspectives__media" aria-label="Image space reserved for our beginnings">
+                    <svg class="company-perspectives__placeholder" viewBox="0 0 96 72" aria-hidden="true"><path d="M12 12h72v48H12z"/><circle cx="34" cy="29" r="5"/><path d="M12 50l20-14 17 13 15-21 20 22M23 6h50M23 66h50"/></svg>
+                    <figcaption><strong>A foundation in engineering.</strong><span>Our beginnings · Image placeholder</span></figcaption>
+                </figure>
+                <div class="company-perspectives__copy">
+                    <p class="company-perspectives__number">01 / 03</p>
+                    <h2 id="company-title-beginnings">Our beginnings</h2>
+                    <p class="company-perspectives__text">JIO Technologies began as a small team of engineers providing IT hardware and infrastructure. It has grown into a hybrid IT and energy provider based in Abu Dhabi, serving Dubai, Abu Dhabi and the wider GCC.</p>
+                    <p class="company-perspectives__key">From hardware to hybrid infrastructure.</p>
+                </div>
+            </article>
+            <article class="company-perspectives__panel" id="mission" data-company-panel="mission" aria-labelledby="company-title-mission">
+                <!-- Replace this figure's placeholder with the client's mission photograph. -->
+                <figure class="company-perspectives__media" aria-label="Image space reserved for our mission">
+                    <svg class="company-perspectives__placeholder" viewBox="0 0 96 72" aria-hidden="true"><path d="M12 12h72v48H12z"/><circle cx="34" cy="29" r="5"/><path d="M12 50l20-14 17 13 15-21 20 22M23 6h50M23 66h50"/></svg>
+                    <figcaption><strong>Purpose behind every solution.</strong><span>Our mission · Image placeholder</span></figcaption>
+                </figure>
+                <div class="company-perspectives__copy">
+                    <p class="company-perspectives__number">02 / 03</p>
+                    <h2 id="company-title-mission">Our mission</h2>
+                    <p class="company-perspectives__text">To be a leading distributor of IT, power and industrial products, known for innovation, reliability and customer service.</p>
+                    <p class="company-perspectives__key">Innovation. Reliability. Customer service.</p>
+                </div>
+            </article>
+            <article class="company-perspectives__panel" id="vision" data-company-panel="vision" aria-labelledby="company-title-vision">
+                <!-- Replace this figure's placeholder with the client's vision photograph. -->
+                <figure class="company-perspectives__media" aria-label="Image space reserved for our vision">
+                    <svg class="company-perspectives__placeholder" viewBox="0 0 96 72" aria-hidden="true"><path d="M12 12h72v48H12z"/><circle cx="34" cy="29" r="5"/><path d="M12 50l20-14 17 13 15-21 20 22M23 6h50M23 66h50"/></svg>
+                    <figcaption><strong>A broader technology horizon.</strong><span>Our vision · Image placeholder</span></figcaption>
+                </figure>
+                <div class="company-perspectives__copy">
+                    <p class="company-perspectives__number">03 / 03</p>
+                    <h2 id="company-title-vision">Our vision</h2>
+                    <p class="company-perspectives__text">To deliver high-quality products across IT, power, telecommunications, computing and machinery.</p>
+                    <p class="company-perspectives__key">Quality across connected technologies.</p>
+                </div>
+            </article>
+            </div>
+        </div>
+        <ul class="company-perspectives__scope"><li>IT infrastructure</li><li>Power &amp; energy</li><li>One connected partner</li></ul>
+    </div>
 </section>
 
 <!-- VALUES: ruled four-column grid (teenage engineering) -->

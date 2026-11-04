@@ -79,9 +79,9 @@ html[data-theme="dark"] {
 [data-theme="dark"] .brand__logo:not(.brand__logo--dark), [data-theme="dark"] .foot__logo:not(.foot__logo--dark) { display: none; }
 [data-theme="dark"] .brand__logo--dark, [data-theme="dark"] .foot__logo--dark { display: block; }
 
-/* Vendor logos keep their original colours on a clean, light backing. */
-[data-theme="dark"] .vendor-strip { background: var(--surface-band); }
-[data-theme="dark"] .vendor-stream__logos li { border-color: #dbe0dc; }
+/* Vendor ribbon: many logos are dark ink, so they all go white and sit directly on the page. */
+[data-theme="dark"] .vendor-stream__logos img { filter: brightness(0) invert(1); }
+[data-theme="dark"] .vendor-stream__logos img[src*="extell"] { filter: none; } /* a solid tile: white would make it a box */
 [data-theme="dark"] .wall__logos li,
 [data-theme="dark"] .logos li { background: var(--paper); border-color: #dbe0dc; }
 [data-theme="dark"] .wall__logos li:hover,

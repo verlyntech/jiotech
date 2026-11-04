@@ -52,7 +52,6 @@ html[data-theme="dark"] {
 [data-theme="dark"] .direct,
 [data-theme="dark"] .company-story__entry:last-child { border-color: var(--rule); }
 [data-theme="dark"] .steps::before { background: var(--rule); }
-[data-theme="dark"] .layer-card,
 [data-theme="dark"] .ind-card > a,
 [data-theme="dark"] .sector-list > li,
 [data-theme="dark"] .solution-card,
@@ -64,10 +63,7 @@ html[data-theme="dark"] {
 [data-theme="dark"] .tile--sec,
 [data-theme="dark"] .tile--net,
 [data-theme="dark"] .tile--msp,
-[data-theme="dark"] .tile--con,
-[data-theme="dark"] .cap-gallery__tile { background: var(--surface); }
-[data-theme="dark"] .cap-gallery__tile[aria-current="location"],
-[data-theme="dark"] .cap-gallery__tile:hover { background: var(--surface-raised); }
+[data-theme="dark"] .tile--con { background: var(--surface); }
 [data-theme="dark"] .theme-toggle,
 [data-theme="dark"] .chat__msg--assistant .chat__text { background: var(--surface-raised); }
 [data-theme="dark"] .theme-toggle:hover,
@@ -93,8 +89,6 @@ html[data-theme="dark"] {
 [data-theme="dark"] .chat__toggle,
 [data-theme="dark"] .chat__send,
 [data-theme="dark"] .chat__chip--go,
-[data-theme="dark"] .layer-card.is-open .layer-card__icon,
-[data-theme="dark"] .cap-gallery__tile[aria-current="location"] .cap-gallery__arrow,
 [data-theme="dark"] .solutions-hero .btn-arrow,
 [data-theme="dark"] .solutions-hero .btn-arrow__box,
 [data-theme="dark"] .solutions-next .btn-arrow { color: var(--brand-ink); }
@@ -116,7 +110,6 @@ html[data-theme="dark"] {
 [data-theme="dark"] .btn-arrow:hover .btn-arrow__box { border-left-color: var(--brand-ink); }
 [data-theme="dark"] .solutions-hero .btn-arrow__box { border-left-color: var(--brand-ink); }
 [data-theme="dark"] .solutions-hero .btn-arrow:hover { background: var(--paper); border-color: var(--paper); }
-[data-theme="dark"] .layer-card--security.is-open .layer-card__icon { color: var(--white); }
 [data-theme="dark"] .sqbtn:disabled { color: var(--ink); }
 [data-theme="dark"] .steps li:nth-child(2) .steps__dot svg,
 [data-theme="dark"] .steps li:nth-child(3) .steps__dot svg { stroke: var(--brand-ink); }
@@ -135,7 +128,6 @@ html[data-theme="dark"] {
 [data-theme="dark"] .hero__stats svg { stroke: var(--on-night); }
 [data-theme="dark"] .hero--photo .btn-arrow { border-color: var(--on-night); }
 [data-theme="dark"] .solutions-hero a:focus-visible { outline-color: var(--on-night); }
-[data-theme="dark"] .layer-card__detail { background: var(--surface); }
 [data-theme="dark"] .chat__msg--user .chat__text { background: var(--surface-raised); color: var(--ink); }
 
 /* Native fields and the menu need explicit colours beyond the shared tokens. */

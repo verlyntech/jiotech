@@ -71,6 +71,7 @@ Inspiration comes from seven Refero reference styles. We take layouts and mechan
 
 ## Motion
 
+- When the site is opened from outside, the header logo plays a 1.8s intro in place: a green line traces the JT mark, the mark fades in behind it, then the wordmark wipes in and the line fades out. It ends on the untouched logo for the current theme and doesn't replay when moving between pages.
 - A green current pulse travels down the power-chain spine, once every 3.4 seconds.
 - The live "support" dot pulses slowly.
 - The header turns solid once the dark hero scrolls away (home only).

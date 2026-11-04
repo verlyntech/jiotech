@@ -8,6 +8,7 @@
 	<div class="wrap foot">
 		<div class="foot__id">
 			<img class="foot__logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo.webp" width="1282" height="262" alt="JIO Tech, JIO Technologies LLC" loading="lazy">
+			<img class="foot__logo foot__logo--dark" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-dark.webp" width="1282" height="262" alt="JIO Tech, JIO Technologies LLC" loading="lazy">
 			<address>Al Muroor Road<br>Abu Dhabi, United Arab Emirates</address>
 		</div>
 		<div class="foot__col">

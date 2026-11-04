@@ -74,11 +74,14 @@ html[data-theme="dark"] {
 [data-theme="dark"] .company-perspectives__media,
 [data-theme="dark"] .industry-hero__media { background: var(--surface); }
 
-/* Supplied logos keep their original colours on a clean, light backing. */
+/* The JIO logo swaps to its light version so it reads on charcoal. Same pixel size, so the intro trace still fits. */
+.brand__logo--dark, .foot__logo--dark { display: none; }
+[data-theme="dark"] .brand__logo:not(.brand__logo--dark), [data-theme="dark"] .foot__logo:not(.foot__logo--dark) { display: none; }
+[data-theme="dark"] .brand__logo--dark, [data-theme="dark"] .foot__logo--dark { display: block; }
+
+/* Vendor logos keep their original colours on a clean, light backing. */
 [data-theme="dark"] .vendor-strip { background: var(--surface-band); }
 [data-theme="dark"] .vendor-stream__logos li { border-color: #dbe0dc; }
-[data-theme="dark"] .brand { padding: .3rem .4rem; background: var(--paper); }
-[data-theme="dark"] .foot__logo { padding: .4rem; background: var(--paper); }
 [data-theme="dark"] .wall__logos li,
 [data-theme="dark"] .logos li { background: var(--paper); border-color: #dbe0dc; }
 [data-theme="dark"] .wall__logos li:hover,

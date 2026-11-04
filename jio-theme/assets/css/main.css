@@ -628,15 +628,20 @@ body:has(#quote) .foot__cta { display: none; }
 .foot__cta p { font-weight: 700; font-size: 25px; line-height: .98; letter-spacing: -.03em; color: var(--on-night); max-width: 20ch; }
 .foot__cta span { color: var(--green); }
 .site-foot { background: var(--white); color: var(--mute); border-top: 1.5px solid var(--ink); }
-.foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; padding-block: 2rem; }
-.foot__logo { height: 3.4rem; width: auto; margin-bottom: 1.25rem; }
+.foot { display: grid; grid-template-columns: repeat(5, auto); justify-content: space-between; gap: 2rem; padding-block: 2rem; }
+.foot__id { align-self: center; width: 21rem; max-width: 100%; }
+.foot__logo { width: min(100%, 21rem); height: auto; }
 .foot__col { display: grid; gap: .5rem; align-content: start; }
 .foot__col .label { color: var(--ink); margin-bottom: .45rem; }
+.foot__col--two { grid-template-columns: auto auto; column-gap: clamp(1.5rem, 3vw, 3rem); }
+.foot__col--two .label { grid-column: 1 / -1; }
+.site-foot .foot__hiring { justify-self: start; padding: .3rem .7rem; background: var(--green); color: #0e1512; font-weight: 700; }
+.site-foot .foot__hiring:hover { background: var(--ink); color: var(--white); text-decoration: none; }
 .site-foot a { color: var(--ink-2); text-decoration: none; }
 .site-foot a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--green); text-decoration-thickness: 2px; }
 .site-foot .btn { color: var(--ink); text-decoration: none; }
 .site-foot .btn:hover { color: #fff; text-decoration: none; }
-.foot__bar { display: grid; grid-template-columns: auto auto auto minmax(0, 1fr); align-items: center; gap: 1.5rem clamp(1.5rem, 4vw, 4rem); padding-block: 1.5rem; border-top: 1px solid var(--rule); }
+.foot__bar { display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; align-items: center; gap: 1.5rem clamp(1.5rem, 4vw, 4rem); padding-block: 1.5rem; border-top: 1px solid var(--rule); }
 .foot__reviews { display: flex; align-items: center; gap: .75rem; }
 .foot__g { flex: none; width: 3rem; height: 3rem; }
 .foot__rating { display: grid; grid-template-columns: auto auto; align-items: center; justify-content: start; gap: .1rem .6rem; }
@@ -653,6 +658,9 @@ body:has(#quote) .foot__cta { display: none; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1240px) {
+	.foot__bar { column-gap: 1.25rem; }
+	.foot { grid-template-columns: repeat(4, auto); }
+	.foot__id { grid-column: 1 / -1; justify-self: center; }
 	.nav, .phone { display: none; }
 	.site-head__act { margin-left: auto; }
 	.menu { display: block; margin-left: 0; }

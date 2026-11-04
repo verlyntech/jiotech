@@ -96,9 +96,9 @@ get_header(); ?>
 </section>
 
 <!-- PARTNERS (Brex logo band) -->
-<section class="vendors vendors--paper">
+<section class="vendors vendors--paper partner-reveal" id="platform-partners" aria-labelledby="partners-title" data-partner-reveal>
 	<div class="wrap">
-		<div class="sec-head"><h2>Platform partners.</h2><p>The manufacturers our solutions are built on.</p></div>
+		<div class="sec-head"><h2 id="partners-title">Platform partners.</h2><p>The manufacturers our solutions are built on.</p></div>
 		<?php get_template_part( 'parts/partner-logos' ); ?>
 	</div>
 </section>

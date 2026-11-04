@@ -151,6 +151,28 @@
 		selectIndustryHash(); window.addEventListener('hashchange', selectIndustryHash);
 	}
 
+	// Platform partners reveal once, with a short stagger as each row enters view.
+	var partnerSection = document.querySelector('[data-partner-reveal]');
+	if (partnerSection && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+		var partnerHeading = partnerSection.querySelector('.sec-head');
+		var partnerItems = Array.from(partnerSection.querySelectorAll('.logos > li'));
+		var partnerColumns = matchMedia('(max-width: 720px)').matches ? 2 : 4;
+		var partnerTargets = [partnerHeading].concat(partnerItems);
+		var partnerObserver = new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				if (!entry.isIntersecting) return;
+				entry.target.setAttribute('data-partner-visible', '');
+				partnerObserver.unobserve(entry.target);
+			});
+		}, { threshold: .15, rootMargin: '0px 0px -20px 0px' });
+		partnerTargets.forEach(function (item, index) {
+			item.setAttribute('data-partner-item', '');
+			item.style.setProperty('--partner-delay', (index === 0 ? 0 : ((index - 1) % partnerColumns) * 90) + 'ms');
+			partnerObserver.observe(item);
+		});
+		partnerSection.setAttribute('data-partner-ready', '');
+	}
+
 	// One continuous ribbon, with a hidden duplicate for a seamless loop.
 	var vendorStrip = document.querySelector('[data-vendor-strip]');
 	if (vendorStrip) {

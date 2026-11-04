@@ -33,6 +33,59 @@
 		});
 	}
 
+	// Homepage service spotlight: anchors remain useful when JavaScript is unavailable.
+	var spotlight = document.querySelector('[data-home-spotlight]');
+	if (spotlight) {
+		var serviceTabs = Array.from(spotlight.querySelectorAll('[data-spotlight-tab]'));
+		var servicePanels = Array.from(spotlight.querySelectorAll('[data-spotlight-panel]'));
+		spotlight.querySelector('[data-spotlight-nav]').setAttribute('role', 'tablist');
+		serviceTabs.forEach(function (tab) {
+			tab.setAttribute('role', 'tab');
+			tab.setAttribute('aria-controls', tab.hash.slice(1));
+		});
+		servicePanels.forEach(function (panel) {
+			panel.setAttribute('role', 'tabpanel');
+			panel.setAttribute('aria-labelledby', 'spotlight-tab-' + panel.dataset.spotlightPanel);
+			panel.tabIndex = 0;
+		});
+		var selectService = function (index) {
+			serviceTabs.forEach(function (tab, i) {
+				tab.setAttribute('aria-selected', String(i === index));
+				tab.tabIndex = i === index ? 0 : -1;
+			});
+			servicePanels.forEach(function (panel, i) { panel.hidden = i !== index; });
+		};
+		serviceTabs.forEach(function (tab, index) {
+			tab.addEventListener('click', function (event) {
+				if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+				event.preventDefault(); selectService(index);
+			});
+			tab.addEventListener('keydown', function (event) {
+				var next;
+				if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % serviceTabs.length;
+				else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + serviceTabs.length) % serviceTabs.length;
+				else if (event.key === 'Home') next = 0;
+				else if (event.key === 'End') next = serviceTabs.length - 1;
+				else if (event.key === ' ') next = index;
+				else return;
+				event.preventDefault(); selectService(next); serviceTabs[next].focus();
+			});
+		});
+		spotlight.querySelectorAll('[data-spotlight-next]').forEach(function (button, index) {
+			button.addEventListener('click', function () {
+				var next = (index + 1) % serviceTabs.length;
+				selectService(next);
+				servicePanels[next].querySelector('[data-spotlight-next]').focus({ preventScroll: true });
+			});
+		});
+		var serviceFromHash = function () { return serviceTabs.findIndex(function (tab) { return tab.hash === location.hash; }); };
+		selectService(Math.max(0, serviceFromHash()));
+		window.addEventListener('hashchange', function () {
+			var index = serviceFromHash(); if (index >= 0) selectService(index);
+		});
+		spotlight.setAttribute('data-spotlight-ready', '');
+	}
+
 	// Company perspectives: the selected chapter changes both the copy and image space.
 	var company = document.querySelector('[data-company-perspectives]');
 	if (company) {

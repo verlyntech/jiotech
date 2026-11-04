@@ -12,9 +12,9 @@ get_header(); ?>
 			<p>JIO brings managed IT, secure connectivity and dependable power together. We align your systems with the demands of your sector, helping you maintain continuity today and plan for what comes next.</p>
 			<a class="btn-arrow" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><span>Discuss your requirements</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
 		</div>
-		<!-- Replace this placeholder with the client's industry photograph, keeping the figure dimensions. -->
-		<figure class="industry-hero__media" aria-label="Image space reserved for industry photography">
-			<svg class="industry-hero__placeholder" viewBox="0 0 120 90" aria-hidden="true"><path d="M18 18h84v54H18zM30 10h60M30 80h60M18 61l25-21 18 15 19-26 22 32"/><circle cx="43" cy="33" r="5"/></svg>
+		<!-- Generated illustration of the connected infrastructure behind different industries. -->
+		<figure class="industry-hero__media industry-hero__media--image">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/industries-it-team.webp" width="1402" height="1122" alt="Illustration of IT colleagues reviewing network dashboards while a technician works on server cabling in a modern UAE workspace" loading="eager" decoding="async">
 			<figcaption>Your industry. Connected.</figcaption>
 		</figure>
 	</div>
@@ -30,7 +30,7 @@ get_header(); ?>
 		<div class="industry-explorer" data-industry-explorer>
             <div class="industry-orbit">
                 <svg class="industry-orbit__track" viewBox="0 0 520 520" aria-hidden="true"><circle cx="260" cy="260" r="198"/><circle class="industry-orbit__inner-track" cx="260" cy="260" r="130"/><g class="industry-orbit__traveler"><circle class="industry-orbit__point" cx="260" cy="62" r="5"/></g></svg>
-                <div class="industry-orbit__hub"><span class="industry-orbit__mark" aria-hidden="true"></span><strong>Connected<br>expertise.</strong><span>Nine industries.<br>One infrastructure partner.</span></div>
+                <div class="industry-orbit__hub"><strong>Connected<br>expertise.</strong><span>Nine industries.<br>One infrastructure partner.</span></div>
                 <div class="industry-orbit__nav" aria-label="Choose your industry" data-industry-nav>
 					<a class="industry-orbit__node" id="industry-tab-government" href="#government" data-industry-tab="government" style="--node-x:50.000%;--node-y:12.000%" aria-controls="government">
                         <svg viewBox="0 0 64 64" aria-hidden="true">

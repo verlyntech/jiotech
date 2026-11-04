@@ -32,7 +32,7 @@ get_header(); ?>
 <?php get_template_part( 'parts/logo-wall' ); ?>
 </section>
 
-<!-- SERVICES: selectable spotlight with supplied illustrations and a power image space. -->
+<!-- SERVICES: selectable spotlight with service illustrations. -->
 <section class="home-spotlight" id="chain" aria-labelledby="spotlight-title" data-home-spotlight>
 	<div class="wrap">
 		<div class="home-spotlight__head">
@@ -50,10 +50,9 @@ get_header(); ?>
 			</nav>
 			<div class="home-spotlight__stage">
 				<article class="home-spotlight__panel" id="spotlight-power" data-spotlight-panel="power">
-					<figure class="home-spotlight__visual">
+					<figure class="home-spotlight__visual home-spotlight__visual--photo">
 						<span class="home-spotlight__count" aria-label="Service 1 of 6">01 <span>/ 06</span></span>
-						<svg viewBox="0 0 64 48" aria-hidden="true"><path d="M4 4h56v40H4zM4 34l16-16 14 13 8-8 18 18M44 11h7v7h-7z"/></svg>
-						<figcaption><span>Image placeholder</span>Power &amp; energy</figcaption>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-power.webp" width="1672" height="941" alt="Illustration of an engineer checking a UPS cabinet beside enclosed battery banks and power equipment" loading="lazy" decoding="async">
 					</figure>
 					<div class="home-spotlight__copy">
 						<p class="home-spotlight__eyebrow">Design · Supply · Support</p>
@@ -118,7 +117,7 @@ get_header(); ?>
 				<article class="home-spotlight__panel" id="spotlight-cloud" data-spotlight-panel="cloud">
 					<figure class="home-spotlight__visual home-spotlight__visual--photo">
 						<span class="home-spotlight__count" aria-label="Service 6 of 6">06 <span>/ 06</span></span>
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-cloud.webp" width="1672" height="941" alt="Laptop displaying a cloud symbol beside server racks at sunset" loading="lazy" decoding="async">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-consulting-team.webp" width="1672" height="941" alt="Illustration of a technology consultant and client reviewing cloud architecture and an IT roadmap" loading="lazy" decoding="async">
 					</figure>
 					<div class="home-spotlight__copy">
 						<p class="home-spotlight__eyebrow">Design · Supply · Support</p>

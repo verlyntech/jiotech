@@ -59,7 +59,7 @@ The static preview does not replace testing in a WordPress/PHP environment.
 
 ## Content and images
 
-The homepage spotlight uses six service illustrations, including generated images of power maintenance and cloud consulting. Image spaces on Services and Company remain deliberate placeholders for approved photography. Replace the placeholder markup in the corresponding template, add the image under `assets/img/`, and preserve responsive sizing and descriptive alternative text.
+The homepage spotlight uses six service illustrations, including generated images of power maintenance and cloud consulting. The Services hero uses a generated illustration of integrated IT and power equipment. Company image spaces remain deliberate placeholders for approved photography. Replace the placeholder markup in the corresponding template, add the image under `assets/img/`, and preserve responsive sizing and descriptive alternative text.
 
 Update the source templates rather than editing generated files in `preview/`. Rebuild the preview after every content change. Vendor logos retain their supplied colours.
 

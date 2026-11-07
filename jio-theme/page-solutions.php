@@ -20,10 +20,9 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="solutions-hero__art">
-				<div class="solutions-image solutions-image--hero" role="img" aria-label="Image placeholder for integrated IT and energy infrastructure">
-					<svg viewBox="0 0 80 60" aria-hidden="true"><path d="M5 5h70v50H5zM5 43l20-20 17 17 12-12 21 22"/><path d="M51 16h8v8h-8z"/></svg>
-					<span>IT &amp; energy infrastructure</span><small>Image placeholder</small>
-				</div>
+				<figure class="solutions-image solutions-image--hero solutions-image--photo">
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/services-hero-infrastructure.webp" width="1402" height="1122" alt="Illustration of integrated enterprise infrastructure with UPS and battery cabinets, server racks and organised network cabling" loading="eager" fetchpriority="high" decoding="async">
+				</figure>
 				<div class="solutions-hero__note"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 10h18v12H4zM4 27h18v12H4zM9 16h6M9 33h6M34 5l-8 20h9l-5 18 15-25H34z"/></svg><p>One integrated approach.<br><strong>From power to performance.</strong></p></div>
 			</div>
 		</div>

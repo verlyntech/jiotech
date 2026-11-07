@@ -36,7 +36,8 @@
 .solutions-intro__experience > span { max-width: 8rem; padding-left: 1rem; border-left: 2px solid var(--green); font: 400 16px/1.35 var(--sans); letter-spacing: 0; color: var(--mute); }
 .solutions-page h2 { font-size: 25px; font-weight: 600; line-height: 1.2; letter-spacing: -.02em; }
 .solutions-intro h2 { max-width: 24ch; }
-.solutions-intro__copy { display: grid; gap: 1.2rem; align-content: center; color: var(--mute); }
+.solutions-intro__copy { display: grid; gap: 1.2rem; align-content: center; max-width: 68ch; color: var(--mute); }
+@media (min-width: 1101px) { .solutions-intro__copy { justify-self: end; } }
 .solutions-intro__copy > p:first-child { color: var(--ink-2); font-size: 1.125rem; line-height: 1.55; }
 .capabilities { padding-block: var(--section-space); }
 .capabilities__heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem 3rem; margin-bottom: 2rem; }

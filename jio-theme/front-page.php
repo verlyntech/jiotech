@@ -32,6 +32,31 @@ get_header(); ?>
 <?php get_template_part( 'parts/logo-wall' ); ?>
 </section>
 
+<!-- WHAT WE DO: full-width media band with proof points. -->
+<section class="what-we-do" aria-labelledby="what-we-do-title">
+	<div class="what-we-do__media">
+		<!-- Video placeholder. To use a video, replace the div below with:
+		<video class="what-we-do__video" autoplay muted loop playsinline poster="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/POSTER.webp"><source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/FILE.mp4" type="video/mp4"></video> -->
+		<div class="what-we-do__placeholder" aria-hidden="true">
+			<svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14"/><path d="M10 9.5v5l4.5-2.5z"/></svg>
+			<span>Video placeholder</span>
+		</div>
+		<div class="wrap wrap--wide what-we-do__copy">
+			<p class="label">What we do</p>
+			<h2 id="what-we-do-title">IT &amp; energy solutions designed for tomorrow&rsquo;s needs.</h2>
+		</div>
+	</div>
+	<div class="wrap wrap--wide">
+		<ul class="what-we-do__stats" aria-label="JIO in brief">
+			<li><b>End-to-end expertise</b><span>IT to energy integration</span></li>
+			<li><b>20+ years</b><span>Proven track record</span></li>
+			<li><b>Client confidence</b><span>Built over years of work</span></li>
+			<li><b>Extensive portfolio</b><span>Across the UAE</span></li>
+			<li><b>24/7 support</b><span>Dedicated support availability</span></li>
+		</ul>
+	</div>
+</section>
+
 <!-- SERVICES: selectable spotlight with service illustrations. -->
 <section class="home-spotlight" id="chain" aria-labelledby="spotlight-title" data-home-spotlight>
 	<div class="wrap">

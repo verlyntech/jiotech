@@ -1,0 +1,173 @@
+{
+  "_note": "Content for the service detail pages under /solutions/. Rendered by inc/service-pages.php (WordPress) and preview/build.mjs (static preview) through parts/service-page.tpl.html. Slugs match the existing jiotechuae.com URLs. Keep claims within inc/knowledge.json: no certifications, SLAs, response times, named clients or prices.",
+  "pages": [
+    {
+      "slug": "power-energy-solutions",
+      "short": "Power & energy",
+      "title": "Power & energy solutions",
+      "lead": "Reliable power. Sustainable performance.",
+      "intro": "UPS systems, VRLA and lithium-ion batteries and renewable energy setups, with installation, configuration, preventive maintenance, battery replacement and annual service contracts in Dubai and Abu Dhabi.",
+      "included_title": "Power that keeps critical systems running.",
+      "items": [
+        { "title": "UPS systems & power backup", "text": "UPS systems that protect IT infrastructure, data centers and industrial operations from outages and power fluctuations." },
+        { "title": "Power distribution & cabling", "text": "Electrical distribution design with PDUs, switchgear and cabling for safe, reliable power that scales with your facility." },
+        { "title": "Energy management", "text": "Monitoring and control of energy use, with data that helps you cut waste and improve efficiency." },
+        { "title": "Data center power integration", "text": "Redundant power and precision cooling engineered together, so the data center stays available." }
+      ],
+      "why_label": "Choosing batteries",
+      "why_title": "VRLA or lithium-ion, sized for your room.",
+      "why_text": "VRLA batteries are the lower-cost, long-standing choice, but they wear out faster in hot rooms. Lithium-ion takes less space, tolerates heat better and lasts longer, at a higher purchase price. We recommend and size the battery around your load, the runtime you need and the room it sits in.",
+      "brands": ["APC by Schneider Electric", "Eaton", "Vertiv", "Emerson", "BPC Energy", "Amaron", "SacredSun"],
+      "hero_image": "A UPS and battery room at a client site: UPS cabinets in front, battery racks behind.",
+      "detail_image": "A VRLA battery string next to a lithium-ion battery cabinet, to show the two options.",
+      "related": ["web-development", "maintenance-technical-support", "managed-services"]
+    },
+    {
+      "slug": "web-development",
+      "short": "Data centers",
+      "title": "Data center design & hosting",
+      "lead": "Building the backbone of digital reliability.",
+      "intro": "Design, build and management of data centers, from a single rack to an enterprise hall, including construction, cabling, power integration and cooling, plus secure hosting for critical applications.",
+      "included_title": "From the first rack to a full data hall.",
+      "items": [
+        { "title": "Design & build", "text": "Engineering and construction from concept to commissioning, planned for efficient cooling and room to grow." },
+        { "title": "Power & cooling integration", "text": "UPS, PDUs and precision cooling designed together for constant availability and lower energy costs." },
+        { "title": "Secure hosting", "text": "Climate-controlled, secure environments for the applications your business cannot run without." },
+        { "title": "Network infrastructure", "text": "Structured cabling and redundant, high-speed connectivity for steady performance and low-latency access." }
+      ],
+      "why_label": "Why one partner",
+      "why_title": "IT and power engineered as one system.",
+      "why_text": "Data centers fail at the joins between racks, UPS, cooling and cabling. JIO designs and builds all of them, so there is one design, one contract and one team accountable for uptime.",
+      "brands": ["APC by Schneider Electric", "Vertiv", "Eaton", "Dell Technologies", "HPE", "Supermicro"],
+      "hero_image": "A finished data hall: rows of racks with cable trays overhead and UPS cabinets at the end.",
+      "detail_image": "A close-up of a rack being cabled, with labelled patch panels and PDUs.",
+      "related": ["power-energy-solutions", "network-connectivity-solutions", "maintenance-technical-support"]
+    },
+    {
+      "slug": "network-connectivity-solutions",
+      "short": "Networking",
+      "title": "Network & connectivity",
+      "lead": "Connecting businesses with speed, security and reliability.",
+      "intro": "Networks designed, built and managed across your offices, data centers, remote sites and cloud platforms, for stable connectivity and secure data flow.",
+      "included_title": "The network your business runs on.",
+      "items": [
+        { "title": "Network design & implementation", "text": "Wired and wireless architectures built around how your business operates, for fast, low-latency connections." },
+        { "title": "Network security & firewalls", "text": "Firewalls, intrusion prevention and endpoint security that protect your network perimeter." },
+        { "title": "Enterprise LAN & WAN", "text": "Secure, high-speed links between offices, users and data centers for multi-branch organisations." },
+        { "title": "Structured cabling & fibre", "text": "Copper and fibre cabling that gives your network a solid physical backbone and room to grow." }
+      ],
+      "why_label": "Why one partner",
+      "why_title": "A network that stays up through a power cut.",
+      "why_text": "Switches, routers and Wi-Fi access points go dark with the power. JIO sizes UPS and backup for your network cabinets as part of the design, so connectivity holds while the site switches to backup power.",
+      "brands": ["Cisco", "HPE Aruba Networking", "Fortinet", "Huawei"],
+      "hero_image": "A network cabinet with neatly dressed fibre and patch cabling and the switches lit up.",
+      "detail_image": "A ceiling Wi-Fi access point in an office, or a technician terminating fibre.",
+      "related": ["cyber-security", "web-development", "managed-services"]
+    },
+    {
+      "slug": "cyber-security",
+      "short": "Cybersecurity",
+      "title": "Cybersecurity, data protection & CCTV",
+      "lead": "Protection for your systems, your data and your premises.",
+      "intro": "Security that covers the network edge, every endpoint, your cloud applications and the physical site, with CCTV that runs on the same network and the same backup power.",
+      "included_title": "Digital and physical security in one design.",
+      "items": [
+        { "title": "Threat detection & prevention", "text": "Continuous monitoring and proactive defence against malware, ransomware and phishing." },
+        { "title": "Cloud & application security", "text": "Encryption, identity management and secure sign-in for cloud platforms, SaaS and remote access." },
+        { "title": "Network & endpoint security", "text": "Protection for every device and connection, keeping access secure and your exposure low." },
+        { "title": "CCTV & physical surveillance", "text": "IP cameras, NVR and DVR recorders and remote viewing, integrated with your IT network." }
+      ],
+      "why_label": "Why one partner",
+      "why_title": "Security that keeps working when the power does not.",
+      "why_text": "Cameras, recorders and firewalls only protect you while they have power. JIO designs the UPS and backup alongside the security system, so it keeps recording and filtering through an outage.",
+      "brands": ["Fortinet", "Cisco", "Hikvision", "HPE Aruba Networking", "Huawei"],
+      "hero_image": "A security view: CCTV monitors beside a firewall or network rack in a server room.",
+      "detail_image": "A ceiling-mounted IP camera at a client site, with the recorder rack in the background.",
+      "related": ["network-connectivity-solutions", "managed-services", "power-energy-solutions"]
+    },
+    {
+      "slug": "managed-services",
+      "short": "Managed IT",
+      "title": "Managed IT & infrastructure services",
+      "lead": "We manage your IT, so you can manage your business.",
+      "intro": "Continuous support, monitoring and optimisation for your servers, storage, networks and devices, so your team spends its time on the business instead of on troubleshooting.",
+      "included_title": "Your IT environment, looked after end to end.",
+      "items": [
+        { "title": "IT infrastructure management", "text": "Servers, storage, networking and virtualisation managed with proactive monitoring and preventive maintenance to cut downtime." },
+        { "title": "Network & performance optimisation", "text": "Network architecture tuned for speed and reliability, with room to grow as your business does." },
+        { "title": "Remote monitoring & support", "text": "Monitoring that flags issues before they reach your users, with 24/7 remote and on-site support when something goes wrong." },
+        { "title": "Security, backup & recovery", "text": "Patch management, access control and endpoint protection, with backup and recovery that protect your data from loss." }
+      ],
+      "why_label": "Why one partner",
+      "why_title": "The same team looks after your IT and the power behind it.",
+      "why_text": "Managed IT usually stops at the server. JIO also maintains the UPS, batteries and power distribution those servers depend on, so one contract and one support number cover the whole chain.",
+      "brands": ["Microsoft", "VMware", "Dell Technologies", "HPE", "Lenovo", "Fortinet"],
+      "hero_image": "A JIO engineer at a monitoring desk, with server racks or a network dashboard behind them.",
+      "detail_image": "An engineer checking a server rack and the UPS beside it in the same room.",
+      "related": ["maintenance-technical-support", "cyber-security", "network-connectivity-solutions"]
+    },
+    {
+      "slug": "maintenance-technical-support",
+      "short": "Maintenance & support",
+      "title": "Maintenance & 24/7 technical support",
+      "lead": "Keeping your systems running, around the clock.",
+      "intro": "Proactive monitoring, preventive maintenance and on-demand support for your IT and power systems, with 24/7 remote and on-site help, including emergency response.",
+      "included_title": "Support for IT and power from one helpdesk.",
+      "items": [
+        { "title": "Proactive system monitoring", "text": "Engineers watch your IT infrastructure, networks and power systems to catch issues before they affect operations." },
+        { "title": "Spare parts & replacement", "text": "Essential hardware kept available, and manufacturers on hand, to speed up replacements." },
+        { "title": "Remote & on-site support", "text": "Remote help for quick fixes, and site visits when a problem needs hands on the equipment." },
+        { "title": "24/7 technical assistance", "text": "A helpdesk you can reach at any hour, with emergency response for outages." }
+      ],
+      "why_label": "Why one partner",
+      "why_title": "One number when something goes down.",
+      "why_text": "When a server room fails, the cause can be IT, power or both. With JIO maintaining both, you make one call and one team works the fault from start to finish, instead of two contractors pointing at each other.",
+      "brands": ["APC by Schneider Electric", "Eaton", "Vertiv", "Cisco", "Dell Technologies", "HPE"],
+      "hero_image": "A JIO technician on site, laptop connected to a UPS or rack, mid-diagnosis.",
+      "detail_image": "A preventive maintenance visit: battery testing, or replacing a UPS battery string.",
+      "related": ["managed-services", "power-energy-solutions", "network-connectivity-solutions"]
+    },
+    {
+      "slug": "it-consulting-advisory",
+      "short": "IT consulting",
+      "title": "IT consulting & advisory",
+      "lead": "Technology decisions tied to your business goals.",
+      "intro": "We review your infrastructure, workflows and plans, then build a roadmap that ties each technology decision to a business outcome, including the power and cooling it will need.",
+      "included_title": "Strategy that connects technology, operations and energy.",
+      "items": [
+        { "title": "IT strategy & roadmap", "text": "An assessment of your infrastructure and goals, turned into a clear, prioritised roadmap." },
+        { "title": "Process automation & modernisation", "text": "Automation, analytics and modern platforms that reduce manual work and raise productivity." },
+        { "title": "Transformation planning", "text": "Guidance through cloud adoption, automation and IoT integration, with change management at each step." },
+        { "title": "IT governance & compliance", "text": "Policies, risk monitoring and resilient systems that support your compliance requirements and audits." }
+      ],
+      "why_label": "Why one partner",
+      "why_title": "Advice that accounts for the power behind the plan.",
+      "why_text": "A roadmap that adds servers or moves workloads also changes your power, cooling and backup needs. Because JIO delivers both IT and power, those needs are part of the plan from the start, not a surprise at installation.",
+      "brands": ["Microsoft", "AWS", "VMware", "Dell Technologies", "HPE"],
+      "hero_image": "A workshop: a JIO consultant and a client team around a table, an infrastructure diagram on screen.",
+      "detail_image": "A roadmap or architecture sketch on a whiteboard in a client office.",
+      "related": ["digital-transformation", "managed-services", "web-development"]
+    },
+    {
+      "slug": "digital-transformation",
+      "short": "Digital transformation",
+      "title": "Digital transformation",
+      "lead": "Modernising how your business operates, connects and grows.",
+      "intro": "The hardest parts of transformation are rarely technical: legacy systems, data silos, workforce readiness and security concerns. We help align technology, people and process, and modernise the infrastructure underneath.",
+      "included_title": "Removing the barriers to change.",
+      "items": [
+        { "title": "Legacy modernisation", "text": "Replacing or integrating ageing systems so they stop holding back new ways of working." },
+        { "title": "Cloud integration", "text": "The right workloads moved to private, public or hybrid cloud, and connected to what stays on site." },
+        { "title": "Connected data & workflows", "text": "Data silos broken down, so information moves between teams and systems." },
+        { "title": "Secure, reliable foundations", "text": "Security, backup and energy-efficient infrastructure that keep the business running through the change." }
+      ],
+      "why_label": "Why one partner",
+      "why_title": "Change that does not add new points of failure.",
+      "why_text": "New systems only help if they stay up. JIO brings the infrastructure, security and backup power a modernised business depends on, so the transformation stays secure, reliable and sustainable.",
+      "brands": ["Microsoft", "AWS", "VMware", "Dell Technologies", "HPE"],
+      "hero_image": "A team using new collaboration tools in a modern office, with a dashboard on a large screen.",
+      "detail_image": "Before and after: an old server cupboard next to a clean, modern rack.",
+      "related": ["it-consulting-advisory", "managed-services", "cyber-security"]
+    }
+  ]
+}

@@ -34,3 +34,6 @@ add_action( 'wp_enqueue_scripts', function () {
 
 /** Website assistant (server-side proxy to the model). */
 require_once get_template_directory() . '/inc/chatbot.php';
+
+/** Service detail pages under /solutions/. */
+require_once get_template_directory() . '/inc/service-pages.php';

@@ -19,7 +19,27 @@ const pages = [
 	{ tpl: 'page-faq.php', out: 'faq.html', slug: 'faq', title: 'FAQ' },
 	{ tpl: '404.php', out: '404.html', slug: '404', title: 'Not found' },
 ];
-const slugToFile = Object.fromEntries(pages.map((p) => [p.slug, p.out]));
+
+// Service detail pages: same data and markup as inc/service-pages.php, filled here without PHP.
+const esc = (v) => String(v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const fill = (tpl, data) => tpl
+	.replace(/\{\{#(\w+)\}\}([\s\S]*?)\{\{\/\1\}\}/g, (_, key, inner) => (data[key] || [])
+		.map((item) => (typeof item === 'object' ? fill(inner, { ...data, ...item }) : inner.replace(/\{\{\.\}\}/g, esc(item)))).join(''))
+	.replace(/\{\{(\w+)\}\}/g, (_, key) => esc(data[key] ?? ''));
+const services = JSON.parse(read('inc/service-pages.json')).pages;
+const serviceFile = (slug) => `service-${slug}.html`;
+const serviceTpl = read('parts/service-page.tpl.html');
+for (const s of services) {
+	const data = {
+		...s,
+		items: s.items.map((item, i) => ({ ...item, num: String(i + 1).padStart(2, '0') })),
+		related: s.related.map((slug) => ({ title: services.find((x) => x.slug === slug).title, url: serviceFile(slug) })),
+		solutions_url: 'solutions.html',
+		quote_url: 'contact.html#quote',
+	};
+	pages.push({ html: `<?php get_header(); ?>\n${fill(serviceTpl, data)}\n<?php get_footer(); ?>`, out: serviceFile(s.slug), slug: `solutions/${s.slug}`, title: s.title });
+}
+const slugToFile = Object.fromEntries(pages.map((p) => [p.slug.replace(/\//g, ''), p.out]));
 
 function render(page) {
 	const head = `<script src="../jio-theme/assets/js/theme.js?v=${Date.now()}"></script>
@@ -52,11 +72,11 @@ ${page.slug === 'solutions' ? `<link rel="stylesheet" href="../jio-theme/assets/
 		[/<\?php \} \?>/g, () => ''],
 	];
 
-	let html = read(page.tpl).replace(/^<\?php\s*\/\*\*[\s\S]*?\*\/\s*/, '<?php ');
+	let html = page.html ?? read(page.tpl).replace(/^<\?php\s*\/\*\*[\s\S]*?\*\/\s*/, '<?php ');
 	for (let i = 0; i < 4; i++) for (const [re, fn] of swaps) html = html.replace(re, fn);
 	html = html.replace(/<\?php[\s\S]*?\?>/g, '');
 	writeFileSync(join(here, page.out), html);
 	return page.out;
 }
 
-console.log('wrote', pages.filter((p) => existsSync(join(theme, p.tpl))).map(render).join(', '));
+console.log('wrote', pages.filter((p) => p.html || existsSync(join(theme, p.tpl))).map(render).join(', '));

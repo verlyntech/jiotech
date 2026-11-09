@@ -23,10 +23,8 @@ get_header(); ?>
 				<figure class="solutions-image solutions-image--hero solutions-image--photo">
 					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/services-hero-jio-tech.webp" width="1402" height="1122" alt="Illustration of a JIO TECH-branded infrastructure room with UPS and battery cabinets, server racks and organised network cabling" loading="eager" fetchpriority="high" decoding="async">
 				</figure>
-				<div class="solutions-hero__note"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 10h18v12H4zM4 27h18v12H4zM9 16h6M9 33h6M34 5l-8 20h9l-5 18 15-25H34z"/></svg><p>One integrated approach.<br><strong>From power to performance.</strong></p></div>
 			</div>
 		</div>
-		<div class="solutions-hero__scope" aria-label="Solution priorities"><span>Business continuity</span><span>Secure infrastructure</span><span>Scalable operations</span></div>
 	</div>
 </section>
 
@@ -39,7 +37,7 @@ get_header(); ?>
 
 <section class="capabilities" aria-labelledby="capabilities-title" data-capabilities>
 	<div class="wrap wrap--wide">
-		<div class="capabilities__heading" id="capabilities"><h2 id="capabilities-title">Five service areas. One connected partner.</h2><p>Choose a service to explore its role in your infrastructure and discuss your requirements with our team.</p></div>
+		<div class="capabilities__heading" id="capabilities"><h2 id="capabilities-title">Five service areas.<br>One connected partner.</h2></div>
 		<div class="service-explorer" data-service-explorer data-active-service="power">
 			<div class="service-map">
 				<div class="service-map__top"><span>Built to work together</span><span aria-hidden="true">IT + ENERGY</span></div>

@@ -6,14 +6,7 @@ get_header(); ?>
 
 <main id="main">
 
-<section class="phero">
-	<div class="wrap phero__grid">
-		<h1>Engineering our next chapter.</h1>
-		<div class="phero__side">
-			<p>IT, power and industrial products. One team in Abu Dhabi, serving Dubai, Abu Dhabi and the wider GCC.</p>
-		</div>
-	</div>
-</section>
+<h1 class="sr">Company</h1>
 
 <!-- Three perspectives: one image and one chapter at a time. -->
 <section class="company-perspectives" id="company-perspectives" aria-label="Our story, purpose and direction" data-company-perspectives>
@@ -63,7 +56,6 @@ get_header(); ?>
             </article>
             </div>
         </div>
-        <ul class="company-perspectives__scope"><li>IT infrastructure</li><li>Power &amp; energy</li><li>One connected partner</li></ul>
     </div>
 </section>
 

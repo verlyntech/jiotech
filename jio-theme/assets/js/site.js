@@ -240,44 +240,24 @@
 
 	}
 
-	// Homepage background video loads on view and honours motion and pause preferences.
+	// Homepage background video plays only while on screen, and stays on its poster when motion is reduced.
 	var videoSection = document.querySelector('[data-home-video]');
 	if (videoSection) {
 		var homeVideo = videoSection.querySelector('[data-home-video-element]');
-		var videoControl = videoSection.querySelector('[data-home-video-control]');
-		var videoLabel = videoControl.querySelector('[data-home-video-label]');
-		var videoIcon = videoControl.querySelector('[data-home-video-icon]');
 		var videoMotion = matchMedia('(prefers-reduced-motion: reduce)');
-		var videoVisible = false, videoUserPaused = false, videoExplicitMotion = false;
-		var updateVideoControl = function () {
-			videoLabel.textContent = homeVideo.paused ? 'Play video' : 'Pause video';
-			videoIcon.textContent = homeVideo.paused ? '▶' : 'Ⅱ';
-		};
+		var videoVisible = false;
 		var syncHomeVideo = function () {
-			if (!videoVisible || document.hidden || videoUserPaused || (videoMotion.matches && !videoExplicitMotion)) {
-				homeVideo.pause(); return;
-			}
+			if (!videoVisible || document.hidden || videoMotion.matches) { homeVideo.pause(); return; }
 			var playing = homeVideo.play();
-			if (playing) playing.catch(function (error) {
-				if (error.name !== 'AbortError') { videoUserPaused = true; updateVideoControl(); }
-			});
+			if (playing) playing.catch(function () { /* autoplay blocked: the poster stays */ });
 		};
-		videoControl.hidden = false;
-		homeVideo.addEventListener('play', updateVideoControl);
-		homeVideo.addEventListener('pause', updateVideoControl);
-		homeVideo.addEventListener('error', function () { videoControl.hidden = true; });
-		videoControl.addEventListener('click', function () {
-			videoUserPaused = !homeVideo.paused;
-			if (!videoUserPaused) videoExplicitMotion = true;
-			syncHomeVideo(); updateVideoControl();
-		});
 		if ('IntersectionObserver' in window) {
 			new IntersectionObserver(function (entries) {
 				videoVisible = entries[0].isIntersecting; syncHomeVideo();
 			}, { threshold: .1 }).observe(videoSection);
 		} else { videoVisible = true; syncHomeVideo(); }
 		document.addEventListener('visibilitychange', syncHomeVideo);
-		videoMotion.addEventListener('change', function () { videoExplicitMotion = false; syncHomeVideo(); });
+		videoMotion.addEventListener('change', syncHomeVideo);
 	}
 
 	// Run decorative connector flow only while its section is visible.

@@ -38,7 +38,6 @@ get_header(); ?>
 		<video class="what-we-do__video" id="home-infrastructure-video" muted loop playsinline preload="none" poster="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/infrastructure-video-poster.webp" aria-hidden="true" tabindex="-1" data-home-video-element>
 			<source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/infrastructure-preview.mp4" type="video/mp4">
 		</video>
-		<button class="what-we-do__video-control" type="button" aria-controls="home-infrastructure-video" data-home-video-control hidden><span data-home-video-label>Play video</span><span aria-hidden="true" data-home-video-icon>▶</span></button>
 		<div class="wrap wrap--wide what-we-do__copy">
 			<p class="label">What we do</p>
 			<h2 id="what-we-do-title">IT &amp; energy solutions designed for tomorrow&rsquo;s needs.</h2>
@@ -194,15 +193,15 @@ get_header(); ?>
 		</div>
 		<div class="industries__rail" id="industries-rail" data-industry-rail tabindex="0" role="region" aria-label="Industries we serve">
 		<ul class="industries__track">
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#government"><h3>Government &amp; public sector</h3><p>Secure, compliant systems for modernisation programmes.</p><ul class="pills"><li class="t-it">Data centers</li><li class="t-it">Secured networks</li><li class="t-power">Backup power</li></ul></a></li>
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#healthcare"><h3>Healthcare</h3><p>IT and power for medical devices, patient data and 24/7 care.</p><ul class="pills"><li class="t-power">Continuous power</li><li class="t-it">Network security</li><li class="t-sec">CCTV</li></ul></a></li>
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#finance"><h3>Banking &amp; financial services</h3><p>High-availability systems for mission-critical workloads.</p><ul class="pills"><li class="t-it">Resilient hosting</li><li class="t-it">Cybersecurity</li><li class="t-power">UPS</li></ul></a></li>
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#energy"><h3>Energy &amp; utilities</h3><p>Smart power systems and UPS integration for critical facilities.</p><ul class="pills"><li class="t-power">UPS integration</li><li class="t-power">Battery systems</li><li class="t-it">Monitoring</li></ul></a></li>
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#manufacturing"><h3>Manufacturing &amp; industrial</h3><p>Networks and backup power for continuous operations.</p><ul class="pills"><li class="t-it">Plant networks</li><li class="t-power">Backup power</li><li class="t-it">Automation-ready IT</li></ul></a></li>
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#construction"><h3>Construction &amp; engineering</h3><p>IT, surveillance and energy for project sites and offices.</p><ul class="pills"><li class="t-it">Site networks</li><li class="t-sec">Surveillance</li><li class="t-power">Site power</li></ul></a></li>
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#logistics"><h3>Logistics &amp; transportation</h3><p>Connected networks, IoT tracking and reliable power.</p><ul class="pills"><li class="t-it">Connected networks</li><li class="t-it">IoT tracking</li><li class="t-power">Reliable power</li></ul></a></li>
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#retail"><h3>Retail &amp; e-commerce</h3><p>Connectivity, cloud and security for store and online sales.</p><ul class="pills"><li class="t-it">Store connectivity</li><li class="t-it">Cloud</li><li class="t-it">Payment security</li></ul></a></li>
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#education"><h3>Education</h3><p>Secure campus networks and energy-efficient infrastructure.</p><ul class="pills"><li class="t-it">Campus networks</li><li class="t-it">Learning platforms</li><li class="t-power">Efficient power</li></ul></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#government"><h3>Government &amp; public sector</h3><p>Secure, compliant systems for modernisation programmes.</p></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#healthcare"><h3>Healthcare</h3><p>IT and power for medical devices, patient data and 24/7 care.</p></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#finance"><h3>Banking &amp; financial services</h3><p>High-availability systems for mission-critical workloads.</p></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#energy"><h3>Energy &amp; utilities</h3><p>Smart power systems and UPS integration for critical facilities.</p></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#manufacturing"><h3>Manufacturing &amp; industrial</h3><p>Networks and backup power for continuous operations.</p></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#construction"><h3>Construction &amp; engineering</h3><p>IT, surveillance and energy for project sites and offices.</p></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#logistics"><h3>Logistics &amp; transportation</h3><p>Connected networks, IoT tracking and reliable power.</p></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#retail"><h3>Retail &amp; e-commerce</h3><p>Connectivity, cloud and security for store and online sales.</p></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#education"><h3>Education</h3><p>Secure campus networks and energy-efficient infrastructure.</p></a></li>
 		</ul>
 		</div>
 		<div class="industries__controls" data-industry-controls hidden>

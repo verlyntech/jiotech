@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../jio-theme/assets/js/theme.js?v=1794042454354"></script>
+<script src="../jio-theme/assets/js/theme.js?v=1794228154620"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
-<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794042454354">
-<script src="../jio-theme/assets/js/site.js?v=1794042454354" defer></script>
-<script src="../jio-theme/assets/js/chat.js?v=1794042454354" defer></script>
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794228154620">
+<script src="../jio-theme/assets/js/site.js?v=1794228154620" defer></script>
+<script src="../jio-theme/assets/js/chat.js?v=1794228154620" defer></script>
 
-<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794042454354">
+<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794228154620">
 <title>Home | JIO Technologies (preview)</title>
 </head>
 <body class="home">
@@ -126,14 +126,12 @@
 </section>
 
 <!-- WHAT WE DO: full-width media band with proof points. -->
-<section class="what-we-do" aria-labelledby="what-we-do-title">
-	<div class="what-we-do__media">
-		<!-- Video placeholder. To use a video, replace the div below with:
-		<video class="what-we-do__video" autoplay muted loop playsinline poster="../jio-theme/assets/img/POSTER.webp"><source src="../jio-theme/assets/video/FILE.mp4" type="video/mp4"></video> -->
-		<div class="what-we-do__placeholder" aria-hidden="true">
-			<svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14"/><path d="M10 9.5v5l4.5-2.5z"/></svg>
-			<span>Video placeholder</span>
-		</div>
+<section class="what-we-do" id="what-we-do" aria-labelledby="what-we-do-title">
+	<div class="what-we-do__media" data-home-video>
+		<video class="what-we-do__video" id="home-infrastructure-video" muted loop playsinline preload="none" poster="../jio-theme/assets/img/infrastructure-video-poster.webp" aria-hidden="true" tabindex="-1" data-home-video-element>
+			<source src="../jio-theme/assets/video/infrastructure-preview.mp4" type="video/mp4">
+		</video>
+		<button class="what-we-do__video-control" type="button" aria-controls="home-infrastructure-video" data-home-video-control hidden><span data-home-video-label>Play video</span><span aria-hidden="true" data-home-video-icon>▶</span></button>
 		<div class="wrap wrap--wide what-we-do__copy">
 			<p class="label">What we do</p>
 			<h2 id="what-we-do-title">IT &amp; energy solutions designed for tomorrow&rsquo;s needs.</h2>

@@ -33,14 +33,12 @@ get_header(); ?>
 </section>
 
 <!-- WHAT WE DO: full-width media band with proof points. -->
-<section class="what-we-do" aria-labelledby="what-we-do-title">
-	<div class="what-we-do__media">
-		<!-- Video placeholder. To use a video, replace the div below with:
-		<video class="what-we-do__video" autoplay muted loop playsinline poster="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/POSTER.webp"><source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/FILE.mp4" type="video/mp4"></video> -->
-		<div class="what-we-do__placeholder" aria-hidden="true">
-			<svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14"/><path d="M10 9.5v5l4.5-2.5z"/></svg>
-			<span>Video placeholder</span>
-		</div>
+<section class="what-we-do" id="what-we-do" aria-labelledby="what-we-do-title">
+	<div class="what-we-do__media" data-home-video>
+		<video class="what-we-do__video" id="home-infrastructure-video" muted loop playsinline preload="none" poster="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/infrastructure-video-poster.webp" aria-hidden="true" tabindex="-1" data-home-video-element>
+			<source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/infrastructure-preview.mp4" type="video/mp4">
+		</video>
+		<button class="what-we-do__video-control" type="button" aria-controls="home-infrastructure-video" data-home-video-control hidden><span data-home-video-label>Play video</span><span aria-hidden="true" data-home-video-icon>▶</span></button>
 		<div class="wrap wrap--wide what-we-do__copy">
 			<p class="label">What we do</p>
 			<h2 id="what-we-do-title">IT &amp; energy solutions designed for tomorrow&rsquo;s needs.</h2>

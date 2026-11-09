@@ -4,7 +4,7 @@ WordPress theme and a dependency-free local preview for the JIO Technologies LLC
 
 ## Current website
 
-- **Home:** responsive storefront hero, a six-service spotlight with selectable overviews, six service illustrations and keyboard navigation, a continuous horizontal manufacturer ribbon below the compact hero (familiar brands first, full-colour logos visible on the first screen and reduced-motion support), and a horizontal industry carousel with previous/next arrows and green corner markers.
+- **Home:** responsive storefront hero, a six-service spotlight with selectable overviews, six service illustrations and keyboard navigation, a continuous horizontal manufacturer ribbon below the compact hero (familiar brands first, full-colour logos visible on the first screen and reduced-motion support), a muted video in the What we do section (poster fallback, pause control and reduced-motion support), and a horizontal industry carousel with previous/next arrows and green corner markers.
 - **Services:** a connected diagram for five service areas, with animated icons, a concise overview on the left, keyboard selection and enquiry links. The repeated detail-card lists have been removed; the equipment catalogue remains below.
 - **Company:** the Three perspectives design: selectable Beginnings, Mission and Vision tabs, matching image placeholders, keyboard navigation and direct chapter links, plus icons for the existing company values.
 - **Industries:** nine static industry icons arranged around a circular selector, with the selected sector's overview, capabilities and enquiry link in a larger adjacent panel. Supports keyboard selection and direct sector links.

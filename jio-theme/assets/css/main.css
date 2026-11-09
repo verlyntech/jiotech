@@ -887,11 +887,19 @@ h1, h2, h3 { font-family: var(--display); }
 /* ---------- what we do: dark media band (video slot) above a row of proof points ---------- */
 .what-we-do { padding-block: 0; border-bottom: 1px solid var(--rule); }
 .what-we-do__media { position: relative; isolation: isolate; display: flex; align-items: center; min-height: clamp(16rem, 26vw, 24rem); background: var(--night); color: var(--on-night); overflow: hidden; }
-.what-we-do__video, .what-we-do__placeholder { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; }
+.what-we-do__video { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; }
 .what-we-do__video { object-fit: cover; }
-.what-we-do__placeholder { display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; gap: .5rem; padding: 2rem clamp(1.5rem, 4vw, 4.5rem); color: var(--on-night-mute); font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; }
-.what-we-do__placeholder::after { content: ""; position: absolute; inset: 1rem; border: 1px dashed var(--on-night-mute); opacity: .45; pointer-events: none; }
-.what-we-do__placeholder svg { width: 2.5rem; height: 2.5rem; fill: none; stroke: currentColor; stroke-width: 1.2; }
+.what-we-do__media::after { content: ""; position: absolute; inset: 0; z-index: 0; background: rgba(5, 10, 8, .5); pointer-events: none; }
+.what-we-do__copy { position: relative; z-index: 1; }
+.what-we-do__video-control { position: absolute; left: clamp(1.25rem, 3.5vw, 4rem); bottom: 1.5rem; z-index: 2; display: inline-flex; align-items: center; gap: .85rem; padding: .65rem .85rem; border: 1px solid rgba(255,255,255,.65); background: rgba(10,14,12,.55); color: #fff; font: 600 .85rem/1.2 var(--sans); cursor: pointer; }
+.what-we-do__video-control[hidden] { display: none; }
+.what-we-do__video-control:hover { border-color: var(--green); background: var(--night); }
+.what-we-do__video-control:focus-visible { outline-color: #fff; }
+@media (max-width: 600px) {
+ .what-we-do__media { min-height: 20rem; align-items: flex-start; }
+ .what-we-do__media .what-we-do__copy { padding-bottom: 5rem; }
+ .what-we-do__video-control { bottom: 1rem; }
+}
 .what-we-do__copy { padding-block: clamp(2rem, 4vw, 3.5rem); }
 .what-we-do__copy .label { margin-bottom: .65rem; color: var(--on-night-mute); }
 .what-we-do__copy h2 { max-width: 26ch; color: var(--on-night); font: 600 clamp(1.8rem, 3.1vw, 2.7rem)/1.12 var(--display); letter-spacing: -.035em; }

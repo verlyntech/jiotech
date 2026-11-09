@@ -21,7 +21,7 @@ get_header(); ?>
 			</div>
 			<div class="solutions-hero__art">
 				<figure class="solutions-image solutions-image--hero solutions-image--photo">
-					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/services-hero-infrastructure.webp" width="1402" height="1122" alt="Illustration of integrated enterprise infrastructure with UPS and battery cabinets, server racks and organised network cabling" loading="eager" fetchpriority="high" decoding="async">
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/services-hero-jio-tech.webp" width="1402" height="1122" alt="Illustration of a JIO TECH-branded infrastructure room with UPS and battery cabinets, server racks and organised network cabling" loading="eager" fetchpriority="high" decoding="async">
 				</figure>
 				<div class="solutions-hero__note"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 10h18v12H4zM4 27h18v12H4zM9 16h6M9 33h6M34 5l-8 20h9l-5 18 15-25H34z"/></svg><p>One integrated approach.<br><strong>From power to performance.</strong></p></div>
 			</div>

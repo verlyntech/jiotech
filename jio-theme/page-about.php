@@ -26,10 +26,9 @@ get_header(); ?>
             </nav>
             <div class="company-perspectives__panels">
             <article class="company-perspectives__panel" id="beginnings" data-company-panel="beginnings" aria-labelledby="company-title-beginnings">
-                <!-- Replace this figure's placeholder with the client's beginnings photograph. -->
-                <figure class="company-perspectives__media" aria-label="Image space reserved for our beginnings">
-                    <svg class="company-perspectives__placeholder" viewBox="0 0 96 72" aria-hidden="true"><path d="M12 12h72v48H12z"/><circle cx="34" cy="29" r="5"/><path d="M12 50l20-14 17 13 15-21 20 22M23 6h50M23 66h50"/></svg>
-                    <figcaption><strong>A foundation in engineering.</strong><span>Our beginnings · Image placeholder</span></figcaption>
+                <figure class="company-perspectives__media company-perspectives__media--photo">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-beginnings.webp" width="1402" height="1122" alt="Illustration of a small engineering team configuring IT hardware in a workshop" loading="lazy" decoding="async">
+                    <figcaption><strong>A foundation in engineering.</strong><span>Beginnings · Illustrative image</span></figcaption>
                 </figure>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">01 / 03</p>
@@ -39,10 +38,9 @@ get_header(); ?>
                 </div>
             </article>
             <article class="company-perspectives__panel" id="mission" data-company-panel="mission" aria-labelledby="company-title-mission">
-                <!-- Replace this figure's placeholder with the client's mission photograph. -->
-                <figure class="company-perspectives__media" aria-label="Image space reserved for our mission">
-                    <svg class="company-perspectives__placeholder" viewBox="0 0 96 72" aria-hidden="true"><path d="M12 12h72v48H12z"/><circle cx="34" cy="29" r="5"/><path d="M12 50l20-14 17 13 15-21 20 22M23 6h50M23 66h50"/></svg>
-                    <figcaption><strong>Purpose behind every solution.</strong><span>Our mission · Image placeholder</span></figcaption>
+                <figure class="company-perspectives__media company-perspectives__media--photo">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-mission-jio-tech.webp" width="1402" height="1122" alt="Illustration of equipment quality checks and customer handover beneath a JIO TECH wall sign" loading="lazy" decoding="async">
+                    <figcaption><strong>Purpose behind every solution.</strong><span>Mission · Illustrative image</span></figcaption>
                 </figure>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">02 / 03</p>
@@ -52,10 +50,9 @@ get_header(); ?>
                 </div>
             </article>
             <article class="company-perspectives__panel" id="vision" data-company-panel="vision" aria-labelledby="company-title-vision">
-                <!-- Replace this figure's placeholder with the client's vision photograph. -->
-                <figure class="company-perspectives__media" aria-label="Image space reserved for our vision">
-                    <svg class="company-perspectives__placeholder" viewBox="0 0 96 72" aria-hidden="true"><path d="M12 12h72v48H12z"/><circle cx="34" cy="29" r="5"/><path d="M12 50l20-14 17 13 15-21 20 22M23 6h50M23 66h50"/></svg>
-                    <figcaption><strong>A broader technology horizon.</strong><span>Our vision · Image placeholder</span></figcaption>
+                <figure class="company-perspectives__media company-perspectives__media--photo">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-vision.webp" width="1402" height="1122" alt="Illustration of a modern UAE technology campus combining IT infrastructure, communications and energy systems" loading="lazy" decoding="async">
+                    <figcaption><strong>A broader technology horizon.</strong><span>Vision · Illustrative image</span></figcaption>
                 </figure>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">03 / 03</p>

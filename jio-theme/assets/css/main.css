@@ -549,6 +549,12 @@ section { padding-block: var(--section-space); }
 .company-perspectives__media figcaption { position: absolute; left: 1.5rem; right: 1.5rem; bottom: 1.5rem; display: grid; gap: .35rem; }
 .company-perspectives__media figcaption strong { color: var(--ink); font-weight: 600; }
 .company-perspectives__media figcaption span { color: var(--mute); font-size: .8rem; }
+.company-perspectives__media--photo { aspect-ratio: 5 / 4; min-height: 0; align-self: start; }
+.company-perspectives__media--photo > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.company-perspectives__media--photo::before, .company-perspectives__media--photo::after { z-index: 1; pointer-events: none; }
+.company-perspectives__media--photo figcaption { right: auto; max-width: calc(100% - 3rem); z-index: 2; padding: .65rem .85rem; background: rgba(14,21,18,.88); }
+.company-perspectives__media--photo figcaption strong { color: #fff; }
+.company-perspectives__media--photo figcaption span { color: #d5ddd8; }
 .company-perspectives__copy { padding-top: 6rem; }
 .company-perspectives__number { color: var(--blue); font-size: .85rem; margin-bottom: 1.15rem; }
 .company-perspectives__copy h2 { font: 600 clamp(1.8rem, 3vw, 2.5rem)/1.15 var(--display); letter-spacing: -.03em; }
@@ -562,6 +568,7 @@ section { padding-block: var(--section-space); }
   .company-perspectives__tabs { position: static; width: 100%; margin-bottom: 1.25rem; }
   .company-perspectives__panel { grid-template-columns: 1fr; gap: 1.5rem; min-height: 0; }
   .company-perspectives__media { min-height: 16rem; }
+  .company-perspectives__media--photo { min-height: 0; }
   .company-perspectives__copy { padding-top: 0; min-height: 18rem; }
   .company-perspectives__number { margin-bottom: .75rem; }
   .company-perspectives__scope { gap: .5rem 1rem; }

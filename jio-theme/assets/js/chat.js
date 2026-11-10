@@ -29,7 +29,7 @@
 		root.classList.toggle('is-open', on);
 		toggle.setAttribute('aria-expanded', on ? 'true' : 'false');
 		toggle.setAttribute('aria-label', on ? 'Close chat' : 'Open chat');
-		if (on) input.focus();
+		if (on) input.focus({ preventScroll: true });
 	}
 
 	/* Render a reply: consecutive "- " / "* " / "• " lines become <ul>, anything else a <p>. Markdown bold is stripped. */
@@ -66,7 +66,15 @@
 		else body.textContent = text;
 		row.appendChild(body);
 		log.appendChild(row);
-		scrollDown();
+		if (role === 'assistant') {
+			// Keep the question visible above the beginning of its reply.
+			var start = row.previousElementSibling;
+			if (!start || !start.classList.contains('chat__msg--user')) start = row;
+			var padding = parseFloat(window.getComputedStyle(log).paddingTop) || 0;
+			log.scrollTop += start.getBoundingClientRect().top - log.getBoundingClientRect().top - log.clientTop - padding;
+		} else {
+			scrollDown();
+		}
 		return row;
 	}
 
@@ -102,7 +110,7 @@
 			box.appendChild(el);
 		});
 		log.appendChild(box);
-		scrollDown();
+		// Adding quick replies must not move the question or answer out of view.
 	}
 
 	/* Hand the gathered details to the quote form: here if the page has one, otherwise on the contact page. */
@@ -184,7 +192,7 @@
 			})
 			.then(function () {
 				setBusy(false);
-				input.focus();
+				if (!panel.hidden) input.focus({ preventScroll: true });
 			});
 	}
 

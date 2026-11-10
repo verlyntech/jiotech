@@ -888,27 +888,6 @@ h1, h2, h3 { font-family: var(--display); }
 .wrap--wide { max-width: none; padding-inline: clamp(1.25rem, 3.5vw, 4rem); }
 
 /* Homepage service spotlight: one visual stage, six clearly indexed services. */
-/* ---------- what we do: dark media band (video slot) above a row of proof points ---------- */
-.what-we-do { padding-block: 0; border-bottom: 1px solid var(--rule); }
-.what-we-do__media { position: relative; isolation: isolate; display: flex; align-items: center; min-height: clamp(16rem, 26vw, 24rem); background: var(--night); color: var(--on-night); overflow: hidden; }
-.what-we-do__video { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; }
-.what-we-do__video { object-fit: cover; }
-.what-we-do__media::after { content: ""; position: absolute; inset: 0; z-index: 0; background: rgba(5, 10, 8, .5); pointer-events: none; }
-.what-we-do__copy { position: relative; z-index: 1; }
-@media (max-width: 600px) {
- .what-we-do__media { min-height: 20rem; align-items: flex-start; }
- .what-we-do__media .what-we-do__copy { padding-bottom: 5rem; }
-}
-.what-we-do__copy { padding-block: clamp(2rem, 4vw, 3.5rem); }
-.what-we-do__copy .label { margin-bottom: .65rem; color: var(--on-night-mute); }
-.what-we-do__copy h2 { max-width: 26ch; color: var(--on-night); font: 600 clamp(1.8rem, 3.1vw, 2.7rem)/1.12 var(--display); letter-spacing: -.035em; }
-.what-we-do__stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.25rem clamp(1.5rem, 3vw, 3.5rem); margin: 0; padding: 1.5rem 0; list-style: none; }
-.what-we-do__stats li { display: grid; align-content: start; gap: .2rem; padding-left: .85rem; border-left: 2px solid var(--green); }
-.what-we-do__stats b { color: var(--ink); font: 600 1.15rem/1.25 var(--display); letter-spacing: -.01em; }
-.what-we-do__stats span { color: var(--mute); font-size: .95rem; line-height: 1.4; }
-@media (max-width: 1080px) { .what-we-do__stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (max-width: 600px) { .what-we-do__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-
 .home-spotlight { padding-block: var(--section-space); border-bottom: 1px solid var(--rule); }
 .home-spotlight__head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 1.75rem; }
 .home-spotlight__head .label { margin-bottom: .65rem; }

@@ -20,7 +20,7 @@ get_header(); ?>
             <div class="company-perspectives__panels">
             <article class="company-perspectives__panel" id="beginnings" data-company-panel="beginnings" aria-labelledby="company-title-beginnings">
                 <figure class="company-perspectives__media company-perspectives__media--photo">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-beginnings.webp" width="1402" height="1122" alt="Illustration of a small engineering team configuring IT hardware in a workshop" loading="lazy" decoding="async">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-beginnings-workshop.webp" width="1402" height="1122" alt="Illustration of an empty engineering workshop with a server, laptop, tools and organised network cabling" loading="lazy" decoding="async">
                     <figcaption><strong>A foundation in engineering.</strong><span>Beginnings · Illustrative image</span></figcaption>
                 </figure>
                 <div class="company-perspectives__copy">
@@ -32,7 +32,7 @@ get_header(); ?>
             </article>
             <article class="company-perspectives__panel" id="mission" data-company-panel="mission" aria-labelledby="company-title-mission">
                 <figure class="company-perspectives__media company-perspectives__media--photo">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-mission-jio-tech.webp" width="1402" height="1122" alt="Illustration of equipment quality checks and customer handover beneath a JIO TECH wall sign" loading="lazy" decoding="async">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-mission-infrastructure.webp" width="1402" height="1122" alt="Illustration of UPS and server equipment ready for delivery beneath a JIO TECH wall sign" loading="lazy" decoding="async">
                     <figcaption><strong>Purpose behind every solution.</strong><span>Mission · Illustrative image</span></figcaption>
                 </figure>
                 <div class="company-perspectives__copy">
@@ -44,7 +44,7 @@ get_header(); ?>
             </article>
             <article class="company-perspectives__panel" id="vision" data-company-panel="vision" aria-labelledby="company-title-vision">
                 <figure class="company-perspectives__media company-perspectives__media--photo">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-vision.webp" width="1402" height="1122" alt="Illustration of a modern UAE technology campus combining IT infrastructure, communications and energy systems" loading="lazy" decoding="async">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-vision-campus.webp" width="1402" height="1122" alt="Illustration of a modern UAE technology campus combining IT infrastructure, communications and energy systems" loading="lazy" decoding="async">
                     <figcaption><strong>A broader technology horizon.</strong><span>Vision · Illustrative image</span></figcaption>
                 </figure>
                 <div class="company-perspectives__copy">

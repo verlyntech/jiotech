@@ -289,26 +289,6 @@
 
 	}
 
-	// Homepage background video plays only while on screen, and stays on its poster when motion is reduced.
-	var videoSection = document.querySelector('[data-home-video]');
-	if (videoSection) {
-		var homeVideo = videoSection.querySelector('[data-home-video-element]');
-		var videoMotion = matchMedia('(prefers-reduced-motion: reduce)');
-		var videoVisible = false;
-		var syncHomeVideo = function () {
-			if (!videoVisible || document.hidden || videoMotion.matches) { homeVideo.pause(); return; }
-			var playing = homeVideo.play();
-			if (playing) playing.catch(function () { /* autoplay blocked: the poster stays */ });
-		};
-		if ('IntersectionObserver' in window) {
-			new IntersectionObserver(function (entries) {
-				videoVisible = entries[0].isIntersecting; syncHomeVideo();
-			}, { threshold: .1 }).observe(videoSection);
-		} else { videoVisible = true; syncHomeVideo(); }
-		document.addEventListener('visibilitychange', syncHomeVideo);
-		videoMotion.addEventListener('change', syncHomeVideo);
-	}
-
 	// Run decorative connector flow only while its section is visible.
 	var motionTargets = document.querySelectorAll('[data-sector-motion], .industry-orbit, .sector-list > li, [data-service-explorer], [data-vendor-strip]');
 	if ('IntersectionObserver' in window) {

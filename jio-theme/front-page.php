@@ -33,28 +33,6 @@ get_header(); ?>
 <?php get_template_part( 'parts/logo-wall' ); ?>
 </section>
 
-<!-- WHAT WE DO: full-width media band with proof points. -->
-<section class="what-we-do" id="what-we-do" aria-labelledby="what-we-do-title">
-	<div class="what-we-do__media" data-home-video>
-		<video class="what-we-do__video" id="home-infrastructure-video" muted loop playsinline preload="none" poster="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/infrastructure-video-poster.webp" aria-hidden="true" tabindex="-1" data-home-video-element>
-			<source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/video/infrastructure-preview.mp4" type="video/mp4">
-		</video>
-		<div class="wrap wrap--wide what-we-do__copy">
-			<p class="label">What we do</p>
-			<h2 id="what-we-do-title">IT &amp; energy solutions designed for tomorrow&rsquo;s needs.</h2>
-		</div>
-	</div>
-	<div class="wrap wrap--wide">
-		<ul class="what-we-do__stats" aria-label="JIO in brief">
-			<li><b>End-to-end expertise</b><span>IT to energy integration</span></li>
-			<li><b>20+ years</b><span>Proven track record</span></li>
-			<li><b>Client confidence</b><span>Built over years of work</span></li>
-			<li><b>Extensive portfolio</b><span>Across the UAE</span></li>
-			<li><b>24/7 support</b><span>Dedicated support availability</span></li>
-		</ul>
-	</div>
-</section>
-
 <!-- SERVICES: selectable spotlight with service illustrations. -->
 <section class="home-spotlight" id="chain" aria-labelledby="spotlight-title" data-home-spotlight>
 	<div class="wrap">
@@ -75,7 +53,7 @@ get_header(); ?>
 				<article class="home-spotlight__panel" id="spotlight-power" data-spotlight-panel="power">
 					<figure class="home-spotlight__visual home-spotlight__visual--photo">
 						<span class="home-spotlight__count" aria-label="Service 1 of 6">01 <span>/ 06</span></span>
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-power.webp" width="1672" height="941" alt="Illustration of an engineer checking a UPS cabinet beside enclosed battery banks and power equipment" loading="lazy" decoding="async">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-power-equipment.webp" width="1672" height="941" alt="Illustration of UPS power equipment, enclosed battery banks and renewable energy monitoring in an empty infrastructure room" loading="lazy" decoding="async">
 					</figure>
 					<div class="home-spotlight__copy">
 						<p class="home-spotlight__eyebrow">Design · Supply · Support</p>
@@ -140,7 +118,7 @@ get_header(); ?>
 				<article class="home-spotlight__panel" id="spotlight-cloud" data-spotlight-panel="cloud">
 					<figure class="home-spotlight__visual home-spotlight__visual--photo">
 						<span class="home-spotlight__count" aria-label="Service 6 of 6">06 <span>/ 06</span></span>
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-consulting-team.webp" width="1672" height="941" alt="Illustration of a technology consultant and client reviewing cloud architecture and an IT roadmap" loading="lazy" decoding="async">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-consulting-workspace.webp" width="1672" height="941" alt="Illustration of an empty cloud planning workspace with architecture diagrams, technology roadmaps and server infrastructure" loading="lazy" decoding="async">
 					</figure>
 					<div class="home-spotlight__copy">
 						<p class="home-spotlight__eyebrow">Design · Supply · Support</p>

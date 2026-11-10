@@ -37,3 +37,6 @@ require_once get_template_directory() . '/inc/chatbot.php';
 
 /** Service detail pages under /solutions/. */
 require_once get_template_directory() . '/inc/service-pages.php';
+
+/** Quote and support forms, emailed to the sales address. */
+require_once get_template_directory() . '/inc/forms.php';

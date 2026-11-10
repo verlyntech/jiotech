@@ -62,6 +62,7 @@ ${page.slug === 'solutions' ? `<link rel="stylesheet" href="../jio-theme/assets/
 		[/<\?php wp_head\(\); \?>/g, () => head],
 		[/<\?php echo esc_url\( get_template_directory_uri\(\) \); \?>/g, () => '../jio-theme'],
 		[/<\?php echo esc_url\( rest_url\( 'jio\/v1\/chat' \) \); \?>/g, () => '/wp-json/jio/v1/chat'],
+		[/<\?php echo esc_url\( admin_url\( 'admin-post\.php' \) \); \?>/g, () => '#'], // no form handler in the preview: site.js shows a notice
 		[/<\?php jio_head_class\(\); \?>/g, () => (page.front ? ' site-head--over' : '')],
 		[/<\?php echo esc_url\( home_url\( '([^']*)' \) \); \?>/g, (_, p) => {
 			const [path, hash] = p.split('#');

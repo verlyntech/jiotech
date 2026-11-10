@@ -1,4 +1,6 @@
-<form class="form" action="#" method="post" enctype="multipart/form-data" novalidate data-quote>
+<form class="form" id="quote-form" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" enctype="multipart/form-data" novalidate data-quote>
+	<input type="hidden" name="action" value="jio_quote"><?php wp_nonce_field( 'jio_quote', 'jio_nonce', false ); ?>
+	<div class="sr" aria-hidden="true"><label for="q-website">Leave this empty</label><input id="q-website" name="website" tabindex="-1" autocomplete="off"></div>
 	<div class="form__errors" data-form-errors role="alert" tabindex="-1" hidden>
 		<p class="form__errors-h">Check these before sending:</p>
 		<ul></ul>
@@ -35,6 +37,5 @@
 		<p class="form__reassure">We call you to schedule the discovery meeting. Your details are used only to reply to this request.</p>
 		<!-- Client to confirm before launch: add a reply-time commitment here, e.g. "We reply within one working day." Do not publish one that is not confirmed. -->
 	</div>
-	<!-- Developer: connect this form to Contact Form 7, WPForms or the CRM before launch (it includes a file upload, so the handler must accept multipart). -->
-	<p class="form__note" data-form-msg role="status" aria-live="polite"></p>
+	<p class="form__note" data-form-msg role="status" aria-live="polite"><?php echo esc_html( jio_form_notice( 'quote' ) ); ?></p>
 </form>

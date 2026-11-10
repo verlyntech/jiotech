@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../jio-theme/assets/js/theme.js?v=1794321119034"></script>
+<script src="../jio-theme/assets/js/theme.js?v=1794323296918"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
-<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794321119034">
-<script src="../jio-theme/assets/js/site.js?v=1794321119034" defer></script>
-<script src="../jio-theme/assets/js/chat.js?v=1794321119034" defer></script>
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794323296918">
+<script src="../jio-theme/assets/js/site.js?v=1794323296918" defer></script>
+<script src="../jio-theme/assets/js/chat.js?v=1794323296918" defer></script>
 
-<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794321119034">
+<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794323296918">
 <title>Client support | JIO Technologies (preview)</title>
 </head>
 <body >
@@ -163,7 +163,9 @@
 			</dl>
 		</div>
 
-		<form class="form" action="#" method="post" data-support>
+		<form class="form" id="support-form" action="#" method="post" data-support>
+			<input type="hidden" name="action" value="jio_support">
+			<div class="sr" aria-hidden="true"><label for="s-website">Leave this empty</label><input id="s-website" name="website" tabindex="-1" autocomplete="off"></div>
 			<h2 class="form__h">Submit a support request</h2>
 			<input type="hidden" name="priority" value="normal" data-priority-field>
 			<div class="form__row">
@@ -188,7 +190,6 @@
 			<div class="field"><label for="s-desc">What is happening?</label><textarea id="s-desc" name="description" rows="5" required placeholder="What stopped working, since when, and at which site"></textarea></div>
 			<label class="check"><input type="checkbox" name="consent" required> <span>I agree to JIO processing these details to handle this request. I can withdraw consent at any time.</span></label>
 			<button class="btn" type="submit">Submit request</button>
-			<!-- Developer: connect this form to the helpdesk before launch. -->
 			<p class="form__note" data-form-msg role="status" aria-live="polite"></p>
 		</form>
 

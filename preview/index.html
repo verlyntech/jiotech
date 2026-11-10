@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../jio-theme/assets/js/theme.js?v=1794321119009"></script>
+<script src="../jio-theme/assets/js/theme.js?v=1794323296872"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
-<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794321119009">
-<script src="../jio-theme/assets/js/site.js?v=1794321119009" defer></script>
-<script src="../jio-theme/assets/js/chat.js?v=1794321119009" defer></script>
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794323296873">
+<script src="../jio-theme/assets/js/site.js?v=1794323296873" defer></script>
+<script src="../jio-theme/assets/js/chat.js?v=1794323296873" defer></script>
 
-<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794321119009">
+<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794323296873">
 <title>Home | JIO Technologies (preview)</title>
 </head>
 <body class="home">
@@ -369,7 +369,9 @@
 </ol>
 
 		<div class="quote__grid">
-			<form class="form" action="#" method="post" enctype="multipart/form-data" novalidate data-quote>
+			<form class="form" id="quote-form" action="#" method="post" enctype="multipart/form-data" novalidate data-quote>
+	<input type="hidden" name="action" value="jio_quote">
+	<div class="sr" aria-hidden="true"><label for="q-website">Leave this empty</label><input id="q-website" name="website" tabindex="-1" autocomplete="off"></div>
 	<div class="form__errors" data-form-errors role="alert" tabindex="-1" hidden>
 		<p class="form__errors-h">Check these before sending:</p>
 		<ul></ul>
@@ -406,7 +408,6 @@
 		<p class="form__reassure">We call you to schedule the discovery meeting. Your details are used only to reply to this request.</p>
 		<!-- Client to confirm before launch: add a reply-time commitment here, e.g. "We reply within one working day." Do not publish one that is not confirmed. -->
 	</div>
-	<!-- Developer: connect this form to Contact Form 7, WPForms or the CRM before launch (it includes a file upload, so the handler must accept multipart). -->
 	<p class="form__note" data-form-msg role="status" aria-live="polite"></p>
 </form>
 

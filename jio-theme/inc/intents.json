@@ -14,7 +14,7 @@
       "description": "What JIO does in general, or a list of all services.",
       "handler": "model",
       "offline": "JIO supplies and supports both IT and power: UPS and batteries, data centers, cloud, cybersecurity, networks, CCTV, managed IT and 24/7 support. One contract and one support number cover both.",
-      "chips": ["quote", "power", "support"],
+      "chips": ["services_page", "quote", "power", "support"],
       "examples": ["what do you offer", "what do you do", "what services do you provide", "what are your services", "tell me about jio", "who are you", "what does jio technologies do", "list your services", "what can you help with", "are you an it company"]
     },
     "service_info": {
@@ -22,7 +22,7 @@
       "description": "A question about one service: UPS, batteries, solar, data centers, cloud, cybersecurity, network, CCTV, managed IT, maintenance, consulting or hardware supply.",
       "handler": "model",
       "offline": "JIO covers UPS and batteries, data centers, cloud, cybersecurity, networks, CCTV, managed IT, maintenance, consulting and hardware supply. For the details of your site, call {phone} or start a quote.",
-      "chips": ["quote_this", "brands", "support"],
+      "chips": ["service_page", "quote_this", "brands", "support"],
       "examples": ["do you install ups systems", "can you design a data center", "do you do cctv", "can you set up our network", "do you offer cloud migration", "do you sell lithium batteries", "do you do solar", "can you manage our it", "do you offer cybersecurity", "what is the difference between vrla and lithium batteries", "do you do maintenance contracts", "can you supply servers"]
     },
     "vendors_brands": {
@@ -38,7 +38,7 @@
       "description": "Which sectors or kinds of organisation JIO serves, including government and SMEs.",
       "handler": "model",
       "offline": "Yes, JIO works with government, healthcare, banking, energy, manufacturing, construction, logistics, retail and education, from SMEs to large enterprises, across the UAE and the GCC.",
-      "chips": ["quote", "services"],
+      "chips": ["industries_page", "quote", "services"],
       "examples": ["do you work with government", "which industries do you serve", "do you work with hospitals", "do you work with banks", "do you work with small businesses", "do you serve schools", "who are your customers", "do you work outside the uae", "do you cover dubai", "do you work in the gcc"]
     },
     "process": {
@@ -90,11 +90,11 @@
     },
     "careers_partners": {
       "group": "About",
-      "description": "Jobs at JIO, or reseller and trade buying through the B2B portal.",
+      "description": "Jobs and careers at JIO, partnering with JIO (manufacturers, distributors, resellers, partner programmes), or reseller and trade buying through the B2B portal.",
       "handler": "model",
-      "offline": "JIO is hiring in Abu Dhabi; open roles are on its recruitment portal. Resellers and trade buyers use the B2B portal at jiotech.ae.",
-      "chips": ["b2b", "contact"],
-      "examples": ["are you hiring", "how do i apply for a job", "careers", "jobs", "i am a reseller", "do you sell to resellers", "trade prices", "b2b portal", "can i become a partner", "internship"]
+      "offline": "JIO is hiring in Abu Dhabi; see the Careers page. Manufacturers and distributors can contact JIO through the Partnerships page, and resellers and trade buyers use the B2B portal at jiotech.ae.",
+      "chips": ["careers_page", "partnerships_page", "b2b", "contact"],
+      "examples": ["are you hiring", "how do i apply for a job", "careers", "jobs", "i am a reseller", "do you sell to resellers", "trade prices", "b2b portal", "can i become a partner", "internship", "do you have a partner programme for resellers", "partner program", "we are a distributor", "i am a manufacturer looking for a local partner", "how do we partner with you"]
     },
     "out_of_scope": {
       "group": "Other",
@@ -126,6 +126,11 @@
     "email": {"label": "Email the team", "href": "mailto:{email}"},
     "whatsapp": {"label": "WhatsApp", "href": "{whatsapp}"},
     "support_page": {"label": "Client support page", "href": "{home}client-support/"},
+    "service_page": {"label": "View the service page", "page_from_turn": true},
+    "services_page": {"label": "All services", "href": "{home}solutions/"},
+    "industries_page": {"label": "Industries page", "href": "{home}industries/"},
+    "careers_page": {"label": "Careers page", "href": "{home}careers/"},
+    "partnerships_page": {"label": "Partnerships page", "href": "{home}partnerships/"},
     "b2b": {"label": "B2B portal", "href": "https://jiotech.ae/"},
     "continue_quote": {"label": "Continue my quote", "send": "Continue my quote"},
     "open_form": {"label": "Open the quote form", "action": "prefill"},
@@ -139,9 +144,10 @@
         "key": "service",
         "label": "Service",
         "question": "What do you need?",
-        "options": ["Power & energy (UPS, batteries, renewables)", "Data center design & hosting", "Cybersecurity & data protection", "Network & connectivity", "Managed IT & 24/7 support", "Consulting & cloud", "Not sure, or several"],
-        "short": ["Power & UPS", "Data center", "Security & CCTV", "Network", "Managed IT & support", "Consulting & cloud", "Not sure"],
-        "covers": ["UPS, batteries, solar, renewables, power distribution", "data centers, racks, hosting, cooling, server rooms", "cybersecurity, firewalls, CCTV, cameras, physical security", "LAN, WAN, Wi-Fi, cabling, network security", "managed IT, maintenance contracts, 24/7 support", "cloud, migration, IT consulting, digital transformation", "several services at once, or hardware supply across categories"]
+        "options": ["Power & energy (UPS, batteries, renewables)", "Data center design & hosting", "Cybersecurity & data protection", "Network & connectivity", "Managed IT & 24/7 support", "Consulting & cloud", "Digital transformation", "Not sure, or several"],
+        "pages": {"Power & energy (UPS, batteries, renewables)": "/solutions/power-energy-solutions/", "Data center design & hosting": "/solutions/web-development/", "Cybersecurity & data protection": "/solutions/cyber-security/", "Network & connectivity": "/solutions/network-connectivity-solutions/", "Managed IT & 24/7 support": "/solutions/managed-services/", "Consulting & cloud": "/solutions/it-consulting-advisory/", "Digital transformation": "/solutions/digital-transformation/"},
+        "short": ["Power & UPS", "Data center", "Security & CCTV", "Network", "Managed IT & support", "Consulting & cloud", "Digital transformation", "Not sure"],
+        "covers": ["UPS, batteries, solar, renewables, power distribution", "data centers, racks, hosting, cooling, server rooms", "cybersecurity, firewalls, CCTV, cameras, physical security", "LAN, WAN, Wi-Fi, cabling, network security", "managed IT, maintenance contracts, 24/7 support", "cloud, migration, IT consulting, IT strategy and roadmaps", "digital transformation, modernising legacy systems, connecting data and workflows", "several services at once, or hardware supply across categories"]
       },
       {
         "key": "site",

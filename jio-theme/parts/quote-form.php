@@ -21,6 +21,7 @@
 			<option>Network &amp; connectivity</option>
 			<option>Managed IT &amp; 24/7 support</option>
 			<option>Consulting &amp; cloud</option>
+			<option>Digital transformation</option>
 			<option>Not sure, or several</option>
 		</select>
 		<p class="field__err" id="sv-err" hidden></p>

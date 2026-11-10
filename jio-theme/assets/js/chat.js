@@ -57,6 +57,13 @@
 
 	function scrollDown() { log.scrollTop = log.scrollHeight; }
 
+	// Scroll towards the bottom, but never so far that the top of `start` leaves the view.
+	function keepInView(start) {
+		var padding = parseFloat(window.getComputedStyle(log).paddingTop) || 0;
+		var toStart = log.scrollTop + start.getBoundingClientRect().top - log.getBoundingClientRect().top - log.clientTop - padding;
+		log.scrollTop = Math.min(log.scrollHeight - log.clientHeight, toStart);
+	}
+
 	function add(role, text) {
 		var row = document.createElement('div');
 		row.className = 'chat__msg chat__msg--' + role;
@@ -70,8 +77,7 @@
 			// Keep the question visible above the beginning of its reply.
 			var start = row.previousElementSibling;
 			if (!start || !start.classList.contains('chat__msg--user')) start = row;
-			var padding = parseFloat(window.getComputedStyle(log).paddingTop) || 0;
-			log.scrollTop += start.getBoundingClientRect().top - log.getBoundingClientRect().top - log.clientTop - padding;
+			keepInView(start);
 		} else {
 			scrollDown();
 		}
@@ -170,7 +176,7 @@
 		pending.className = 'chat__msg chat__msg--assistant chat__pending';
 		pending.innerHTML = '<span class="chat__typing" aria-label="Thinking"><i></i><i></i><i></i></span>';
 		log.appendChild(pending);
-		scrollDown();
+		keepInView(pending.previousElementSibling); // the question stays visible while the reply loads
 
 		fetch(endpoint, {
 			method: 'POST',

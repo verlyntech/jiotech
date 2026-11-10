@@ -25,7 +25,7 @@ The browser sends the state back with every message: flow, pending question, fil
 | File | Role |
 |---|---|
 | `jio-theme/inc/intents.json` | Intent catalog, examples, chips, quote slots, fallback and handoff copy |
-| `jio-theme/inc/knowledge.json` | Facts the model may use, plus the `not_confirmed` list it must never claim |
+| `jio-theme/inc/knowledge.json` | Facts the model may use: company, a map of every page and its path, services, why choose JIO, industries and industry expertise, vendors, partnerships, process, the same 12 questions as the FAQ page, and the `not_confirmed` list it must never claim |
 | `jio-theme/inc/chatbot.php` | WordPress endpoint `/wp-json/jio/v1/chat` |
 | `preview/serve.mjs` | The same engine for the static preview |
 | `jio-theme/assets/js/chat.js` | Widget: renders replies and chips, keeps the state, prefills the quote form |
@@ -104,6 +104,8 @@ This flow can't make anything up: every question and option comes from `intents.
 - **Arabic:** messages in Arabic script always go to the model, which replies in Arabic. Chips and form fields stay in English. Arabic service isn't confirmed by JIO yet; see `not_confirmed`.
 
 ## Response Design
+
+- Answers link to the site. A service answer offers **View the service page**, picked from the service the visitor asked about (the `pages` map on the quote form's service question in `intents.json`); it is dropped when no single service was named. Overview, industries and careers or partner answers offer All services, the Industries page, and the Careers and Partnerships pages. In the preview, site paths are turned into the preview's files, so the same buttons work there. When the site gains a page, add it to `pages` in `knowledge.json` and, if it needs a button, to `chips` in `intents.json`.
 
 - The format fits the question. A simple question (yes or no, or a single fact) gets one or two plain sentences. Bullets are only for several items or steps: up to four, about 15 words each. Every reply stays under about 60 words, with the answer first and no closing pleasantries. Fixed replies (contact, support, handoff) are plain sentences. The client asked for short, pointed replies, so this overrides the skill's "acknowledge first" principle for model answers. Templated flow steps do acknowledge ("Got it.").
 - The tone is plain, professional and specific, with no hype, matching the site copy.

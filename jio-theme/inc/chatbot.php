@@ -240,6 +240,19 @@ function jio_chat_chip( $key, $turn_slots = array() ) {
 	if ( ! empty( $c['reset'] ) ) {
 		$out['reset'] = true;
 	}
+	if ( ! empty( $c['page_from_turn'] ) ) {
+		$pages = array();
+		foreach ( $cat['quote']['slots'] as $s ) {
+			if ( 'service' === $s['key'] && isset( $s['pages'] ) ) {
+				$pages = $s['pages'];
+			}
+		}
+		$service = isset( $turn_slots['service'] ) ? $turn_slots['service'] : '';
+		if ( ! isset( $pages[ $service ] ) ) {
+			return null; // no page for this service (or none named): drop the button
+		}
+		$out['href'] = home_url( $pages[ $service ] );
+	}
 	if ( ! empty( $c['slots_from_turn'] ) && ! empty( $turn_slots['service'] ) ) {
 		$out['state'] = array( 'slots' => array( 'service' => $turn_slots['service'] ) );
 	}

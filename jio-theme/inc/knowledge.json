@@ -9,8 +9,78 @@
     "whatsapp": "https://wa.me/971553440144",
     "support": "Technical support is offered 24/7, remote and onsite, including emergency response.",
     "b2b_portal": "https://jiotech.ae/ (for resellers and trade buyers)",
-    "careers": "The company is hiring in Abu Dhabi. Open positions are listed on its recruitment portal."
+    "careers": "JIO is hiring in Abu Dhabi; see the Careers page. It looks for people who are passionate, proactive, team players, adaptable and committed. Benefits listed: competitive salaries, performance-based rewards, health and wellness benefits, training and certification sponsorship, and career growth pathways. Open positions are listed on its recruitment portal."
   },
+  "pages": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Services (all)",
+      "path": "/solutions/"
+    },
+    {
+      "name": "Power & energy solutions",
+      "path": "/solutions/power-energy-solutions/"
+    },
+    {
+      "name": "Data center design & hosting",
+      "path": "/solutions/web-development/"
+    },
+    {
+      "name": "Network & connectivity",
+      "path": "/solutions/network-connectivity-solutions/"
+    },
+    {
+      "name": "Cybersecurity, data protection & CCTV",
+      "path": "/solutions/cyber-security/"
+    },
+    {
+      "name": "Managed IT & infrastructure services",
+      "path": "/solutions/managed-services/"
+    },
+    {
+      "name": "Maintenance & 24/7 technical support",
+      "path": "/solutions/maintenance-technical-support/"
+    },
+    {
+      "name": "IT consulting & advisory",
+      "path": "/solutions/it-consulting-advisory/"
+    },
+    {
+      "name": "Digital transformation",
+      "path": "/solutions/digital-transformation/"
+    },
+    {
+      "name": "Industries",
+      "path": "/industries/"
+    },
+    {
+      "name": "Company",
+      "path": "/about/"
+    },
+    {
+      "name": "Careers",
+      "path": "/careers/"
+    },
+    {
+      "name": "Partnerships",
+      "path": "/partnerships/"
+    },
+    {
+      "name": "FAQ",
+      "path": "/faq/"
+    },
+    {
+      "name": "Contact and quote form",
+      "path": "/contact/"
+    },
+    {
+      "name": "Client support",
+      "path": "/client-support/"
+    }
+  ],
   "services": [
     {
       "name": "Power and energy",
@@ -54,6 +124,13 @@
       "summary": "Networking equipment, servers, storage, UPS units and power distribution units supplied through JIO."
     }
   ],
+  "why_choose": [
+    "20+ years: two decades delivering hybrid IT and energy projects across the UAE.",
+    "One partner for IT and power: one contract and one support number, instead of separate IT and power contractors.",
+    "End-to-end delivery: site survey, design, supply, installation and maintenance, handled by the same team.",
+    "Established brands: equipment from 30 manufacturers, including APC, Eaton, Dell, Cisco and Fortinet.",
+    "Local, 24/7 support: a team in Abu Dhabi with 24/7 remote and on-site support, including emergency response."
+  ],
   "industries": [
     "Government and public sector",
     "Healthcare and medical",
@@ -65,19 +142,86 @@
     "Retail and e-commerce",
     "Education"
   ],
+  "industry_expertise": [
+    "Compliance: healthcare, banking and government work comes with regulatory and audit requirements; JIO plans IT and power setups around them, with documentation that supports audits.",
+    "Sector systems: from hospital applications to plant controls, sector systems depend on stable networks and power; JIO designs around the systems a client already uses.",
+    "Security: firewalls, endpoint protection and CCTV, sized to the risk an organisation faces.",
+    "Backup power to standard: UPS and battery setups built to the safety and audit requirements of the sector, and maintained to stay that way."
+  ],
   "vendors": "Power: APC by Schneider Electric, Eaton, Vertiv, Emerson, BPC Energy, Amaron, SacredSun. Compute and storage: Dell Technologies, HPE, HP, Lenovo, Supermicro, Intel, Synology. Network and security: Cisco, HPE Aruba Networking, Fortinet, Huawei, Hikvision. Software and cloud: Microsoft, VMware, AWS. Print, AV and devices: Xerox, Epson, Canon, Brother, Zebra, Poly, Bose. JIO works with these manufacturers. Do not describe JIO's authorisation tier with any of them unless it is listed here.",
+  "partnerships": {
+    "summary": "JIO brings power, compute, networking and security from established brands into one design, one installation and one support contract. Manufacturers and distributors get a local team that delivers to their standards; resellers and trade buyers order through the B2B portal.",
+    "routes": [
+      "Manufacturers and distributors: contact JIO through the Partnerships or Contact page.",
+      "Resellers and trade buyers: the B2B portal at https://jiotech.ae/.",
+      "Organisations buying services: the Services pages and the quote form."
+    ],
+    "focus_areas": [
+      "Power and energy: APC by Schneider Electric, Eaton, Vertiv, Emerson, BPC Energy.",
+      "Servers, storage and edge: Dell Technologies, HPE, Lenovo, Supermicro.",
+      "Networking and security: Cisco, HPE Aruba Networking, Fortinet, Huawei, Hikvision.",
+      "Virtualisation and cloud: VMware, Microsoft, AWS."
+    ],
+    "how": [
+      "Solutions designed with manufacturer input, with regular reviews of deployment quality.",
+      "Manufacturer-approved materials and testing procedures, with joint commissioning where a project calls for it.",
+      "Transparent project documentation and warranty terms aligned with the manufacturer."
+    ]
+  },
   "process": [
     "Schedule a call at a time that suits you.",
     "Discovery meeting: JIO reviews your sites, loads and systems.",
     "Proposal: scope, equipment and a support plan in writing."
   ],
   "faq": [
-    {"q": "What is your industry focus?", "a": "Organisations that cannot afford downtime: government and the public sector, healthcare, banking and finance, energy and utilities, and industrial sites. What they share is critical IT that depends on reliable power, which is where one supplier for both helps most."},
-    {"q": "Do you support small and large businesses?", "a": "Yes. JIO works with SMEs, enterprises, government bodies and industrial clients, and scales each solution to the organisation."},
-    {"q": "Do you install and maintain UPS systems in Dubai and Abu Dhabi?", "a": "Yes: installation, configuration, preventive maintenance, battery replacement and annual service contracts."},
-    {"q": "Can you design and build data centers?", "a": "Yes, end to end: construction, hosting, cabling, power integration and cooling, for small to enterprise environments."},
-    {"q": "Do you offer CCTV and physical security?", "a": "Yes: camera and recorder installation, remote monitoring, and integration with the IT network."},
-    {"q": "Can you supply IT hardware and power equipment?", "a": "Yes: networking equipment, servers, storage, UPS units, power distribution units and energy-efficient hardware."}
+    {
+      "q": "What services does JIO provide in the UAE?",
+      "a": "Hybrid IT and energy services: managed IT, power backup, cybersecurity, cloud, data center design, networking and technology procurement, in Dubai and Abu Dhabi."
+    },
+    {
+      "q": "Do you support small and large businesses?",
+      "a": "Yes. We work with SMEs, enterprises, government bodies and industrial clients, and scale each solution to the organisation."
+    },
+    {
+      "q": "Which industries do you serve?",
+      "a": "Manufacturing, construction, healthcare, finance, retail, education, logistics, energy and utilities, and government."
+    },
+    {
+      "q": "What is your industry focus?",
+      "a": "Organisations that cannot afford downtime: government and the public sector, healthcare, banking and finance, energy and utilities, and industrial sites. What they share is critical IT that depends on reliable power, which is where one supplier for both helps most."
+    },
+    {
+      "q": "Do you offer 24/7 technical support?",
+      "a": "Yes: round-the-clock monitoring, remote and onsite help, and emergency response."
+    },
+    {
+      "q": "Which brands do you work with?",
+      "a": "Dell, HPE, Lenovo, Cisco, Microsoft, APC, Eaton, Vertiv, Intel, Acronis and Ubiquiti, among others."
+    },
+    {
+      "q": "Do you install and maintain UPS systems in Dubai and Abu Dhabi?",
+      "a": "Yes: installation, configuration, preventive maintenance, battery replacement and annual service contracts."
+    },
+    {
+      "q": "Can you design and build data centers?",
+      "a": "Yes, end to end: construction, hosting, cabling, power integration and cooling, for small to enterprise environments."
+    },
+    {
+      "q": "Do you offer CCTV and physical security?",
+      "a": "Yes: camera and recorder installation, remote monitoring, and integration with your IT network."
+    },
+    {
+      "q": "Can you supply IT hardware and power equipment?",
+      "a": "Yes: networking equipment, servers, storage, UPS units, power distribution units and energy-efficient hardware."
+    },
+    {
+      "q": "What sets JIO apart?",
+      "a": "IT and energy under one roof, end-to-end delivery, fast local support, and a focus on reliability and long-term partnerships."
+    },
+    {
+      "q": "How can I contact JIO?",
+      "a": "Email sales@jiotechuae.com or call +971 55 344 0144."
+    }
   ],
   "not_confirmed": [
     "Trade licence or registration numbers",

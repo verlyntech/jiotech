@@ -148,7 +148,23 @@ function chip(key, cat, k, turnSlots) {
 	if (c.action) out.action = c.action;
 	if (c.reset) out.reset = true;
 	if (c.slots_from_turn && turnSlots.service) out.state = { slots: { service: turnSlots.service } };
+	if (c.page_from_turn) {
+		const pages = (cat.quote.slots.find((s) => s.key === 'service') || {}).pages || {};
+		const path = pages[turnSlots.service];
+		if (!path) return null; // no page for this service (or none named): drop the button
+		out.href = path;
+	}
+	if (out.href) out.href = previewHref(out.href);
 	return out;
+}
+
+/** Site paths (/careers/, /solutions/<slug>/) as the static preview's files, so chat links work in the preview. */
+function previewHref(href) {
+	if (!href.startsWith('/')) return href;
+	const [path, hash] = href.split('#');
+	const service = path.match(/^\/solutions\/([^/]+)\/$/);
+	const file = path === '/' ? 'index.html' : service ? `service-${service[1]}.html` : `${path.replace(/\//g, '')}.html`;
+	return `/preview/${file}${hash ? `#${hash}` : ''}`;
 }
 
 /** Quote flow (slot filling): ask for the next missing detail, then confirm and hand the details to the form. */

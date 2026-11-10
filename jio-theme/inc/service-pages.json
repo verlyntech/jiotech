@@ -3,6 +3,7 @@
   "pages": [
     {
       "slug": "power-energy-solutions",
+      "tone": "power",
       "short": "Power & energy",
       "title": "Power & energy solutions",
       "lead": "Reliable power. Sustainable performance.",
@@ -30,6 +31,7 @@
     },
     {
       "slug": "web-development",
+      "tone": "power",
       "short": "Data centers",
       "title": "Data center design & hosting",
       "lead": "Building the backbone of digital reliability.",
@@ -57,6 +59,7 @@
     },
     {
       "slug": "network-connectivity-solutions",
+      "tone": "it",
       "short": "Networking",
       "title": "Network & connectivity",
       "lead": "Connecting businesses with speed, security and reliability.",
@@ -84,6 +87,7 @@
     },
     {
       "slug": "cyber-security",
+      "tone": "it",
       "short": "Cybersecurity",
       "title": "Cybersecurity, data protection & CCTV",
       "lead": "Protection for your systems, your data and your premises.",
@@ -111,6 +115,7 @@
     },
     {
       "slug": "managed-services",
+      "tone": "it",
       "short": "Managed IT",
       "title": "Managed IT & infrastructure services",
       "lead": "We manage your IT, so you can manage your business.",
@@ -138,6 +143,7 @@
     },
     {
       "slug": "maintenance-technical-support",
+      "tone": "power",
       "short": "Maintenance & support",
       "title": "Maintenance & 24/7 technical support",
       "lead": "Keeping your systems running, around the clock.",
@@ -165,6 +171,7 @@
     },
     {
       "slug": "it-consulting-advisory",
+      "tone": "it",
       "short": "IT consulting",
       "title": "IT consulting & advisory",
       "lead": "Technology decisions tied to your business goals.",
@@ -192,6 +199,7 @@
     },
     {
       "slug": "digital-transformation",
+      "tone": "it",
       "short": "Digital transformation",
       "title": "Digital transformation",
       "lead": "Modernising how your business operates, connects and grows.",

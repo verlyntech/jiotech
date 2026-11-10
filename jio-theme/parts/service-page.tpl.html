@@ -13,9 +13,9 @@
 				<a class="link" href="{{solutions_url}}">All services</a>
 			</div>
 		</div>
-		<figure class="svc-media">
-			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
-			<figcaption><strong>Image placeholder</strong><span>{{hero_image}}</span></figcaption>
+		<figure class="svc-media svc-media--photo">
+			<img src="{{hero_image_url}}" width="{{hero_image_width}}" height="{{hero_image_height}}" alt="{{hero_image}}" loading="eager" fetchpriority="high" decoding="async">
+			<figcaption>Illustrative image</figcaption>
 		</figure>
 	</div>
 </section>
@@ -31,9 +31,9 @@
 
 <section class="svc-fit" aria-labelledby="svc-fit-title">
 	<div class="wrap svc-fit__grid">
-		<figure class="svc-media svc-media--wide">
-			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
-			<figcaption><strong>Image placeholder</strong><span>{{detail_image}}</span></figcaption>
+		<figure class="svc-media svc-media--wide svc-media--photo">
+			<img src="{{detail_image_url}}" width="{{detail_image_width}}" height="{{detail_image_height}}" alt="{{detail_image}}" loading="lazy" decoding="async">
+			<figcaption>Illustrative image</figcaption>
 		</figure>
 		<div class="svc-fit__copy">
 			<p class="label">{{why_label}}</p>

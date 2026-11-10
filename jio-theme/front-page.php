@@ -29,7 +29,6 @@ get_header(); ?>
 
 <!-- Manufacturer ribbon follows the hero. -->
 <section class="vendor-strip" id="technology-brands" aria-label="Manufacturers supplied by JIO" data-vendor-strip>
-<a class="vendor-strip__link" href="<?php echo esc_url( home_url( '/partnerships/' ) ); ?>"><span>Brands we<br>work with</span><span class="vendor-strip__arrow" aria-hidden="true">&#8599;</span></a>
 <?php get_template_part( 'parts/logo-wall' ); ?>
 </section>
 

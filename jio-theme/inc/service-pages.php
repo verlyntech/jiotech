@@ -58,6 +58,9 @@ function jio_render_service_page( $slug ) {
 	);
 	$page['solutions_url'] = home_url( '/solutions/' );
 	$page['quote_url']     = home_url( '/contact/#quote' );
+	foreach ( array( 'hero', 'detail' ) as $role ) {
+		$page[ $role . '_image_url' ] = get_template_directory_uri() . '/assets/img/' . $page[ $role . '_image_file' ];
+	}
 	return jio_fill_template( (string) file_get_contents( get_template_directory() . '/parts/service-page.tpl.html' ), $page );
 }
 

@@ -87,9 +87,9 @@ get_header(); ?>
 <!-- TEAM AND CULTURE: image-and-copy rows, the second mirrored. -->
 <section class="company-team" aria-labelledby="team-title">
 	<div class="wrap svc-fit__grid">
-		<figure class="svc-media svc-media--wide">
-			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
-			<figcaption><strong>Image placeholder</strong><span>The JIO team together at the Abu Dhabi office, IT engineers and power specialists side by side.</span></figcaption>
+		<figure class="svc-media svc-media--wide svc-media--photo">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-team-workspace.webp" width="1586" height="992" alt="Illustration of an empty collaborative engineering studio with shared project tables and green task chairs" loading="lazy" decoding="async">
+			<figcaption>Illustrative image</figcaption>
 		</figure>
 		<div class="svc-fit__copy">
 			<p class="label">Our team</p>
@@ -109,9 +109,9 @@ get_header(); ?>
 			<h2 id="culture-title">Better together.</h2>
 			<p>Work matters, and so does enjoying it. We respect our partners, work through problems together and take real pride in helping our clients. That spirit is what we look for in everyone who joins.</p>
 		</div>
-		<figure class="svc-media svc-media--wide">
-			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
-			<figcaption><strong>Image placeholder</strong><span>A candid moment at the office, such as the team marking a project handover together.</span></figcaption>
+		<figure class="svc-media svc-media--wide svc-media--photo">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-culture-lounge.webp" width="1586" height="992" alt="Illustration of a welcoming office lounge with sage seating, plants and a coffee area" loading="lazy" decoding="async">
+			<figcaption>Illustrative image</figcaption>
 		</figure>
 	</div>
 </section>

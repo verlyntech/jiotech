@@ -18,9 +18,9 @@ get_header(); ?>
 				<a class="link" href="https://jiotech.ae/">B2B portal</a>
 			</div>
 		</div>
-		<figure class="svc-media">
-			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
-			<figcaption><strong>Image placeholder</strong><span>JIO and manufacturer engineers commissioning a UPS or rack installation together.</span></figcaption>
+		<figure class="svc-media svc-media--photo">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/partnerships-delivery-hub.webp" width="1402" height="1122" alt="Illustration of an organised technology delivery hub with equipment shelving, transit cases and a staging bench" loading="eager" fetchpriority="high" decoding="async">
+			<figcaption>Illustrative image</figcaption>
 		</figure>
 	</div>
 </section>
@@ -50,9 +50,9 @@ get_header(); ?>
 
 <section class="svc-fit" aria-labelledby="partners-where-title">
 	<div class="wrap svc-fit__grid">
-		<figure class="svc-media svc-media--wide">
-			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
-			<figcaption><strong>Image placeholder</strong><span>A finished project that shows several brands working together, such as a rack with UPS, servers and network gear.</span></figcaption>
+		<figure class="svc-media svc-media--wide svc-media--photo">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/partnerships-integrated-edge.webp" width="1586" height="992" alt="Illustration of an integrated edge installation combining an IT rack, UPS cabinet, power distribution and security camera" loading="lazy" decoding="async">
+			<figcaption>Illustrative image</figcaption>
 		</figure>
 		<div class="svc-fit__copy">
 			<p class="label">Where we partner</p>

@@ -43,6 +43,11 @@ get_header(); ?>
 				<div class="service-map__top"><span>Built to work together</span><span aria-hidden="true">IT + ENERGY</span></div>
 				<div class="service-map__stage">
 					<svg class="service-map__wires" viewBox="0 0 640 520" preserveAspectRatio="none" aria-hidden="true">
+						<path class="service-map__track is-active" data-service-wire="power" d="M320 245V170H125V100"/>
+						<path class="service-map__track" data-service-wire="datacenter" d="M320 245V170H515V100"/>
+						<path class="service-map__track" data-service-wire="network" d="M320 245H225V320H125"/>
+						<path class="service-map__track" data-service-wire="operations" d="M320 245H415V320H515"/>
+						<path class="service-map__track" data-service-wire="equipment" d="M320 245V445"/>
 						<path class="is-active" data-service-wire="power" d="M320 245V170H125V100"/>
 						<path data-service-wire="datacenter" d="M320 245V170H515V100"/>
 						<path data-service-wire="network" d="M320 245H225V320H125"/>

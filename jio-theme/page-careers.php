@@ -19,9 +19,9 @@ get_header(); ?>
 				<a class="link" href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About JIO</a>
 			</div>
 		</div>
-		<figure class="svc-media">
-			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
-			<figcaption><strong>Image placeholder</strong><span>The JIO team at the Abu Dhabi office, or engineers together on a site visit.</span></figcaption>
+		<figure class="svc-media svc-media--photo">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/careers-office-atrium.webp" width="1402" height="1122" alt="Illustration of a light-filled technology workplace atrium with a glass and timber staircase" loading="eager" fetchpriority="high" decoding="async">
+			<figcaption>Illustrative image</figcaption>
 		</figure>
 	</div>
 </section>
@@ -41,9 +41,9 @@ get_header(); ?>
 
 <section class="svc-fit" aria-labelledby="careers-offer-title">
 	<div class="wrap svc-fit__grid">
-		<figure class="svc-media svc-media--wide">
-			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
-			<figcaption><strong>Image placeholder</strong><span>A training session, or a new engineer learning a UPS or rack installation from a senior colleague.</span></figcaption>
+		<figure class="svc-media svc-media--wide svc-media--photo">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/careers-learning-lab.webp" width="1586" height="992" alt="Illustration of an empty training laboratory with networking and low-voltage energy learning benches" loading="lazy" decoding="async">
+			<figcaption>Illustrative image</figcaption>
 		</figure>
 		<div class="svc-fit__copy">
 			<p class="label">What you get</p>

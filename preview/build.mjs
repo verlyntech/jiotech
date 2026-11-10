@@ -38,6 +38,8 @@ for (const s of services) {
 		related: s.related.map((slug) => ({ title: services.find((x) => x.slug === slug).title, url: serviceFile(slug) })),
 		solutions_url: 'solutions.html',
 		quote_url: 'contact.html#quote',
+		hero_image_url: '../jio-theme/assets/img/' + s.hero_image_file,
+		detail_image_url: '../jio-theme/assets/img/' + s.detail_image_file,
 	};
 	pages.push({ html: `<?php get_header(); ?>\n${fill(serviceTpl, data)}\n<?php get_footer(); ?>`, out: serviceFile(s.slug), slug: `solutions/${s.slug}`, title: s.title });
 }

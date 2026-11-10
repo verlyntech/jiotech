@@ -165,8 +165,8 @@ html[data-theme="dark"] {
 }
 [data-theme="dark"] .mega__aside { border: 1px solid var(--rule); }
 
-/* Match the chatbot green while retaining distinct, readable bordered cards. */
-[data-theme="dark"] .service-map { --map-background: var(--green); --map-card: var(--night-2); --map-ink: #17251b; --map-muted: #234529; --map-rule: #255936; --map-wire: #255936; --map-wire-active: #17251b; --map-card-ink: var(--on-night); --map-card-muted: var(--on-night-mute); --map-card-border: #17251b; }
+/* Muted green map with white connector flow and distinct bordered cards. */
+[data-theme="dark"] .service-map { --map-background: #395740; --map-card: var(--night-2); --map-ink: #f0f6f1; --map-muted: #e2ede4; --map-rule: #a8c2b0; --map-wire: #b7d0bf; --map-wire-active: #fff; --map-wire-track-active: #76967b; --map-card-ink: var(--on-night); --map-card-muted: var(--on-night-mute); --map-card-border: #17251b; }
 [data-theme="dark"] .service-node.is-active { background: var(--map-card); color: var(--map-card-ink); }
 [data-theme="dark"] .service-node.is-active .service-node__top { color: var(--map-card-ink); }
 [data-theme="dark"] .service-node.is-active svg { stroke: var(--node-accent); }

@@ -53,8 +53,8 @@
 	</div>
 	<div class="wrap wrap--wide foot__base">
 		<span>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> JIO Technologies LLC. All rights reserved.</span>
-		<a href="https://jiotechuae.com/terms-conditions/">Terms &amp; Conditions</a>
-		<a href="https://jiotechuae.com/privacy-policy/">Privacy Policy</a>
+		<a href="<?php echo esc_url( home_url( '/terms-conditions/' ) ); ?>">Terms &amp; Conditions</a>
+		<a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">Privacy Policy</a>
 	</div>
 </footer>
 <div class="chat" data-chat data-endpoint="<?php echo esc_url( rest_url( 'jio/v1/chat' ) ); ?>" data-quote-url="<?php echo esc_url( home_url( '/contact/#quote' ) ); ?>">

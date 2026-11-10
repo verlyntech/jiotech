@@ -2,11 +2,60 @@
 (function () {
 	'use strict';
 
-	// Mark the current page in the primary nav.
+	// Mark the current page in the primary nav; a page inside a menu also marks its parent link.
 	var here = location.pathname.replace(/\/$/, '');
 	document.querySelectorAll('.nav a').forEach(function (a) {
 		var p = new URL(a.href, location.href).pathname.replace(/\/$/, '');
-		if (p && p === here) a.setAttribute('aria-current', 'page');
+		if (!p || p !== here) return;
+		a.setAttribute('aria-current', 'page');
+		var item = a.closest('.nav__item');
+		if (item && item.firstElementChild !== a) item.firstElementChild.setAttribute('aria-current', 'page');
+	});
+
+	// Header menus: the arrow button opens the panel; hover opens it after a short delay on devices that hover.
+	var megaItems = Array.prototype.slice.call(document.querySelectorAll('[data-mega]'));
+	var canHover = matchMedia('(hover: hover)').matches;
+	var setMega = function (item, open) {
+		var btn = item.querySelector('[data-mega-toggle]');
+		item.querySelector('[data-mega-panel]').hidden = !open;
+		btn.setAttribute('aria-expanded', String(open));
+		item.classList.toggle('is-open', open);
+	};
+	var closeAllMega = function (except) {
+		megaItems.forEach(function (item) { if (item !== except) setMega(item, false); });
+	};
+	megaItems.forEach(function (item) {
+		var btn = item.querySelector('[data-mega-toggle]');
+		var timer;
+		btn.hidden = false;
+		btn.addEventListener('click', function () {
+			var open = btn.getAttribute('aria-expanded') !== 'true';
+			closeAllMega(item); setMega(item, open);
+		});
+		if (canHover) {
+			item.addEventListener('mouseenter', function () {
+				clearTimeout(timer);
+				timer = setTimeout(function () { closeAllMega(item); setMega(item, true); }, 120);
+			});
+			item.addEventListener('mouseleave', function () {
+				clearTimeout(timer);
+				timer = setTimeout(function () { setMega(item, false); }, 250);
+			});
+		}
+		item.addEventListener('focusout', function (event) {
+			if (!item.contains(event.relatedTarget)) setMega(item, false);
+		});
+	});
+	document.addEventListener('keydown', function (event) {
+		if (event.key !== 'Escape') return;
+		megaItems.forEach(function (item) {
+			if (!item.classList.contains('is-open')) return;
+			setMega(item, false);
+			item.querySelector('[data-mega-toggle]').focus();
+		});
+	});
+	document.addEventListener('click', function (event) {
+		megaItems.forEach(function (item) { if (!item.contains(event.target)) setMega(item, false); });
 	});
 
 	// Segmented radiogroup helper: click and arrow keys.

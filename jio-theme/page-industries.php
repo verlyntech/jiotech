@@ -223,6 +223,19 @@ get_header(); ?>
 	</div>
 </section>
 
+<!-- WHY INDUSTRY EXPERTISE: four reasons, same card row as the service pages. -->
+<section class="industry-why" aria-labelledby="industry-why-title">
+	<div class="wrap">
+		<div class="svc-head"><p class="label">Industry expertise</p><h2 id="industry-why-title">Why industry expertise matters for IT.</h2><p>Whatever your sector, the IT and power behind it should be built for its reliability, security and compliance needs.</p></div>
+		<ol class="svc-cards">
+			<li><span class="svc-cards__num">01</span><h3>Compliance</h3><p>Healthcare, banking and government work comes with regulatory and audit requirements. We plan IT and power setups around them, with documentation that supports your audits.</p></li>
+			<li><span class="svc-cards__num">02</span><h3>Sector systems</h3><p>From hospital applications to plant controls, the systems your sector runs depend on stable networks and power. We design around the systems you already use.</p></li>
+			<li><span class="svc-cards__num">03</span><h3>Security</h3><p>Some sectors are targeted more often than others. Firewalls, endpoint protection and CCTV are sized to the risk your organisation faces.</p></li>
+			<li><span class="svc-cards__num">04</span><h3>Backup power to standard</h3><p>Critical sites need UPS and battery setups built to the safety and audit requirements of their sector, and maintained to stay that way.</p></li>
+		</ol>
+	</div>
+</section>
+
 </main>
 
 <?php get_footer(); ?>

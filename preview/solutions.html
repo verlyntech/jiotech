@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../jio-theme/assets/js/theme.js?v=1794232701280"></script>
+<script src="../jio-theme/assets/js/theme.js?v=1794307064430"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
-<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794232701280">
-<script src="../jio-theme/assets/js/site.js?v=1794232701280" defer></script>
-<script src="../jio-theme/assets/js/chat.js?v=1794232701280" defer></script>
-<link rel="stylesheet" href="../jio-theme/assets/css/services.css?v=1794232701280">
-<script src="../jio-theme/assets/js/services.js?v=1794232701280" defer></script>
-<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794232701280">
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794307064430">
+<script src="../jio-theme/assets/js/site.js?v=1794307064430" defer></script>
+<script src="../jio-theme/assets/js/chat.js?v=1794307064430" defer></script>
+<link rel="stylesheet" href="../jio-theme/assets/css/services.css?v=1794307064430">
+<script src="../jio-theme/assets/js/services.js?v=1794307064430" defer></script>
+<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794307064430">
 <title>Services | JIO Technologies (preview)</title>
 </head>
 <body >
@@ -27,10 +27,53 @@
 		</a>
 		<nav class="nav" aria-label="Primary">
 			<a href="index.html">Home</a>
-			<a href="solutions.html">Services</a>
+			<div class="nav__item" data-mega>
+				<a href="solutions.html">Services</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mega-services" aria-label="Show services" data-mega-toggle hidden><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5l4 4 4-4"/></svg></button>
+				<div class="mega" id="mega-services" data-mega-panel hidden>
+					<div class="wrap wrap--wide mega__grid">
+						<div class="mega__group mega__group--power">
+							<p class="mega__label">Power</p>
+							<a class="mega__link" href="service-power-energy-solutions.html"><span>Power &amp; energy</span><small>UPS, batteries, renewables and power distribution</small></a>
+							<a class="mega__link" href="service-web-development.html"><span>Data center design &amp; hosting</span><small>From a single rack to an enterprise hall</small></a>
+							<a class="mega__link" href="service-maintenance-technical-support.html"><span>Maintenance &amp; 24/7 support</span><small>Preventive maintenance, remote and on-site help</small></a>
+						</div>
+						<div class="mega__group mega__group--it">
+							<p class="mega__label">IT</p>
+							<a class="mega__link" href="service-managed-services.html"><span>Managed IT &amp; infrastructure</span><small>Monitoring, support and optimisation</small></a>
+							<a class="mega__link" href="service-network-connectivity-solutions.html"><span>Network &amp; connectivity</span><small>LAN, WAN, Wi-Fi and structured cabling</small></a>
+							<a class="mega__link" href="service-cyber-security.html"><span>Cybersecurity &amp; CCTV</span><small>Network, cloud and physical security</small></a>
+							<a class="mega__link" href="service-it-consulting-advisory.html"><span>IT consulting &amp; advisory</span><small>Strategy, roadmaps and governance</small></a>
+							<a class="mega__link" href="service-digital-transformation.html"><span>Digital transformation</span><small>Modernise legacy systems and connect data</small></a>
+						</div>
+						<div class="mega__aside">
+							<p class="mega__label">Something down?</p>
+							<p class="mega__aside-title">24/7 technical support</p>
+							<a class="mega__phone" href="tel:+971553440144">+971 55 344 0144</a>
+							<a class="mega__aside-link" href="client-support.html">Client support</a>
+							<a class="btn-arrow btn-arrow--sm" href="contact.html"><span>Get a quote</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+						</div>
+						<div class="mega__foot">
+							<a href="solutions.html">All services <span aria-hidden="true">&#8599;</span></a>
+							<a href="solutions.html#equipment">Equipment supply <span aria-hidden="true">&#8599;</span></a>
+							<a href="industries.html">Industries we serve <span aria-hidden="true">&#8599;</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
 			<a href="industries.html">Industries</a>
-			<a href="about.html">Company</a>
-			<a href="faq.html">FAQ</a>
+			<div class="nav__item" data-mega>
+				<a href="about.html">Company</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mega-company" aria-label="Show company pages" data-mega-toggle hidden><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5l4 4 4-4"/></svg></button>
+				<div class="mega mega--slim" id="mega-company" data-mega-panel hidden>
+					<div class="wrap wrap--wide mega__row">
+						<a class="mega__link" href="about.html"><span>About us</span><small>Our story, mission and how we work</small></a>
+						<a class="mega__link" href="careers.html"><span>Careers</span><small>Open roles and life at JIO</small></a>
+						<a class="mega__link" href="partnerships.html"><span>Partnerships</span><small>Manufacturers, distributors and resellers</small></a>
+						<a class="mega__link" href="faq.html"><span>FAQ</span><small>Answers to common buyer questions</small></a>
+					</div>
+				</div>
+			</div>
 			<a href="client-support.html">Support</a>
 			<a href="https://jiotech.ae/">B2B portal</a>
 		</nav>
@@ -47,10 +90,28 @@
 			<summary aria-label="Menu"><span></span></summary>
 			<div class="menu__panel">
 				<a href="index.html">Home</a>
-				<a href="solutions.html">Services</a>
+				<details class="menu__group">
+					<summary>Services</summary>
+					<p class="menu__label">Power</p>
+					<a href="service-power-energy-solutions.html">Power &amp; energy</a>
+					<a href="service-web-development.html">Data center design &amp; hosting</a>
+					<a href="service-maintenance-technical-support.html">Maintenance &amp; 24/7 support</a>
+					<p class="menu__label">IT</p>
+					<a href="service-managed-services.html">Managed IT &amp; infrastructure</a>
+					<a href="service-network-connectivity-solutions.html">Network &amp; connectivity</a>
+					<a href="service-cyber-security.html">Cybersecurity &amp; CCTV</a>
+					<a href="service-it-consulting-advisory.html">IT consulting &amp; advisory</a>
+					<a href="service-digital-transformation.html">Digital transformation</a>
+					<a href="solutions.html">All services</a>
+				</details>
 				<a href="industries.html">Industries</a>
-				<a href="about.html">Company</a>
-				<a href="faq.html">FAQ</a>
+				<details class="menu__group">
+					<summary>Company</summary>
+					<a href="about.html">About us</a>
+					<a href="careers.html">Careers</a>
+					<a href="partnerships.html">Partnerships</a>
+					<a href="faq.html">FAQ</a>
+				</details>
 				<a href="client-support.html">Client support</a>
 				<a href="https://jiotech.ae/">B2B portal</a>
 				<a href="tel:+971553440144">+971 55 344 0144</a>
@@ -134,6 +195,7 @@
 					<h3>Power &amp; energy</h3>
 					<p>Build a resilient power foundation for your critical equipment. We bring site power, backup systems and energy optimisation into one coordinated plan.</p>
 					<ul><li>UPS systems and VRLA or lithium-ion batteries</li><li>Power planning and renewable integration</li><li>Preventive maintenance and service contracts</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="service-power-energy-solutions.html">Power &amp; energy</a><a href="service-maintenance-technical-support.html">Maintenance &amp; 24/7 support</a></div>
 					<a class="service-summary__link" href="contact.html">Discuss power &amp; energy <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="datacenter" aria-labelledby="service-datacenter" data-service-summary="datacenter" hidden>
@@ -141,6 +203,7 @@
 					<h3>Data centers &amp; cloud</h3>
 					<p>Connect your physical infrastructure and cloud platforms around the applications you run. From a single rack to a hybrid environment, we plan for capacity and growth.</p>
 					<ul><li>Data center design, hosting, power and cooling</li><li>Private, public and hybrid cloud environments</li><li>Cloud architecture and migration planning</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="service-web-development.html">Data center design &amp; hosting</a><a href="service-it-consulting-advisory.html">IT consulting &amp; advisory</a></div>
 					<a class="service-summary__link" href="contact.html">Discuss data centers &amp; cloud <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="network" aria-labelledby="service-network" data-service-summary="network" hidden>
@@ -148,6 +211,7 @@
 					<h3>Network &amp; security</h3>
 					<p>Bring connectivity, cybersecurity and physical security together across your sites. Give your people dependable access while protecting your systems and information.</p>
 					<ul><li>Business LAN, WAN and Wi-Fi connectivity</li><li>Security monitoring and data protection</li><li>CCTV, recording and remote monitoring</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="service-network-connectivity-solutions.html">Network &amp; connectivity</a><a href="service-cyber-security.html">Cybersecurity &amp; CCTV</a></div>
 					<a class="service-summary__link" href="contact.html">Discuss network &amp; security <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="operations" aria-labelledby="service-operations" data-service-summary="operations" hidden>
@@ -155,6 +219,7 @@
 					<h3>Managed IT &amp; support</h3>
 					<p>Keep day-to-day systems supported while planning your next technology investment. One team coordinates infrastructure, user support and maintenance around your priorities.</p>
 					<ul><li>Infrastructure management and end-user support</li><li>24/7 monitoring, remote and onsite assistance</li><li>Technology roadmaps and systems integration</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="service-managed-services.html">Managed IT</a><a href="service-maintenance-technical-support.html">Maintenance &amp; 24/7 support</a><a href="service-digital-transformation.html">Digital transformation</a></div>
 					<a class="service-summary__link" href="contact.html">Discuss managed IT &amp; support <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="service-panel-equipment" aria-labelledby="service-equipment" data-service-summary="equipment" hidden>
@@ -228,6 +293,20 @@
 	</div>
 </section>
 
+<!-- WHY JIO: five reasons, same card row as the service and careers pages. -->
+<section class="solutions-why" aria-labelledby="why-title">
+	<div class="wrap">
+		<div class="svc-head"><p class="label">Why JIO</p><h2 id="why-title">Why choose JIO Technologies.</h2></div>
+		<ol class="svc-cards svc-cards--5">
+			<li><span class="svc-cards__num">01</span><h3>20+ years</h3><p>Two decades delivering hybrid IT and energy projects across the UAE.</p></li>
+			<li><span class="svc-cards__num">02</span><h3>One partner for IT and power</h3><p>One contract and one support number, instead of separate IT and power contractors.</p></li>
+			<li><span class="svc-cards__num">03</span><h3>End-to-end delivery</h3><p>Site survey, design, supply, installation and maintenance, handled by the same team.</p></li>
+			<li><span class="svc-cards__num">04</span><h3>Established brands</h3><p>Equipment from 30 manufacturers, including APC, Eaton, Dell, Cisco and Fortinet.</p></li>
+			<li><span class="svc-cards__num">05</span><h3>Local, 24/7 support</h3><p>A team in Abu Dhabi with 24/7 remote and on-site support, including emergency response.</p></li>
+		</ol>
+	</div>
+</section>
+
 <section class="solutions-next" aria-labelledby="solutions-next-title">
 	<div class="wrap wrap--wide solutions-next__grid"><div><h2 id="solutions-next-title">Bring your IT &amp; energy priorities together.</h2><p>Tell us what you operate, what needs to improve and where you want to go. We will help shape a practical plan.</p></div><a class="btn-arrow" href="contact.html"><span>Start a conversation</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a></div>
 </section>
@@ -259,7 +338,7 @@
 			<p class="label">Company</p>
 			<a href="about.html">About us</a>
 			<a href="industries.html">Industries</a>
-			<a href="https://jiotechuae.com/partnerships/">Partnerships</a>
+			<a href="partnerships.html">Partnerships</a>
 		</div>
 		<div class="foot__col">
 			<p class="label">Resources</p>
@@ -269,8 +348,8 @@
 		</div>
 		<div class="foot__col">
 			<p class="label">Join us</p>
-			<a href="https://jiotechuae.com/careers/">Careers</a>
-			<a class="foot__hiring" href="https://jiotechuae.com/careers/">We are hiring</a>
+			<a href="careers.html">Careers</a>
+			<a class="foot__hiring" href="careers.html">We are hiring</a>
 		</div>
 	</div>
 	<div class="wrap wrap--wide foot__bar">

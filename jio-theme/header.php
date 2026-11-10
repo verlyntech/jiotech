@@ -19,10 +19,53 @@
 		</a>
 		<nav class="nav" aria-label="Primary">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
-			<a href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">Services</a>
+			<div class="nav__item" data-mega>
+				<a href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">Services</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mega-services" aria-label="Show services" data-mega-toggle hidden><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5l4 4 4-4"/></svg></button>
+				<div class="mega" id="mega-services" data-mega-panel hidden>
+					<div class="wrap wrap--wide mega__grid">
+						<div class="mega__group mega__group--power">
+							<p class="mega__label">Power</p>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>"><span>Power &amp; energy</span><small>UPS, batteries, renewables and power distribution</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>"><span>Data center design &amp; hosting</span><small>From a single rack to an enterprise hall</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>"><span>Maintenance &amp; 24/7 support</span><small>Preventive maintenance, remote and on-site help</small></a>
+						</div>
+						<div class="mega__group mega__group--it">
+							<p class="mega__label">IT</p>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>"><span>Managed IT &amp; infrastructure</span><small>Monitoring, support and optimisation</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/network-connectivity-solutions/' ) ); ?>"><span>Network &amp; connectivity</span><small>LAN, WAN, Wi-Fi and structured cabling</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>"><span>Cybersecurity &amp; CCTV</span><small>Network, cloud and physical security</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>"><span>IT consulting &amp; advisory</span><small>Strategy, roadmaps and governance</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>"><span>Digital transformation</span><small>Modernise legacy systems and connect data</small></a>
+						</div>
+						<div class="mega__aside">
+							<p class="mega__label">Something down?</p>
+							<p class="mega__aside-title">24/7 technical support</p>
+							<a class="mega__phone" href="tel:+971553440144">+971 55 344 0144</a>
+							<a class="mega__aside-link" href="<?php echo esc_url( home_url( '/client-support/' ) ); ?>">Client support</a>
+							<a class="btn-arrow btn-arrow--sm" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><span>Get a quote</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+						</div>
+						<div class="mega__foot">
+							<a href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">All services <span aria-hidden="true">&#8599;</span></a>
+							<a href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>#equipment">Equipment supply <span aria-hidden="true">&#8599;</span></a>
+							<a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>">Industries we serve <span aria-hidden="true">&#8599;</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
 			<a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>">Industries</a>
-			<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Company</a>
-			<a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">FAQ</a>
+			<div class="nav__item" data-mega>
+				<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Company</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mega-company" aria-label="Show company pages" data-mega-toggle hidden><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5l4 4 4-4"/></svg></button>
+				<div class="mega mega--slim" id="mega-company" data-mega-panel hidden>
+					<div class="wrap wrap--wide mega__row">
+						<a class="mega__link" href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><span>About us</span><small>Our story, mission and how we work</small></a>
+						<a class="mega__link" href="<?php echo esc_url( home_url( '/careers/' ) ); ?>"><span>Careers</span><small>Open roles and life at JIO</small></a>
+						<a class="mega__link" href="<?php echo esc_url( home_url( '/partnerships/' ) ); ?>"><span>Partnerships</span><small>Manufacturers, distributors and resellers</small></a>
+						<a class="mega__link" href="<?php echo esc_url( home_url( '/faq/' ) ); ?>"><span>FAQ</span><small>Answers to common buyer questions</small></a>
+					</div>
+				</div>
+			</div>
 			<a href="<?php echo esc_url( home_url( '/client-support/' ) ); ?>">Support</a>
 			<a href="https://jiotech.ae/">B2B portal</a>
 		</nav>
@@ -39,10 +82,28 @@
 			<summary aria-label="Menu"><span></span></summary>
 			<div class="menu__panel">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
-				<a href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">Services</a>
+				<details class="menu__group">
+					<summary>Services</summary>
+					<p class="menu__label">Power</p>
+					<a href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>">Power &amp; energy</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>">Data center design &amp; hosting</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>">Maintenance &amp; 24/7 support</a>
+					<p class="menu__label">IT</p>
+					<a href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>">Managed IT &amp; infrastructure</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/network-connectivity-solutions/' ) ); ?>">Network &amp; connectivity</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Cybersecurity &amp; CCTV</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>">IT consulting &amp; advisory</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">Digital transformation</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">All services</a>
+				</details>
 				<a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>">Industries</a>
-				<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Company</a>
-				<a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">FAQ</a>
+				<details class="menu__group">
+					<summary>Company</summary>
+					<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About us</a>
+					<a href="<?php echo esc_url( home_url( '/careers/' ) ); ?>">Careers</a>
+					<a href="<?php echo esc_url( home_url( '/partnerships/' ) ); ?>">Partnerships</a>
+					<a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">FAQ</a>
+				</details>
 				<a href="<?php echo esc_url( home_url( '/client-support/' ) ); ?>">Client support</a>
 				<a href="https://jiotech.ae/">B2B portal</a>
 				<a href="tel:+971553440144">+971 55 344 0144</a>

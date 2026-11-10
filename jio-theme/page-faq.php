@@ -31,6 +31,10 @@ get_header(); ?>
 				<p>Manufacturing, construction, healthcare, finance, retail, education, logistics, energy and utilities, and government.</p>
 			</details>
 			<details>
+				<summary>What is your industry focus?</summary>
+				<p>Organisations that cannot afford downtime: government and the public sector, healthcare, banking and finance, energy and utilities, and industrial sites. What they share is critical IT that depends on reliable power, which is where one supplier for both helps most.</p>
+			</details>
+			<details>
 				<summary>Do you offer 24/7 technical support?</summary>
 				<p>Yes: round-the-clock monitoring, remote and onsite help, and emergency response.</p>
 			</details>

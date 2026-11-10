@@ -77,6 +77,7 @@ get_header(); ?>
 					<h3>Power &amp; energy</h3>
 					<p>Build a resilient power foundation for your critical equipment. We bring site power, backup systems and energy optimisation into one coordinated plan.</p>
 					<ul><li>UPS systems and VRLA or lithium-ion batteries</li><li>Power planning and renewable integration</li><li>Preventive maintenance and service contracts</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>">Power &amp; energy</a><a href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>">Maintenance &amp; 24/7 support</a></div>
 					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss power &amp; energy <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="datacenter" aria-labelledby="service-datacenter" data-service-summary="datacenter" hidden>
@@ -84,6 +85,7 @@ get_header(); ?>
 					<h3>Data centers &amp; cloud</h3>
 					<p>Connect your physical infrastructure and cloud platforms around the applications you run. From a single rack to a hybrid environment, we plan for capacity and growth.</p>
 					<ul><li>Data center design, hosting, power and cooling</li><li>Private, public and hybrid cloud environments</li><li>Cloud architecture and migration planning</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>">Data center design &amp; hosting</a><a href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>">IT consulting &amp; advisory</a></div>
 					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss data centers &amp; cloud <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="network" aria-labelledby="service-network" data-service-summary="network" hidden>
@@ -91,6 +93,7 @@ get_header(); ?>
 					<h3>Network &amp; security</h3>
 					<p>Bring connectivity, cybersecurity and physical security together across your sites. Give your people dependable access while protecting your systems and information.</p>
 					<ul><li>Business LAN, WAN and Wi-Fi connectivity</li><li>Security monitoring and data protection</li><li>CCTV, recording and remote monitoring</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/network-connectivity-solutions/' ) ); ?>">Network &amp; connectivity</a><a href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Cybersecurity &amp; CCTV</a></div>
 					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss network &amp; security <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="operations" aria-labelledby="service-operations" data-service-summary="operations" hidden>
@@ -98,6 +101,7 @@ get_header(); ?>
 					<h3>Managed IT &amp; support</h3>
 					<p>Keep day-to-day systems supported while planning your next technology investment. One team coordinates infrastructure, user support and maintenance around your priorities.</p>
 					<ul><li>Infrastructure management and end-user support</li><li>24/7 monitoring, remote and onsite assistance</li><li>Technology roadmaps and systems integration</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>">Managed IT</a><a href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>">Maintenance &amp; 24/7 support</a><a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">Digital transformation</a></div>
 					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss managed IT &amp; support <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="service-panel-equipment" aria-labelledby="service-equipment" data-service-summary="equipment" hidden>
@@ -167,6 +171,20 @@ get_header(); ?>
 			<li><span aria-hidden="true">01</span><h3>Design around your goals.</h3><p>Review your sites, systems and priorities. Define a solution that fits your operational needs and plans for growth.</p></li>
 			<li><span aria-hidden="true">02</span><h3>Deploy as one connected system.</h3><p>Coordinate equipment, installation and integration across IT and power, with a clear scope and implementation plan.</p></li>
 			<li><span aria-hidden="true">03</span><h3>Maintain for the long term.</h3><p>Support your infrastructure through monitoring, preventive maintenance and technical assistance as your business evolves.</p></li>
+		</ol>
+	</div>
+</section>
+
+<!-- WHY JIO: five reasons, same card row as the service and careers pages. -->
+<section class="solutions-why" aria-labelledby="why-title">
+	<div class="wrap">
+		<div class="svc-head"><p class="label">Why JIO</p><h2 id="why-title">Why choose JIO Technologies.</h2></div>
+		<ol class="svc-cards svc-cards--5">
+			<li><span class="svc-cards__num">01</span><h3>20+ years</h3><p>Two decades delivering hybrid IT and energy projects across the UAE.</p></li>
+			<li><span class="svc-cards__num">02</span><h3>One partner for IT and power</h3><p>One contract and one support number, instead of separate IT and power contractors.</p></li>
+			<li><span class="svc-cards__num">03</span><h3>End-to-end delivery</h3><p>Site survey, design, supply, installation and maintenance, handled by the same team.</p></li>
+			<li><span class="svc-cards__num">04</span><h3>Established brands</h3><p>Equipment from 30 manufacturers, including APC, Eaton, Dell, Cisco and Fortinet.</p></li>
+			<li><span class="svc-cards__num">05</span><h3>Local, 24/7 support</h3><p>A team in Abu Dhabi with 24/7 remote and on-site support, including emergency response.</p></li>
 		</ol>
 	</div>
 </section>

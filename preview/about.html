@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../jio-theme/assets/js/theme.js?v=1794232701289"></script>
+<script src="../jio-theme/assets/js/theme.js?v=1794307064437"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
-<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794232701289">
-<script src="../jio-theme/assets/js/site.js?v=1794232701289" defer></script>
-<script src="../jio-theme/assets/js/chat.js?v=1794232701289" defer></script>
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794307064437">
+<script src="../jio-theme/assets/js/site.js?v=1794307064437" defer></script>
+<script src="../jio-theme/assets/js/chat.js?v=1794307064437" defer></script>
 
-<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794232701289">
+<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794307064437">
 <title>Company | JIO Technologies (preview)</title>
 </head>
 <body >
@@ -26,10 +26,53 @@
 		</a>
 		<nav class="nav" aria-label="Primary">
 			<a href="index.html">Home</a>
-			<a href="solutions.html">Services</a>
+			<div class="nav__item" data-mega>
+				<a href="solutions.html">Services</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mega-services" aria-label="Show services" data-mega-toggle hidden><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5l4 4 4-4"/></svg></button>
+				<div class="mega" id="mega-services" data-mega-panel hidden>
+					<div class="wrap wrap--wide mega__grid">
+						<div class="mega__group mega__group--power">
+							<p class="mega__label">Power</p>
+							<a class="mega__link" href="service-power-energy-solutions.html"><span>Power &amp; energy</span><small>UPS, batteries, renewables and power distribution</small></a>
+							<a class="mega__link" href="service-web-development.html"><span>Data center design &amp; hosting</span><small>From a single rack to an enterprise hall</small></a>
+							<a class="mega__link" href="service-maintenance-technical-support.html"><span>Maintenance &amp; 24/7 support</span><small>Preventive maintenance, remote and on-site help</small></a>
+						</div>
+						<div class="mega__group mega__group--it">
+							<p class="mega__label">IT</p>
+							<a class="mega__link" href="service-managed-services.html"><span>Managed IT &amp; infrastructure</span><small>Monitoring, support and optimisation</small></a>
+							<a class="mega__link" href="service-network-connectivity-solutions.html"><span>Network &amp; connectivity</span><small>LAN, WAN, Wi-Fi and structured cabling</small></a>
+							<a class="mega__link" href="service-cyber-security.html"><span>Cybersecurity &amp; CCTV</span><small>Network, cloud and physical security</small></a>
+							<a class="mega__link" href="service-it-consulting-advisory.html"><span>IT consulting &amp; advisory</span><small>Strategy, roadmaps and governance</small></a>
+							<a class="mega__link" href="service-digital-transformation.html"><span>Digital transformation</span><small>Modernise legacy systems and connect data</small></a>
+						</div>
+						<div class="mega__aside">
+							<p class="mega__label">Something down?</p>
+							<p class="mega__aside-title">24/7 technical support</p>
+							<a class="mega__phone" href="tel:+971553440144">+971 55 344 0144</a>
+							<a class="mega__aside-link" href="client-support.html">Client support</a>
+							<a class="btn-arrow btn-arrow--sm" href="contact.html"><span>Get a quote</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+						</div>
+						<div class="mega__foot">
+							<a href="solutions.html">All services <span aria-hidden="true">&#8599;</span></a>
+							<a href="solutions.html#equipment">Equipment supply <span aria-hidden="true">&#8599;</span></a>
+							<a href="industries.html">Industries we serve <span aria-hidden="true">&#8599;</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
 			<a href="industries.html">Industries</a>
-			<a href="about.html">Company</a>
-			<a href="faq.html">FAQ</a>
+			<div class="nav__item" data-mega>
+				<a href="about.html">Company</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mega-company" aria-label="Show company pages" data-mega-toggle hidden><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5l4 4 4-4"/></svg></button>
+				<div class="mega mega--slim" id="mega-company" data-mega-panel hidden>
+					<div class="wrap wrap--wide mega__row">
+						<a class="mega__link" href="about.html"><span>About us</span><small>Our story, mission and how we work</small></a>
+						<a class="mega__link" href="careers.html"><span>Careers</span><small>Open roles and life at JIO</small></a>
+						<a class="mega__link" href="partnerships.html"><span>Partnerships</span><small>Manufacturers, distributors and resellers</small></a>
+						<a class="mega__link" href="faq.html"><span>FAQ</span><small>Answers to common buyer questions</small></a>
+					</div>
+				</div>
+			</div>
 			<a href="client-support.html">Support</a>
 			<a href="https://jiotech.ae/">B2B portal</a>
 		</nav>
@@ -46,10 +89,28 @@
 			<summary aria-label="Menu"><span></span></summary>
 			<div class="menu__panel">
 				<a href="index.html">Home</a>
-				<a href="solutions.html">Services</a>
+				<details class="menu__group">
+					<summary>Services</summary>
+					<p class="menu__label">Power</p>
+					<a href="service-power-energy-solutions.html">Power &amp; energy</a>
+					<a href="service-web-development.html">Data center design &amp; hosting</a>
+					<a href="service-maintenance-technical-support.html">Maintenance &amp; 24/7 support</a>
+					<p class="menu__label">IT</p>
+					<a href="service-managed-services.html">Managed IT &amp; infrastructure</a>
+					<a href="service-network-connectivity-solutions.html">Network &amp; connectivity</a>
+					<a href="service-cyber-security.html">Cybersecurity &amp; CCTV</a>
+					<a href="service-it-consulting-advisory.html">IT consulting &amp; advisory</a>
+					<a href="service-digital-transformation.html">Digital transformation</a>
+					<a href="solutions.html">All services</a>
+				</details>
 				<a href="industries.html">Industries</a>
-				<a href="about.html">Company</a>
-				<a href="faq.html">FAQ</a>
+				<details class="menu__group">
+					<summary>Company</summary>
+					<a href="about.html">About us</a>
+					<a href="careers.html">Careers</a>
+					<a href="partnerships.html">Partnerships</a>
+					<a href="faq.html">FAQ</a>
+				</details>
 				<a href="client-support.html">Client support</a>
 				<a href="https://jiotech.ae/">B2B portal</a>
 				<a href="tel:+971553440144">+971 55 344 0144</a>
@@ -140,6 +201,38 @@
 	</div>
 </section>
 
+<!-- TEAM AND CULTURE: image-and-copy rows, the second mirrored. -->
+<section class="company-team" aria-labelledby="team-title">
+	<div class="wrap svc-fit__grid">
+		<figure class="svc-media svc-media--wide">
+			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
+			<figcaption><strong>Image placeholder</strong><span>The JIO team together at the Abu Dhabi office, IT engineers and power specialists side by side.</span></figcaption>
+		</figure>
+		<div class="svc-fit__copy">
+			<p class="label">Our team</p>
+			<h2 id="team-title">A team built on experience.</h2>
+			<p>IT engineers and power specialists work side by side at JIO, from our base in Abu Dhabi. The people who design your system are the same people who install it and support it afterwards.</p>
+			<p class="svc-fit__brands">Our expertise</p>
+			<ul class="svc-tags"><li>IT infrastructure</li><li>Power &amp; energy</li><li>Networking &amp; security</li><li>Support &amp; maintenance</li></ul>
+			<a class="link" href="careers.html">Join the team</a>
+		</div>
+	</div>
+</section>
+
+<section class="company-team company-team--culture" aria-labelledby="culture-title">
+	<div class="wrap svc-fit__grid svc-fit__grid--reverse">
+		<div class="svc-fit__copy">
+			<p class="label">Our culture</p>
+			<h2 id="culture-title">Better together.</h2>
+			<p>Work matters, and so does enjoying it. We respect our partners, work through problems together and take real pride in helping our clients. That spirit is what we look for in everyone who joins.</p>
+		</div>
+		<figure class="svc-media svc-media--wide">
+			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
+			<figcaption><strong>Image placeholder</strong><span>A candid moment at the office, such as the team marking a project handover together.</span></figcaption>
+		</figure>
+	</div>
+</section>
+
 <!-- PARTNERS (Brex logo band) -->
 <section class="vendors vendors--paper partner-reveal" id="platform-partners" aria-labelledby="partners-title" data-partner-reveal>
 	<div class="wrap">
@@ -169,7 +262,7 @@
 			<h2>We are hiring.</h2>
 			<p>Open positions in Abu Dhabi are listed on our recruitment portal.</p>
 		</div>
-		<a class="btn" href="#careers">See open positions</a>
+		<a class="btn" href="careers.html">See open positions</a>
 	</div>
 </section>
 
@@ -200,7 +293,7 @@
 			<p class="label">Company</p>
 			<a href="about.html">About us</a>
 			<a href="industries.html">Industries</a>
-			<a href="https://jiotechuae.com/partnerships/">Partnerships</a>
+			<a href="partnerships.html">Partnerships</a>
 		</div>
 		<div class="foot__col">
 			<p class="label">Resources</p>
@@ -210,8 +303,8 @@
 		</div>
 		<div class="foot__col">
 			<p class="label">Join us</p>
-			<a href="https://jiotechuae.com/careers/">Careers</a>
-			<a class="foot__hiring" href="https://jiotechuae.com/careers/">We are hiring</a>
+			<a href="careers.html">Careers</a>
+			<a class="foot__hiring" href="careers.html">We are hiring</a>
 		</div>
 	</div>
 	<div class="wrap wrap--wide foot__bar">

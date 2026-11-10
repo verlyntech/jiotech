@@ -163,3 +163,4 @@ html[data-theme="dark"] {
 	.site-head__row { gap: .5rem; }
 	.brand__logo { width: clamp(9rem, 44vw, 11rem); }
 }
+[data-theme="dark"] .mega__aside { border: 1px solid var(--rule); }

@@ -17,6 +17,8 @@ const pages = [
 	{ tpl: 'page-contact.php', out: 'contact.html', slug: 'contact', title: 'Contact' },
 	{ tpl: 'page-client-support.php', out: 'client-support.html', slug: 'client-support', title: 'Client support' },
 	{ tpl: 'page-faq.php', out: 'faq.html', slug: 'faq', title: 'FAQ' },
+	{ tpl: 'page-careers.php', out: 'careers.html', slug: 'careers', title: 'Careers' },
+	{ tpl: 'page-partnerships.php', out: 'partnerships.html', slug: 'partnerships', title: 'Partnerships' },
 	{ tpl: '404.php', out: '404.html', slug: '404', title: 'Not found' },
 ];
 

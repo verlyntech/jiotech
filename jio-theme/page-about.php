@@ -84,6 +84,38 @@ get_header(); ?>
 	</div>
 </section>
 
+<!-- TEAM AND CULTURE: image-and-copy rows, the second mirrored. -->
+<section class="company-team" aria-labelledby="team-title">
+	<div class="wrap svc-fit__grid">
+		<figure class="svc-media svc-media--wide">
+			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
+			<figcaption><strong>Image placeholder</strong><span>The JIO team together at the Abu Dhabi office, IT engineers and power specialists side by side.</span></figcaption>
+		</figure>
+		<div class="svc-fit__copy">
+			<p class="label">Our team</p>
+			<h2 id="team-title">A team built on experience.</h2>
+			<p>IT engineers and power specialists work side by side at JIO, from our base in Abu Dhabi. The people who design your system are the same people who install it and support it afterwards.</p>
+			<p class="svc-fit__brands">Our expertise</p>
+			<ul class="svc-tags"><li>IT infrastructure</li><li>Power &amp; energy</li><li>Networking &amp; security</li><li>Support &amp; maintenance</li></ul>
+			<a class="link" href="<?php echo esc_url( home_url( '/careers/' ) ); ?>">Join the team</a>
+		</div>
+	</div>
+</section>
+
+<section class="company-team company-team--culture" aria-labelledby="culture-title">
+	<div class="wrap svc-fit__grid svc-fit__grid--reverse">
+		<div class="svc-fit__copy">
+			<p class="label">Our culture</p>
+			<h2 id="culture-title">Better together.</h2>
+			<p>Work matters, and so does enjoying it. We respect our partners, work through problems together and take real pride in helping our clients. That spirit is what we look for in everyone who joins.</p>
+		</div>
+		<figure class="svc-media svc-media--wide">
+			<svg viewBox="0 0 48 36" aria-hidden="true"><rect x="1" y="1" width="46" height="34"/><circle cx="15" cy="12" r="4"/><path d="M1 30l13-12 10 9 7-6 16 13"/></svg>
+			<figcaption><strong>Image placeholder</strong><span>A candid moment at the office, such as the team marking a project handover together.</span></figcaption>
+		</figure>
+	</div>
+</section>
+
 <!-- PARTNERS (Brex logo band) -->
 <section class="vendors vendors--paper partner-reveal" id="platform-partners" aria-labelledby="partners-title" data-partner-reveal>
 	<div class="wrap">

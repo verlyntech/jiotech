@@ -23,7 +23,7 @@
 			<p class="label">Company</p>
 			<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About us</a>
 			<a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>">Industries</a>
-			<a href="https://jiotechuae.com/partnerships/">Partnerships</a>
+			<a href="<?php echo esc_url( home_url( '/partnerships/' ) ); ?>">Partnerships</a>
 		</div>
 		<div class="foot__col">
 			<p class="label">Resources</p>
@@ -33,8 +33,8 @@
 		</div>
 		<div class="foot__col">
 			<p class="label">Join us</p>
-			<a href="https://jiotechuae.com/careers/">Careers</a>
-			<a class="foot__hiring" href="https://jiotechuae.com/careers/">We are hiring</a>
+			<a href="<?php echo esc_url( home_url( '/careers/' ) ); ?>">Careers</a>
+			<a class="foot__hiring" href="<?php echo esc_url( home_url( '/careers/' ) ); ?>">We are hiring</a>
 		</div>
 	</div>
 	<div class="wrap wrap--wide foot__bar">

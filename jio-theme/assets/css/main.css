@@ -280,6 +280,15 @@ section { padding-block: var(--section-space); }
 .versus__col--us li { color: var(--ink); font-weight: 700; border-color: var(--rule); }
 .versus__col--us li::before { width: .6rem; height: .6rem; margin-top: .45rem; background: var(--green); }
 
+/* Match the pale green Services background in light mode. */
+:root:not([data-theme="dark"]) .versus { background: var(--green-tint); color: var(--ink-2); }
+:root:not([data-theme="dark"]) .versus__head h2,
+:root:not([data-theme="dark"]) .versus__col h3 { color: var(--ink); }
+:root:not([data-theme="dark"]) .versus__col { background: var(--white); border-color: var(--rule); }
+:root:not([data-theme="dark"]) .versus__col li { border-color: var(--rule); }
+:root:not([data-theme="dark"]) .versus__col:not(.versus__col--us) li::before { background: var(--mute); }
+
+
 /* ---------- homepage industries: horizontal cards with boxed arrow controls ---------- */
 .industries { padding-block: var(--section-space); }
 .industries__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem 3rem; margin-bottom: 2rem; }

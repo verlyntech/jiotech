@@ -38,38 +38,38 @@ get_header(); ?>
 <section class="capabilities" aria-labelledby="capabilities-title" data-capabilities>
 	<div class="wrap wrap--wide">
 		<div class="capabilities__heading" id="capabilities"><h2 id="capabilities-title">Five service areas.<br>One connected partner.</h2></div>
-		<div class="service-explorer" data-service-explorer data-active-service="power">
+		<div class="service-explorer" data-service-explorer data-active-service="digital">
 			<div class="service-map">
 				<div class="service-map__top"><span>Built to work together</span><span aria-hidden="true">IT + ENERGY</span></div>
 				<div class="service-map__stage">
 					<svg class="service-map__wires" viewBox="0 0 640 520" preserveAspectRatio="none" aria-hidden="true">
-						<path class="service-map__track is-active" data-service-wire="power" d="M320 245V170H125V100"/>
+						<path class="service-map__track is-active" data-service-wire="digital" d="M320 245V170H125V100"/>
 						<path class="service-map__track" data-service-wire="datacenter" d="M320 245V170H515V100"/>
 						<path class="service-map__track" data-service-wire="network" d="M320 245H225V320H125"/>
 						<path class="service-map__track" data-service-wire="operations" d="M320 245H415V320H515"/>
-						<path class="service-map__track" data-service-wire="equipment" d="M320 245V445"/>
-						<path class="is-active" data-service-wire="power" d="M320 245V170H125V100"/>
+						<path class="service-map__track" data-service-wire="cybersecurity" d="M320 245V445"/>
+						<path class="is-active" data-service-wire="digital" d="M320 245V170H125V100"/>
 						<path data-service-wire="datacenter" d="M320 245V170H515V100"/>
 						<path data-service-wire="network" d="M320 245H225V320H125"/>
 						<path data-service-wire="operations" d="M320 245H415V320H515"/>
-						<path data-service-wire="equipment" d="M320 245V445"/>
+						<path data-service-wire="cybersecurity" d="M320 245V445"/>
 					</svg>
 					<div class="service-map__hub" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 7h18v7H7zM7 18h18v7H7zM11 10.5h2M11 21.5h2M16 14v4"/><path class="service-map__hub-accent" d="M20 10.5h1M20 21.5h1"/></svg><span>One partner</span></div>
 					<nav class="service-map__nodes" aria-label="Service areas" data-service-nav>
-						<a class="service-node service-node--power is-active" id="service-power" href="#power" data-service-node="power" aria-controls="power">
-							<span class="service-node__top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 3L7 18h9l-2 11 12-16h-9z"/></svg><span aria-hidden="true">01</span></span><strong>Power &amp;<br>energy</strong>
+						<a class="service-node service-node--digital is-active" id="service-digital" href="#digital" data-service-node="digital" aria-controls="digital">
+							<span class="service-node__top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 5h24v16H4zM11 27h10M16 21v6M8 15l5-5 4 4 7-7M20 7h4v4"/></svg><span aria-hidden="true">01</span></span><strong>Digital<br>transformation</strong>
 						</a>
 						<a class="service-node service-node--datacenter" id="service-datacenter" href="#datacenter" data-service-node="datacenter" aria-controls="datacenter">
 							<span class="service-node__top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 5h22v9H5zM5 18h22v9H5zM9 9.5h2M9 22.5h2M17 9.5h6M17 22.5h6"/></svg><span aria-hidden="true">02</span></span><strong>Data centers<br>&amp; cloud</strong>
 						</a>
 						<a class="service-node service-node--network" id="service-network" href="#network" data-service-node="network" aria-controls="network">
-							<span class="service-node__top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l10 4v8c0 7-10 14-10 14S6 22 6 15V7zM11 15l3 3 7-7"/></svg><span aria-hidden="true">03</span></span><strong>Network &amp;<br>security</strong>
+							<span class="service-node__top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 4h24v8H4zM8 8h2M14 8h2M16 12v6M6 18h20M6 18v4M16 18v4M26 18v4M3 22h6v6H3zM13 22h6v6h-6zM23 22h6v6h-6z"/></svg><span aria-hidden="true">03</span></span><strong>Network &amp;<br>connectivity</strong>
 						</a>
 						<a class="service-node service-node--operations" id="service-operations" href="#operations" data-service-node="operations" aria-controls="operations">
 							<span class="service-node__top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 18v-4a11 11 0 0 1 22 0v4M5 14h5v10H5zM22 14h5v10h-5zM26 24v3H16M13 25h6v4h-6z"/></svg><span aria-hidden="true">04</span></span><strong>Managed IT<br>&amp; support</strong>
 						</a>
-						<a class="service-node service-node--equipment" id="service-equipment" href="#equipment" data-service-node="equipment" aria-controls="service-panel-equipment">
-							<span class="service-node__top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 9l12-6 12 6v14l-12 6-12-6zM4 9l12 6 12-6M16 15v14M10 6l12 6"/></svg><span aria-hidden="true">05</span></span><strong>Equipment<br>supply</strong>
+						<a class="service-node service-node--cybersecurity" id="service-cybersecurity" href="#cybersecurity" data-service-node="cybersecurity" aria-controls="cybersecurity">
+							<span class="service-node__top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 4v8c0 7-11 14-11 14S5 22 5 15V7zM10 11h9v7h-9zM19 13l4-2v7l-4-2"/></svg><span aria-hidden="true">05</span></span><strong>Cybersecurity<br>&amp; CCTV</strong>
 						</a>
 					</nav>
 				</div>
@@ -77,13 +77,13 @@ get_header(); ?>
 			</div>
 			<div class="service-explorer__overview">
 				<div class="service-explorer__top"><span>Connected expertise</span><span data-service-position aria-live="polite" aria-atomic="true">01 / 05</span></div>
-				<article class="service-summary" id="power" aria-labelledby="service-power" data-service-summary="power">
-					<span class="service-summary__category">Business continuity</span>
-					<h3>Power &amp; energy</h3>
-					<p>Build a resilient power foundation for your critical equipment. We bring site power, backup systems and energy optimisation into one coordinated plan.</p>
-					<ul><li>UPS systems and VRLA or lithium-ion batteries</li><li>Power planning and renewable integration</li><li>Preventive maintenance and service contracts</li></ul>
-					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>">Power &amp; energy</a><a href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>">Maintenance &amp; 24/7 support</a></div>
-					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss power &amp; energy <span aria-hidden="true">↗</span></a>
+				<article class="service-summary" id="digital" aria-labelledby="service-digital" data-service-summary="digital">
+					<span class="service-summary__category">Business modernisation</span>
+					<h3>Digital transformation</h3>
+					<p>Modernise legacy systems, connect business applications and bring data and workflows together. We align your technology roadmap with the way your organisation works, backed by secure, reliable infrastructure.</p>
+					<ul><li>Legacy system modernisation and integration</li><li>Cloud migration and connected business data</li><li>Digital workflows and process automation</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">Digital transformation</a><a href="<?php echo esc_url( home_url( '/solutions/business-process-automation/' ) ); ?>">Business process automation</a><a href="<?php echo esc_url( home_url( '/solutions/cloud-saas-transformation/' ) ); ?>">Microsoft 365 &amp; cloud</a></div>
+					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss digital transformation <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="datacenter" aria-labelledby="service-datacenter" data-service-summary="datacenter" hidden>
 					<span class="service-summary__category">Capacity &amp; performance</span>
@@ -94,12 +94,12 @@ get_header(); ?>
 					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss data centers &amp; cloud <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="network" aria-labelledby="service-network" data-service-summary="network" hidden>
-					<span class="service-summary__category">Connected &amp; protected</span>
-					<h3>Network &amp; security</h3>
-					<p>Bring connectivity, cybersecurity and physical security together across your sites. Give your people dependable access while protecting your systems and information.</p>
-					<ul><li>Business LAN, WAN and Wi-Fi connectivity</li><li>Security monitoring and data protection</li><li>CCTV, recording and remote monitoring</li></ul>
-					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/network-connectivity-solutions/' ) ); ?>">Network &amp; connectivity</a><a href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Cybersecurity &amp; CCTV</a></div>
-					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss network &amp; security <span aria-hidden="true">↗</span></a>
+					<span class="service-summary__category">Connected operations</span>
+					<h3>Network &amp; connectivity</h3>
+					<p>Connect offices, branches and hybrid teams through dependable business networks. We design and optimise connectivity around your applications, sites and operating requirements.</p>
+					<ul><li>Business LAN, WAN and Wi-Fi infrastructure</li><li>Branch connectivity, VPN and secure access</li><li>Network design, optimisation and ongoing support</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/network-connectivity-solutions/' ) ); ?>">Network &amp; connectivity</a></div>
+					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss network &amp; connectivity <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="operations" aria-labelledby="service-operations" data-service-summary="operations" hidden>
 					<span class="service-summary__category">Operational confidence</span>
@@ -109,12 +109,13 @@ get_header(); ?>
 					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>">Managed IT</a><a href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>">Maintenance &amp; 24/7 support</a><a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">Digital transformation</a><a href="<?php echo esc_url( home_url( '/solutions/business-process-automation/' ) ); ?>">Business process automation</a></div>
 					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss managed IT &amp; support <span aria-hidden="true">↗</span></a>
 				</article>
-				<article class="service-summary" id="service-panel-equipment" aria-labelledby="service-equipment" data-service-summary="equipment" hidden>
-					<span class="service-summary__category">Supply through deployment</span>
-					<h3>Equipment supply</h3>
-					<p>Specify, source and deploy equipment through the same infrastructure partner. We connect product selection, vendor coordination and installation with your wider operating plan.</p>
-					<ul><li>Networking, servers, storage and business devices</li><li>UPS systems, batteries and power distribution</li><li>Vendor coordination and deployment planning</li></ul>
-					<a class="service-summary__link" href="#equipment">Explore equipment supply <span aria-hidden="true">↗</span></a>
+				<article class="service-summary" id="cybersecurity" aria-labelledby="service-cybersecurity" data-service-summary="cybersecurity" hidden>
+					<span class="service-summary__category">Digital &amp; physical protection</span>
+					<h3>Cybersecurity &amp; CCTV</h3>
+					<p>Protect business systems, information and physical sites through a coordinated security approach. We connect cybersecurity, data protection and CCTV with the infrastructure your organisation relies on.</p>
+					<ul><li>Firewalls, endpoint protection and secure access</li><li>Data protection, backup and security monitoring</li><li>CCTV cameras, recording and remote monitoring</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Cybersecurity, data protection &amp; CCTV</a></div>
+					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss cybersecurity &amp; CCTV <span aria-hidden="true">↗</span></a>
 				</article>
 			</div>
 		</div>

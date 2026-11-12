@@ -829,16 +829,16 @@ a.chat__chip { display: inline-block; text-decoration: none; }
 
 /* ---------- photo hero: the sign has its own clear area at every breakpoint ---------- */
 .hero--photo { --hero-copy-width: min(32vw, 33rem); position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: flex-start; min-height: max(22rem, calc(100svh - var(--head-h) - 1px - var(--vendor-h))); background: var(--night); padding-block: 0; border-bottom: 0; color: var(--white); overflow: hidden; }
-.hero__bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 55% 24%; transform: translateX(clamp(1rem, 2.2vw, 2.75rem)); }
+.hero__bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 55% 24%; transform: none; }
 .hero--photo::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(10, 14, 12, .2); }
 .hero--photo::after { content: ""; position: absolute; inset: 0 auto 0 0; z-index: -1; width: calc(var(--hero-copy-width) + clamp(1.25rem, 3.5vw, 4rem) + 1.5rem); background: rgba(10, 14, 12, .66); }
-.hero__inner { flex: 1; display: flex; align-items: stretch; padding-block: clamp(1.25rem, 2.5vw, 2rem) 0; }
-.hero--photo .hero__copy { display: flex; flex-direction: column; width: 100%; max-width: var(--hero-copy-width); }
-.hero--photo h1 { margin-top: auto; color: var(--white); max-width: none; font-size: clamp(1.9rem, 2.45vw, 2.65rem); line-height: 1.12; }
+.hero__inner { flex: 1; display: grid; grid-template-rows: minmax(min-content, 1fr) auto; align-items: center; gap: clamp(2rem, 4svh, 3rem); padding-block: clamp(1.25rem, 2.5vw, 2rem); }
+.hero--photo .hero__copy { width: 100%; max-width: var(--hero-copy-width); }
+.hero--photo h1 { margin-top: 0; color: var(--white); max-width: none; font-size: clamp(1.9rem, 2.45vw, 2.65rem); line-height: 1.12; }
 .hero--photo .hero__lede { margin-top: .875rem; max-width: 34rem; font-size: clamp(1rem, .95vw, 1.125rem); line-height: 1.55; color: rgba(255,255,255,.92); }
-.hero__ctas { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; margin-bottom: 2.5rem; }
+.hero__ctas { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
 .hero--photo .btn-arrow { border-color: var(--white); }
-.hero__metrics { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; max-width: 30rem; margin: auto 0 0; padding: 1rem 0 0; border-top: 1px solid rgba(255,255,255,.25); color: var(--on-night-mute); }
+.hero__metrics { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; max-width: 30rem; margin: 0; padding: 1rem 0 0; border-top: 1px solid rgba(255,255,255,.25); color: var(--on-night-mute); }
 .hero__metrics li { min-width: 0; display: grid; grid-template-columns: 1.1rem minmax(0, 1fr); align-items: start; gap: .4rem; padding-inline: .65rem; padding-bottom: .75rem; border-left: 1px solid rgba(255,255,255,.22); }
 .hero__metrics li:first-child { padding-left: 0; border-left: 0; }
 .hero__metrics li:last-child { padding-right: 0; }
@@ -850,7 +850,7 @@ a.chat__chip { display: inline-block; text-decoration: none; }
 	.hero--photo { padding-block: 0; background: var(--night); }
 	.hero--photo::before, .hero--photo::after { display: none; }
 	.hero__bg { position: relative; inset: auto; z-index: auto; flex: 1 1 0; height: 0; min-height: clamp(10rem, 24svh, 14rem); object-position: 55% 24%; transform: none; }
-	.hero--photo .hero__inner { flex: none; padding-block: clamp(1.25rem, 2.5vw, 1.75rem) 0; }
+	.hero--photo .hero__inner { flex: none; row-gap: 1.25rem; padding-block: clamp(1.25rem, 2.5vw, 1.75rem) 0; }
 	.hero__ctas { margin-bottom: 1.25rem; }
 	.hero--photo .hero__copy { max-width: 56rem; }
 	.hero--photo h1 { max-width: 30ch; font-size: clamp(1.65rem, 2.9vw, 2.25rem); line-height: 1.12; }
@@ -870,7 +870,7 @@ a.chat__chip { display: inline-block; text-decoration: none; }
     .hero__ctas .btn-arrow, .hero__ctas .btn-line { font-size: .875rem; }
     .hero__ctas .btn-arrow > span:first-child, .hero__ctas .btn-line { padding: .75rem .8rem; }
     .hero__ctas .btn-arrow__box { width: 2.25rem; }
-    .hero__metrics { margin-top: 1rem; padding-top: .85rem; }
+    .hero__metrics { margin-top: 0; padding-top: .85rem; }
     .hero__metrics li { grid-template-columns: 1fr; padding-inline: .45rem; gap: .35rem; }
     .hero__metrics span { font-size: .7rem; }
     .hero__metrics b { font-size: 1.2rem; }

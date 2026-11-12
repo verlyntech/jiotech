@@ -58,7 +58,7 @@
 .capabilities__heading h2 { max-width: 26ch; }
 /* The map leads in the document; the overview sits on its left on desktop. */
 .service-explorer { --service-accent: var(--green); display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); grid-template-areas: "overview map"; min-height: 34rem; border: 1px solid var(--rule); }
-.service-explorer:not([data-active-service="power"]) { --service-accent: var(--blue); }
+.service-explorer:not([data-active-service="digital"]) { --service-accent: var(--blue); }
 .service-explorer__overview { grid-area: overview; min-width: 0; display: flex; flex-direction: column; padding: clamp(1.25rem, 2.2vw, 2rem); border-top: 3px solid var(--service-accent); background: var(--fog); scroll-margin-top: 1rem; }
 .service-explorer__top { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 1.1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--rule); font-size: 14px; color: var(--mute); }
 .service-explorer__top > span:last-child { flex: none; color: var(--ink); }
@@ -83,7 +83,7 @@
 .service-map__stage { position: relative; flex: 1; min-height: 26rem; isolation: isolate; }
 .service-map__wires { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: var(--map-rule); stroke-width: 1.5; pointer-events: none; }
 .service-map__wires path { vector-effect: non-scaling-stroke; stroke: var(--map-wire); opacity: .6; transition: stroke .25s, opacity .25s; }
-.service-map__wires [data-service-wire="power"] { stroke: var(--map-wire); }
+.service-map__wires [data-service-wire="digital"] { stroke: var(--map-wire); }
 .service-map__wires .is-active { stroke: var(--map-wire-active); opacity: 1; stroke-width: 2; stroke-dasharray: 8 6; animation: service-flow 16s linear infinite; animation-play-state: var(--motion-play, running); }
 .service-map__wires .service-map__track { stroke: var(--map-wire); stroke-width: 1.5; opacity: .6; stroke-dasharray: none; animation: none; }
 .service-map__wires .service-map__track.is-active { stroke: var(--map-wire-track-active); stroke-width: 3.5; opacity: 1; stroke-dasharray: none; animation: none; }
@@ -91,19 +91,20 @@
 .service-map__hub svg { width: 1.75rem; height: 1.75rem; fill: none; stroke: var(--map-card-ink); stroke-width: 1.4; }
 .service-map__hub-accent { stroke: var(--service-accent); stroke-width: 2.5; }
 .service-node { --node-accent: var(--blue); position: absolute; z-index: 2; transform: translate(-50%, -50%); width: clamp(6.4rem, 26%, 9rem); min-height: 6.5rem; padding: .75rem .85rem; display: flex; flex-direction: column; gap: .8rem; background: var(--map-card); color: var(--map-card-ink); border: 2px solid var(--map-card-border); text-decoration: none; transition: background-color .25s, border-color .25s, transform .25s var(--ease); }
-.service-node--power { --node-accent: var(--green); left: 19.531%; top: 19.231%; }
+.service-node--digital, .service-node--cybersecurity { width: clamp(6.4rem, 39%, 9rem); }
+.service-node--digital { --node-accent: var(--green); left: 19.531%; top: 19.231%; }
 .service-node--datacenter { left: 80.469%; top: 19.231%; }
 .service-node--network { left: 19.531%; top: 61.538%; }
 .service-node--operations { left: 80.469%; top: 61.538%; }
-.service-node--equipment { left: 50%; top: 85.577%; }
+.service-node--cybersecurity { left: 50%; top: 85.577%; }
 .service-node__top { display: flex; align-items: center; justify-content: space-between; gap: .5rem; font-size: 14px; color: var(--map-card-muted); }
 .service-node__top svg { width: 1.65rem; height: 1.65rem; flex: none; fill: none; stroke: var(--node-accent); stroke-width: 1.5; stroke-linecap: square; stroke-linejoin: miter; }
 .service-node__top svg { transform-box: fill-box; transform-origin: center; animation-duration: 3.4s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-play-state: var(--motion-play, running); }
-.service-node--power svg { animation-name: service-bolt; }
+.service-node--digital svg { animation-name: service-data; }
 .service-node--datacenter svg { animation-name: service-data; animation-delay: -.6s; }
-.service-node--network svg { animation-name: service-shield; animation-delay: -1.2s; }
+.service-node--network svg { animation-name: service-data; animation-delay: -1.2s; }
 .service-node--operations svg { animation-name: service-support; animation-duration: 4s; }
-.service-node--equipment svg { animation-name: service-lift; animation-delay: -1.8s; }
+.service-node--cybersecurity svg { animation-name: service-shield; animation-delay: -1.8s; }
 .service-node strong { font: 600 16px/1.25 var(--display); }
 .service-node:hover { transform: translate(-50%, -50%) scale(1.035); border-color: var(--node-accent); }
 .service-node.is-active { background: var(--map-card); border-color: var(--map-card-border); box-shadow: inset 0 3px 0 var(--node-accent); color: var(--map-card-ink); }
@@ -130,6 +131,7 @@
  .service-map__stage { height: 27.5rem; }
  .service-node { padding: .6rem; min-height: 6.1rem; gap: .4rem; }
  .service-node strong { font-size: 14px; }
+ .service-node--digital strong, .service-node--network strong, .service-node--cybersecurity strong { font-size: 13px; }
  .service-node__top svg { width: 1.4rem; height: 1.4rem; }
  .service-map__hub { width: 4rem; height: 4rem; padding: .25rem; gap: .2rem; line-height: 1.1; }
  .service-map__hub svg { width: 1.25rem; height: 1.25rem; }

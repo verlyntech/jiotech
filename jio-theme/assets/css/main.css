@@ -121,6 +121,16 @@ figcaption { display: none !important; }
 	67% { opacity: 1; clip-path: inset(-1px 75% -1px 0); animation-timing-function: cubic-bezier(.33, 1, .68, 1); }
 	100% { opacity: 1; clip-path: inset(-1px 0 -1px 0); }
 }
+/* Logo float: gentle bob after intro completes */
+@keyframes logo-float {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-6px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+	.brand__art {
+		animation: logo-float 3.2s ease-in-out 2.4s infinite;
+	}
+}
 .nav { display: flex; align-items: center; gap: 1.6rem; margin-left: auto; }
 .nav > a, .nav__item > a { font-size: .98rem; font-weight: 700; color: var(--ink-2); text-decoration: none; white-space: nowrap; padding-block: .4rem; border-bottom: 2px solid transparent; transition: border-color .2s, color .2s; }
 .nav > a:hover, .nav > a[aria-current="page"], .nav__item > a:hover, .nav__item > a[aria-current="page"], .nav__item.is-open > a { color: var(--ink); border-color: var(--green); }

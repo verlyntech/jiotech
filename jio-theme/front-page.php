@@ -36,7 +36,7 @@ get_header(); ?>
 <section class="home-spotlight" id="chain" aria-labelledby="spotlight-title" data-home-spotlight>
 	<div class="wrap">
 		<div class="home-spotlight__head">
-			<div><p class="label">Integrated expertise</p><h2 id="spotlight-title">From the battery room<br>to the browser tab.</h2></div>
+			<div><p class="label">Integrated expertise</p><h2 id="spotlight-title">Complete IT infrastructure<br>and critical power.</h2></div>
 			<p>Every layer, connected.<br>One contract. One number to call.</p>
 		</div>
 		<div class="home-spotlight__layout">

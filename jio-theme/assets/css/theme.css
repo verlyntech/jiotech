@@ -166,7 +166,7 @@ html[data-theme="dark"] {
 }
 @media (max-width: 400px) {
 	.site-head__row { gap: .5rem; }
-	.brand__logo { width: clamp(9rem, 44vw, 11rem); }
+	.brand__logo, .brand__art { width: clamp(9rem, 44vw, 11rem); }
 }
 [data-theme="dark"] .mega__aside { border: 1px solid var(--rule); }
 

@@ -38,7 +38,7 @@ get_header(); ?>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">02 / 03</p>
                     <h2 id="company-title-mission">Our mission</h2>
-                    <p class="company-perspectives__text">To be a leading distributor of IT, power and industrial products, known for innovation, reliability and customer service.</p>
+                    <p class="company-perspectives__text">To help businesses harness IT and energy to operate smarter and more sustainably, with reliable products, sound engineering and service that goes beyond expectations.</p>
                     <p class="company-perspectives__key">Innovation. Reliability. Customer service.</p>
                 </div>
             </article>
@@ -50,8 +50,8 @@ get_header(); ?>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">03 / 03</p>
                     <h2 id="company-title-vision">Our vision</h2>
-                    <p class="company-perspectives__text">To deliver high-quality products across IT, power, telecommunications, computing and machinery.</p>
-                    <p class="company-perspectives__key">Quality across connected technologies.</p>
+                    <p class="company-perspectives__text">To be the leading hybrid IT and energy partner in the GCC, connecting customers across IT, power, telecommunications and industry to the world's leading brands from our base in the UAE.</p>
+                    <p class="company-perspectives__key">One partner for IT and energy.</p>
                 </div>
             </article>
             </div>

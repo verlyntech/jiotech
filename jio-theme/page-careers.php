@@ -21,7 +21,6 @@ get_header(); ?>
 		</div>
 		<figure class="svc-media svc-media--photo">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/careers-office-atrium.webp" width="1402" height="1122" alt="Illustration of a light-filled technology workplace atrium with a glass and timber staircase" loading="eager" fetchpriority="high" decoding="async">
-			<figcaption>Illustrative image</figcaption>
 		</figure>
 	</div>
 </section>
@@ -43,7 +42,6 @@ get_header(); ?>
 	<div class="wrap svc-fit__grid">
 		<figure class="svc-media svc-media--wide svc-media--photo">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/careers-learning-lab.webp" width="1586" height="992" alt="Illustration of an empty training laboratory with networking and low-voltage energy learning benches" loading="lazy" decoding="async">
-			<figcaption>Illustrative image</figcaption>
 		</figure>
 		<div class="svc-fit__copy">
 			<p class="label">What you get</p>

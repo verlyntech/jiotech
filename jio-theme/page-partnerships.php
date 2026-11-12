@@ -20,7 +20,6 @@ get_header(); ?>
 		</div>
 		<figure class="svc-media svc-media--photo">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/partnerships-delivery-hub.webp" width="1402" height="1122" alt="Illustration of an organised technology delivery hub with equipment shelving, transit cases and a staging bench" loading="eager" fetchpriority="high" decoding="async">
-			<figcaption>Illustrative image</figcaption>
 		</figure>
 	</div>
 </section>
@@ -52,7 +51,6 @@ get_header(); ?>
 	<div class="wrap svc-fit__grid">
 		<figure class="svc-media svc-media--wide svc-media--photo">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/partnerships-integrated-edge.webp" width="1586" height="992" alt="Illustration of an integrated edge installation combining an IT rack, UPS cabinet, power distribution and security camera" loading="lazy" decoding="async">
-			<figcaption>Illustrative image</figcaption>
 		</figure>
 		<div class="svc-fit__copy">
 			<p class="label">Where we partner</p>

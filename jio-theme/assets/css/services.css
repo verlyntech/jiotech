@@ -35,10 +35,11 @@
 :root:not([data-theme="dark"]) .solutions-hero h1,
 :root:not([data-theme="dark"]) .solutions-hero__lead,
 :root:not([data-theme="dark"]) .solutions-hero__explore { color: var(--ink); }
-:root:not([data-theme="dark"]) .solutions-hero__it,
-:root:not([data-theme="dark"]) .solutions-hero__energy { color: var(--ink); text-decoration: underline; text-decoration-thickness: .1em; text-underline-offset: .14em; }
-:root:not([data-theme="dark"]) .solutions-hero__it { text-decoration-color: var(--blue); }
-:root:not([data-theme="dark"]) .solutions-hero__energy { text-decoration-color: var(--green); }
+.solutions-hero__it { color: var(--blue); text-decoration: none; }
+.solutions-hero__energy, .solutions-hero__power { color: var(--green); text-decoration: none; }
+:root:not([data-theme="dark"]) .solutions-hero__it { color: var(--blue); text-decoration: none; }
+:root:not([data-theme="dark"]) .solutions-hero__energy,
+:root:not([data-theme="dark"]) .solutions-hero__power { color: var(--green); text-decoration: none; }
 :root:not([data-theme="dark"]) .solutions-hero__explore { border-bottom-color: var(--ink-2); }
 :root:not([data-theme="dark"]) .solutions-hero .btn-arrow:hover { background: var(--white); border-color: var(--ink); }
 :root:not([data-theme="dark"]) .solutions-hero a:focus-visible { outline-color: var(--ink); }

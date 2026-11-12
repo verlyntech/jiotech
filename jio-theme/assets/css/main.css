@@ -66,7 +66,8 @@ p { margin: 0; text-wrap: pretty; }
 .sec-head h2, .intro h2, .versus__head h2, .group h2, .sectors__more h2, .careers h2, .compare__head h3, .article__head h1 {
 	font-weight: 700; letter-spacing: -.03em; line-height: .96; font-size: 25px;
 }
-.hl-green { text-decoration: underline; text-decoration-color: var(--green); text-decoration-thickness: .11em; text-underline-offset: .09em; text-decoration-skip-ink: none; }
+.hl-green { text-decoration: none; }
+figcaption { display: none !important; }
 
 /* ---------- controls: boxed or transparent, never rounded ---------- */
 .btn {

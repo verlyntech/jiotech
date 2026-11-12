@@ -15,7 +15,6 @@ get_header(); ?>
 		<!-- Generated illustration of the connected infrastructure behind different industries. -->
 		<figure class="industry-hero__media industry-hero__media--image">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/industries-it-workspace.webp" width="1402" height="1122" alt="Illustration of an empty UAE IT operations workspace with network dashboards, server racks and UPS power equipment" loading="eager" decoding="async">
-			<figcaption>Your industry. Connected.</figcaption>
 		</figure>
 	</div>
 </section>

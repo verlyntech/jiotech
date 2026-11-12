@@ -21,7 +21,6 @@ get_header(); ?>
             <article class="company-perspectives__panel" id="beginnings" data-company-panel="beginnings" aria-labelledby="company-title-beginnings">
                 <figure class="company-perspectives__media company-perspectives__media--photo">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-beginnings-workshop.webp" width="1402" height="1122" alt="Illustration of an empty engineering workshop with a server, laptop, tools and organised network cabling" loading="lazy" decoding="async">
-                    <figcaption><strong>A foundation in engineering.</strong><span>Beginnings · Illustrative image</span></figcaption>
                 </figure>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">01 / 03</p>
@@ -33,7 +32,6 @@ get_header(); ?>
             <article class="company-perspectives__panel" id="mission" data-company-panel="mission" aria-labelledby="company-title-mission">
                 <figure class="company-perspectives__media company-perspectives__media--photo">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-mission-infrastructure.webp" width="1402" height="1122" alt="Illustration of UPS and server equipment ready for delivery beneath a JIO TECH wall sign" loading="lazy" decoding="async">
-                    <figcaption><strong>Purpose behind every solution.</strong><span>Mission · Illustrative image</span></figcaption>
                 </figure>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">02 / 03</p>
@@ -45,7 +43,6 @@ get_header(); ?>
             <article class="company-perspectives__panel" id="vision" data-company-panel="vision" aria-labelledby="company-title-vision">
                 <figure class="company-perspectives__media company-perspectives__media--photo">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-vision-campus.webp" width="1402" height="1122" alt="Illustration of a modern UAE technology campus combining IT infrastructure, communications and energy systems" loading="lazy" decoding="async">
-                    <figcaption><strong>A broader technology horizon.</strong><span>Vision · Illustrative image</span></figcaption>
                 </figure>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">03 / 03</p>
@@ -89,7 +86,6 @@ get_header(); ?>
 	<div class="wrap svc-fit__grid">
 		<figure class="svc-media svc-media--wide svc-media--photo">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-team-workspace.webp" width="1586" height="992" alt="Illustration of an empty collaborative engineering studio with shared project tables and green task chairs" loading="lazy" decoding="async">
-			<figcaption>Illustrative image</figcaption>
 		</figure>
 		<div class="svc-fit__copy">
 			<p class="label">Our team</p>
@@ -111,7 +107,6 @@ get_header(); ?>
 		</div>
 		<figure class="svc-media svc-media--wide svc-media--photo">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-culture-lounge.webp" width="1586" height="992" alt="Illustration of a welcoming office lounge with sage seating, plants and a coffee area" loading="lazy" decoding="async">
-			<figcaption>Illustrative image</figcaption>
 		</figure>
 	</div>
 </section>

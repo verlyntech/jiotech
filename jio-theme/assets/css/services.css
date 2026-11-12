@@ -37,9 +37,9 @@
 :root:not([data-theme="dark"]) .solutions-hero__explore { color: var(--ink); }
 .solutions-hero__it { color: var(--blue); text-decoration: none; }
 .solutions-hero__energy, .solutions-hero__power { color: var(--green); text-decoration: none; }
-:root:not([data-theme="dark"]) .solutions-hero__it { color: var(--blue); text-decoration: none; }
+:root:not([data-theme="dark"]) .solutions-hero__it { color: #3f7fae; text-decoration: none; }
 :root:not([data-theme="dark"]) .solutions-hero__energy,
-:root:not([data-theme="dark"]) .solutions-hero__power { color: var(--green); text-decoration: none; }
+:root:not([data-theme="dark"]) .solutions-hero__power { color: #3a9a12; text-decoration: none; }
 :root:not([data-theme="dark"]) .solutions-hero__explore { border-bottom-color: var(--ink-2); }
 :root:not([data-theme="dark"]) .solutions-hero .btn-arrow:hover { background: var(--white); border-color: var(--ink); }
 :root:not([data-theme="dark"]) .solutions-hero a:focus-visible { outline-color: var(--ink); }

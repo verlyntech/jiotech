@@ -224,6 +224,62 @@
       "detail_image_width": 1586,
       "detail_image_height": 992,
       "related": ["it-consulting-advisory", "managed-services", "cyber-security"]
+    },
+    {
+      "slug": "business-process-automation",
+      "tone": "it",
+      "short": "Automation",
+      "title": "Business process automation",
+      "lead": "Less manual work, fewer errors, faster approvals.",
+      "intro": "We map the repetitive tasks your teams do by hand, from approvals and data entry to reports and notifications, and automate them with the Microsoft 365 tools you already pay for.",
+      "included_title": "Work that runs itself.",
+      "items": [
+        { "title": "Process mapping", "text": "We document how a process runs today, find the manual steps and agree what to automate first." },
+        { "title": "Workflow automation", "text": "Approvals, requests and notifications that route themselves, built with Power Automate." },
+        { "title": "Digital forms", "text": "Forms that replace paper and email attachments, sending data straight to the right list or system." },
+        { "title": "Reports and alerts", "text": "Scheduled reports and alerts, so people see the numbers without assembling them by hand." }
+      ],
+      "why_label": "Why one partner",
+      "why_title": "Automation on systems that stay up.",
+      "why_text": "Automated processes stop when the systems under them do. JIO also looks after the network, devices and Microsoft 365 setup your automations depend on, so they keep running.",
+      "brands": ["Microsoft"],
+      "hero_image": "Illustration of an IT and energy architecture plan drawn on a glass board in an empty strategy room",
+      "hero_image_file": "service-consulting-detail.webp",
+      "hero_image_width": 1586,
+      "hero_image_height": 992,
+      "detail_image": "Illustration of an empty operations room with infrastructure dashboards on a six-screen monitoring wall",
+      "detail_image_file": "service-managed-hero.webp",
+      "detail_image_width": 1402,
+      "detail_image_height": 1122,
+      "related": ["cloud-saas-transformation", "digital-transformation", "managed-services"]
+    },
+    {
+      "slug": "cloud-saas-transformation",
+      "tone": "it",
+      "short": "Microsoft 365 & cloud",
+      "title": "Microsoft 365 & cloud transformation",
+      "lead": "Move your team to Microsoft 365, and keep it running well.",
+      "intro": "We plan and carry out the move from on-site email, file servers and desktop software to Microsoft 365, then manage licences, security and support afterwards.",
+      "included_title": "From the first mailbox to the whole company.",
+      "items": [
+        { "title": "Migration planning", "text": "An inventory of your mailboxes, files and apps, and a plan that keeps people working during the switch." },
+        { "title": "Email and file migration", "text": "Mail, calendars and shared files moved to Exchange Online, OneDrive, SharePoint and Teams." },
+        { "title": "Security and access", "text": "Multi-factor sign-in, device and access policies, and backup for your Microsoft 365 data." },
+        { "title": "Licences and support", "text": "The right licence for each person, plus ongoing user support and administration." }
+      ],
+      "why_label": "Why one partner",
+      "why_title": "Cloud apps on a network built for them.",
+      "why_text": "Microsoft 365 is only as fast and reliable as the connection and devices people use it on. JIO handles the network, Wi-Fi and devices too, so the move works from day one.",
+      "brands": ["Microsoft"],
+      "hero_image": "Illustration of a ceiling-mounted wireless access point serving an empty contemporary office",
+      "hero_image_file": "service-network-detail.webp",
+      "hero_image_width": 1586,
+      "hero_image_height": 992,
+      "detail_image": "Illustration of an open rackmount server and network storage enclosure on an engineering bench",
+      "detail_image_file": "service-managed-detail.webp",
+      "detail_image_width": 1586,
+      "detail_image_height": 992,
+      "related": ["business-process-automation", "managed-services", "network-connectivity-solutions"]
     }
   ]
 }

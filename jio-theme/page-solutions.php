@@ -90,7 +90,7 @@ get_header(); ?>
 					<h3>Data centers &amp; cloud</h3>
 					<p>Connect your physical infrastructure and cloud platforms around the applications you run. From a single rack to a hybrid environment, we plan for capacity and growth.</p>
 					<ul><li>Data center design, hosting, power and cooling</li><li>Private, public and hybrid cloud environments</li><li>Cloud architecture and migration planning</li></ul>
-					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>">Data center design &amp; hosting</a><a href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>">IT consulting &amp; advisory</a></div>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>">Data center design &amp; hosting</a><a href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>">IT consulting &amp; advisory</a><a href="<?php echo esc_url( home_url( '/solutions/cloud-saas-transformation/' ) ); ?>">Microsoft 365 &amp; cloud</a></div>
 					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss data centers &amp; cloud <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="network" aria-labelledby="service-network" data-service-summary="network" hidden>
@@ -106,7 +106,7 @@ get_header(); ?>
 					<h3>Managed IT &amp; support</h3>
 					<p>Keep day-to-day systems supported while planning your next technology investment. One team coordinates infrastructure, user support and maintenance around your priorities.</p>
 					<ul><li>Infrastructure management and end-user support</li><li>24/7 monitoring, remote and onsite assistance</li><li>Technology roadmaps and systems integration</li></ul>
-					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>">Managed IT</a><a href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>">Maintenance &amp; 24/7 support</a><a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">Digital transformation</a></div>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>">Managed IT</a><a href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>">Maintenance &amp; 24/7 support</a><a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">Digital transformation</a><a href="<?php echo esc_url( home_url( '/solutions/business-process-automation/' ) ); ?>">Business process automation</a></div>
 					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss managed IT &amp; support <span aria-hidden="true">↗</span></a>
 				</article>
 				<article class="service-summary" id="service-panel-equipment" aria-labelledby="service-equipment" data-service-summary="equipment" hidden>
@@ -132,18 +132,6 @@ get_header(); ?>
 			<li>
 				<svg viewBox="0 0 120 90" aria-hidden="true"><rect x="38" y="8" width="44" height="74"/><rect x="45" y="16" width="30" height="16"/><path d="M45 42h30M45 48h30M45 54h30"/><circle cx="60" cy="70" r="4"/></svg>
 				<h3>UPS units</h3><p>Eaton, APC, Vertiv, BPC</p>
-			</li>
-			<li>
-				<svg viewBox="0 0 120 90" aria-hidden="true"><rect x="22" y="26" width="34" height="48"/><rect x="64" y="26" width="34" height="48"/><path d="M30 26v-6h6v6M42 26v-6h6v6M72 26v-6h6v6M84 26v-6h6v6M33 44h12M39 38v12M75 44h12"/></svg>
-				<h3>VRLA batteries</h3><p>Amaron, SacredSun</p>
-			</li>
-			<li>
-				<svg viewBox="0 0 120 90" aria-hidden="true"><rect x="34" y="6" width="52" height="78"/><path d="M34 22h52M34 38h52M34 54h52M34 70h52"/><circle cx="78" cy="14" r="2"/><circle cx="78" cy="30" r="2"/><circle cx="78" cy="46" r="2"/><circle cx="78" cy="62" r="2"/></svg>
-				<h3>Lithium-ion battery cabinets</h3><p>Matched to the UPS</p>
-			</li>
-			<li>
-				<svg viewBox="0 0 120 90" aria-hidden="true"><rect x="52" y="4" width="16" height="82"/><circle cx="60" cy="16" r="3"/><circle cx="60" cy="30" r="3"/><circle cx="60" cy="44" r="3"/><circle cx="60" cy="58" r="3"/><circle cx="60" cy="72" r="3"/></svg>
-				<h3>Power distribution units</h3><p>APC, Eaton, Vertiv</p>
 			</li>
 			<li>
 				<svg viewBox="0 0 120 90" aria-hidden="true"><rect x="12" y="28" width="96" height="16"/><rect x="12" y="48" width="96" height="16"/><path d="M20 36h30M20 56h30"/><circle cx="98" cy="36" r="2"/><circle cx="98" cy="56" r="2"/></svg>

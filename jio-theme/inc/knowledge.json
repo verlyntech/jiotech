@@ -53,6 +53,14 @@
       "path": "/solutions/digital-transformation/"
     },
     {
+      "name": "Business process automation",
+      "path": "/solutions/business-process-automation/"
+    },
+    {
+      "name": "Microsoft 365 & cloud transformation",
+      "path": "/solutions/cloud-saas-transformation/"
+    },
+    {
       "name": "Industries",
       "path": "/industries/"
     },
@@ -118,6 +126,14 @@
     {
       "name": "IT consulting and digital transformation",
       "summary": "IT planning, cloud migration and technology integration tied to the business plan."
+    },
+    {
+      "name": "Business process automation",
+      "summary": "Mapping manual processes and automating approvals, requests, forms, notifications and reports with Microsoft 365 tools such as Power Automate."
+    },
+    {
+      "name": "Microsoft 365 and cloud transformation",
+      "summary": "Planning and carrying out the move from on-site email, file servers and desktop software to Microsoft 365 (Exchange Online, Teams, SharePoint, OneDrive), then managing licences, security, backup and user support."
     },
     {
       "name": "IT procurement and vendor management",

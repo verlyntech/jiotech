@@ -24,6 +24,8 @@
 			<option>Managed IT &amp; 24/7 support</option>
 			<option>Consulting &amp; cloud</option>
 			<option>Digital transformation</option>
+			<option>Business process automation</option>
+			<option>Microsoft 365 &amp; cloud</option>
 			<option>Not sure, or several</option>
 		</select>
 		<p class="field__err" id="sv-err" hidden></p>

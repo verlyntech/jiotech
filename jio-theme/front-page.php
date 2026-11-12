@@ -41,43 +41,30 @@ get_header(); ?>
 		</div>
 		<div class="home-spotlight__layout">
 			<nav class="home-spotlight__nav" aria-label="Explore our services" data-spotlight-nav>
-				<a class="home-spotlight__tab" id="spotlight-tab-power" href="#spotlight-power" data-spotlight-tab="power"><span class="home-spotlight__number">01</span><span>Power &amp; energy</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
-				<a class="home-spotlight__tab" id="spotlight-tab-datacenter" href="#spotlight-datacenter" data-spotlight-tab="datacenter"><span class="home-spotlight__number">02</span><span>Data center design &amp; hosting</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
-				<a class="home-spotlight__tab" id="spotlight-tab-security" href="#spotlight-security" data-spotlight-tab="security"><span class="home-spotlight__number">03</span><span>Cybersecurity &amp; data protection</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
-				<a class="home-spotlight__tab" id="spotlight-tab-network" href="#spotlight-network" data-spotlight-tab="network"><span class="home-spotlight__number">04</span><span>Network &amp; connectivity</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
+				<a class="home-spotlight__tab" id="spotlight-tab-network" href="#spotlight-network" data-spotlight-tab="network"><span class="home-spotlight__number">01</span><span>Network &amp; connectivity</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
+				<a class="home-spotlight__tab" id="spotlight-tab-security" href="#spotlight-security" data-spotlight-tab="security"><span class="home-spotlight__number">02</span><span>Cybersecurity &amp; data protection</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
+				<a class="home-spotlight__tab" id="spotlight-tab-cloud" href="#spotlight-cloud" data-spotlight-tab="cloud"><span class="home-spotlight__number">03</span><span>Consulting &amp; cloud</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
+				<a class="home-spotlight__tab" id="spotlight-tab-datacenter" href="#spotlight-datacenter" data-spotlight-tab="datacenter"><span class="home-spotlight__number">04</span><span>Data center design &amp; hosting</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
 				<a class="home-spotlight__tab" id="spotlight-tab-managed" href="#spotlight-managed" data-spotlight-tab="managed"><span class="home-spotlight__number">05</span><span>Managed IT &amp; 24/7 support</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
-				<a class="home-spotlight__tab" id="spotlight-tab-cloud" href="#spotlight-cloud" data-spotlight-tab="cloud"><span class="home-spotlight__number">06</span><span>Consulting &amp; cloud</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
+				<a class="home-spotlight__tab" id="spotlight-tab-power" href="#spotlight-power" data-spotlight-tab="power"><span class="home-spotlight__number">06</span><span>Power &amp; energy</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
 			</nav>
 			<div class="home-spotlight__stage">
-				<article class="home-spotlight__panel" id="spotlight-power" data-spotlight-panel="power">
+				<article class="home-spotlight__panel" id="spotlight-network" data-spotlight-panel="network">
 					<figure class="home-spotlight__visual home-spotlight__visual--photo">
 						<span class="home-spotlight__count" aria-label="Service 1 of 6">01 <span>/ 06</span></span>
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-power-equipment.webp" width="1672" height="941" alt="Illustration of UPS power equipment, enclosed battery banks and renewable energy monitoring in an empty infrastructure room" loading="lazy" decoding="async">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-network.webp" width="1672" height="941" alt="Network switches connected with organised blue and yellow cabling" loading="lazy" decoding="async">
 					</figure>
 					<div class="home-spotlight__copy">
 						<p class="home-spotlight__eyebrow">Design · Supply · Support</p>
-						<h3>Power &amp; energy</h3>
-						<p>Coordinate backup power, battery systems and renewable energy around the equipment your business depends on. From installation to preventive maintenance, one team supports your power infrastructure.</p>
-						<ul class="home-spotlight__tags" aria-label="Capabilities"><li>UPS systems</li><li>VRLA &amp; lithium-ion</li><li>Renewables</li><li>Maintenance</li></ul>
-						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
-					</div>
-				</article>
-				<article class="home-spotlight__panel" id="spotlight-datacenter" data-spotlight-panel="datacenter">
-					<figure class="home-spotlight__visual home-spotlight__visual--photo">
-						<span class="home-spotlight__count" aria-label="Service 2 of 6">02 <span>/ 06</span></span>
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-datacenter.webp" width="1672" height="941" alt="Server racks and overhead cabling in a modern data center" loading="lazy" decoding="async">
-					</figure>
-					<div class="home-spotlight__copy">
-						<p class="home-spotlight__eyebrow">Design · Supply · Support</p>
-						<h3>Data center design &amp; hosting</h3>
-						<p>Bring racks, structured cabling, power, cooling and application hosting together in one coordinated environment, from a single rack to an enterprise data hall.</p>
-						<ul class="home-spotlight__tags" aria-label="Capabilities"><li>Facility design</li><li>Power &amp; cooling</li><li>Application hosting</li></ul>
-						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
+						<h3>Network &amp; connectivity</h3>
+						<p>Connect offices, branches and hybrid teams through reliable LAN, WAN and wireless infrastructure, with network security built into the design.</p>
+						<ul class="home-spotlight__tags" aria-label="Capabilities"><li>LAN &amp; WAN</li><li>Business Wi-Fi</li><li>Site connectivity</li><li>VPN</li></ul>
+						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/network-connectivity-solutions/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
 					</div>
 				</article>
 				<article class="home-spotlight__panel" id="spotlight-security" data-spotlight-panel="security">
 					<figure class="home-spotlight__visual home-spotlight__visual--photo">
-						<span class="home-spotlight__count" aria-label="Service 3 of 6">03 <span>/ 06</span></span>
+						<span class="home-spotlight__count" aria-label="Service 2 of 6">02 <span>/ 06</span></span>
 						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-security.webp" width="1672" height="941" alt="Three security operations monitors showing network, protection and backup dashboards" loading="lazy" decoding="async">
 					</figure>
 					<div class="home-spotlight__copy">
@@ -88,17 +75,30 @@ get_header(); ?>
 						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
 					</div>
 				</article>
-				<article class="home-spotlight__panel" id="spotlight-network" data-spotlight-panel="network">
+				<article class="home-spotlight__panel" id="spotlight-cloud" data-spotlight-panel="cloud">
 					<figure class="home-spotlight__visual home-spotlight__visual--photo">
-						<span class="home-spotlight__count" aria-label="Service 4 of 6">04 <span>/ 06</span></span>
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-network.webp" width="1672" height="941" alt="Network switches connected with organised blue and yellow cabling" loading="lazy" decoding="async">
+						<span class="home-spotlight__count" aria-label="Service 3 of 6">03 <span>/ 06</span></span>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-consulting-workspace.webp" width="1672" height="941" alt="Illustration of an empty cloud planning workspace with architecture diagrams, technology roadmaps and server infrastructure" loading="lazy" decoding="async">
 					</figure>
 					<div class="home-spotlight__copy">
 						<p class="home-spotlight__eyebrow">Design · Supply · Support</p>
-						<h3>Network &amp; connectivity</h3>
-						<p>Connect offices, branches and hybrid teams through reliable LAN, WAN and wireless infrastructure, with network security built into the design.</p>
-						<ul class="home-spotlight__tags" aria-label="Capabilities"><li>LAN &amp; WAN</li><li>Business Wi-Fi</li><li>Site connectivity</li><li>VPN</li></ul>
-						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/network-connectivity-solutions/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
+						<h3>Consulting &amp; cloud</h3>
+						<p>Align your technology roadmap with business priorities. Plan cloud migration, hybrid infrastructure and systems integration around your applications, people and growth.</p>
+						<ul class="home-spotlight__tags" aria-label="Capabilities"><li>IT planning</li><li>Cloud migration</li><li>Hybrid infrastructure</li><li>Integration</li></ul>
+						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
+					</div>
+				</article>
+				<article class="home-spotlight__panel" id="spotlight-datacenter" data-spotlight-panel="datacenter">
+					<figure class="home-spotlight__visual home-spotlight__visual--photo">
+						<span class="home-spotlight__count" aria-label="Service 4 of 6">04 <span>/ 06</span></span>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-datacenter.webp" width="1672" height="941" alt="Server racks and overhead cabling in a modern data center" loading="lazy" decoding="async">
+					</figure>
+					<div class="home-spotlight__copy">
+						<p class="home-spotlight__eyebrow">Design · Supply · Support</p>
+						<h3>Data center design &amp; hosting</h3>
+						<p>Bring racks, structured cabling, power, cooling and application hosting together in one coordinated environment, from a single rack to an enterprise data hall.</p>
+						<ul class="home-spotlight__tags" aria-label="Capabilities"><li>Facility design</li><li>Power &amp; cooling</li><li>Application hosting</li></ul>
+						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
 					</div>
 				</article>
 				<article class="home-spotlight__panel" id="spotlight-managed" data-spotlight-panel="managed">
@@ -114,17 +114,17 @@ get_header(); ?>
 						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
 					</div>
 				</article>
-				<article class="home-spotlight__panel" id="spotlight-cloud" data-spotlight-panel="cloud">
+				<article class="home-spotlight__panel" id="spotlight-power" data-spotlight-panel="power">
 					<figure class="home-spotlight__visual home-spotlight__visual--photo">
 						<span class="home-spotlight__count" aria-label="Service 6 of 6">06 <span>/ 06</span></span>
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-consulting-workspace.webp" width="1672" height="941" alt="Illustration of an empty cloud planning workspace with architecture diagrams, technology roadmaps and server infrastructure" loading="lazy" decoding="async">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-power-equipment.webp" width="1672" height="941" alt="Illustration of UPS power equipment, enclosed battery banks and renewable energy monitoring in an empty infrastructure room" loading="lazy" decoding="async">
 					</figure>
 					<div class="home-spotlight__copy">
 						<p class="home-spotlight__eyebrow">Design · Supply · Support</p>
-						<h3>Consulting &amp; cloud</h3>
-						<p>Align your technology roadmap with business priorities. Plan cloud migration, hybrid infrastructure and systems integration around your applications, people and growth.</p>
-						<ul class="home-spotlight__tags" aria-label="Capabilities"><li>IT planning</li><li>Cloud migration</li><li>Hybrid infrastructure</li><li>Integration</li></ul>
-						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
+						<h3>Power &amp; energy</h3>
+						<p>Coordinate backup power, battery systems and renewable energy around the equipment your business depends on. From installation to preventive maintenance, one team supports your power infrastructure.</p>
+						<ul class="home-spotlight__tags" aria-label="Capabilities"><li>UPS systems</li><li>VRLA &amp; lithium-ion</li><li>Renewables</li><li>Maintenance</li></ul>
+						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
 					</div>
 				</article>
 			</div>

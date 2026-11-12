@@ -24,12 +24,6 @@
 				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mega-services" aria-label="Show services" data-mega-toggle hidden><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5l4 4 4-4"/></svg></button>
 				<div class="mega" id="mega-services" data-mega-panel hidden>
 					<div class="wrap wrap--wide mega__grid">
-						<div class="mega__group mega__group--power">
-							<p class="mega__label">Power</p>
-							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>"><span>Power &amp; energy</span><small>UPS, batteries, renewables and power distribution</small></a>
-							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>"><span>Data center design &amp; hosting</span><small>From a single rack to an enterprise hall</small></a>
-							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>"><span>Maintenance &amp; 24/7 support</span><small>Preventive maintenance, remote and on-site help</small></a>
-						</div>
 						<div class="mega__group mega__group--it">
 							<p class="mega__label">IT</p>
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>"><span>Managed IT &amp; infrastructure</span><small>Monitoring, support and optimisation</small></a>
@@ -37,6 +31,14 @@
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>"><span>Cybersecurity &amp; CCTV</span><small>Network, cloud and physical security</small></a>
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>"><span>IT consulting &amp; advisory</span><small>Strategy, roadmaps and governance</small></a>
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>"><span>Digital transformation</span><small>Modernise legacy systems and connect data</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/business-process-automation/' ) ); ?>"><span>Business process automation</span><small>Workflows, approvals and reports with Microsoft 365</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/cloud-saas-transformation/' ) ); ?>"><span>Microsoft 365 &amp; cloud</span><small>Move email, files and teams to Microsoft 365</small></a>
+						</div>
+						<div class="mega__group mega__group--power">
+							<p class="mega__label">Power</p>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>"><span>Power &amp; energy</span><small>UPS, batteries, renewables and power distribution</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>"><span>Data center design &amp; hosting</span><small>From a single rack to an enterprise hall</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>"><span>Maintenance &amp; 24/7 support</span><small>Preventive maintenance, remote and on-site help</small></a>
 						</div>
 						<div class="mega__aside">
 							<p class="mega__label">Something down?</p>
@@ -94,6 +96,8 @@
 					<a href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Cybersecurity &amp; CCTV</a>
 					<a href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>">IT consulting &amp; advisory</a>
 					<a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">Digital transformation</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/business-process-automation/' ) ); ?>">Business process automation</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/cloud-saas-transformation/' ) ); ?>">Microsoft 365 &amp; cloud</a>
 					<a href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>">All services</a>
 				</details>
 				<a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>">Industries</a>

@@ -22,11 +22,7 @@ get_header(); ?>
 			<?php get_template_part( 'parts/quote-form' ); ?>
 			<div class="office">
 				<?php get_template_part( 'parts/direct' ); ?>
-				<div class="office__card">
-					<h2>Office</h2>
-					<p>Al Muroor Road<br>Abu Dhabi, United Arab Emirates</p>
-					<a class="link" href="https://maps.google.com/?q=JIO+Technologies+Al+Muroor+Road+Abu+Dhabi">Open in Google Maps</a>
-				</div>
+				<?php get_template_part( 'parts/location' ); ?>
 			</div>
 		</div>
 	</div>

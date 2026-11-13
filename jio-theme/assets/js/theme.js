@@ -8,7 +8,7 @@
 	if (!calm && document.referrer.indexOf(location.origin + '/') !== 0) root.classList.add('logo-intro');
 	// Clear it once played: the theme toggle shows a different logo image, which would otherwise replay the intro.
 	document.addEventListener('animationend', function (event) {
-		if (event.animationName === 'logo-reveal') root.classList.remove('logo-intro');
+		if (event.animationName === 'logo-trace-out') root.classList.remove('logo-intro');
 	});
 	var system = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 	var preference = null;

@@ -15,6 +15,8 @@ const pages = [
 	{ tpl: 'page-industries.php', out: 'industries.html', slug: 'industries', title: 'Industries' },
 	{ tpl: 'page-about.php', out: 'about.html', slug: 'about', title: 'Company' },
 	{ tpl: 'page-contact.php', out: 'contact.html', slug: 'contact', title: 'Contact' },
+	{ tpl: 'page-privacy-policy.php', out: 'privacy-policy.html', slug: 'privacy-policy', title: 'Privacy Policy' },
+	{ tpl: 'page-terms-conditions.php', out: 'terms-conditions.html', slug: 'terms-conditions', title: 'Terms & Conditions' },
 	{ tpl: 'page-client-support.php', out: 'client-support.html', slug: 'client-support', title: 'Client support' },
 	{ tpl: 'page-faq.php', out: 'faq.html', slug: 'faq', title: 'FAQ' },
 	{ tpl: 'page-careers.php', out: 'careers.html', slug: 'careers', title: 'Careers' },
@@ -80,7 +82,7 @@ ${page.slug === 'solutions' ? `<link rel="stylesheet" href="../jio-theme/assets/
 	let html = page.html ?? read(page.tpl).replace(/^<\?php\s*\/\*\*[\s\S]*?\*\/\s*/, '<?php ');
 	for (let i = 0; i < 4; i++) for (const [re, fn] of swaps) html = html.replace(re, fn);
 	html = html.replace(/<\?php[\s\S]*?\?>/g, '');
-	writeFileSync(join(here, page.out), html);
+	writeFileSync(join(here, page.out), html.trimEnd() + '\n');
 	return page.out;
 }
 

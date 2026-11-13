@@ -8,7 +8,8 @@ WordPress theme and a dependency-free local preview for the JIO Technologies LLC
 - **Services:** a connected diagram for five service areas, with animated icons, a concise overview on the left, keyboard selection and enquiry links. A pale green map canvas with white animated connectors over green tracks joins fully bordered service boxes: white in light mode and charcoal in dark mode, with colour accents identifying the selected service. The equipment catalogue remains below.
 - **Company:** the Three perspectives design: selectable Beginnings, Mission and Vision tabs, matching illustrations (including JIO TECH signage in Mission), keyboard navigation and direct chapter links, plus icons for the existing company values.
 - **Industries:** nine static industry icons arranged around a circular selector, with the selected sector's overview, capabilities and enquiry link in a larger adjacent panel. Supports keyboard selection and direct sector links.
-- **Shared header:** responsive logo, navigation and a keyboard-accessible dark-mode toggle. The hiring announcement banner has been removed.
+- **Contact and legal:** the homepage enquiry sidebar and Contact page share an Abu Dhabi location card, directions and a Google map that loads only on request. Privacy Policy and Terms & Conditions have dedicated pages, section links and matching light/dark layouts.
+- **Shared header:** responsive logo with a gently floating shield and static wordmark, navigation and a keyboard-accessible dark-mode toggle. The hiring announcement banner has been removed.
 
 The design uses white, green (`#4CBB17`), blue (`#5F9BC6`) and dark ink, with square corners, IBM Plex Sans headings and Source Sans 3 body text. See [DESIGN.md](DESIGN.md) and [PRODUCT.md](PRODUCT.md) for the project context.
 
@@ -45,14 +46,14 @@ After editing a template, stylesheet or script, rerun the build command and refr
 | `jio-theme/assets/js/services.js` | Connected service selection, overview panels, keyboard controls and deep links. |
 | `jio-theme/assets/js/theme.js`, `assets/css/theme.css` | Early theme selection, saved preference, header toggle and dark palette. |
 | `jio-theme/assets/img/` | Logo and website image assets. |
-| `preview/build.mjs` | Generates the eight preview HTML pages. |
+| `preview/build.mjs` | Generates the website and legal preview HTML pages. |
 | `preview/serve.mjs` | Local preview server. |
 
 ## WordPress installation
 
 1. Copy `jio-theme` into the WordPress installation’s `wp-content/themes/` directory.
 2. Activate **JIO Technologies** in Appearance → Themes.
-3. Use the page slugs `solutions`, `about`, `industries`, `contact`, `client-support` and `faq` so WordPress selects the corresponding templates.
+3. Use the page slugs `solutions`, `about`, `industries`, `contact`, `client-support`, `faq`, `privacy-policy` and `terms-conditions` so WordPress selects the corresponding templates.
 4. Configure the site’s homepage and verify navigation, contact forms and support integrations in WordPress before deployment.
 
 The static preview does not replace testing in a WordPress/PHP environment.
@@ -70,6 +71,7 @@ node --check jio-theme/assets/js/site.js
 node --check jio-theme/assets/js/services.js
 node --check preview/build.mjs
 node preview/build.mjs
+node --test --test-isolation=none tests/preview-routes.test.mjs
 git diff --check
 ```
 
@@ -78,3 +80,13 @@ For UI review, check phone, tablet and desktop widths; the header logo; the manu
 ## Secrets and backend configuration
 
 Keep API credentials in server-side configuration and out of templates, browser scripts, screenshots and commits. `.env` files are ignored by Git. The preview server is for development review; production should run through the WordPress installation. Chatbot configuration is separate from the website layout changes.
+
+## Final contact and legal pages
+
+`parts/location.php` is shared by Home and Contact. Address and directions are taken from the company's live Contact page at https://jiotechuae.com/contact/. Google Maps stays unloaded until the visitor chooses it; the directions link works without JavaScript. The same directions destination appears in the footer and contact details.
+
+Privacy and terms content lives in `page-privacy-policy.php` and `page-terms-conditions.php`. Create or retain published WordPress pages with those exact slugs and verify the footer and form consent links after deployment. Review these initial policy texts against actual business retention, hosting and supplier arrangements before publication; they are website copy, not a legal compliance certification.
+
+The chatbot front end, WordPress backend and knowledge content use the GitHub version. The preview retains that dialogue engine with a public-file allowlist and a loopback-only listener; local chatbot rewrite files are unused. Credentials remain server-side and ignored by Git.
+
+The privacy-rights wording was checked against the UAE Government’s overview: https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws. Review applicable legal requirements and the company’s actual practices before publishing.

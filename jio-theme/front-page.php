@@ -202,7 +202,10 @@ get_header(); ?>
 		<?php get_template_part( 'parts/steps' ); ?>
 		<div class="quote__grid">
 			<?php get_template_part( 'parts/quote-form' ); ?>
-			<?php get_template_part( 'parts/direct' ); ?>
+			<aside class="quote__aside" aria-label="Contact and office location">
+				<?php get_template_part( 'parts/direct' ); ?>
+				<?php get_template_part( 'parts/location' ); ?>
+			</aside>
 		</div>
 	</div>
 </section>

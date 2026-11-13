@@ -76,7 +76,7 @@
       "group": "Contact",
       "description": "Phone, email, WhatsApp, office address or location.",
       "handler": "template",
-      "reply": "Call {phone} or email {email}; WhatsApp is on the same number. The office is on {office}.",
+      "reply": "Call {phone} or email {email}; WhatsApp is on the same number. The office is at {office}.",
       "chips": ["call", "email", "whatsapp"],
       "examples": ["what is your phone number", "how do i contact you", "where are you located", "what is your email", "where is your office", "do you have whatsapp", "address", "contact", "phone number", "how can i reach you"]
     },

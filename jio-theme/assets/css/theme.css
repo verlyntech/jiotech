@@ -83,7 +83,10 @@ html[data-theme="dark"] {
 	border-bottom: 1px solid var(--rule);
 }
 [data-theme="dark"] .vendor-stream__logos img { filter: brightness(0) invert(1); opacity: .92; }
-[data-theme="dark"] .vendor-stream__logos img[src*="extell"] { filter: none; opacity: 1; }
+/* ExTell's logo is a solid red square, so dark mode swaps in its white glyphs alone, like the others. */
+.vendor-stream__logos .vendor-logo--dark { display: none; }
+[data-theme="dark"] .vendor-stream__logos img[src*="extell.png"] { display: none; }
+[data-theme="dark"] .vendor-stream__logos .vendor-logo--dark { display: block; }
 [data-theme="dark"] .wall__logos li,
 [data-theme="dark"] .logos li { background: var(--paper); border-color: #dbe0dc; }
 [data-theme="dark"] .wall__logos li:hover,

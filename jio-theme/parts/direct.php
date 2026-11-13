@@ -2,6 +2,6 @@
 	<div><dt>Phone</dt><dd><a href="tel:+971553440144">+971 55 344 0144</a></dd></div>
 	<div><dt>Email</dt><dd><a href="mailto:sales@jiotechuae.com">sales@jiotechuae.com</a></dd></div>
 	<div><dt>WhatsApp</dt><dd><a href="https://wa.me/971553440144">Message us</a></dd></div>
-	<div><dt>Office</dt><dd><a href="https://maps.app.goo.gl/xPxPg9DrjFnqj5Fr6" target="_blank" rel="noopener noreferrer">Al Muroor Road, Abu Dhabi, UAE</a></dd></div>
+	<div><dt>Office</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=JIO+Technologies,+Abdullah+Bin+Darwish+Building,+Sheikh+Zayed+Bin+Sultan+St,+Al+Zahiyah,+Abu+Dhabi" target="_blank" rel="noopener noreferrer">Office 304, Abdullah Bin Darwish Building, Al Zahiyah, Abu Dhabi, UAE</a></dd></div>
 	<div><dt>Existing client?</dt><dd><a href="<?php echo esc_url( home_url( '/client-support/' ) ); ?>">Raise a support request</a></dd></div>
 </dl>

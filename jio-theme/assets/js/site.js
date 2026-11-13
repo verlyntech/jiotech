@@ -2,18 +2,6 @@
 (function () {
 	'use strict';
 
-	// Google receives a map request only when the visitor chooses to load it.
-	document.querySelectorAll('[data-office-map]').forEach(function (map) {
-		var button = map.querySelector('[data-map-load]');
-		var frame = map.querySelector('[data-map-embed]');
-		button.hidden = false;
-		button.addEventListener('click', function () {
-			frame.src = frame.getAttribute('data-src');
-			frame.hidden = false;
-			map.querySelector('[data-map-cover]').hidden = true;
-		});
-	});
-
 	// Mark the current page in the primary nav; a page inside a menu also marks its parent link.
 	var here = location.pathname.replace(/\/$/, '');
 	document.querySelectorAll('.nav a').forEach(function (a) {

@@ -8,7 +8,7 @@ WordPress theme and a dependency-free local preview for the JIO Technologies LLC
 - **Services:** a connected diagram for five service areas, with animated icons, a concise overview on the left, keyboard selection and enquiry links. A pale green map canvas with white animated connectors over green tracks joins fully bordered service boxes: white in light mode and charcoal in dark mode, with colour accents identifying the selected service. The equipment catalogue remains below.
 - **Company:** the Three perspectives design: selectable Beginnings, Mission and Vision tabs, matching illustrations (including JIO TECH signage in Mission), keyboard navigation and direct chapter links, plus icons for the existing company values.
 - **Industries:** nine static industry icons arranged around a circular selector, with the selected sector's overview, capabilities and enquiry link in a larger adjacent panel. Supports keyboard selection and direct sector links.
-- **Contact and legal:** the homepage enquiry sidebar and Contact page share an Abu Dhabi location card, directions and a Google map that loads only on request. Privacy Policy and Terms & Conditions have dedicated pages, section links and matching light/dark layouts.
+- **Contact and legal:** the homepage enquiry sidebar and Contact page share an Abu Dhabi location card, directions and a lazy-loaded Google map. Privacy Policy and Terms & Conditions have dedicated pages, section links and matching light/dark layouts.
 - **Shared header:** responsive logo with a gently floating shield and static wordmark, navigation and a keyboard-accessible dark-mode toggle. The hiring announcement banner has been removed.
 
 The design uses white, green (`#4CBB17`), blue (`#5F9BC6`) and dark ink, with square corners, IBM Plex Sans headings and Source Sans 3 body text. See [DESIGN.md](DESIGN.md) and [PRODUCT.md](PRODUCT.md) for the project context.
@@ -19,7 +19,7 @@ Dark mode follows the device colour preference until a visitor uses the header t
 
 ## Local preview
 
-Requires Node.js 18 or newer. Run these commands from the repository root:
+Requires a current Node.js release (Node.js 22 or newer to run the checks). Run these commands from the repository root:
 
 ```sh
 node preview/build.mjs
@@ -28,7 +28,7 @@ node preview/serve.mjs
 
 Open [http://localhost:5173/preview/](http://localhost:5173/preview/). To choose another port, run `node preview/serve.mjs 5174` instead.
 
-After editing a template, stylesheet or script, rerun the build command and refresh the browser. The preview renders the PHP templates into HTML without running WordPress. Forms in this static preview are not connected to production submission handlers.
+For an automatically rebuilt preview, run `node serve.mjs` from the repository root. Otherwise, after editing a template, stylesheet or script, rerun the build command and refresh the browser. The preview renders the PHP templates into HTML without running WordPress. Forms in this static preview are not connected to production submission handlers.
 
 ## Project structure
 
@@ -83,10 +83,14 @@ Keep API credentials in server-side configuration and out of templates, browser 
 
 ## Final contact and legal pages
 
-`parts/location.php` is shared by Home and Contact. Address and directions are taken from the company's live Contact page at https://jiotechuae.com/contact/. Google Maps stays unloaded until the visitor chooses it; the directions link works without JavaScript. The same directions destination appears in the footer and contact details.
+`parts/location.php` is shared by Home and Contact. The office address is Abdullah Bin Darwish Building, Office No. 304, Sheikh Zayed Bin Sultan St, Al Zahiyah, E15, Abu Dhabi. The embedded map and directions link use the same address. The lazy-loaded Google map appears automatically as its frame approaches the viewport; the directions link works without JavaScript. The same directions destination appears in the footer and contact details.
 
 Privacy and terms content lives in `page-privacy-policy.php` and `page-terms-conditions.php`. Create or retain published WordPress pages with those exact slugs and verify the footer and form consent links after deployment. Review these initial policy texts against actual business retention, hosting and supplier arrangements before publication; they are website copy, not a legal compliance certification.
 
 The chatbot front end, WordPress backend and knowledge content use the GitHub version. The preview retains that dialogue engine with a public-file allowlist and a loopback-only listener; local chatbot rewrite files are unused. Credentials remain server-side and ignored by Git.
 
 The privacy-rights wording was checked against the UAE Government’s overview: https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws. Review applicable legal requirements and the company’s actual practices before publishing.
+
+## Source repository
+
+The active repository is https://github.com/verlyntech/jiotech. Use `git pull --ff-only origin main` before starting work and `git push origin main` to publish reviewed commits. The former repository is retained locally as `legacy-origin`; it is not the default push destination.

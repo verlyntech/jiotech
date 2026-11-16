@@ -4,7 +4,7 @@
     {
       "name": "jio-preview",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["preview/serve.mjs", "5173"],
+      "runtimeArgs": ["serve.mjs"],
       "port": 5173
     }
   ]

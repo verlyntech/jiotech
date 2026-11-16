@@ -62,13 +62,14 @@ test('legal pages and privacy consent links resolve to real pages', async () => 
   }
 });
 
-test('office location is shared and the map stays unloaded until requested', async () => {
+test('office location and embedded map agree on the updated Abu Dhabi address', async () => {
   for (const page of ['index', 'contact']) {
     const html = await (await fetch(base + '/preview/' + page + '.html')).text();
-    assert.match(html, /data-map-load/);
-    assert.match(html, /<iframe[^>]+data-src="https:\/\/maps\.google\.com\/maps\?/);
-    assert.doesNotMatch(html, /<iframe[^>]+\ssrc=/);
-    assert.match(html, /https:\/\/maps\.app\.goo\.gl\/xPxPg9DrjFnqj5Fr6/);
+    assert.match(html, /Abdullah Bin Darwish Building, Office No\. 304/);
+    assert.match(html, /<iframe[^>]+src="https:\/\/maps\.google\.com\/maps\?/);
+    assert.match(html, /<iframe[^>]+loading="lazy"/);
+    assert.match(html, /https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=JIO\+Technologies/);
+    assert.doesNotMatch(html, /data-map-load|Al Muroor Road/);
   }
 });
 

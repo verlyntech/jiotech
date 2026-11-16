@@ -6,9 +6,12 @@ get_header(); ?>
 
 <main id="main">
 
-<!-- Hero: keep the storefront sign clear of copy; smaller screens place the photograph above the text. -->
-<section class="hero hero--photo">
-	<img class="hero__bg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-office.webp" width="2000" height="1131" alt="JIO Technologies LLC storefront with the company sign above the entrance" loading="eager" fetchpriority="high">
+<!-- Hero: temporary image space; keep the enquiry links and company statistics. -->
+<section class="hero hero--photo hero--placeholder">
+	<div class="hero__bg hero__placeholder" role="img" aria-label="Homepage banner image placeholder">
+		<svg viewBox="0 0 64 48" aria-hidden="true"><path d="M3 3h58v42H3zM3 35l16-16 14 14 10-10 18 18"/><circle cx="44" cy="14" r="4"/></svg>
+		<span>Homepage image placeholder</span>
+	</div>
 	<div class="wrap wrap--wide hero__inner">
 		<div class="hero__copy">
 			<h1>One contractor for IT and the power behind it.</h1>
@@ -132,30 +135,30 @@ get_header(); ?>
 	</div>
 </section>
 
-<!-- WHY ONE SUPPLIER (Apple dark stage with a white comparison card as the reset) -->
-<section class="versus">
+<!-- Connected AI, cybersecurity and IT services. -->
+<section class="versus" aria-labelledby="connected-solutions-title">
 	<div class="wrap">
 		<div class="versus__head">
-			<h2>Why one supplier for IT and power.</h2>
-			<p>When power and IT are bought separately, the gap between the two contracts is where outages start.</p>
+			<h2 id="connected-solutions-title">AI, cybersecurity and IT solutions. One connected partner.</h2>
+			<p>JIO Technologies connects technology planning, secure infrastructure and automation for organisations across the UAE.</p>
 		</div>
 		<div class="versus__grid">
 			<div class="versus__col">
-				<h3>Separate IT and power contractors</h3>
+				<h3>When technology is managed in silos</h3>
 				<ul>
-					<li>Two contracts, two support numbers, two site visits.</li>
-					<li>UPS sized from a nameplate guess, not the rack load.</li>
-					<li>After an outage, each side points at the other.</li>
-					<li>Battery replacement falls between the two contracts.</li>
+					<li>AI initiatives start without a clear plan for data, integration or security.</li>
+					<li>Cybersecurity tools, networks and cloud systems are managed separately.</li>
+					<li>Routine approvals and reporting still depend on manual work.</li>
+					<li>Support is split between suppliers, with no shared technology roadmap.</li>
 				</ul>
 			</div>
 			<div class="versus__col versus__col--us">
-				<h3>JIO Technologies</h3>
+				<h3>Connected solutions from JIO Technologies</h3>
 				<ul>
-					<li>One contract and one number for every layer.</li>
-					<li>UPS and battery runtime sized from the equipment we install.</li>
-					<li>One team owns the fault from the mains to the firewall.</li>
-					<li>Battery health is part of the same maintenance schedule.</li>
+					<li><a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">IT consulting and AI-ready infrastructure aligned with your business goals.</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Cybersecurity, network and cloud protection planned together.</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/solutions/business-process-automation/' ) ); ?>">Microsoft 365 and business process automation that connect everyday workflows.</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>">Managed IT services with coordinated maintenance and technical support.</a></li>
 				</ul>
 			</div>
 		</div>

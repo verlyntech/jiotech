@@ -23,7 +23,6 @@
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/aruba.svg" width="115" height="26" alt="HPE Aruba Networking" style="--h:26px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/vertiv.svg" width="109" height="27" alt="Vertiv" style="--h:27px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/emerson.png" width="82" height="36" alt="Emerson" style="--h:36px" loading="eager" decoding="async"></li>
-			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/hikvision.png" width="140" height="21" alt="Hikvision" style="--h:21px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/synology.svg" width="105" height="28" alt="Synology" style="--h:28px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/supermicro.png" width="74" height="38" alt="Supermicro" style="--h:38px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/xerox.png" width="107" height="27" alt="Xerox" style="--h:27px" loading="eager" decoding="async"></li>

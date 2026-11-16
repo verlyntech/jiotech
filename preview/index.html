@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../jio-theme/assets/js/theme.js?v=1794730594084"></script>
+<script src="../jio-theme/assets/js/theme.js?v=1794851213381"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
-<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794730594084">
-<script src="../jio-theme/assets/js/site.js?v=1794730594084" defer></script>
-<script src="../jio-theme/assets/js/chat.js?v=1794730594084" defer></script>
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794851213381">
+<script src="../jio-theme/assets/js/site.js?v=1794851213381" defer></script>
+<script src="../jio-theme/assets/js/chat.js?v=1794851213381" defer></script>
 
-<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794730594084">
+<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794851213381">
 <title>Home | JIO Technologies (preview)</title>
 </head>
 <body class="home">
@@ -133,9 +133,12 @@
 
 <main id="main">
 
-<!-- Hero: keep the storefront sign clear of copy; smaller screens place the photograph above the text. -->
-<section class="hero hero--photo">
-	<img class="hero__bg" src="../jio-theme/assets/img/hero-office.webp" width="2000" height="1131" alt="JIO Technologies LLC storefront with the company sign above the entrance" loading="eager" fetchpriority="high">
+<!-- Hero: temporary image space; keep the enquiry links and company statistics. -->
+<section class="hero hero--photo hero--placeholder">
+	<div class="hero__bg hero__placeholder" role="img" aria-label="Homepage banner image placeholder">
+		<svg viewBox="0 0 64 48" aria-hidden="true"><path d="M3 3h58v42H3zM3 35l16-16 14 14 10-10 18 18"/><circle cx="44" cy="14" r="4"/></svg>
+		<span>Homepage image placeholder</span>
+	</div>
 	<div class="wrap wrap--wide hero__inner">
 		<div class="hero__copy">
 			<h1>One contractor for IT and the power behind it.</h1>
@@ -179,7 +182,6 @@
 			<li><img src="../jio-theme/assets/logos/aruba.svg" width="115" height="26" alt="HPE Aruba Networking" style="--h:26px" loading="eager" decoding="async"></li>
 			<li><img src="../jio-theme/assets/logos/vertiv.svg" width="109" height="27" alt="Vertiv" style="--h:27px" loading="eager" decoding="async"></li>
 			<li><img src="../jio-theme/assets/logos/emerson.png" width="82" height="36" alt="Emerson" style="--h:36px" loading="eager" decoding="async"></li>
-			<li><img src="../jio-theme/assets/logos/hikvision.png" width="140" height="21" alt="Hikvision" style="--h:21px" loading="eager" decoding="async"></li>
 			<li><img src="../jio-theme/assets/logos/synology.svg" width="105" height="28" alt="Synology" style="--h:28px" loading="eager" decoding="async"></li>
 			<li><img src="../jio-theme/assets/logos/supermicro.png" width="74" height="38" alt="Supermicro" style="--h:38px" loading="eager" decoding="async"></li>
 			<li><img src="../jio-theme/assets/logos/xerox.png" width="107" height="27" alt="Xerox" style="--h:27px" loading="eager" decoding="async"></li>
@@ -296,30 +298,30 @@
 	</div>
 </section>
 
-<!-- WHY ONE SUPPLIER (Apple dark stage with a white comparison card as the reset) -->
-<section class="versus">
+<!-- Connected AI, cybersecurity and IT services. -->
+<section class="versus" aria-labelledby="connected-solutions-title">
 	<div class="wrap">
 		<div class="versus__head">
-			<h2>Why one supplier for IT and power.</h2>
-			<p>When power and IT are bought separately, the gap between the two contracts is where outages start.</p>
+			<h2 id="connected-solutions-title">AI, cybersecurity and IT solutions. One connected partner.</h2>
+			<p>JIO Technologies connects technology planning, secure infrastructure and automation for organisations across the UAE.</p>
 		</div>
 		<div class="versus__grid">
 			<div class="versus__col">
-				<h3>Separate IT and power contractors</h3>
+				<h3>When technology is managed in silos</h3>
 				<ul>
-					<li>Two contracts, two support numbers, two site visits.</li>
-					<li>UPS sized from a nameplate guess, not the rack load.</li>
-					<li>After an outage, each side points at the other.</li>
-					<li>Battery replacement falls between the two contracts.</li>
+					<li>AI initiatives start without a clear plan for data, integration or security.</li>
+					<li>Cybersecurity tools, networks and cloud systems are managed separately.</li>
+					<li>Routine approvals and reporting still depend on manual work.</li>
+					<li>Support is split between suppliers, with no shared technology roadmap.</li>
 				</ul>
 			</div>
 			<div class="versus__col versus__col--us">
-				<h3>JIO Technologies</h3>
+				<h3>Connected solutions from JIO Technologies</h3>
 				<ul>
-					<li>One contract and one number for every layer.</li>
-					<li>UPS and battery runtime sized from the equipment we install.</li>
-					<li>One team owns the fault from the mains to the firewall.</li>
-					<li>Battery health is part of the same maintenance schedule.</li>
+					<li><a href="service-digital-transformation.html">IT consulting and AI-ready infrastructure aligned with your business goals.</a></li>
+					<li><a href="service-cyber-security.html">Cybersecurity, network and cloud protection planned together.</a></li>
+					<li><a href="service-business-process-automation.html">Microsoft 365 and business process automation that connect everyday workflows.</a></li>
+					<li><a href="service-managed-services.html">Managed IT services with coordinated maintenance and technical support.</a></li>
 				</ul>
 			</div>
 		</div>
@@ -468,7 +470,7 @@
 		</div>
 		<div class="foot__col foot__col--two">
 			<p class="label">Services</p>
-			<a href="service-power-energy-solutions.html">Power &amp; energy</a>
+			<a href="service-digital-transformation.html">Digital transformation</a>
 			<a href="service-managed-services.html">Managed IT &amp; support</a>
 			<a href="service-web-development.html">Data centers &amp; cloud</a>
 			<a href="solutions.html#equipment">Equipment supply</a>

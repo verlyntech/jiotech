@@ -12,7 +12,7 @@
 		</div>
 		<div class="foot__col foot__col--two">
 			<p class="label">Services</p>
-			<a href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>">Power &amp; energy</a>
+			<a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">Digital transformation</a>
 			<a href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>">Managed IT &amp; support</a>
 			<a href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>">Data centers &amp; cloud</a>
 			<a href="<?php echo esc_url( home_url( '/solutions/' ) ); ?>#equipment">Equipment supply</a>

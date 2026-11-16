@@ -4,9 +4,9 @@ WordPress theme and a dependency-free local preview for the JIO Technologies LLC
 
 ## Current website
 
-- **Home:** responsive storefront hero, a six-service spotlight with selectable overviews, six service illustrations and keyboard navigation, a continuous horizontal manufacturer ribbon below the compact hero (familiar brands first, full-colour logos visible on the first screen and reduced-motion support), and a horizontal industry carousel with previous/next arrows and green corner markers.
+- **Home:** a temporary homepage hero image placeholder with the existing enquiry links and statistics, a six-service spotlight with selectable overviews, six service illustrations and keyboard navigation, a continuous horizontal manufacturer ribbon below the compact hero (familiar brands first, full-colour logos visible on the first screen and reduced-motion support), and a horizontal industry carousel with previous/next arrows and green corner markers.
 - **Services:** a connected diagram for five service areas, with animated icons, a concise overview on the left, keyboard selection and enquiry links. A pale green map canvas with white animated connectors over green tracks joins fully bordered service boxes: white in light mode and charcoal in dark mode, with colour accents identifying the selected service. The equipment catalogue remains below.
-- **Company:** the Three perspectives design: selectable Beginnings, Mission and Vision tabs, matching illustrations (including JIO TECH signage in Mission), keyboard navigation and direct chapter links, plus icons for the existing company values.
+- **Company:** the Three perspectives design: selectable Beginnings, Mission and Vision tabs, matching illustrations (including a people-free Mission office with JIO TECH signage), keyboard navigation and direct chapter links, plus icons for the existing company values.
 - **Industries:** nine static industry icons arranged around a circular selector, with the selected sector's overview, capabilities and enquiry link in a larger adjacent panel. Supports keyboard selection and direct sector links.
 - **Contact and legal:** the homepage enquiry sidebar and Contact page share an Abu Dhabi location card, directions and a lazy-loaded Google map. Privacy Policy and Terms & Conditions have dedicated pages, section links and matching light/dark layouts.
 - **Shared header:** responsive logo with a gently floating shield and static wordmark, navigation and a keyboard-accessible dark-mode toggle. The hiring announcement banner has been removed.
@@ -94,3 +94,9 @@ The privacy-rights wording was checked against the UAE Government’s overview: 
 ## Source repository
 
 The active repository is https://github.com/verlyntech/jiotech. Use `git pull --ff-only origin main` before starting work and `git push origin main` to publish reviewed commits. The former repository is retained locally as `legacy-origin`; it is not the default push destination.
+
+## Homepage positioning and Mission image
+
+The homepage comparison describes AI-ready infrastructure, cybersecurity, business process automation and managed IT, with links to the relevant service pages. Its manufacturer ribbon excludes Hikvision and retains the other supplied brand marks. The footer service list starts with Digital transformation. The former homepage storefront image is retained as an unused asset while a styled placeholder is shown.
+
+The Mission tab uses `assets/img/company-mission-office-v2.webp`, a 1402 × 1122 office illustration optimised to approximately 198 KB. It was created using the built-in image generator with the previous Mission illustration as a reference. Its prompt and original image are retained locally in `output/imagegen/company-mission-office/`; it is illustrative, not a photograph of an actual JIO office.

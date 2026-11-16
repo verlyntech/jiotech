@@ -31,7 +31,7 @@ get_header(); ?>
             </article>
             <article class="company-perspectives__panel" id="mission" data-company-panel="mission" aria-labelledby="company-title-mission">
                 <figure class="company-perspectives__media company-perspectives__media--photo">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-mission-infrastructure.webp" width="1402" height="1122" alt="Illustration of UPS and server equipment ready for delivery beneath a JIO TECH wall sign" loading="lazy" decoding="async">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-mission-office-v2.webp" width="1402" height="1122" alt="Illustration of an empty JIO TECH office with a meeting table, laptop and a glass-enclosed IT and power equipment area" loading="lazy" decoding="async">
                 </figure>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">02 / 03</p>

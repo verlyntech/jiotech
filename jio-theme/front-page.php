@@ -6,9 +6,10 @@ get_header(); ?>
 
 <main id="main">
 
-<!-- Homepage background is reserved for a future image. -->
-<section class="hero hero--photo hero--placeholder">
-	<div class="hero__placeholder" role="img" aria-label="Homepage background image placeholder"><div class="hero__placeholder-label" aria-hidden="true"><svg viewBox="0 0 64 48"><path d="M3 3h58v42H3zM3 34l16-16 13 14 9-10 20 21"/><circle cx="45" cy="14" r="4"/></svg><span>Homepage background image</span><small>Image placeholder</small></div></div>
+<!-- Logo-free IT workspace photograph with a soft green readability gradient. -->
+<section class="hero hero--photo hero--infrastructure hero--with-hub">
+	<figure class="hero__scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-natural-office-2560.webp" srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-natural-office-1280.webp 1280w, <?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-natural-office-1774.webp 1774w, <?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-natural-office-2560.webp 2560w" sizes="100vw" width="2560" height="1280" alt="Illustration of a natural, unoccupied IT office with everyday workstations, laptops, plants and soft window daylight" loading="eager" fetchpriority="high" decoding="async"></figure>
+	<?php get_template_part( 'parts/home-service-hub' ); ?>
 	<div class="wrap wrap--wide hero__inner">
 		<div class="hero__copy">
 			<h1>One contractor for IT and the power behind it.</h1>

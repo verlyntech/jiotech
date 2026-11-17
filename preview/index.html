@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="../jio-theme/assets/js/theme.js?v=1794913815489"></script>
+<script src="../jio-theme/assets/js/theme.js?v=1794933313034"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap">
-<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794913815489">
-<script src="../jio-theme/assets/js/site.js?v=1794913815489" defer></script>
-<script src="../jio-theme/assets/js/chat.js?v=1794913815489" defer></script>
+<link rel="stylesheet" href="../jio-theme/assets/css/main.css?v=1794933313034">
+<script src="../jio-theme/assets/js/site.js?v=1794933313034" defer></script>
+<script src="../jio-theme/assets/js/chat.js?v=1794933313034" defer></script>
 
-<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794913815489">
+<link rel="stylesheet" href="../jio-theme/assets/css/theme.css?v=1794933313034">
 <title>Home | JIO Technologies (preview)</title>
 </head>
 <body class="home">
@@ -137,9 +137,24 @@
 
 <main id="main">
 
-<!-- Homepage background is reserved for a future image. -->
-<section class="hero hero--photo hero--placeholder">
-	<div class="hero__placeholder" role="img" aria-label="Homepage background image placeholder"><div class="hero__placeholder-label" aria-hidden="true"><svg viewBox="0 0 64 48"><path d="M3 3h58v42H3zM3 34l16-16 13 14 9-10 20 21"/><circle cx="45" cy="14" r="4"/></svg><span>Homepage background image</span><small>Image placeholder</small></div></div>
+<!-- Logo-free IT workspace photograph with a soft green readability gradient. -->
+<section class="hero hero--photo hero--infrastructure hero--with-hub">
+	<figure class="hero__scene"><img src="../jio-theme/assets/img/home-natural-office-2560.webp" srcset="../jio-theme/assets/img/home-natural-office-1280.webp 1280w, ../jio-theme/assets/img/home-natural-office-1774.webp 1774w, ../jio-theme/assets/img/home-natural-office-2560.webp 2560w" sizes="100vw" width="2560" height="1280" alt="Illustration of a natural, unoccupied IT office with everyday workstations, laptops, plants and soft window daylight" loading="eager" fetchpriority="high" decoding="async"></figure>
+	<nav class="hero-service-hub" aria-label="Six services connected by JIO Technologies">
+	<svg class="hero-service-hub__connections" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+		<defs><mask id="home-hub-logo-clearance"><rect width="1000" height="700" fill="white"/><rect x="415" y="270" width="170" height="160" fill="black"/></mask></defs>
+		<g id="home-hub-lines" mask="url(#home-hub-logo-clearance)"><path d="M500 350L300 100"/><path d="M500 350L700 100"/><path d="M500 350H870"/><path d="M500 350L700 600"/><path d="M500 350L300 600"/><path d="M500 350H130"/></g>
+		<use href="#home-hub-lines" class="hero-service-hub__flow"/>
+	</svg>
+	<div class="hero-service-hub__brand"><svg class="hero-service-hub__emblem" viewBox="0 0 318 262" role="img" aria-label="JIO Technologies J emblem"><image href="../jio-theme/assets/img/logo.webp" width="1282" height="262"/></svg></div>
+	<a class="hero-service-hub__node hero-service-hub__node--1" href="service-network-connectivity-solutions.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 3h8v8h-8zM2 22h8v8H2zM22 22h8v8h-8zM16 11v6M6 22v-5h20v5"/></svg><span>Network &amp;<br>Connectivity</span></a>
+	<a class="hero-service-hub__node hero-service-hub__node--2" href="service-cyber-security.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l11 5v9c0 7-6 11-11 14C11 27 5 23 5 16V7zM10 16l4 4 8-9"/></svg><span>Cybersecurity &amp;<br>Data Protection</span></a>
+	<a class="hero-service-hub__node hero-service-hub__node--3" href="service-it-consulting-advisory.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 25H8a6 6 0 0 1-1-12 9 9 0 0 1 17-2 7 7 0 0 1 0 14H9zM11 19l4-4 5 5M15 15v13"/></svg><span>Consulting &amp;<br>Cloud</span></a>
+	<a class="hero-service-hub__node hero-service-hub__node--4" href="service-web-development.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 3h26v11H3zM3 18h26v11H3zM7 8h2M7 23h2M15 8h10M15 23h10"/></svg><span>Data Center<br>Design &amp; Hosting</span></a>
+	<a class="hero-service-hub__node hero-service-hub__node--5" href="service-managed-services.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 18v-5a11 11 0 0 1 22 0v5M3 15h6v11H3zM23 15h6v11h-6zM26 26v3H16M13 27h6v4h-6z"/></svg><span>Managed IT &amp;<br>24/7 Support</span></a>
+	<a class="hero-service-hub__node hero-service-hub__node--6" href="service-power-energy-solutions.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 2L5 19h10l-1 11 13-18H17z"/></svg><span>Power</span></a>
+</nav>
+
 	<div class="wrap wrap--wide hero__inner">
 		<div class="hero__copy">
 			<h1>One contractor for IT and the power behind it.</h1>
@@ -178,7 +193,7 @@
 			<li><img src="../jio-theme/assets/logos/fortinet.svg" width="159" height="18" alt="Fortinet" style="--h:18px" loading="eager" decoding="async"></li>
 			<li><img src="../jio-theme/assets/logos/huawei.png" width="114" height="25" alt="Huawei" style="--h:25px" loading="eager" decoding="async"></li>
 			<li><img src="../jio-theme/assets/logos/epson.png" width="104" height="27" alt="Epson" style="--h:27px" loading="eager" decoding="async"></li>
-			<li><img src="../jio-theme/assets/logos/brother.png" width="84" height="34" alt="Brother" style="--h:34px" loading="eager" decoding="async"></li>
+			<li><img class="vendor-logo--brother" src="../jio-theme/assets/logos/brother.png" width="318" height="74" alt="Brother" loading="eager" decoding="async"></li>
 			<li><img src="../jio-theme/assets/logos/vmware.png" width="138" height="21" alt="VMware" style="--h:21px" loading="eager" decoding="async"></li>
 			<li><img src="../jio-theme/assets/logos/aruba.svg" width="115" height="26" alt="HPE Aruba Networking" style="--h:26px" loading="eager" decoding="async"></li>
 			<li><img src="../jio-theme/assets/logos/vertiv.svg" width="109" height="27" alt="Vertiv" style="--h:27px" loading="eager" decoding="async"></li>

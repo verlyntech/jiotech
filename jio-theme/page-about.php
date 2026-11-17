@@ -25,8 +25,7 @@ get_header(); ?>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">01 / 03</p>
                     <h2 id="company-title-beginnings">Our beginnings</h2>
-                    <p class="company-perspectives__text">JIO Technologies began as a small team of engineers providing IT hardware and infrastructure. It has grown into a hybrid IT and power provider based in Abu Dhabi, serving Dubai, Abu Dhabi and the wider GCC.</p>
-                    <p class="company-perspectives__text company-perspectives__text--addition">That hands-on engineering mindset remains at the heart of every solution we deliver.</p>
+                    <p class="company-perspectives__text">JIO Technologies began as a small team of engineers providing IT hardware and infrastructure. It has grown into a hybrid IT and power provider based in Abu Dhabi, serving Dubai, Abu Dhabi and the wider GCC. That hands-on engineering mindset remains at the heart of every solution we deliver. As our capabilities expanded, we kept our focus on practical advice, dependable delivery and lasting customer relationships.</p>
                     <p class="company-perspectives__key">From hardware to hybrid infrastructure.</p>
                 </div>
             </article>
@@ -37,8 +36,7 @@ get_header(); ?>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">02 / 03</p>
                     <h2 id="company-title-mission">Our mission</h2>
-                    <p class="company-perspectives__text">To deliver high-quality IT, power, telecom and machinery products, using our expertise and strategic location to exceed customer expectations.</p>
-                    <p class="company-perspectives__text company-perspectives__text--addition">We combine expert advice, carefully selected products and responsive support to help customers operate with confidence.</p>
+                    <p class="company-perspectives__text">To deliver high-quality IT, power, telecom and machinery products, using our expertise and strategic location to exceed customer expectations. We combine expert advice, carefully selected products and responsive support to help customers operate with confidence. Every recommendation starts with understanding the customer’s needs and ends with a solution that is straightforward to use and maintain.</p>
                     <p class="company-perspectives__key">Innovation. Reliability. Customer service.</p>
                 </div>
             </article>
@@ -49,8 +47,7 @@ get_header(); ?>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">03 / 03</p>
                     <h2 id="company-title-vision">Our vision</h2>
-                    <p class="company-perspectives__text">To be the leading global distributor of IT, power and industrial products, recognised for innovation, reliability and exceptional service.</p>
-                    <p class="company-perspectives__text company-perspectives__text--addition">We see a future where secure, connected infrastructure gives every organisation the confidence to grow.</p>
+                    <p class="company-perspectives__text">To be the leading global distributor of IT, power and industrial products, recognised for innovation, reliability and exceptional service. We see a future where secure, connected infrastructure gives every organisation the confidence to grow. Our ambition is to connect trusted products, specialist knowledge and long-term support into a consistent standard of service.</p>
                     <p class="company-perspectives__key">One partner for IT and power.</p>
                 </div>
             </article>
@@ -106,7 +103,7 @@ get_header(); ?>
 		<div class="svc-fit__copy">
 			<p class="label">Our culture</p>
 			<h2 id="culture-title">Better together.</h2>
-			<p>Work matters, and so does enjoying it. We respect our partners, work through problems together and take real pride in helping our clients. That spirit is what we look for in everyone who joins.</p>
+			<p>Work matters, and so does enjoying it. We respect our partners, work through problems together and take real pride in helping our clients. That spirit is what we look for in everyone who joins. We value open communication, shared responsibility and a willingness to learn from one another. Bringing different technical perspectives together helps us ask better questions and find practical answers.</p>
 		</div>
 		<figure class="svc-media svc-media--wide svc-media--photo">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-culture-lounge.webp" width="1586" height="992" alt="Illustration of a welcoming office lounge with sage seating, plants and a coffee area" loading="lazy" decoding="async">

@@ -6,9 +6,9 @@ get_header(); ?>
 
 <main id="main">
 
-<!-- Logo-free IT workspace photograph with a soft green readability gradient. -->
-<section class="hero hero--photo hero--infrastructure hero--with-hub">
-	<figure class="hero__scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-natural-office-2560.webp" srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-natural-office-1280.webp 1280w, <?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-natural-office-1774.webp 1774w, <?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-natural-office-2560.webp 2560w" sizes="100vw" width="2560" height="1280" alt="Illustration of a natural, unoccupied IT office with everyday workstations, laptops, plants and soft window daylight" loading="eager" fetchpriority="high" decoding="async"></figure>
+<!-- A people-free, generated IT workspace represents the six service areas. -->
+<section class="hero hero--photo hero--infrastructure hero--services-photo">
+
 	<?php get_template_part( 'parts/home-service-hub' ); ?>
 	<div class="wrap wrap--wide hero__inner">
 		<div class="hero__copy">

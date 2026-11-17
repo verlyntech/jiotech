@@ -1,14 +1,7 @@
-<nav class="hero-service-hub" aria-label="Six services connected by JIO Technologies">
-	<svg class="hero-service-hub__connections" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
-		<defs><mask id="home-hub-logo-clearance"><rect width="1000" height="700" fill="white"/><rect x="415" y="270" width="170" height="160" fill="black"/></mask></defs>
-		<g id="home-hub-lines" mask="url(#home-hub-logo-clearance)"><path d="M500 350L300 100"/><path d="M500 350L700 100"/><path d="M500 350H870"/><path d="M500 350L700 600"/><path d="M500 350L300 600"/><path d="M500 350H130"/></g>
-		<use href="#home-hub-lines" class="hero-service-hub__flow"/>
-	</svg>
-	<div class="hero-service-hub__brand"><svg class="hero-service-hub__emblem" viewBox="0 0 318 262" role="img" aria-label="JIO Technologies J emblem"><image href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo.webp" width="1282" height="262"/></svg></div>
-	<a class="hero-service-hub__node hero-service-hub__node--1" href="<?php echo esc_url( home_url( '/solutions/network-connectivity-solutions/' ) ); ?>"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 3h8v8h-8zM2 22h8v8H2zM22 22h8v8h-8zM16 11v6M6 22v-5h20v5"/></svg><span>Network &amp;<br>Connectivity</span></a>
-	<a class="hero-service-hub__node hero-service-hub__node--2" href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l11 5v9c0 7-6 11-11 14C11 27 5 23 5 16V7zM10 16l4 4 8-9"/></svg><span>Cybersecurity &amp;<br>Data Protection</span></a>
-	<a class="hero-service-hub__node hero-service-hub__node--3" href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 25H8a6 6 0 0 1-1-12 9 9 0 0 1 17-2 7 7 0 0 1 0 14H9zM11 19l4-4 5 5M15 15v13"/></svg><span>Consulting &amp;<br>Cloud</span></a>
-	<a class="hero-service-hub__node hero-service-hub__node--4" href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 3h26v11H3zM3 18h26v11H3zM7 8h2M7 23h2M15 8h10M15 23h10"/></svg><span>Data Center<br>Design &amp; Hosting</span></a>
-	<a class="hero-service-hub__node hero-service-hub__node--5" href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 18v-5a11 11 0 0 1 22 0v5M3 15h6v11H3zM23 15h6v11h-6zM26 26v3H16M13 27h6v4h-6z"/></svg><span>Managed IT &amp;<br>24/7 Support</span></a>
-	<a class="hero-service-hub__node hero-service-hub__node--6" href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 2L5 19h10l-1 11 13-18H17z"/></svg><span>Power</span></a>
-</nav>
+<figure class="hero__services-photo">
+    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-six-services-photo.webp"
+         srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-six-services-photo-1000.webp 1000w, <?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-six-services-photo.webp 1672w"
+         sizes="100vw" width="1672" height="941"
+         alt="IT solutions workspace with network and security equipment, a cloud planning area, server racks, an IT support desk and UPS backup power"
+         fetchpriority="high" decoding="async">
+</figure>

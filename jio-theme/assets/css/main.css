@@ -242,7 +242,6 @@ section { padding-block: var(--section-space); }
 .vendor-stream__logos img { display: block; flex: none; width: auto; height: var(--h, 32px); max-width: none; max-height: 42px; object-fit: contain; }
 /* Crop only the displayed Brother mark: its tagline begins below source row 79. */
 .vendor-stream__logos .vendor-logo--brother { width: 8rem; height: calc(8rem * 74 / 318); max-height: none; object-fit: cover; object-position: center top; }
-.vendor-stream__logos img[src*="vmware"] { filter: brightness(.3); }
 [data-vendor-ready] .vendor-stream { overflow-x: hidden; }
 [data-vendor-ready] .vendor-stream__track { animation: vendor-flow 84s linear infinite; animation-play-state: var(--motion-play, running); }
 @keyframes vendor-flow { to { transform: translateX(-50%); } }
@@ -264,7 +263,6 @@ section { padding-block: var(--section-space); }
 .wall__logos, .logos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); }
 .wall__logos li, .logos li { display: grid; place-items: center; min-height: 5.5rem; padding: 1rem; border-left: 1px solid var(--rule); margin-bottom: -1px; border-bottom: 1px solid var(--rule); transition: background-color .25s; }
 .wall__logos img, .logos img { height: var(--h, 28px); width: auto; max-width: 100%; object-fit: contain; }
-.wall__logos img[src*="vmware"], .logos img[src*="vmware"] { filter: brightness(.3); }
 .wall__logos li:hover, .logos li:hover { background: var(--fog); }
 .logos { grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1.5px solid var(--ink); }
 .logos li { border-left: 0; border-right: 1px solid var(--rule); }
@@ -1315,43 +1313,23 @@ h1, h2, h3 { font-family: var(--display); }
 .company-perspectives + .values { padding-top: clamp(1.25rem, 2vw, 1.75rem); }
 .company-team--culture .svc-fit__copy { align-content: start; }
 
-/* A crisp six-service composition, centered on the supplied company logo. */
-.hero.hero--with-hub { background: #0b2428; }
-.hero--with-hub .hero__scene img { opacity: .38; filter: saturate(.55) contrast(1.05); }
-.hero--with-hub .hero__scene::after { background: radial-gradient(ellipse at 74% 40%, rgba(82, 155, 147, .2), transparent 62%), linear-gradient(90deg, rgba(6, 24, 29, .9), rgba(10, 35, 39, .72) 34%, rgba(14, 48, 46, .38) 75%), linear-gradient(0deg, rgba(5, 23, 27, .5), transparent 65%); }
-.hero-service-hub { position: absolute; z-index: 1; inset: 1.5rem var(--gutter) 1.5rem 43%; }
-.hero-service-hub__connections { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: #89aa95; stroke-width: 1.5; }
-.hero-service-hub__flow { stroke: #dcf9cd; stroke-width: 2; stroke-dasharray: 6 18; animation: hero-hub-flow 3s linear infinite; }
-.hero-service-hub__brand { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: clamp(3rem, 7vw, 4rem); aspect-ratio: 318 / 262; padding: 0; border: 0; background: none; box-shadow: none; display: grid; place-items: center; }
-.hero-service-hub__emblem { width: 100%; height: auto; overflow: hidden; filter: drop-shadow(0 1px 1px rgba(203, 239, 197, .3)); }
-.hero-service-hub__node { position: absolute; transform: translate(-50%, -50%); width: 26%; min-height: 7rem; padding: .85rem .65rem; display: grid; justify-items: center; align-content: center; gap: .55rem; text-align: center; border-radius: 8px; background: linear-gradient(145deg, #ffffff, #edf5ee); color: #1b3428; border: 1px solid rgba(222, 239, 220, .85); box-shadow: inset 0 1px 0 #ffffff, 0 8px 22px rgba(0, 0, 0, .13); font: 600 clamp(.73rem, 1.05vw, .98rem)/1.3 var(--sans); text-decoration: none; transition: transform .2s, background .2s, box-shadow .2s; }
-.hero-service-hub__node::before { content: ''; position: absolute; top: 0; left: 25%; right: 25%; height: 2px; border-radius: 0 0 2px 2px; background: #7faab9; opacity: .7; }
-.hero-service-hub__node:hover, .hero-service-hub__node:focus-visible { transform: translate(-50%, -50%) translateY(-3px); background: #f5fff0; box-shadow: 0 12px 26px rgba(0, 0, 0, .18); }
-.hero-service-hub__node:focus-visible { outline: 2px solid #b2e895; outline-offset: 4px; }
-.hero-service-hub__node svg { box-sizing: content-box; width: 1.4rem; height: 1.4rem; padding: .45rem; border-radius: 9px; background: #e7f0f4; fill: none; stroke: #397a9c; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.hero-service-hub__node--1 { left: 30%; top: 14.2857%; }
-.hero-service-hub__node--2 { left: 70%; top: 14.2857%; }
-.hero-service-hub__node--3 { left: 87%; top: 50%; }
-.hero-service-hub__node--4 { left: 70%; top: 85.7143%; }
-.hero-service-hub__node--5 { left: 30%; top: 85.7143%; }
-.hero-service-hub__node--6 { left: 13%; top: 50%; }
-.hero-service-hub__node--6 svg { stroke: #4b9f2e; background: #e6f2df; }
-.hero-service-hub__node--6::before { background: #84b66f; }
-@keyframes hero-hub-flow { to { stroke-dashoffset: -48; } }
-@media (max-width: 1000px) {
- .hero.hero--with-hub { min-height: 0; }
- .hero-service-hub { position: relative; inset: auto; width: calc(100% - 2 * var(--gutter)); height: clamp(22rem, 49vw, 30rem); margin: 1.5rem var(--gutter) 0; flex: none; }
- .hero.hero--with-hub .hero__inner { flex: none; padding-block: 1.5rem; gap: 1.5rem; }
- .hero.hero--with-hub .hero__copy { max-width: 40rem; }
- .hero--with-hub .hero__metrics { max-width: 36rem; width: 100%; }
+/* Full-width photograph; reserve room for the moving manufacturer ribbon on first load. */
+.hero.hero--services-photo { background: #294e3c; min-height: max(22rem, calc(100svh - var(--head-h) - var(--vendor-h) - 1px)); }
+.hero__services-photo { position: absolute; z-index: -1; inset: 0; margin: 0; overflow: hidden; }
+.hero__services-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.hero__services-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(25,57,41,.98) 0%, rgba(25,57,41,.93) 23%, rgba(25,57,41,.68) 35%, rgba(25,57,41,.16) 49%, transparent 63%), linear-gradient(0deg, rgba(18,39,28,.2), transparent 48%); }
+@media (max-width: 1100px) {
+ .hero.hero--services-photo { --hero-copy-width: 40rem; }
+ .hero.hero--services-photo .hero__inner { flex: 1; padding-block: 1.5rem; gap: 1.5rem; }
+ .hero.hero--services-photo .hero__copy { max-width: var(--hero-copy-width); }
+ .hero__services-photo::after { background: linear-gradient(90deg, rgba(17,43,30,.88), rgba(17,43,30,.64) 65%, rgba(17,43,30,.32)), linear-gradient(0deg, rgba(17,43,30,.35), transparent 50%); }
+ .hero--services-photo .hero__metrics { max-width: 36rem; width: 100%; }
 }
-@media (max-width: 480px) {
- .hero-service-hub__node { min-height: 6rem; padding: .5rem .25rem; gap: .4rem; font-size: .7rem; }
- .hero-service-hub__node svg { width: 1.15rem; height: 1.15rem; padding: .3rem; border-radius: 7px; }
+@media (max-width: 600px) {
+ .hero__services-photo img { object-position: 68% center; }
 }
-@media (prefers-reduced-motion: reduce) { .hero-service-hub__flow { animation: none; } }
 /* Keep the culture image close to its following partner heading. */
 .company-team--culture { padding-bottom: 1rem; }
 .company-team--culture + .vendors { padding-top: clamp(1.25rem, 2vw, 1.75rem); }
-/* Give the existing VMware wordmark the website's blue accent. */
-.partner-card__logo img[src*="vmware"], .logos img[src*="vmware"] { filter: brightness(0) saturate(100%) invert(47%) sepia(51%) saturate(700%) hue-rotate(161deg) brightness(90%) contrast(88%); }
+/* VMware uses the grey wordmark shown in the supplied brand reference. */
+img[src*="/logos/vmware"] { filter: brightness(0) invert(.42); opacity: 1; }

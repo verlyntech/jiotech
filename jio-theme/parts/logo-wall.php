@@ -30,8 +30,6 @@
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/poly.png" width="87" height="34" alt="Poly" style="--h:34px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/zebra.svg" width="94" height="31" alt="Zebra Technologies" style="--h:31px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/bpc.png" width="92" height="32" alt="BPC Energy" style="--h:32px" loading="eager" decoding="async"></li>
-			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/amaron.png" width="112" height="25" alt="Amaron" style="--h:25px" loading="eager" decoding="async"></li>
-			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/sacredsun.png" width="91" height="31" alt="SacredSun" style="--h:31px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/extell.png" width="49" height="46" alt="ExTell" style="--h:46px" loading="eager" decoding="async"><img class="vendor-logo--dark" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/extell-dark.png" width="45" height="40" alt="ExTell" style="--h:40px" loading="eager" decoding="async"></li>
         </ul>
     </div>

@@ -4,9 +4,9 @@ WordPress theme and a dependency-free local preview for the JIO Technologies LLC
 
 ## Current website
 
-- **Home:** a temporary homepage hero image placeholder with the existing enquiry links and statistics, a six-service spotlight with selectable overviews, six service illustrations and keyboard navigation, a continuous horizontal manufacturer ribbon below the compact hero (familiar brands first, full-colour logos visible on the first screen and reduced-motion support), and a horizontal industry carousel with previous/next arrows and green corner markers.
+- **Home:** a full-width pale green hero background placeholder with the existing enquiry links and statistics, a six-service spotlight with selectable overviews, six service illustrations and keyboard navigation, a continuous horizontal manufacturer ribbon below the compact hero (familiar brands first, full-colour logos visible on the first screen and reduced-motion support), and a horizontal industry carousel with previous/next arrows and green corner markers.
 - **Services:** a connected diagram for five service areas, with animated icons, a concise overview on the left, keyboard selection and enquiry links. A pale green map canvas with white animated connectors over green tracks joins fully bordered service boxes: white in light mode and charcoal in dark mode, with colour accents identifying the selected service. The equipment catalogue remains below.
-- **Company:** the Three perspectives design: selectable Beginnings, Mission and Vision tabs, matching illustrations (including a people-free Mission office with JIO TECH signage), keyboard navigation and direct chapter links, plus icons for the existing company values.
+- **Company:** the Three perspectives design: selectable Beginnings, Mission and Vision tabs, matching people-free, unbranded illustrations and an additional supporting sentence in each chapter, keyboard navigation and direct chapter links, plus icons for the existing company values.
 - **Industries:** nine static industry icons arranged around a circular selector, with the selected sector's overview, capabilities and enquiry link in a larger adjacent panel. Supports keyboard selection and direct sector links.
 - **Contact and legal:** the homepage enquiry sidebar and Contact page share an Abu Dhabi location card, directions and a lazy-loaded Google map. Privacy Policy and Terms & Conditions have dedicated pages, section links and matching light/dark layouts.
 - **Shared header:** responsive logo with a gently floating shield and static wordmark, navigation and a keyboard-accessible dark-mode toggle. The hiring announcement banner has been removed.
@@ -97,6 +97,22 @@ The active repository is https://github.com/verlyntech/jiotech. Use `git pull --
 
 ## Homepage positioning and Mission image
 
-The homepage comparison describes AI-ready infrastructure, cybersecurity, business process automation and managed IT, with links to the relevant service pages. Its manufacturer ribbon excludes Hikvision and retains the other supplied brand marks. The footer service list starts with Digital transformation. The former homepage storefront image is retained as an unused asset while a styled placeholder is shown.
+The homepage comparison describes AI-ready infrastructure, cybersecurity, business process automation and managed IT, with links to the relevant service pages. Its manufacturer ribbon excludes Hikvision and the battery brands Amaron and SacredSun, retains the other original supplied brand marks, and gives every logo an equal-width slot. The footer service list starts with Digital transformation. The homepage uses a styled full-background image placeholder; the storefront illustrations are not displayed.
 
-The Mission tab uses `assets/img/company-mission-office-v2.webp`, a 1402 × 1122 office illustration optimised to approximately 198 KB. It was created using the built-in image generator with the previous Mission illustration as a reference. Its prompt and original image are retained locally in `output/imagegen/company-mission-office/`; it is illustrative, not a photograph of an actual JIO office.
+The Mission tab uses `assets/img/company-mission-office-unbranded.webp`, a 1402 × 1122 office illustration with the wall logo removed. The Services hero similarly uses `assets/img/services-hero-infrastructure-unbranded.webp` without the wall sign. Both were edited using the built-in image generator; original images and edit prompts are retained locally in `output/imagegen/unbranded-scenes/`. These are illustrations, not photographs of actual JIO premises.
+
+## Partnerships, identity security and power positioning
+
+The Partnerships page is available from both Company menus and includes 12 named technology brands with logos, practical integration roles and relevant service links. It uses styled image spaces for future partnership and project photographs. It does not assert certification levels or manufacturer authorisation tiers.
+
+IAM and EDR are separate entries in `inc/service-pages.json`, linked from navigation, the Services page and the cybersecurity page. Create published child pages under the WordPress `solutions` page with slugs `identity-access-management` and `endpoint-detection-response`, as with the existing service-page setup. The preview generates and serves both routes directly. IAM and EDR each use two distinct, people-free illustrations. Optional media blocks show styled placeholders when a service has no supplied image. The website quote form includes both new services. Its server allowlist is maintained in `inc/quote-form-options.json`; the Power choice retains its legacy submitted value so existing assistant prefills keep working.
+
+Visible positioning now uses IT and power. Renewable-energy offerings and solar imagery have been removed from the rendered site, including the Power page, homepage power media and Company Vision image. The original `/solutions/power-energy-solutions/` URL and the Industries `#energy` fragment are preserved for existing links. The BPC Energy brand retains its actual name. The GitHub chatbot implementation and catalogues are retained unchanged. Local chatbot catalogue edits and alternate chatbot files are excluded from this website commit.
+
+Current optimised replacement assets are stored in `jio-theme/assets/img/`: `company-mission-office-unbranded.webp`, `services-hero-infrastructure-unbranded.webp`, `company-vision-campus-v2.webp`, `service-power-backup-v2.webp`, `home-service-power-v2.webp`, `service-consulting-power-v2.webp`, `service-consulting-planning-v2.webp`, `careers-learning-lab-power-v2.webp`, and the four `service-iam-*` / `service-edr-*` images. They were generated or edited with the built-in image generator; original PNGs and prompts are retained locally in the corresponding `output/imagegen/` folders. They are illustrations rather than photographs of JIO premises or completed projects.
+
+IAM and EDR terminology and capabilities were checked against Microsoft documentation:
+- https://learn.microsoft.com/entra/fundamentals/introduction-identity-access-management
+- https://learn.microsoft.com/en-us/entra/fundamentals/entra-admin-center
+- https://learn.microsoft.com/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response
+- https://learn.microsoft.com/en-us/defender-endpoint

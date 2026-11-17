@@ -6,12 +6,9 @@ get_header(); ?>
 
 <main id="main">
 
-<!-- Hero: temporary image space; keep the enquiry links and company statistics. -->
+<!-- Homepage background is reserved for a future image. -->
 <section class="hero hero--photo hero--placeholder">
-	<div class="hero__bg hero__placeholder" role="img" aria-label="Homepage banner image placeholder">
-		<svg viewBox="0 0 64 48" aria-hidden="true"><path d="M3 3h58v42H3zM3 35l16-16 14 14 10-10 18 18"/><circle cx="44" cy="14" r="4"/></svg>
-		<span>Homepage image placeholder</span>
-	</div>
+	<div class="hero__placeholder" role="img" aria-label="Homepage background image placeholder"><div class="hero__placeholder-label" aria-hidden="true"><svg viewBox="0 0 64 48"><path d="M3 3h58v42H3zM3 34l16-16 13 14 9-10 20 21"/><circle cx="45" cy="14" r="4"/></svg><span>Homepage background image</span><small>Image placeholder</small></div></div>
 	<div class="wrap wrap--wide hero__inner">
 		<div class="hero__copy">
 			<h1>One contractor for IT and the power behind it.</h1>
@@ -49,7 +46,7 @@ get_header(); ?>
 				<a class="home-spotlight__tab" id="spotlight-tab-cloud" href="#spotlight-cloud" data-spotlight-tab="cloud"><span class="home-spotlight__number">03</span><span>Consulting &amp; Cloud</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
 				<a class="home-spotlight__tab" id="spotlight-tab-datacenter" href="#spotlight-datacenter" data-spotlight-tab="datacenter"><span class="home-spotlight__number">04</span><span>Data Center Design &amp; Hosting</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
 				<a class="home-spotlight__tab" id="spotlight-tab-managed" href="#spotlight-managed" data-spotlight-tab="managed"><span class="home-spotlight__number">05</span><span>Managed IT &amp; 24/7 Support</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
-				<a class="home-spotlight__tab" id="spotlight-tab-power" href="#spotlight-power" data-spotlight-tab="power"><span class="home-spotlight__number">06</span><span>Power &amp; Energy</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
+				<a class="home-spotlight__tab" id="spotlight-tab-power" href="#spotlight-power" data-spotlight-tab="power"><span class="home-spotlight__number">06</span><span>Power</span><span class="home-spotlight__arrow" aria-hidden="true">↗</span></a>
 			</nav>
 			<div class="home-spotlight__stage">
 				<article class="home-spotlight__panel" id="spotlight-network" data-spotlight-panel="network">
@@ -73,8 +70,8 @@ get_header(); ?>
 					<div class="home-spotlight__copy">
 						<p class="home-spotlight__eyebrow">Design · Supply · Support</p>
 						<h3>Cybersecurity &amp; Data Protection</h3>
-						<p>Protect business systems and information from the network edge to every endpoint, with security monitoring, threat detection and a coordinated approach to recovery.</p>
-						<ul class="home-spotlight__tags" aria-label="Capabilities"><li>Firewall &amp; VPN</li><li>Endpoint protection</li><li>Email security</li><li>Backup &amp; recovery</li></ul>
+						<p>Protect business systems and information from the network edge to every endpoint, with identity and access management, endpoint detection and response, and a coordinated approach to recovery.</p>
+						<ul class="home-spotlight__tags" aria-label="Capabilities"><li><a href="<?php echo esc_url( home_url( '/solutions/identity-access-management/' ) ); ?>">Identity &amp; access (IAM)</a></li><li><a href="<?php echo esc_url( home_url( '/solutions/endpoint-detection-response/' ) ); ?>">Endpoint response (EDR)</a></li><li>Firewall &amp; VPN</li><li>Backup &amp; recovery</li></ul>
 						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
 					</div>
 				</article>
@@ -120,13 +117,13 @@ get_header(); ?>
 				<article class="home-spotlight__panel" id="spotlight-power" data-spotlight-panel="power">
 					<figure class="home-spotlight__visual home-spotlight__visual--photo">
 						<span class="home-spotlight__count" aria-label="Service 6 of 6">06 <span>/ 06</span></span>
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-power-equipment.webp" width="1672" height="941" alt="Illustration of UPS power equipment, enclosed battery banks and renewable energy monitoring in an empty infrastructure room" loading="lazy" decoding="async">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-service-power-v2.webp" width="1672" height="941" alt="Illustration of UPS power equipment, enclosed battery banks and UPS and battery monitoring in an empty infrastructure room" loading="lazy" decoding="async">
 					</figure>
 					<div class="home-spotlight__copy">
 						<p class="home-spotlight__eyebrow">Design · Supply · Support</p>
-						<h3>Power &amp; Energy</h3>
-						<p>Coordinate backup power, battery systems and renewable energy around the equipment your business depends on. From installation to preventive maintenance, one team supports your power infrastructure.</p>
-						<ul class="home-spotlight__tags" aria-label="Capabilities"><li>UPS systems</li><li>VRLA &amp; lithium-ion</li><li>Renewables</li><li>Maintenance</li></ul>
+						<h3>Power</h3>
+						<p>Coordinate backup power, battery systems and power distribution around the equipment your business depends on. From installation to preventive maintenance, one team supports your power infrastructure.</p>
+						<ul class="home-spotlight__tags" aria-label="Capabilities"><li>UPS systems</li><li>VRLA &amp; lithium-ion</li><li>Power distribution</li><li>Maintenance</li></ul>
 						<div class="home-spotlight__actions"><a class="link" href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>">Explore this service <span aria-hidden="true">↗</span></a><button type="button" class="home-spotlight__next" data-spotlight-next>Next service <span aria-hidden="true">→</span></button></div>
 					</div>
 				</article>
@@ -139,12 +136,12 @@ get_header(); ?>
 <section class="versus" aria-labelledby="connected-solutions-title">
 	<div class="wrap">
 		<div class="versus__head">
-			<h2 id="connected-solutions-title">AI, cybersecurity and IT solutions. One connected partner.</h2>
-			<p>JIO Technologies connects technology planning, secure infrastructure and automation for organisations across the UAE.</p>
+			<h2 id="connected-solutions-title">Your advantage in AI, cybersecurity and enterprise IT.</h2>
+			<p>JIO Technologies turns complex technology into a business advantage. From AI-ready infrastructure and advanced security to everyday IT performance, one accountable team connects strategy, delivery and ongoing support.</p>
 		</div>
 		<div class="versus__grid">
 			<div class="versus__col">
-				<h3>When technology is managed in silos</h3>
+				<h3>The cost of disconnected technology</h3>
 				<ul>
 					<li>AI initiatives start without a clear plan for data, integration or security.</li>
 					<li>Cybersecurity tools, networks and cloud systems are managed separately.</li>
@@ -153,12 +150,12 @@ get_header(); ?>
 				</ul>
 			</div>
 			<div class="versus__col versus__col--us">
-				<h3>Connected solutions from JIO Technologies</h3>
+				<h3>JIO Technologies. A higher standard of delivery.</h3>
 				<ul>
-					<li><a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">IT consulting and AI-ready infrastructure aligned with your business goals.</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Cybersecurity, network and cloud protection planned together.</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/solutions/business-process-automation/' ) ); ?>">Microsoft 365 and business process automation that connect everyday workflows.</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>">Managed IT services with coordinated maintenance and technical support.</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">Strategy with purpose. AI-ready infrastructure shaped around your priorities and growth.</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Protection at every layer. Identity, endpoint, network and cloud security working together.</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/solutions/business-process-automation/' ) ); ?>">Productivity by design. Microsoft 365 and intelligent workflows that move work forward.</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>">Accountability throughout. One team for deployment, documentation and dependable IT support.</a></li>
 				</ul>
 			</div>
 		</div>
@@ -177,12 +174,12 @@ get_header(); ?>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#government"><h3>Government &amp; public sector</h3><p>Secure, compliant systems for modernisation programmes.</p></a></li>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#healthcare"><h3>Healthcare</h3><p>IT and power for medical devices, patient data and 24/7 care.</p></a></li>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#finance"><h3>Banking &amp; financial services</h3><p>High-availability systems for mission-critical workloads.</p></a></li>
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#energy"><h3>Energy &amp; utilities</h3><p>Smart power systems and UPS integration for critical facilities.</p></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#energy"><h3>Power &amp; utilities</h3><p>Smart power systems and UPS integration for critical facilities.</p></a></li>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#manufacturing"><h3>Manufacturing &amp; industrial</h3><p>Networks and backup power for continuous operations.</p></a></li>
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#construction"><h3>Construction &amp; engineering</h3><p>IT, surveillance and energy for project sites and offices.</p></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#construction"><h3>Construction &amp; engineering</h3><p>IT, surveillance and power for project sites and offices.</p></a></li>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#logistics"><h3>Logistics &amp; transportation</h3><p>Connected networks, IoT tracking and reliable power.</p></a></li>
 			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#retail"><h3>Retail &amp; e-commerce</h3><p>Connectivity, cloud and security for store and online sales.</p></a></li>
-			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#education"><h3>Education</h3><p>Secure campus networks and energy-efficient infrastructure.</p></a></li>
+			<li class="ind-card"><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>#education"><h3>Education</h3><p>Secure campus networks and reliable infrastructure.</p></a></li>
 		</ul>
 		</div>
 		<div class="industries__controls" data-industry-controls hidden>

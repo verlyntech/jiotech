@@ -1,6 +1,6 @@
 <?php
 /**
- * Service detail pages under /solutions/ (managed services, power & energy, and so on).
+ * Service detail pages under /solutions/ (managed services, power & power, and so on).
  *
  * Content lives in inc/service-pages.json and the markup in parts/service-page.tpl.html, which the
  * static preview (preview/build.mjs) renders too. Any child page of "Services" whose slug is in the
@@ -60,6 +60,9 @@ function jio_render_service_page( $slug ) {
 	$page['quote_url']     = home_url( '/contact/#quote' );
 	foreach ( array( 'hero', 'detail' ) as $role ) {
 		$page[ $role . '_image_url' ] = get_template_directory_uri() . '/assets/img/' . $page[ $role . '_image_file' ];
+		$has_image = ! empty( $page[ $role . '_image_file' ] );
+		$page[ $role . '_media' ] = $has_image ? array( array() ) : array();
+		$page[ $role . '_placeholder' ] = $has_image ? array() : array( array() );
 	}
 	return jio_fill_template( (string) file_get_contents( get_template_directory() . '/parts/service-page.tpl.html' ), $page );
 }

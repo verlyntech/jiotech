@@ -11,8 +11,8 @@ get_header(); ?>
 		<div class="solutions-hero__grid">
 			<div class="solutions-hero__copy">
 				<p class="solutions-hero__category">Services &amp; solutions</p>
-				<h1 id="solutions-title">Smarter <span class="solutions-hero__it">IT.</span><br>Stronger <span class="solutions-hero__energy">energy.</span><br>Better together.</h1>
-				<p class="solutions-hero__lead">Empowering businesses through smarter IT &amp; energy integration.</p>
+				<h1 id="solutions-title">Smarter <span class="solutions-hero__it">IT.</span><br>Stronger <span class="solutions-hero__energy">power.</span><br>Better together.</h1>
+				<p class="solutions-hero__lead">Empowering businesses through smarter IT &amp; power integration.</p>
 				<p>JIO Technologies LLC brings enterprise technology and power systems together to improve efficiency, strengthen security and support business continuity.</p>
 				<div class="solutions-hero__actions">
 					<a class="btn-arrow" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><span>Discuss your requirements</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
@@ -21,7 +21,7 @@ get_header(); ?>
 			</div>
 			<div class="solutions-hero__art">
 				<figure class="solutions-image solutions-image--hero solutions-image--photo">
-					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/services-hero-jio-tech.webp" width="1402" height="1122" alt="Illustration of a JIO TECH-branded infrastructure room with UPS and battery cabinets, server racks and organised network cabling" loading="eager" fetchpriority="high" decoding="async">
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/services-hero-infrastructure-unbranded.webp" width="1402" height="1122" alt="Illustration of an enterprise infrastructure room with UPS and battery cabinets, server racks and organised network cabling" loading="eager" fetchpriority="high" decoding="async">
 				</figure>
 			</div>
 		</div>
@@ -30,8 +30,8 @@ get_header(); ?>
 
 <section class="solutions-intro" aria-labelledby="solutions-intro-title">
 	<div class="wrap wrap--wide solutions-intro__grid">
-		<div class="solutions-intro__heading"><span class="solutions-intro__experience">20+ <span>years of experience</span></span><h2 id="solutions-intro-title">Comprehensive IT &amp; energy services for business.</h2></div>
-		<div class="solutions-intro__copy"><p>For over two decades, JIO Technologies has helped organisations across the UAE turn complex infrastructure needs into practical, connected solutions.</p><p>From cloud platforms and cybersecurity to UPS systems and renewable energy, we design, deploy and maintain infrastructure around your business priorities. Our approach helps you streamline operations, manage costs and build the capacity to grow.</p></div>
+		<div class="solutions-intro__heading"><span class="solutions-intro__experience">20+ <span>years of experience</span></span><h2 id="solutions-intro-title">Comprehensive IT &amp; power services for business.</h2></div>
+		<div class="solutions-intro__copy"><p>For over two decades, JIO Technologies has helped organisations across the UAE turn complex infrastructure needs into practical, connected solutions.</p><p>From cloud platforms and cybersecurity to UPS and backup power systems, we design, deploy and maintain infrastructure around your business priorities. Our approach helps you streamline operations, manage costs and build the capacity to grow.</p></div>
 	</div>
 </section>
 
@@ -40,7 +40,7 @@ get_header(); ?>
 		<div class="capabilities__heading" id="capabilities"><h2 id="capabilities-title">Five service areas.<br>One connected partner.</h2></div>
 		<div class="service-explorer" data-service-explorer data-active-service="digital">
 			<div class="service-map">
-				<div class="service-map__top"><span>Built to work together</span><span aria-hidden="true">IT + ENERGY</span></div>
+				<div class="service-map__top"><span>Built to work together</span><span aria-hidden="true">IT + POWER</span></div>
 				<div class="service-map__stage">
 					<svg class="service-map__wires" viewBox="0 0 640 520" preserveAspectRatio="none" aria-hidden="true">
 						<path class="service-map__track is-active" data-service-wire="digital" d="M320 245V170H125V100"/>
@@ -113,8 +113,8 @@ get_header(); ?>
 					<span class="service-summary__category">Digital &amp; physical protection</span>
 					<h3>Cybersecurity &amp; CCTV</h3>
 					<p>Protect business systems, information and physical sites through a coordinated security approach. We connect cybersecurity, data protection and CCTV with the infrastructure your organisation relies on.</p>
-					<ul><li>Firewalls, endpoint protection and secure access</li><li>Data protection, backup and security monitoring</li><li>CCTV cameras, recording and remote monitoring</li></ul>
-					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Cybersecurity, data protection &amp; CCTV</a></div>
+					<ul><li>IAM, multifactor authentication and secure access</li><li>EDR, endpoint visibility and response planning</li><li>Firewalls and network protection</li><li>Data protection, backup and security monitoring</li><li>CCTV cameras, recording and remote monitoring</li></ul>
+					<div class="service-summary__pages"><p class="service-summary__pages-label">Service pages</p><a href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Cybersecurity, data protection &amp; CCTV</a><a href="<?php echo esc_url( home_url( '/solutions/identity-access-management/' ) ); ?>">Identity &amp; access management</a><a href="<?php echo esc_url( home_url( '/solutions/endpoint-detection-response/' ) ); ?>">Endpoint detection &amp; response</a></div>
 					<a class="service-summary__link" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss cybersecurity &amp; CCTV <span aria-hidden="true">↗</span></a>
 				</article>
 			</div>
@@ -122,6 +122,8 @@ get_header(); ?>
 
 	</div>
 </section>
+
+<section class="security-focus" aria-labelledby="security-focus-title"><div class="wrap wrap--wide"><div class="sec-head"><div><p class="label">Identity + endpoint security</p><h2 id="security-focus-title">Secure the people. Protect the devices.</h2></div><p>Two connected layers of your cybersecurity strategy.</p></div><div class="security-focus__grid"><article><span class="label">01 / IAM</span><h3>Identity &amp; access management</h3><p>Connect user identities, applications and access policies. Strengthen sign-in with SSO, MFA and a clear approach to permissions and user lifecycle.</p><a class="link" href="<?php echo esc_url( home_url( '/solutions/identity-access-management/' ) ); ?>">Explore IAM solutions <span aria-hidden="true">↗</span></a></article><article><span class="label">02 / EDR</span><h3>Endpoint detection &amp; response</h3><p>Bring visibility, threat detection and response workflows to your business devices, with deployment, configuration and handover planned around your team.</p><a class="link" href="<?php echo esc_url( home_url( '/solutions/endpoint-detection-response/' ) ); ?>">Explore EDR solutions <span aria-hidden="true">↗</span></a></article></div></div></section>
 
 <!-- EQUIPMENT CATALOGUE (teenage engineering ruled product grid) -->
 <section class="catalogue" id="equipment" aria-labelledby="equipment-title">
@@ -174,7 +176,7 @@ get_header(); ?>
 	<div class="wrap">
 		<div class="svc-head"><p class="label">Why JIO</p><h2 id="why-title">Why choose JIO Technologies.</h2></div>
 		<ol class="svc-cards svc-cards--5">
-			<li><span class="svc-cards__num">01</span><h3>20+ years</h3><p>Two decades delivering hybrid IT and energy projects across the UAE.</p></li>
+			<li><span class="svc-cards__num">01</span><h3>20+ years</h3><p>Two decades delivering hybrid IT and power projects across the UAE.</p></li>
 			<li><span class="svc-cards__num">02</span><h3>One partner for IT and power</h3><p>One contract and one support number, instead of separate IT and power contractors.</p></li>
 			<li><span class="svc-cards__num">03</span><h3>End-to-end delivery</h3><p>Site survey, design, supply, installation and maintenance, handled by the same team.</p></li>
 			<li><span class="svc-cards__num">04</span><h3>Established brands</h3><p>Equipment from 30 manufacturers, including APC, Eaton, Dell, Cisco and Fortinet.</p></li>
@@ -184,7 +186,7 @@ get_header(); ?>
 </section>
 
 <section class="solutions-next" aria-labelledby="solutions-next-title">
-	<div class="wrap wrap--wide solutions-next__grid"><div><h2 id="solutions-next-title">Bring your IT &amp; energy priorities together.</h2><p>Tell us what you operate, what needs to improve and where you want to go. We will help shape a practical plan.</p></div><a class="btn-arrow" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><span>Start a conversation</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a></div>
+	<div class="wrap wrap--wide solutions-next__grid"><div><h2 id="solutions-next-title">Bring your IT &amp; power priorities together.</h2><p>Tell us what you operate, what needs to improve and where you want to go. We will help shape a practical plan.</p></div><a class="btn-arrow" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><span>Start a conversation</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a></div>
 </section>
 
 </main>

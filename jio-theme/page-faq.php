@@ -20,7 +20,7 @@ get_header(); ?>
 		<div class="faq__list">
 			<details>
 				<summary>What services does JIO provide in the UAE?</summary>
-				<p>Hybrid IT and energy services: managed IT, power backup, cybersecurity, cloud, data center design, networking and technology procurement, in Dubai and Abu Dhabi.</p>
+				<p>Hybrid IT and power services: managed IT, power backup, cybersecurity, cloud, data center design, networking and technology procurement, in Dubai and Abu Dhabi.</p>
 			</details>
 			<details>
 				<summary>Do you support small and large businesses?</summary>
@@ -28,11 +28,11 @@ get_header(); ?>
 			</details>
 			<details>
 				<summary>Which industries do you serve?</summary>
-				<p>Manufacturing, construction, healthcare, finance, retail, education, logistics, energy and utilities, and government.</p>
+				<p>Manufacturing, construction, healthcare, finance, retail, education, logistics, power and utilities, and government.</p>
 			</details>
 			<details>
 				<summary>What is your industry focus?</summary>
-				<p>Organisations that cannot afford downtime: government and the public sector, healthcare, banking and finance, energy and utilities, and industrial sites. What they share is critical IT that depends on reliable power, which is where one supplier for both helps most.</p>
+				<p>Organisations that cannot afford downtime: government and the public sector, healthcare, banking and finance, power and utilities, and industrial sites. What they share is critical IT that depends on reliable power, which is where one supplier for both helps most.</p>
 			</details>
 			<details>
 				<summary>Do you offer 24/7 technical support?</summary>
@@ -56,11 +56,11 @@ get_header(); ?>
 			</details>
 			<details>
 				<summary>Can you supply IT hardware and power equipment?</summary>
-				<p>Yes: networking equipment, servers, storage, UPS units, power distribution units and energy-efficient hardware.</p>
+				<p>Yes: networking equipment, servers, storage, UPS units, power distribution units and reliable hardware.</p>
 			</details>
 			<details>
 				<summary>What sets JIO apart?</summary>
-				<p>IT and energy under one roof, end-to-end delivery, fast local support, and a focus on reliability and long-term partnerships.</p>
+				<p>IT and power under one roof, end-to-end delivery, fast local support, and a focus on reliability and long-term partnerships.</p>
 			</details>
 			<details>
 				<summary>How can I contact JIO?</summary>

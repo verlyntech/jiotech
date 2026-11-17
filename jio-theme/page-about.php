@@ -25,30 +25,33 @@ get_header(); ?>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">01 / 03</p>
                     <h2 id="company-title-beginnings">Our beginnings</h2>
-                    <p class="company-perspectives__text">JIO Technologies began as a small team of engineers providing IT hardware and infrastructure. It has grown into a hybrid IT and energy provider based in Abu Dhabi, serving Dubai, Abu Dhabi and the wider GCC.</p>
+                    <p class="company-perspectives__text">JIO Technologies began as a small team of engineers providing IT hardware and infrastructure. It has grown into a hybrid IT and power provider based in Abu Dhabi, serving Dubai, Abu Dhabi and the wider GCC.</p>
+                    <p class="company-perspectives__text company-perspectives__text--addition">That hands-on engineering mindset remains at the heart of every solution we deliver.</p>
                     <p class="company-perspectives__key">From hardware to hybrid infrastructure.</p>
                 </div>
             </article>
             <article class="company-perspectives__panel" id="mission" data-company-panel="mission" aria-labelledby="company-title-mission">
                 <figure class="company-perspectives__media company-perspectives__media--photo">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-mission-office-v2.webp" width="1402" height="1122" alt="Illustration of an empty JIO TECH office with a meeting table, laptop and a glass-enclosed IT and power equipment area" loading="lazy" decoding="async">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-mission-office-unbranded.webp" width="1402" height="1122" alt="Illustration of an empty technology office with a meeting table, laptop, plain stone wall and a glass-enclosed IT and power equipment area" loading="lazy" decoding="async">
                 </figure>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">02 / 03</p>
                     <h2 id="company-title-mission">Our mission</h2>
                     <p class="company-perspectives__text">To deliver high-quality IT, power, telecom and machinery products, using our expertise and strategic location to exceed customer expectations.</p>
+                    <p class="company-perspectives__text company-perspectives__text--addition">We combine expert advice, carefully selected products and responsive support to help customers operate with confidence.</p>
                     <p class="company-perspectives__key">Innovation. Reliability. Customer service.</p>
                 </div>
             </article>
             <article class="company-perspectives__panel" id="vision" data-company-panel="vision" aria-labelledby="company-title-vision">
                 <figure class="company-perspectives__media company-perspectives__media--photo">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-vision-campus.webp" width="1402" height="1122" alt="Illustration of a modern UAE technology campus combining IT infrastructure, communications and energy systems" loading="lazy" decoding="async">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/company-vision-campus-v2.webp" width="1402" height="1122" alt="Illustration of a modern UAE technology campus combining IT infrastructure, communications and power systems" loading="lazy" decoding="async">
                 </figure>
                 <div class="company-perspectives__copy">
                     <p class="company-perspectives__number">03 / 03</p>
                     <h2 id="company-title-vision">Our vision</h2>
                     <p class="company-perspectives__text">To be the leading global distributor of IT, power and industrial products, recognised for innovation, reliability and exceptional service.</p>
-                    <p class="company-perspectives__key">One partner for IT and energy.</p>
+                    <p class="company-perspectives__text company-perspectives__text--addition">We see a future where secure, connected infrastructure gives every organisation the confidence to grow.</p>
+                    <p class="company-perspectives__key">One partner for IT and power.</p>
                 </div>
             </article>
             </div>
@@ -75,7 +78,7 @@ get_header(); ?>
 			</li>
 			<li>
 				<svg class="values__icon values__icon--it" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><path d="M7 7h15v15H7zM42 7h15v15H42zM7 42h15v15H7zM42 42h15v15H42z"/><path class="values__accent" d="M22 22l10 10 10-10M22 42l10-10 10 10M26 26h12v12H26z"/></svg>
-				<h3>Unified</h3><p>One team across IT and energy, not two departments.</p>
+				<h3>Unified</h3><p>One team across IT and power, not two departments.</p>
 			</li>
 		</ul>
 	</div>
@@ -92,7 +95,7 @@ get_header(); ?>
 			<h2 id="team-title">A team built on experience.</h2>
 			<p>IT engineers and power specialists work side by side at JIO, from our base in Abu Dhabi. The people who design your system are the same people who install it and support it afterwards.</p>
 			<p class="svc-fit__brands">Our expertise</p>
-			<ul class="svc-tags"><li>IT infrastructure</li><li>Power &amp; energy</li><li>Networking &amp; security</li><li>Support &amp; maintenance</li></ul>
+			<ul class="svc-tags"><li>IT infrastructure</li><li>Power</li><li>Networking &amp; security</li><li>Support &amp; maintenance</li></ul>
 			<a class="link" href="<?php echo esc_url( home_url( '/careers/' ) ); ?>">Join the team</a>
 		</div>
 	</div>

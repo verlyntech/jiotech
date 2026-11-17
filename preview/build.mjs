@@ -42,6 +42,10 @@ for (const s of services) {
 		quote_url: 'contact.html#quote',
 		hero_image_url: '../jio-theme/assets/img/' + s.hero_image_file,
 		detail_image_url: '../jio-theme/assets/img/' + s.detail_image_file,
+		hero_media: s.hero_image_file ? [{}] : [],
+		hero_placeholder: s.hero_image_file ? [] : [{}],
+		detail_media: s.detail_image_file ? [{}] : [],
+		detail_placeholder: s.detail_image_file ? [] : [{}],
 	};
 	pages.push({ html: `<?php get_header(); ?>\n${fill(serviceTpl, data)}\n<?php get_footer(); ?>`, out: serviceFile(s.slug), slug: `solutions/${s.slug}`, title: s.title });
 }

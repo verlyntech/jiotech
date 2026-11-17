@@ -35,6 +35,8 @@
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>"><span>Managed IT &amp; infrastructure</span><small>Monitoring, support and optimisation</small></a>
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/network-connectivity-solutions/' ) ); ?>"><span>Network &amp; connectivity</span><small>LAN, WAN, Wi-Fi and structured cabling</small></a>
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>"><span>Cybersecurity &amp; CCTV</span><small>Network, cloud and physical security</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/identity-access-management/' ) ); ?>"><span>Identity &amp; access management</span><small>IAM, SSO, MFA and access governance</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/endpoint-detection-response/' ) ); ?>"><span>Endpoint detection &amp; response</span><small>EDR deployment, detection and response planning</small></a>
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>"><span>IT consulting &amp; advisory</span><small>Strategy, roadmaps and governance</small></a>
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>"><span>Digital transformation</span><small>Modernise legacy systems and connect data</small></a>
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/business-process-automation/' ) ); ?>"><span>Business process automation</span><small>Workflows, approvals and reports with Microsoft 365</small></a>
@@ -42,7 +44,7 @@
 						</div>
 						<div class="mega__group mega__group--power">
 							<p class="mega__label">Power</p>
-							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>"><span>Power &amp; energy</span><small>UPS, batteries, renewables and power distribution</small></a>
+							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>"><span>Power</span><small>UPS, batteries and power distribution</small></a>
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>"><span>Data center design &amp; hosting</span><small>From a single rack to an enterprise hall</small></a>
 							<a class="mega__link" href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>"><span>Maintenance &amp; 24/7 support</span><small>Preventive maintenance, remote and on-site help</small></a>
 						</div>
@@ -69,7 +71,7 @@
 					<div class="wrap wrap--wide mega__row">
 						<a class="mega__link" href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><span>About us</span><small>Our story, mission and how we work</small></a>
 						<a class="mega__link" href="<?php echo esc_url( home_url( '/careers/' ) ); ?>"><span>Careers</span><small>Open roles and life at JIO</small></a>
-						<a class="mega__link" href="<?php echo esc_url( home_url( '/partnerships/' ) ); ?>"><span>Partnerships</span><small>Manufacturers, distributors and resellers</small></a>
+						<a class="mega__link" href="<?php echo esc_url( home_url( '/partnerships/' ) ); ?>"><span>Partnerships</span><small>Our technology ecosystem and delivery capabilities</small></a>
 						<a class="mega__link" href="<?php echo esc_url( home_url( '/faq/' ) ); ?>"><span>FAQ</span><small>Answers to common buyer questions</small></a>
 					</div>
 				</div>
@@ -93,13 +95,15 @@
 				<details class="menu__group">
 					<summary>Services</summary>
 					<p class="menu__label">Power</p>
-					<a href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>">Power &amp; energy</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/power-energy-solutions/' ) ); ?>">Power</a>
 					<a href="<?php echo esc_url( home_url( '/solutions/web-development/' ) ); ?>">Data center design &amp; hosting</a>
 					<a href="<?php echo esc_url( home_url( '/solutions/maintenance-technical-support/' ) ); ?>">Maintenance &amp; 24/7 support</a>
 					<p class="menu__label">IT</p>
 					<a href="<?php echo esc_url( home_url( '/solutions/managed-services/' ) ); ?>">Managed IT &amp; infrastructure</a>
 					<a href="<?php echo esc_url( home_url( '/solutions/network-connectivity-solutions/' ) ); ?>">Network &amp; connectivity</a>
 					<a href="<?php echo esc_url( home_url( '/solutions/cyber-security/' ) ); ?>">Cybersecurity &amp; CCTV</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/identity-access-management/' ) ); ?>">Identity &amp; access management (IAM)</a>
+					<a href="<?php echo esc_url( home_url( '/solutions/endpoint-detection-response/' ) ); ?>">Endpoint detection &amp; response (EDR)</a>
 					<a href="<?php echo esc_url( home_url( '/solutions/it-consulting-advisory/' ) ); ?>">IT consulting &amp; advisory</a>
 					<a href="<?php echo esc_url( home_url( '/solutions/digital-transformation/' ) ); ?>">Digital transformation</a>
 					<a href="<?php echo esc_url( home_url( '/solutions/business-process-automation/' ) ); ?>">Business process automation</a>

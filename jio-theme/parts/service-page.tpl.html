@@ -14,7 +14,8 @@
 			</div>
 		</div>
 		<figure class="svc-media svc-media--photo">
-			<img src="{{hero_image_url}}" width="{{hero_image_width}}" height="{{hero_image_height}}" alt="{{hero_image}}" loading="eager" fetchpriority="high" decoding="async">
+{{#hero_media}}			<img src="{{hero_image_url}}" width="{{hero_image_width}}" height="{{hero_image_height}}" alt="{{hero_image}}" loading="eager" fetchpriority="high" decoding="async">{{/hero_media}}
+{{#hero_placeholder}}<div class="media-placeholder" role="img" aria-label="{{hero_image}}"><svg viewBox="0 0 64 48" aria-hidden="true"><path d="M3 3h58v42H3zM3 35l16-16 14 14 10-10 18 18"/><circle cx="44" cy="14" r="4"/></svg><strong>{{hero_image}}</strong><span>Image placeholder</span></div>{{/hero_placeholder}}
 		</figure>
 	</div>
 </section>
@@ -31,7 +32,8 @@
 <section class="svc-fit" aria-labelledby="svc-fit-title">
 	<div class="wrap svc-fit__grid">
 		<figure class="svc-media svc-media--wide svc-media--photo">
-			<img src="{{detail_image_url}}" width="{{detail_image_width}}" height="{{detail_image_height}}" alt="{{detail_image}}" loading="lazy" decoding="async">
+{{#detail_media}}			<img src="{{detail_image_url}}" width="{{detail_image_width}}" height="{{detail_image_height}}" alt="{{detail_image}}" loading="lazy" decoding="async">{{/detail_media}}
+{{#detail_placeholder}}<div class="media-placeholder" role="img" aria-label="{{detail_image}}"><svg viewBox="0 0 64 48" aria-hidden="true"><path d="M3 3h58v42H3zM3 35l16-16 14 14 10-10 18 18"/><circle cx="44" cy="14" r="4"/></svg><strong>{{detail_image}}</strong><span>Image placeholder</span></div>{{/detail_placeholder}}
 		</figure>
 		<div class="svc-fit__copy">
 			<p class="label">{{why_label}}</p>

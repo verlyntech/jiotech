@@ -313,7 +313,7 @@ async function chat(req, res) {
 // Public website files only. The GitHub chatbot implementation above is unchanged.
 export function isPublicPath(path) {
     if (/^\/preview\/(?:index|solutions|industries|about|contact|client-support|faq|careers|partnerships|privacy-policy|terms-conditions|404)\.html$/.test(path)) return true;
-    if (/^\/preview\/service-(?:power-energy-solutions|web-development|network-connectivity-solutions|cyber-security|managed-services|maintenance-technical-support|it-consulting-advisory|digital-transformation|business-process-automation|cloud-saas-transformation)\.html$/.test(path)) return true;
+    if (/^\/preview\/service-(?:power-energy-solutions|web-development|network-connectivity-solutions|cyber-security|managed-services|maintenance-technical-support|it-consulting-advisory|digital-transformation|business-process-automation|cloud-saas-transformation|identity-access-management|endpoint-detection-response)\.html$/.test(path)) return true;
     return /^\/jio-theme\/assets\/(?:css|js|img|logos|video)\/[a-z0-9_-]+(?:\/[a-z0-9_-]+)*\.(?:css|js|png|jpe?g|webp|svg|ico|woff2?|ttf|mp4)$/i.test(path);
 }
 

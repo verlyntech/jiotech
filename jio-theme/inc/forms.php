@@ -59,6 +59,8 @@ function jio_handle_quote() {
 			$services = $slot['options']; // the same list as the form's "What do you need?" options
 		}
 	}
+	// Website choices evolve independently; keep legacy assistant values valid.
+	$services = array_merge( $services, jio_chat_json( 'quote-form-options.json' ) );
 	if ( '' === $f['first'] || '' === $f['last'] || '' === $f['company'] || ! is_email( $f['email'] ) || ! in_array( $f['service'], $services, true ) || empty( $_POST['consent'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 		jio_form_back( 'quote', 'invalid' );
 	}

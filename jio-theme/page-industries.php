@@ -7,7 +7,7 @@ get_header(); ?>
 <section class="industry-hero">
 	<div class="wrap industry-hero__grid">
 		<div class="industry-hero__copy">
-			<h1>Managed IT &amp; energy services for your industry.</h1>
+			<h1>Managed IT &amp; power services for your industry.</h1>
 			<p class="industry-hero__lead">Infrastructure shaped around the way your organisation operates.</p>
 			<p>JIO brings managed IT, secure connectivity and dependable power together. We align your systems with the demands of your sector, helping you maintain continuity today and plan for what comes next.</p>
 			<a class="btn-arrow" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><span>Discuss your requirements</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
@@ -56,7 +56,7 @@ get_header(); ?>
 						<path d="M5 17h18M5 29h12M5 43h14M43 45h16M48 33h11"/>
 						<path class="sector-card__accent" d="M36 5L18 35h16l-6 24 22-34H34z"/>
 						<path class="sector-card__accent" d="M5 17h18M5 29h12M5 43h14M43 45h16M48 33h11"/>
-					</svg><span class="industry-orbit__label">Energy</span><span class="sr-only">Energy &amp; utilities</span>
+					</svg><span class="industry-orbit__label">Power</span><span class="sr-only">Power &amp; utilities</span>
                     </a>
 					<a class="industry-orbit__node" id="industry-tab-manufacturing" href="#manufacturing" data-industry-tab="manufacturing" style="--node-x:62.997%;--node-y:85.708%" aria-controls="manufacturing">
                         <svg viewBox="0 0 64 64" aria-hidden="true">
@@ -107,7 +107,7 @@ get_header(); ?>
 						<path class="sector-card__accent" d="M16 47V30M27 47V30M38 47V30M49 47V30"/>
 					</svg></div>
                     <h3 id="industry-title-government">Government &amp; public sector</h3>
-                    <p>Secure, scalable infrastructure for public services and modernisation programmes, with connected systems and dependable backup power.</p>
+                    <p>Secure, scalable infrastructure for public services and modernisation programmes, with connected systems and dependable backup power.</p>
                     <a class="link-line" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss your requirements <span aria-hidden="true">↗</span></a>
                 </article>
 				<article class="industry-detail" id="healthcare" data-industry-panel="healthcare" aria-labelledby="industry-title-healthcare">
@@ -118,7 +118,7 @@ get_header(); ?>
 						<path class="sector-card__accent" d="M5 39h16l4-5 6 10 6-9 4 4h18"/>
 					</svg></div>
                     <h3 id="industry-title-healthcare">Healthcare</h3>
-                    <p>Connected infrastructure that supports clinical systems, protects patient information and keeps essential equipment powered.</p>
+                    <p>Connected infrastructure that supports clinical systems, protects patient information and keeps essential equipment powered.</p>
                     <a class="link-line" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss your requirements <span aria-hidden="true">↗</span></a>
                 </article>
 				<article class="industry-detail" id="finance" data-industry-panel="finance" aria-labelledby="industry-title-finance">
@@ -129,7 +129,7 @@ get_header(); ?>
 						<path class="sector-card__accent" d="M38 45l6 6 9-12"/>
 					</svg></div>
                     <h3 id="industry-title-finance">Banking &amp; financial services</h3>
-                    <p>Resilient hosting, secure connectivity and backup power for demanding financial operations and business continuity requirements.</p>
+                    <p>Resilient hosting, secure connectivity and backup power for demanding financial operations and business continuity requirements.</p>
                     <a class="link-line" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss your requirements <span aria-hidden="true">↗</span></a>
                 </article>
 				<article class="industry-detail" id="energy" data-industry-panel="energy" aria-labelledby="industry-title-energy">
@@ -139,8 +139,8 @@ get_header(); ?>
 						<path class="sector-card__accent" d="M36 5L18 35h16l-6 24 22-34H34z"/>
 						<path class="sector-card__accent" d="M5 17h18M5 29h12M5 43h14M43 45h16M48 33h11"/>
 					</svg></div>
-                    <h3 id="industry-title-energy">Energy &amp; utilities</h3>
-                    <p>Integrated UPS, battery systems and monitoring to support the availability and performance of critical facilities.</p>
+                    <h3 id="industry-title-energy">Power &amp; utilities</h3>
+                    <p>Integrated UPS, battery systems and monitoring to support the availability and performance of critical facilities.</p>
                     <a class="link-line" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss your requirements <span aria-hidden="true">↗</span></a>
                 </article>
 				<article class="industry-detail" id="manufacturing" data-industry-panel="manufacturing" aria-labelledby="industry-title-manufacturing">
@@ -150,7 +150,7 @@ get_header(); ?>
 						<path class="sector-card__accent" d="M15 41h5M27 41h5M15 49h5M27 49h5M51 8V3"/>
 					</svg></div>
                     <h3 id="industry-title-manufacturing">Manufacturing &amp; industrial</h3>
-                    <p>Plant networks, backup power and infrastructure designed to support production systems and continuous operations.</p>
+                    <p>Plant networks, backup power and infrastructure designed to support production systems and continuous operations.</p>
                     <a class="link-line" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss your requirements <span aria-hidden="true">↗</span></a>
                 </article>
 				<article class="industry-detail" id="construction" data-industry-panel="construction" aria-labelledby="industry-title-construction">
@@ -162,7 +162,7 @@ get_header(); ?>
 						<path class="sector-card__accent" d="M41 36h12v11H41z"/>
 					</svg></div>
                     <h3 id="industry-title-construction">Construction &amp; engineering</h3>
-                    <p>Reliable site networks, surveillance and power for project offices, active developments and engineering teams.</p>
+                    <p>Reliable site networks, surveillance and power for project offices, active developments and engineering teams.</p>
                     <a class="link-line" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss your requirements <span aria-hidden="true">↗</span></a>
                 </article>
 				<article class="industry-detail" id="logistics" data-industry-panel="logistics" aria-labelledby="industry-title-logistics">
@@ -175,7 +175,7 @@ get_header(); ?>
 						<path class="sector-card__accent" d="M44 50h8M48 46v8"/>
 					</svg></div>
                     <h3 id="industry-title-logistics">Logistics &amp; transportation</h3>
-                    <p>Connected networks, tracking infrastructure and dependable power across warehouses, distribution sites and transport operations.</p>
+                    <p>Connected networks, tracking infrastructure and dependable power across warehouses, distribution sites and transport operations.</p>
                     <a class="link-line" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss your requirements <span aria-hidden="true">↗</span></a>
                 </article>
 				<article class="industry-detail" id="retail" data-industry-panel="retail" aria-labelledby="industry-title-retail">
@@ -186,7 +186,7 @@ get_header(); ?>
 						<path class="sector-card__accent" d="M18 35h28M18 42h28M18 49h28"/>
 					</svg></div>
                     <h3 id="industry-title-retail">Retail &amp; e-commerce</h3>
-                    <p>Connected stores and cloud infrastructure with security for digital commerce, checkout systems and customer-facing operations.</p>
+                    <p>Connected stores and cloud infrastructure with security for digital commerce, checkout systems and customer-facing operations.</p>
                     <a class="link-line" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss your requirements <span aria-hidden="true">↗</span></a>
                 </article>
 				<article class="industry-detail" id="education" data-industry-panel="education" aria-labelledby="industry-title-education">
@@ -197,7 +197,7 @@ get_header(); ?>
 						<path class="sector-card__accent" d="M12 36l13 3M12 43l13 3M39 39l13-3M39 46l13-3"/>
 					</svg></div>
                     <h3 id="industry-title-education">Education</h3>
-                    <p>Secure campus connectivity, digital learning platforms and efficient power infrastructure for teaching and campus operations.</p>
+                    <p>Secure campus connectivity, digital learning platforms and efficient power infrastructure for teaching and campus operations.</p>
                     <a class="link-line" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Discuss your requirements <span aria-hidden="true">↗</span></a>
                 </article>
             </div>

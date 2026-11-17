@@ -17,7 +17,7 @@
 	<div class="field"><label for="sv">What do you need?</label>
 		<select id="sv" name="service" required aria-describedby="sv-err" data-err="Choose what you need, or pick &ldquo;Not sure, or several&rdquo;.">
 			<option value="" disabled selected>Choose one</option>
-			<option>Power &amp; energy (UPS, batteries, renewables)</option>
+			<option value="Power &amp; energy (UPS, batteries, renewables)">Power (UPS and batteries)</option>
 			<option>Data center design &amp; hosting</option>
 			<option>Cybersecurity &amp; data protection</option>
 			<option>Network &amp; connectivity</option>
@@ -26,7 +26,9 @@
 			<option>Digital transformation</option>
 			<option>Business process automation</option>
 			<option>Microsoft 365 &amp; cloud</option>
-			<option>Not sure, or several</option>
+			<option>Identity &amp; access management (IAM)</option>
+				<option>Endpoint detection &amp; response (EDR)</option>
+				<option>Not sure, or several</option>
 		</select>
 		<p class="field__err" id="sv-err" hidden></p>
 	</div>

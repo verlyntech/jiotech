@@ -12,7 +12,7 @@ get_header(); ?>
 			<nav class="svc-crumb" aria-label="Breadcrumb"><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Company</a><span aria-hidden="true">/</span><span aria-current="page">Careers</span></nav>
 			<h1 id="careers-title">Start your journey.</h1>
 			<p class="svc-hero__lead">Grow your career as we grow.</p>
-			<p class="svc-hero__intro">JIO Technologies works across IT infrastructure, energy systems and cloud. From our base in Abu Dhabi, the team builds smarter, secure and sustainable systems for organisations across the UAE. If you are passionate about technology and committed to doing the job well, we want to hear from you.</p>
+			<p class="svc-hero__intro">JIO Technologies works across IT infrastructure, power systems and cloud. From our base in Abu Dhabi, the team builds smarter, secure and resilient systems for organisations across the UAE. If you are passionate about technology and committed to doing the job well, we want to hear from you.</p>
 			<div class="svc-hero__actions">
 				<!-- Point this at the recruitment portal once JIO confirms its address. -->
 				<a class="btn-arrow" href="https://www.linkedin.com/company/jio-technologies-llc"><span>See open positions</span><span class="btn-arrow__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
@@ -29,7 +29,7 @@ get_header(); ?>
 	<div class="wrap">
 		<div class="svc-head"><p class="label">Who we hire</p><h2 id="careers-who-title">People who like solving real problems.</h2></div>
 		<ol class="svc-cards svc-cards--5">
-			<li><span class="svc-cards__num">01</span><h3>Passionate</h3><p>Curious about technology and energy, and keen to learn how the two fit together.</p></li>
+			<li><span class="svc-cards__num">01</span><h3>Passionate</h3><p>Curious about technology and power, and keen to learn how the two fit together.</p></li>
 			<li><span class="svc-cards__num">02</span><h3>Proactive</h3><p>Problem-solvers who spot the issue before the client does.</p></li>
 			<li><span class="svc-cards__num">03</span><h3>Team players</h3><p>Clear communicators who work well with colleagues and clients.</p></li>
 			<li><span class="svc-cards__num">04</span><h3>Adaptable</h3><p>Comfortable picking up new tools, trends and challenges.</p></li>
@@ -41,7 +41,7 @@ get_header(); ?>
 <section class="svc-fit" aria-labelledby="careers-offer-title">
 	<div class="wrap svc-fit__grid">
 		<figure class="svc-media svc-media--wide svc-media--photo">
-			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/careers-learning-lab.webp" width="1586" height="992" alt="Illustration of an empty training laboratory with networking and low-voltage energy learning benches" loading="lazy" decoding="async">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/careers-learning-lab-power-v2.webp" width="1586" height="992" alt="Illustration of an empty training laboratory with networking and low-voltage power learning benches" loading="lazy" decoding="async">
 		</figure>
 		<div class="svc-fit__copy">
 			<p class="label">What you get</p>

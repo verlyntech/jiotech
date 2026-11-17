@@ -84,3 +84,50 @@ test('GitHub chatbot greeting still uses its checked intent reply', async () => 
   assert.match(data.reply, /power, IT, security and support/);
   assert.ok(data.chips.length);
 });
+
+
+test('IAM and EDR pages render distinct images that resolve through the preview server', async () => {
+  for (const [slug, heading] of [['identity-access-management', 'Identity &amp; access management (IAM)'], ['endpoint-detection-response', 'Endpoint detection &amp; response (EDR)']]) {
+    const response = await fetch(base + '/preview/service-' + slug + '.html');
+    assert.equal(response.status, 200);
+    const html = await response.text();
+    assert.ok(html.includes(heading), slug);
+    assert.doesNotMatch(html, /class="media-placeholder"/);
+    const images = [...html.matchAll(/src="([^" ]*service-(?:iam|edr)-(?:hero|detail)\.webp)"/g)].map(m => m[1]);
+    assert.equal(images.length, 2, slug);
+    assert.equal(new Set(images).size, 2, slug);
+    for (const image of images) {
+      const asset = await fetch(new URL(image, base + '/preview/'));
+      assert.equal(asset.status, 200, image);
+      assert.match(asset.headers.get('content-type'), /^image\/webp/);
+    }
+    assert.doesNotMatch(html, /\{\{|<\?php|src="[^"]*assets\/img\/"/);
+    const services = await (await fetch(base + '/preview/solutions.html')).text();
+    assert.ok(services.includes('href="service-' + slug + '.html"'));
+  }
+});
+
+test('website quote choices match their server allowlist and retain the legacy power value', async () => {
+  const allowed = JSON.parse(await readFile(join(root, 'jio-theme/inc/quote-form-options.json'), 'utf8'));
+  const html = await (await fetch(base + '/preview/index.html')).text();
+  const decode = value => value.replaceAll('&amp;', '&');
+  const choices = [...html.matchAll(/<option\b([^>]*)>(.*?)<\/option>/g)]
+    .filter(m => m[2] !== 'Choose one')
+    .map(m => ({ label: decode(m[2]), value: decode(m[1].match(/value="([^"]*)"/)?.[1] ?? m[2]) }));
+  assert.deepEqual(choices.map(c => c.value), allowed);
+  assert.equal(choices[0].label, 'Power (UPS and batteries)');
+  assert.equal(choices[0].value, 'Power & energy (UPS, batteries, renewables)');
+  for (const label of ['Identity & access management (IAM)', 'Endpoint detection & response (EDR)']) {
+    assert.ok(choices.some(c => c.label === label));
+  }
+});
+
+test('rendered pages offer power without renewable copy or old solar illustrations', async () => {
+  const { readdir } = await import('node:fs/promises');
+  for (const file of (await readdir(join(root, 'preview'))).filter(f => f.endsWith('.html'))) {
+    const html = await readFile(join(root, 'preview', file), 'utf8');
+    const text = html.replace(/<[^>]*>/g, ' ').replaceAll('BPC Energy', 'BPC');
+    assert.doesNotMatch(text, /\b(?:renewable\w*|solar|energy)\b/i, file);
+    assert.doesNotMatch(html, /(?:company-vision-campus|service-power-hero|home-service-power-equipment|service-consulting-detail|service-consulting-hero|careers-learning-lab)\.webp/, file);
+  }
+});

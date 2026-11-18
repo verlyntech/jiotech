@@ -89,6 +89,16 @@
 		log.querySelectorAll('[data-chat-chips]').forEach(function (box) { box.remove(); });
 	}
 
+	function safeChipHref(value) {
+        try {
+            var url = new URL(value, location.origin);
+            if (url.protocol === 'tel:' || url.protocol === 'mailto:') return url.href;
+            if (url.origin === location.origin && /^https?:$/.test(url.protocol)) return url.href;
+            if (url.protocol === 'https:' && /^(?:www\.)?(?:jiotechuae\.com|jiotech\.ae|wa\.me)$/.test(url.hostname) && !url.username && !url.password) return url.href;
+        } catch (e) { /* invalid URL: omit the link */ }
+        return null;
+    }
+
 	function chips(list) {
 		if (!list || !list.length) return;
 		var box = document.createElement('div');
@@ -98,8 +108,10 @@
 			if (!c || !c.label) return;
 			var el;
 			if (c.href) {
+				var href = safeChipHref(c.href);
+				if (!href) return;
 				el = document.createElement('a');
-				el.href = c.href;
+				el.href = href;
 				if (/^https?:/.test(c.href) && c.href.indexOf(location.origin) !== 0) { el.target = '_blank'; el.rel = 'noopener'; }
 			} else {
 				el = document.createElement('button');

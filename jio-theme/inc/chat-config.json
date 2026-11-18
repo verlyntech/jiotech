@@ -1,0 +1,27 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "max_tokens": 1200,
+  "model_token_limits": {
+    "qwen/qwen3.8-27b": 450
+  },
+  "sources": [
+    "front-page.php",
+    "page-solutions.php",
+    "page-industries.php",
+    "page-about.php",
+    "page-faq.php",
+    "page-client-support.php",
+    "page-contact.php",
+    "parts/steps.php",
+    "parts/direct.php",
+    "parts/logo-wall.php",
+    "page-careers.php",
+    "page-partnerships.php",
+    "page-privacy-policy.php",
+    "page-terms-conditions.php"
+  ],
+  "fallback_models": [
+    "openai/gpt-oss-20b",
+    "qwen/qwen3.8-27b"
+  ]
+}

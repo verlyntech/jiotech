@@ -1,7 +1,7 @@
 {
   "company": {
     "name": "JIO Technologies LLC",
-    "what": "An integrated IT and energy solutions company in Abu Dhabi, UAE, serving Dubai, Abu Dhabi and the wider GCC.",
+    "what": "An integrated IT and power solutions company in Abu Dhabi, UAE, serving Dubai, Abu Dhabi and the wider GCC.",
     "positioning": "One supplier for both IT and power, so there is one contract and one support number instead of separate IT and power contractors.",
     "office": "Abdullah Bin Darwish Building, Office No. 304, Sheikh Zayed Bin Sultan St, Al Zahiyah, E15, Abu Dhabi, United Arab Emirates",
     "phone": "+971 55 344 0144",
@@ -21,7 +21,7 @@
       "path": "/solutions/"
     },
     {
-      "name": "Power & energy solutions",
+      "name": "Power solutions",
       "path": "/solutions/power-energy-solutions/"
     },
     {
@@ -87,13 +87,21 @@
     {
       "name": "Client support",
       "path": "/client-support/"
+    },
+    {
+      "name": "Identity & access management (IAM)",
+      "path": "/solutions/identity-access-management/"
+    },
+    {
+      "name": "Endpoint detection & response (EDR)",
+      "path": "/solutions/endpoint-detection-response/"
     }
   ],
   "services": [
     {
-      "name": "Power and energy",
-      "summary": "UPS systems, VRLA and lithium-ion batteries, and renewable energy setups, with installation, configuration, preventive maintenance, battery replacement and annual service contracts in Dubai and Abu Dhabi.",
-      "details": "Online UPS conditions power continuously and carries the load through an outage. VRLA batteries are the lower-cost, long-standing choice but shorter-lived in hot rooms. Lithium-ion batteries have a smaller footprint, better heat tolerance and a longer life, at a higher purchase price. Smart infrastructure and sustainability covers measuring and managing power use, IT performance and environmental impact together."
+      "name": "Power",
+      "summary": "UPS systems and VRLA or lithium-ion batteries, with installation, preventive maintenance, replacement and service contracts in Dubai and Abu Dhabi.",
+      "details": "Power backup, battery runtime, power distribution and UPS monitoring are planned around the connected load and operating environment. JIO focuses on dependable power infrastructure."
     },
     {
       "name": "Data center design and hosting",
@@ -138,10 +146,20 @@
     {
       "name": "IT procurement and vendor management",
       "summary": "Networking equipment, servers, storage, UPS units and power distribution units supplied through JIO."
+    },
+    {
+      "name": "Identity & access management (IAM)",
+      "summary": "Bring identities, applications and access policies into one coordinated plan. JIO helps organisations strengthen sign-in, manage user access and connect identity controls with their Microsoft 365, cloud and on-premises environments.",
+      "details": "Identity assessment & design: Review directories, applications, roles and existing access. Define an identity architecture and a phased implementation plan. Single sign-on & multifactor authentication: Simplify access to business applications while strengthening sign-in with SSO and MFA appropriate to your environment. Access policies & least privilege: Plan role-based access, Conditional Access and administrative permissions around business requirements and risk. User lifecycle & access reviews: Coordinate joiner, mover and leaver processes, periodic reviews and documented ownership of access."
+    },
+    {
+      "name": "Endpoint detection & response (EDR)",
+      "summary": "Connect endpoint visibility, detection and response across your business devices. JIO helps plan, deploy and configure EDR around your users, infrastructure and security processes.",
+      "details": "Endpoint readiness & deployment: Review supported devices and operating systems, plan licensing and onboarding, and deploy the selected endpoint security platform. Detection policies & alert visibility: Configure relevant protection and detection policies, prioritise alerts and connect device signals with your security workflow. Investigation & response workflows: Define escalation paths, investigation steps and available containment actions, such as isolating an affected device, within the agreed scope. Tuning, reporting & operational handover: Review coverage, tune policies and document responsibilities so your team understands the service and how to respond."
     }
   ],
   "why_choose": [
-    "20+ years: two decades delivering hybrid IT and energy projects across the UAE.",
+    "20+ years: two decades delivering hybrid IT and power projects across the UAE.",
     "One partner for IT and power: one contract and one support number, instead of separate IT and power contractors.",
     "End-to-end delivery: site survey, design, supply, installation and maintenance, handled by the same team.",
     "Established brands: equipment from 30 manufacturers, including APC, Eaton, Dell, Cisco and Fortinet.",
@@ -151,7 +169,7 @@
     "Government and public sector",
     "Healthcare and medical",
     "Banking and financial services",
-    "Energy and utilities",
+    "power and utilities",
     "Manufacturing and industrial",
     "Construction and engineering",
     "Logistics and transportation",
@@ -173,7 +191,7 @@
       "Organisations buying services: the Services pages and the quote form."
     ],
     "focus_areas": [
-      "Power and energy: APC by Schneider Electric, Eaton, Vertiv, Emerson, BPC Energy.",
+      "Power: APC by Schneider Electric, Eaton, Vertiv, Emerson, BPC Energy.",
       "Servers, storage and edge: Dell Technologies, HPE, Lenovo, Supermicro.",
       "Networking and security: Cisco, HPE Aruba Networking, Fortinet, Huawei, Hikvision.",
       "Virtualisation and cloud: VMware, Microsoft, AWS."
@@ -192,7 +210,7 @@
   "faq": [
     {
       "q": "What services does JIO provide in the UAE?",
-      "a": "Hybrid IT and energy services: managed IT, power backup, cybersecurity, cloud, data center design, networking and technology procurement, in Dubai and Abu Dhabi."
+      "a": "Hybrid IT and power services: managed IT, power backup, cybersecurity, cloud, data center design, networking and technology procurement, in Dubai and Abu Dhabi."
     },
     {
       "q": "Do you support small and large businesses?",
@@ -200,11 +218,11 @@
     },
     {
       "q": "Which industries do you serve?",
-      "a": "Manufacturing, construction, healthcare, finance, retail, education, logistics, energy and utilities, and government."
+      "a": "Manufacturing, construction, healthcare, finance, retail, education, logistics, power and utilities, and government."
     },
     {
       "q": "What is your industry focus?",
-      "a": "Organisations that cannot afford downtime: government and the public sector, healthcare, banking and finance, energy and utilities, and industrial sites. What they share is critical IT that depends on reliable power, which is where one supplier for both helps most."
+      "a": "Organisations that cannot afford downtime: government and the public sector, healthcare, banking and finance, power and utilities, and industrial sites. What they share is critical IT that depends on reliable power, which is where one supplier for both helps most."
     },
     {
       "q": "Do you offer 24/7 technical support?",
@@ -228,11 +246,11 @@
     },
     {
       "q": "Can you supply IT hardware and power equipment?",
-      "a": "Yes: networking equipment, servers, storage, UPS units, power distribution units and energy-efficient hardware."
+      "a": "Yes: networking equipment, servers, storage, UPS units, power distribution units and reliable hardware."
     },
     {
       "q": "What sets JIO apart?",
-      "a": "IT and energy under one roof, end-to-end delivery, fast local support, and a focus on reliability and long-term partnerships."
+      "a": "IT and power under one roof, end-to-end delivery, fast local support, and a focus on reliability and long-term partnerships."
     },
     {
       "q": "How can I contact JIO?",

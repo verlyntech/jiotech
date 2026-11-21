@@ -5,7 +5,6 @@
  * Intent first, response second (design in CHATBOT.md, catalog in inc/intents.json): each message is routed by
  * rules (an answer to the pending quote question, or an exact catalog example) or classified by the model, then
  * the dialogue manager picks the reply: a template, the quote flow, the fallback ladder, or the model's answer.
- * Mirrors preview/serve.mjs.
  *
  * The API key never reaches the browser. Set it in wp-config.php:
  *   define( 'JIO_OPENROUTER_KEY', 'sk-or-...' );

@@ -242,3 +242,9 @@ At 1280px, every section starts and ends on the same pixel as live, and the page
 - Paragraph text in image rows is capped at 493px with 1.65 line height.
 
 All of these are shared classes, so the pages built earlier picked up the fixes automatically. I re-checked Careers afterwards and it still matches exactly.
+
+## Old page templates removed (21 Nov 2026)
+
+With every page now on Elementor, the code-built page templates were deleted from the theme: `front-page.php`, the eleven `page-*.php` files, `template-service.php`, `inc/service-pages.php` and `.json`, `parts/service-page.tpl.html`, `parts/steps.php`, `direct.php`, `location.php`, `partner-logos.php`, and `assets/css/services.css` / `assets/js/services.js`. The static preview built from them (`preview/`, the root `serve.mjs` and `index.html`, `tests/preview-routes.test.mjs` and `.claude/launch.json`) went with them. They remain in git history.
+
+Kept: `header.php`, `footer.php`, `page.php`, `index.php`, `home.php`, `single.php`, `404.php` (blog, 404 and fallback), and the three parts behind the shortcodes (`quote-form`, `support-panel`, `logo-wall`). Checked: all 23 Elementor pages, the blog and the 404 still load without PHP errors.

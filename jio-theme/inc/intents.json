@@ -1,5 +1,5 @@
 {
-  "_about": "Intent catalog for the website assistant (see CHATBOT.md). Read by inc/chatbot.php and preview/serve.mjs. Examples double as exact-match rules: a message that matches one after normalising (lower case, no punctuation) is routed without the model. Add real phrasings from the fallback log here.",
+  "_about": "Intent catalog for the website assistant (see CHATBOT.md). Read by inc/chatbot.php. Examples double as exact-match rules: a message that matches one after normalising (lower case, no punctuation) is routed without the model. Add real phrasings from the fallback log here.",
   "intents": {
     "greeting": {
       "group": "Small talk",

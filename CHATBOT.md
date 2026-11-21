@@ -27,7 +27,6 @@ The browser sends the state back with every message: flow, pending question, fil
 | `jio-theme/inc/intents.json` | Intent catalog, examples, chips, quote slots, fallback and handoff copy |
 | `jio-theme/inc/knowledge.json` | Facts the model may use: company, a map of every page and its path, services, why choose JIO, industries and industry expertise, vendors, partnerships, process, the same 12 questions as the FAQ page, and the `not_confirmed` list it must never claim |
 | `jio-theme/inc/chatbot.php` | WordPress endpoint `/wp-json/jio/v1/chat` |
-| `preview/serve.mjs` | The same engine for the static preview |
 | `jio-theme/assets/js/chat.js` | Widget: renders replies and chips, keeps the state, prefills the quote form |
 
 ## Intent Catalog
@@ -105,7 +104,7 @@ This flow can't make anything up: every question and option comes from `intents.
 
 ## Response Design
 
-- Answers link to the site. A service answer offers **View the service page**, picked from the service the visitor asked about (the `pages` map on the quote form's service question in `intents.json`); it is dropped when no single service was named. Overview, industries and careers or partner answers offer All services, the Industries page, and the Careers and Partnerships pages. In the preview, site paths are turned into the preview's files, so the same buttons work there. When the site gains a page, add it to `pages` in `knowledge.json` and, if it needs a button, to `chips` in `intents.json`.
+- Answers link to the site. A service answer offers **View the service page**, picked from the service the visitor asked about (the `pages` map on the quote form's service question in `intents.json`); it is dropped when no single service was named. Overview, industries and careers or partner answers offer All services, the Industries page, and the Careers and Partnerships pages. When the site gains a page, add it to `pages` in `knowledge.json` and, if it needs a button, to `chips` in `intents.json`.
 
 - The format fits the question. A simple question (yes or no, or a single fact) gets one or two plain sentences. Bullets are only for several items or steps: up to four, about 15 words each. Every reply stays under about 60 words, with the answer first and no closing pleasantries. Fixed replies (contact, support, handoff) are plain sentences. The client asked for short, pointed replies, so this overrides the skill's "acknowledge first" principle for model answers. Templated flow steps do acknowledge ("Got it.").
 - The tone is plain, professional and specific, with no hype, matching the site copy.
@@ -143,11 +142,9 @@ wp option get jio_chat_misses --format=json
 - When a missed topic keeps coming up, add a new intent for it.
 - When an answer is missing, add the fact to `knowledge.json`, but only after JIO confirms it.
 
-The preview server prints one `[chat] intent=… via=…` line per turn instead.
-
 ## Before Launch
 
 - Set `JIO_OPENROUTER_KEY` in `wp-config.php` and rotate the key that was shared in chat.
 - The free tier allows 50 requests a day across all models, and testing alone used it up. Add OpenRouter credits (which raises the limit to 1,000 a day) or switch to a paid model.
 - Test with ten or more real buyers, not the team, and review the first week of logs.
-- The WordPress PHP path has not been run. There is no PHP on the build machine, so only the preview engine has been exercised.
+- The static preview and its copy of the chat engine have been removed, so the WordPress endpoint is now the only one. Test it end to end on Local before launch.

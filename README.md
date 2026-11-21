@@ -1,6 +1,6 @@
 # JIO Technologies website
 
-WordPress theme and a dependency-free local preview for the JIO Technologies LLC website.
+WordPress theme for the JIO Technologies LLC website. The pages themselves are built in Elementor; see [ELEMENTOR-REBUILD.md](ELEMENTOR-REBUILD.md).
 
 ## Current website
 
@@ -17,61 +17,42 @@ Shared responsive spacing keeps sections and cards compact across pages. The ind
 
 Dark mode follows the device colour preference until a visitor uses the header toggle. The explicit choice is saved in the browser and shared across pages and tabs. If browser storage is unavailable, the toggle still works for the current page. Neutral charcoal surfaces, lighter cards and soft white text preserve the content hierarchy; green and blue remain accents on controls, headings and rules. Logos retain their supplied colours on light backings in dark mode.
 
-## Local preview
+## Local site
 
-Requires a current Node.js release (Node.js 22 or newer to run the checks). Run these commands from the repository root:
-
-```sh
-node preview/build.mjs
-node preview/serve.mjs
-```
-
-Open [http://localhost:5173/preview/](http://localhost:5173/preview/). To choose another port, run `node preview/serve.mjs 5174` instead.
-
-For an automatically rebuilt preview, run `node serve.mjs` from the repository root. Otherwise, after editing a template, stylesheet or script, rerun the build command and refresh the browser. The preview renders the PHP templates into HTML without running WordPress. Forms in this static preview are not connected to production submission handlers.
+The site runs in Local at http://jio.local. There is no separate static preview: the old code-built page templates and the preview built from them were removed once every page had been rebuilt in Elementor.
 
 ## Project structure
 
 | Path | Purpose |
 | --- | --- |
 | `jio-theme/` | WordPress theme to install and activate. |
-| `jio-theme/front-page.php` | Homepage content and infrastructure/industry cards. |
-| `jio-theme/page-solutions.php` | Services introduction, five service areas and equipment catalogue. |
-| `jio-theme/page-about.php` | Company page. |
-| `jio-theme/page-industries.php` | Industries page. |
-| `jio-theme/header.php`, `footer.php` | Shared navigation and footer. |
+| `jio-theme/header.php`, `footer.php` | Shared navigation and footer, used around the Elementor pages. |
+| `jio-theme/page.php`, `index.php`, `home.php`, `single.php`, `404.php` | Fallback page, blog and 404 templates (not built in Elementor). |
+| `jio-theme/inc/forms.php` | Quote and support forms, plus the `[jio_quote_form]`, `[jio_support]` and `[jio_logo_wall]` shortcodes used in Elementor. |
+| `jio-theme/inc/elementor-dark.php`, `inc/elementor-speed.php` | Dark mode and page speed for the Elementor pages. |
+| `jio-theme/parts/` | The quote form, support panel and logo wall behind those shortcodes. |
 | `jio-theme/assets/css/main.css` | Shared styles and responsive layouts. |
-| `jio-theme/assets/css/services.css` | Services page styling. |
-| `jio-theme/assets/js/site.js` | Infrastructure interactions, industry arrows and shared page behaviour. |
-| `jio-theme/assets/js/services.js` | Connected service selection, overview panels, keyboard controls and deep links. |
+| `jio-theme/assets/js/site.js` | Industry arrows, logo ribbon and shared page behaviour. |
+| `jio-theme/assets/js/elementor-bridge.js` | Jump links and dark-mode icons on the Elementor pages. |
 | `jio-theme/assets/js/theme.js`, `assets/css/theme.css` | Early theme selection, saved preference, header toggle and dark palette. |
-| `jio-theme/assets/img/` | Logo and website image assets. |
-| `preview/build.mjs` | Generates the website and legal preview HTML pages. |
-| `preview/serve.mjs` | Local preview server. |
+| `jio-theme/assets/img/`, `assets/elementor/` | Logo, photos and the icons used on the Elementor pages. |
 
 ## WordPress installation
 
 1. Copy `jio-theme` into the WordPress installation’s `wp-content/themes/` directory.
-2. Activate **JIO Technologies** in Appearance → Themes.
-3. Use the page slugs `solutions`, `about`, `industries`, `contact`, `client-support`, `faq`, `privacy-policy` and `terms-conditions` so WordPress selects the corresponding templates.
-4. Configure the site’s homepage and verify navigation, contact forms and support integrations in WordPress before deployment.
-
-The static preview does not replace testing in a WordPress/PHP environment.
+2. Install Elementor and activate **JIO Technologies** in Appearance → Themes.
+3. Move the pages across with the database (see the domain note in ELEMENTOR-REBUILD.md), and set Home as the homepage.
+4. Verify navigation, contact forms and support integrations in WordPress before deployment.
 
 ## Content and images
 
-All displayed website photographs and illustrations are people-free. The homepage spotlight uses six service illustrations, including an equipment-only power room and an empty cloud planning workspace. The Services hero uses a generated illustration of integrated IT and power equipment. Industries uses an empty IT operations workspace. Company perspectives show an engineering workshop, an equipment preparation room and a technology campus, with JIO TECH signage preserved in the Mission image. The remaining 22 media frames across the eight service detail pages, Company, Careers and Partnerships each use a different people-free illustration. The set varies equipment close-ups, energy installations, technical planning, automated facilities and workplace architecture. Images are optimised WebP assets with descriptive alternative text and stable responsive frames. Service image files and dimensions are defined in `inc/service-pages.json` and rendered consistently in WordPress and the static preview.
-
-Update the source templates rather than editing generated files in `preview/`. Rebuild the preview after every content change. Vendor logos retain their supplied colours.
+All displayed website photographs and illustrations are people-free. The homepage spotlight uses six service illustrations, including an equipment-only power room and an empty cloud planning workspace. The Services hero uses a generated illustration of integrated IT and power equipment. Industries uses an empty IT operations workspace. Company perspectives show an engineering workshop, an equipment preparation room and a technology campus, with JIO TECH signage preserved in the Mission image. The remaining 22 media frames across the eight service detail pages, Company, Careers and Partnerships each use a different people-free illustration. The set varies equipment close-ups, energy installations, technical planning, automated facilities and workplace architecture. Images are optimised WebP assets with descriptive alternative text and stable responsive frames. Page content and images are edited in Elementor. Vendor logos retain their supplied colours.
 
 ## Checks
 
 ```sh
 node --check jio-theme/assets/js/site.js
-node --check jio-theme/assets/js/services.js
-node --check preview/build.mjs
-node preview/build.mjs
-node --test --test-isolation=none tests/preview-routes.test.mjs
+node --check jio-theme/assets/js/elementor-bridge.js
 git diff --check
 ```
 
@@ -79,15 +60,15 @@ For UI review, check phone, tablet and desktop widths; the header logo; the manu
 
 ## Secrets and backend configuration
 
-Keep API credentials in server-side configuration and out of templates, browser scripts, screenshots and commits. `.env` files are ignored by Git. The preview server is for development review; production should run through the WordPress installation. Chatbot configuration is separate from the website layout changes.
+Keep API credentials in server-side configuration and out of templates, browser scripts, screenshots and commits. `.env` files are ignored by Git. Chatbot configuration is separate from the website layout changes.
 
 ## Final contact and legal pages
 
-`parts/location.php` is shared by Home and Contact. The office address is Abdullah Bin Darwish Building, Office No. 304, Sheikh Zayed Bin Sultan St, Al Zahiyah, E15, Abu Dhabi. The embedded map and directions link use the same address. The lazy-loaded Google map appears automatically as its frame approaches the viewport; the directions link works without JavaScript. The same directions destination appears in the footer and contact details.
+Home and Contact share the Abu Dhabi location card. The office address is Abdullah Bin Darwish Building, Office No. 304, Sheikh Zayed Bin Sultan St, Al Zahiyah, E15, Abu Dhabi. The embedded map and directions link use the same address. The same directions destination appears in the footer and contact details.
 
-Privacy and terms content lives in `page-privacy-policy.php` and `page-terms-conditions.php`. Create or retain published WordPress pages with those exact slugs and verify the footer and form consent links after deployment. Review these initial policy texts against actual business retention, hosting and supplier arrangements before publication; they are website copy, not a legal compliance certification.
+Privacy and terms content lives in the Elementor pages with the slugs `privacy-policy` and `terms-conditions`. Verify the footer and form consent links after deployment. Review these initial policy texts against actual business retention, hosting and supplier arrangements before publication; they are website copy, not a legal compliance certification.
 
-The chatbot front end, WordPress backend and knowledge content use the GitHub version. The preview retains that dialogue engine with a public-file allowlist and a loopback-only listener; local chatbot rewrite files are unused. Credentials remain server-side and ignored by Git.
+The chatbot front end, WordPress backend and knowledge content use the GitHub version. Credentials remain server-side and ignored by Git.
 
 The privacy-rights wording was checked against the UAE Government’s overview: https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws. Review applicable legal requirements and the company’s actual practices before publishing.
 
@@ -105,7 +86,7 @@ The Mission tab uses `assets/img/company-mission-office-unbranded.webp`, a 1402 
 
 The Partnerships page is available from both Company menus and includes 12 named technology brands with logos, practical integration roles and relevant service links. It uses styled image spaces for future partnership and project photographs. It does not assert certification levels or manufacturer authorisation tiers.
 
-IAM and EDR are separate entries in `inc/service-pages.json`, linked from navigation, the Services page and the cybersecurity page. Create published child pages under the WordPress `solutions` page with slugs `identity-access-management` and `endpoint-detection-response`, as with the existing service-page setup. The preview generates and serves both routes directly. IAM and EDR each use two distinct, people-free illustrations. Optional media blocks show styled placeholders when a service has no supplied image. The website quote form includes both new services. Its server allowlist is maintained in `inc/quote-form-options.json`; the Power choice retains its legacy submitted value so existing assistant prefills keep working.
+IAM and EDR are separate service pages under `solutions` (slugs `identity-access-management` and `endpoint-detection-response`), linked from navigation, the Services page and the cybersecurity page. IAM and EDR each use two distinct, people-free illustrations. Optional media blocks show styled placeholders when a service has no supplied image. The website quote form includes both new services. Its server allowlist is maintained in `inc/quote-form-options.json`; the Power choice retains its legacy submitted value so existing assistant prefills keep working.
 
 Visible positioning now uses IT and power. Renewable-energy offerings and solar imagery have been removed from the rendered site, including the Power page, homepage power media and Company Vision image. The original `/solutions/power-energy-solutions/` URL and the Industries `#energy` fragment are preserved for existing links. The BPC Energy brand retains its actual name. The GitHub chatbot implementation and catalogues are retained unchanged. Local chatbot catalogue edits and alternate chatbot files are excluded from this website commit.
 

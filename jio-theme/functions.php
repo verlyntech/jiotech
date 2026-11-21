@@ -30,6 +30,9 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'jio-theme', get_template_directory_uri() . '/assets/css/theme.css', array( 'jio-main' ), $ver . '.' . filemtime( get_template_directory() . '/assets/css/theme.css' ) );
 	wp_enqueue_script( 'jio-chat', get_template_directory_uri() . '/assets/js/chat.js', array(), $ver, array( 'strategy' => 'defer' ) );
 	wp_enqueue_script( 'jio-site', get_template_directory_uri() . '/assets/js/site.js', array(), $ver . '.' . filemtime( get_template_directory() . '/assets/js/site.js' ), array( 'strategy' => 'defer' ) );
+	if ( is_singular() && get_post_meta( get_queried_object_id(), '_elementor_edit_mode', true ) === 'builder' ) {
+		wp_enqueue_script( 'jio-elementor-bridge', get_template_directory_uri() . '/assets/js/elementor-bridge.js', array(), $ver . '.' . filemtime( get_template_directory() . '/assets/js/elementor-bridge.js' ), array( 'strategy' => 'defer' ) );
+	}
 } );
 
 /** Website assistant (server-side proxy to the model). */
@@ -40,3 +43,5 @@ require_once get_template_directory() . '/inc/service-pages.php';
 
 /** Quote and support forms, emailed to the sales address. */
 require_once get_template_directory() . '/inc/forms.php';
+require_once get_template_directory() . '/inc/elementor-dark.php';
+require_once get_template_directory() . '/inc/elementor-speed.php';

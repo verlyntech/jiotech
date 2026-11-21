@@ -178,3 +178,37 @@ function jio_form_notice( $form ) {
 	$key = substr( $status, strlen( $prefix ) );
 	return isset( $text[ $key ] ) ? $text[ $key ] : '';
 }
+
+// Lets page builders (Elementor's Shortcode widget) place the theme's working quote form: [jio_quote_form].
+add_shortcode(
+	'jio_quote_form',
+	function () {
+		ob_start();
+		get_template_part( 'parts/quote-form' );
+		return ob_get_clean();
+	}
+);
+
+// The support routing panel and form together (they share a script): [jio_support].
+add_shortcode(
+	'jio_support',
+	function () {
+		ob_start();
+		echo '<div class="support__grid">';
+		get_template_part( 'parts/support-panel' );
+		echo '</div>';
+		return ob_get_clean();
+	}
+);
+
+// The scrolling manufacturer ribbon (site.js duplicates the logos for the loop): [jio_logo_wall].
+add_shortcode(
+	'jio_logo_wall',
+	function () {
+		ob_start();
+		echo '<div class="vendor-strip" data-vendor-strip>';
+		get_template_part( 'parts/logo-wall' );
+		echo '</div>';
+		return ob_get_clean();
+	}
+);

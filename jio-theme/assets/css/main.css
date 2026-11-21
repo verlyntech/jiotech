@@ -345,6 +345,9 @@ section { padding-block: var(--section-space); }
 .industries__rail { --industry-gap: 1.25rem; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; scroll-padding-inline: 2px; padding: 2px; margin: -2px; scrollbar-width: thin; }
 .industries__rail[data-ready] { scrollbar-width: none; }
 .industries__rail[data-ready]::-webkit-scrollbar { display: none; }
+.jio-industry-rail[data-ready] { scrollbar-width: none; }
+.jio-industry-rail[data-ready]::-webkit-scrollbar { display: none; }
+.jio-industry-prev:disabled, .jio-industry-next:disabled { opacity: .3; cursor: default; background: transparent; color: var(--ink); }
 .industries__track { list-style: none; margin: 0; padding: 0; display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 2 * var(--industry-gap)) / 3); gap: var(--industry-gap); }
 .ind-card { min-width: 0; scroll-snap-align: start; }
 .ind-card > a { position: relative; height: 100%; min-height: 16rem; display: flex; flex-direction: column; gap: 1rem; padding: 2.9rem 1.5rem 1.5rem; border: 1px solid var(--rule); background: var(--white); text-decoration: none; transition: border-color .25s, background-color .25s; }
@@ -684,7 +687,7 @@ section { padding-block: var(--section-space); }
 
 /* ---------- footer: Wise dark CTA card above a white teenage-engineering footer ---------- */
 .foot__cta { background: var(--night); }
-body:has(#quote) .foot__cta { display: none; }
+body:has(#quote) .foot__cta, body:has(#quote-form) .foot__cta, body:has(.jio-no-foot-cta) .foot__cta { display: none; }
 .foot__cta-row { display: flex; justify-content: space-between; align-items: end; gap: 2rem; flex-wrap: wrap; padding-block: var(--section-space); }
 .foot__cta p { font-weight: 700; font-size: 25px; line-height: .98; letter-spacing: -.03em; color: var(--on-night); max-width: 20ch; }
 .foot__cta span { color: var(--green); }

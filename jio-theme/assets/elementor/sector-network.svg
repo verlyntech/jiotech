@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230" width="360" height="230" fill="none" stroke-width="1.5">
+<g stroke="#2c3731"><path d="M50 50h60v65h45M310 50h-60v65h-45M50 180h60v-65h45M310 180h-60v-65h-45"/></g>
+<g stroke="#4cbb17" stroke-width="2.5" stroke-dasharray="12 158"><path d="M50 50h60v65h45M310 50h-60v65h-45"/><animate attributeName="stroke-dashoffset" from="0" to="-170" dur="4s" repeatCount="indefinite"/></g>
+<g stroke="#5f9bc6" stroke-width="2.5" stroke-dasharray="12 158"><path d="M50 180h60v-65h45M310 180h-60v-65h-45"/><animate attributeName="stroke-dashoffset" from="-85" to="-255" dur="4s" repeatCount="indefinite"/></g>
+<g fill="#18211c" stroke="#a9b3ad"><path d="M25 25h50v50H25zM285 25h50v50h-50zM25 155h50v50H25zM285 155h50v50h-50z"/><path d="M36 37h28v9H36zM36 53h28v9H36zM296 40h28v20h-28zM303 32h14M296 49h28M36 171h28v18H36zM44 163v8M56 163v8M296 170h28v20h-28zM302 177h16M302 183h10"/></g>
+<g transform="translate(180 115)"><rect x="-36" y="-36" width="72" height="72" stroke="#4cbb17" opacity=".25"><animate attributeName="opacity" values=".25;.7;.25" dur="4s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="1;1.15;1" dur="4s" repeatCount="indefinite"/></rect></g>
+<rect x="150" y="85" width="60" height="60" fill="#18211c" stroke="#4cbb17"/>
+<path stroke="#ffffff" d="M167 128v-26h26v26M162 128h36M173 108h4M183 108h4M173 115h4M183 115h4M178 128v-7h6v7"/>
+<text x="180" y="174" text-anchor="middle" fill="#a9b3ad" stroke="none" font-family="Source Sans 3, sans-serif" font-weight="600" font-size="14" letter-spacing=".7">YOUR BUSINESS</text>
+</svg>

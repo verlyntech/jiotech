@@ -25,6 +25,8 @@ html[data-theme="dark"] {
 	--surface-band: #1b1e21;
 	--surface-raised: #2d3237;
 }
+/* Elementor's global colour variables (the same palette under jio- names) follow the theme into dark mode. */
+html[data-theme="dark"] { --jio-white: #23272b; --jio-fog: #2d3237; --jio-green-tint: #1b1e21; --jio-blue-tint: #1b1e21; --jio-rule: #424a52; --jio-ink: #f1f2f3; --jio-ink-2: #d3d6d9; --jio-mute: #aeb5bc; --jio-night: #101214; }
 
 /* Keep sections, cards and image spaces visually separate rather than one dark fill. */
 [data-theme="dark"] .site-head,

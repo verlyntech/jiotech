@@ -178,13 +178,13 @@
 	}
 
 	// Homepage industries: one row, moved one card at a time by the arrows.
-	var industryRail = document.querySelector('[data-industry-rail]');
+	var industryRail = document.querySelector('[data-industry-rail], .jio-industry-rail'); // .jio-* = Elementor build
 	if (industryRail) {
-		var industryCards = industryRail.querySelectorAll('.ind-card');
-		var industryPrev = document.querySelector('[data-industry-prev]');
-		var industryNext = document.querySelector('[data-industry-next]');
-		var industryPosition = document.querySelector('[data-industry-position]');
-		var industryStep = function () { return industryCards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(industryRail.querySelector('.industries__track')).columnGap); };
+		var industryCards = industryRail.querySelectorAll('.ind-card, .jio-hind-card');
+		var industryPrev = document.querySelector('[data-industry-prev], .jio-industry-prev');
+		var industryNext = document.querySelector('[data-industry-next], .jio-industry-next');
+		var industryPosition = document.querySelector('[data-industry-position], .jio-industry-position');
+		var industryStep = function () { return industryCards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(industryRail.querySelector('.industries__track') || industryRail).columnGap); };
 		var syncIndustries = function () {
 			var step = industryStep();
 			var visible = Math.max(1, Math.round(industryRail.clientWidth / step));
@@ -207,7 +207,7 @@
 		industryRail.addEventListener('scroll', syncIndustries, { passive: true });
 		window.addEventListener('resize', syncIndustries);
 		industryRail.setAttribute('data-ready', '');
-		document.querySelector('[data-industry-controls]').hidden = false;
+		document.querySelector('[data-industry-controls], .jio-industry-controls').hidden = false;
 		syncIndustries();
 	}
 

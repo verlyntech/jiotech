@@ -283,3 +283,7 @@ Fix: the Services hero photo's corner brackets hugged the photo edge (56px, 2px,
 - Company copy (a384f51): the Beginnings, Mission and Vision paragraphs and the culture text were copied into the Elementor Company page.
 - Logo ribbon spacing, Brother crop and VMware grey (a384f51, 44ceadf): kept; they style the theme's logo ribbon.
 - Homepage hero photo, service hub and hero alignment (a384f51, 44ceadf, 0be6fd8): not used; the Elementor homepage keeps the office hero. Their template and images were removed; their CSS only targets the removed templates.
+
+## Chatbot request size (22 Nov 2026)
+
+Groq's free tier gives each model 8,000 tokens a minute and 200,000 a day (confirmed from Groq's rate-limit headers for this key). A question used about 5,500 tokens, so a second quick question hit HTTP 429 on all three models. The prompt now sends two page excerpts of up to 1,100 characters (was four of 2,200) and only the name and one-line summary of each service: about 3,600 tokens a question (measured), roughly two per minute per model. No further Groq models could be added: this key's only other text models are `gpt-oss-safeguard-20b` (2,000 tokens a minute, smaller than one request) and `allam-2-7b` (403). Checked: four questions back to back all answered; one 429 was absorbed by the failover; IAM, UPS, server room and CCTV answers match the pages.

@@ -110,7 +110,10 @@ function jio_chat_system_prompt( $state, $messages = array() ) {
 	$lines[] = '- Do not ask for personal, financial or government ID details. If a visitor shares them, tell them not to, and that they should use the quote form or call.';
 	$lines[] = '';
 	$lines[] = 'FACTS:';
-	$lines[] = wp_json_encode( array_intersect_key( jio_chat_json( 'knowledge.json' ), array_flip( array( 'company', 'services', 'process', 'not_confirmed' ) ) ), JSON_UNESCAPED_UNICODE );
+	$facts = array_intersect_key( jio_chat_json( 'knowledge.json' ), array_flip( array( 'company', 'services', 'process', 'not_confirmed' ) ) );
+	// Service names and one-line summaries only: the page excerpts below carry the detail, and a smaller prompt fits more questions into the free tier.
+	$facts['services'] = array_map( function ( $s ) { return array_intersect_key( $s, array_flip( array( 'name', 'summary' ) ) ); }, $facts['services'] );
+	$lines[] = wp_json_encode( $facts, JSON_UNESCAPED_UNICODE );
 	return implode( "\n", $lines ) . "\n\n" . jio_chat_website_context( $messages );
 }
 

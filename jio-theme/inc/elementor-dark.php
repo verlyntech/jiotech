@@ -16,8 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 function jio_elementor_dark_map() {
 	return array(
 		'text'   => array( '14,21,18' => '#f1f2f3', '23,37,27' => '#f1f2f3', '54,64,59' => '#d3d6d9', '91,101,96' => '#aeb5bc', '75,100,80' => '#aeb5bc', '88,107,92' => '#aeb5bc', '169,179,173' => '#aeb5bc' ),
-		'bg'     => array( '255,255,255' => '#23272b', '244,246,244' => '#2d3237', '237,248,232' => '#1b1e21', '236,243,249' => '#1b1e21', '14,21,18' => '#101214' ),
-		'border' => array( '219,224,220' => '#424a52', '164,187,164' => '#424a52', '44,55,49' => '#384047', '14,21,18' => '#f1f2f3', '54,64,59' => '#d3d6d9' ),
+		'bg'     => array( '255,255,255' => '#23272b', '244,246,244' => '#2d3237', '237,248,232' => '#1b1e21', '237,246,236' => '#1b1e21', '4,71,21' => '#4cbb17', '236,243,249' => '#1b1e21', '14,21,18' => '#101214' ),
+		'border' => array( '219,224,220' => '#424a52', '207,220,205' => '#424a52', '4,71,21' => '#4cbb17', '164,187,164' => '#424a52', '44,55,49' => '#384047', '14,21,18' => '#f1f2f3', '54,64,59' => '#d3d6d9' ),
 	);
 }
 
@@ -110,7 +110,7 @@ add_filter(
 		if ( ! is_readable( $file ) ) {
 			return $tag;
 		}
-		$cache_key = 'jio_ed_' . md5( $file . filemtime( $file ) . filesize( $file ) );
+		$cache_key = 'jio_ed_' . md5( $file . filemtime( $file ) . filesize( $file ) . wp_json_encode( jio_elementor_dark_map() ) ); // The map is in the key, so editing it refreshes the cache.
 		$dark      = get_transient( $cache_key );
 		if ( false === $dark ) {
 			$dark = jio_elementor_dark_css( (string) file_get_contents( $file ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- local file.

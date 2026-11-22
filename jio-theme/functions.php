@@ -38,3 +38,4 @@ require_once get_template_directory() . '/inc/chatbot.php';
 require_once get_template_directory() . '/inc/forms.php';
 require_once get_template_directory() . '/inc/elementor-dark.php';
 require_once get_template_directory() . '/inc/elementor-speed.php';
+require_once get_template_directory() . '/inc/seo.php';

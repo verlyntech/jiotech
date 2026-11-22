@@ -1312,3 +1312,11 @@ h1, h2, h3 { font-family: var(--display); }
 
 /* A concise supporting sentence gives each company chapter the same reading rhythm. */
 .company-perspectives__text--addition { margin-top: .9rem; }
+
+/* Home hero (Elementor): the green words in the headline. */
+.jio-hero-title span { color: #0f6a14; }
+html[data-theme="dark"] .jio-hero-title span { color: #6ccf3f; }
+/* Dark mode swaps in a dark version of the hero art (dark panel, same green curve, the office still lit). */
+html[data-theme="dark"] .jio-hero-bg { background: url(../img/home-hero-v5-dark.webp) 0% 50% / cover no-repeat; }
+html[data-theme="dark"] .jio-hero-bg img { visibility: hidden; }
+@media (max-width: 1024px) { html[data-theme="dark"] .jio-hero-bg { background-position: 80% 50%; } }

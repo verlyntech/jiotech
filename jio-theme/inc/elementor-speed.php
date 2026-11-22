@@ -28,7 +28,12 @@ function jio_lazy_load_images( $html, $eager = 4 ) {
 add_filter(
 	'the_content',
 	static function ( $html ) {
-		return 'builder' === get_post_meta( get_the_ID(), '_elementor_edit_mode', true ) ? jio_lazy_load_images( $html ) : $html;
+		if ( 'builder' !== get_post_meta( get_the_ID(), '_elementor_edit_mode', true ) ) {
+			return $html;
+		}
+		$html = jio_lazy_load_images( $html );
+		// The page's main landmark and the header's "Skip to content" (#main) target, as the old templates had.
+		return in_the_loop() && is_main_query() ? '<main id="main">' . $html . '</main>' : $html;
 	},
 	20 // After Elementor has put the page into the content.
 );

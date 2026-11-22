@@ -55,4 +55,14 @@
 		swapIcons();
 		new MutationObserver(swapIcons).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 	}
+
+	// 3. Home hero: fetch the dark-mode background once the page has loaded, so the first switch to dark mode doesn't blink.
+	var heroImg = document.querySelector('.jio-hero-bg img');
+	if (heroImg) {
+		window.addEventListener('load', function () {
+			var bg = getComputedStyle(document.documentElement).getPropertyValue('--jio-hero-dark').trim().replace(/^url\(["']?|["']?\)$/g, '');
+			var sheet = document.querySelector('link[href*="/assets/css/main.css"]');
+			if (bg && sheet) new Image().src = new URL(bg, sheet.href).href; // The path in the variable is relative to main.css.
+		});
+	}
 })();

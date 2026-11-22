@@ -4,7 +4,7 @@ WordPress theme for the JIO Technologies LLC website. The pages themselves are b
 
 ## Current website
 
-- **Home:** a full-width pale green hero background placeholder with the existing enquiry links and statistics, a six-service spotlight with selectable overviews, six service illustrations and keyboard navigation, a continuous horizontal manufacturer ribbon below the compact hero (familiar brands first, full-colour logos visible on the first screen and reduced-motion support), and a horizontal industry carousel with previous/next arrows and green corner markers.
+- **Home:** a realistic, people-free AI-generated IT workspace photograph representing all six services, as a full-width green-shaded hero background with existing enquiry links and statistics, a six-service spotlight with selectable overviews, six service illustrations and keyboard navigation, a continuous horizontal manufacturer ribbon below the compact hero (familiar brands first, full-colour logos visible on the first screen and reduced-motion support), and a horizontal industry carousel with previous/next arrows and green corner markers.
 - **Services:** a connected diagram for five service areas, with animated icons, a concise overview on the left, keyboard selection and enquiry links. A pale green map canvas with white animated connectors over green tracks joins fully bordered service boxes: white in light mode and charcoal in dark mode, with colour accents identifying the selected service. The equipment catalogue remains below.
 - **Company:** the Three perspectives design: selectable Beginnings, Mission and Vision tabs, matching people-free, unbranded illustrations and an additional supporting sentence in each chapter, keyboard navigation and direct chapter links, plus icons for the existing company values.
 - **Industries:** nine static industry icons arranged around a circular selector, with the selected sector's overview, capabilities and enquiry link in a larger adjacent panel. Supports keyboard selection and direct sector links.
@@ -19,7 +19,7 @@ Dark mode follows the device colour preference until a visitor uses the header t
 
 ## Local site
 
-The site runs in Local at http://jio.local. There is no separate static preview: the old code-built page templates and the preview built from them were removed once every page had been rebuilt in Elementor.
+The site runs in Local at http://jio.local. There is no separate static preview of the pages: the old code-built page templates and the preview built from them were removed once every page had been rebuilt in Elementor.
 
 ## Project structure
 
@@ -46,7 +46,7 @@ The site runs in Local at http://jio.local. There is no separate static preview:
 
 ## Content and images
 
-All displayed website photographs and illustrations are people-free. The homepage spotlight uses six service illustrations, including an equipment-only power room and an empty cloud planning workspace. The Services hero uses a generated illustration of integrated IT and power equipment. Industries uses an empty IT operations workspace. Company perspectives show an engineering workshop, an equipment preparation room and a technology campus, with JIO TECH signage preserved in the Mission image. The remaining 22 media frames across the eight service detail pages, Company, Careers and Partnerships each use a different people-free illustration. The set varies equipment close-ups, energy installations, technical planning, automated facilities and workplace architecture. Images are optimised WebP assets with descriptive alternative text and stable responsive frames. Page content and images are edited in Elementor. Vendor logos retain their supplied colours.
+All displayed website photographs and illustrations are people-free. The homepage spotlight uses six service illustrations, including an equipment-only power room and an empty cloud planning workspace. The Services hero uses a generated illustration of integrated IT and power equipment. Industries uses an empty IT operations workspace. Company perspectives show an engineering workshop, an equipment preparation room and a technology campus, with an unbranded Mission office image. The remaining 22 media frames across the eight service detail pages, Company, Careers and Partnerships each use a different people-free illustration. The set varies equipment close-ups, energy installations, technical planning, automated facilities and workplace architecture. Images are optimised WebP assets with descriptive alternative text and stable responsive frames. Page content and images are edited in Elementor. Vendor logos retain their supplied colours.
 
 ## Checks
 
@@ -68,7 +68,7 @@ Home and Contact share the Abu Dhabi location card. The office address is Abdull
 
 Privacy and terms content lives in the Elementor pages with the slugs `privacy-policy` and `terms-conditions`. Verify the footer and form consent links after deployment. Review these initial policy texts against actual business retention, hosting and supplier arrangements before publication; they are website copy, not a legal compliance certification.
 
-The chatbot front end, WordPress backend and knowledge content use the GitHub version. Credentials remain server-side and ignored by Git.
+The chatbot retains its intent router, quick replies, navigation and quote/form flow, with Groq providing model answers through a backend-only proxy. Current public website excerpts ground replies; shared refusal rules, strict structured output and validated links protect the dialogue. `GROQ_API_KEY` stays private and ignored by Git. See `CHAT_SETUP.md` for WordPress deployment and validation.
 
 The privacy-rights wording was checked against the UAE Government’s overview: https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws. Review applicable legal requirements and the company’s actual practices before publishing.
 
@@ -78,7 +78,7 @@ The active repository is https://github.com/verlyntech/jiotech. Use `git pull --
 
 ## Homepage positioning and Mission image
 
-The homepage comparison describes AI-ready infrastructure, cybersecurity, business process automation and managed IT, with links to the relevant service pages. Its manufacturer ribbon excludes Hikvision and the battery brands Amaron and SacredSun, retains the other original supplied brand marks, and gives every logo an equal-width slot. The footer service list starts with Digital transformation. The homepage uses a styled full-background image placeholder; the storefront illustrations are not displayed.
+The homepage comparison describes AI-ready infrastructure, cybersecurity, business process automation and managed IT, with links to the relevant service pages. Its manufacturer ribbon excludes Hikvision and the battery brands Amaron and SacredSun, retains the other original supplied brand marks, and uses an equal edge-to-edge gap between naturally sized logos, including the looping seam. Brother is displayed as a cropped wordmark without its tagline. The footer service list starts with Digital transformation. The homepage uses `parts/home-service-hub.php` for one responsive AI-generated photograph of a natural IT solutions office. Network equipment, security monitoring, cloud planning, server racks, a support workstation and UPS cabinets represent the six services without logos, people, service labels or infographic elements. Optimised panoramic WebP sizes fill the hero at every breakpoint, with green shading behind the page copy. The hero reserves the manufacturer ribbon height, so its moving logos are visible directly below the background on the initial screen.
 
 The Mission tab uses `assets/img/company-mission-office-unbranded.webp`, a 1402 × 1122 office illustration with the wall logo removed. The Services hero similarly uses `assets/img/services-hero-infrastructure-unbranded.webp` without the wall sign. Both were edited using the built-in image generator; original images and edit prompts are retained locally in `output/imagegen/unbranded-scenes/`. These are illustrations, not photographs of actual JIO premises.
 
@@ -88,7 +88,7 @@ The Partnerships page is available from both Company menus and includes 12 named
 
 IAM and EDR are separate service pages under `solutions` (slugs `identity-access-management` and `endpoint-detection-response`), linked from navigation, the Services page and the cybersecurity page. IAM and EDR each use two distinct, people-free illustrations. Optional media blocks show styled placeholders when a service has no supplied image. The website quote form includes both new services. Its server allowlist is maintained in `inc/quote-form-options.json`; the Power choice retains its legacy submitted value so existing assistant prefills keep working.
 
-Visible positioning now uses IT and power. Renewable-energy offerings and solar imagery have been removed from the rendered site, including the Power page, homepage power media and Company Vision image. The original `/solutions/power-energy-solutions/` URL and the Industries `#energy` fragment are preserved for existing links. The BPC Energy brand retains its actual name. The GitHub chatbot implementation and catalogues are retained unchanged. Local chatbot catalogue edits and alternate chatbot files are excluded from this website commit.
+Visible positioning now uses IT and power. Renewable-energy offerings and solar imagery have been removed from the rendered site, including the Power page, homepage power media and Company Vision image. The original `/solutions/power-energy-solutions/` URL and the Industries `#energy` fragment are preserved for existing links. The BPC Energy brand retains its actual name. The earlier website commit retained the GitHub chatbot. The subsequent Groq integration uses the current catalogues and preserves its existing visitor flows; secrets remain excluded from Git.
 
 Current optimised replacement assets are stored in `jio-theme/assets/img/`: `company-mission-office-unbranded.webp`, `services-hero-infrastructure-unbranded.webp`, `company-vision-campus-v2.webp`, `service-power-backup-v2.webp`, `home-service-power-v2.webp`, `service-consulting-power-v2.webp`, `service-consulting-planning-v2.webp`, `careers-learning-lab-power-v2.webp`, and the four `service-iam-*` / `service-edr-*` images. They were generated or edited with the built-in image generator; original PNGs and prompts are retained locally in the corresponding `output/imagegen/` folders. They are illustrations rather than photographs of JIO premises or completed projects.
 

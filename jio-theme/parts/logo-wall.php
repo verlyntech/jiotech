@@ -18,7 +18,7 @@
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/fortinet.svg" width="159" height="18" alt="Fortinet" style="--h:18px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/huawei.png" width="114" height="25" alt="Huawei" style="--h:25px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/epson.png" width="104" height="27" alt="Epson" style="--h:27px" loading="eager" decoding="async"></li>
-			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/brother.png" width="84" height="34" alt="Brother" style="--h:34px" loading="eager" decoding="async"></li>
+			<li><img class="vendor-logo--brother" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/brother.png" width="318" height="74" alt="Brother" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/vmware.png" width="138" height="21" alt="VMware" style="--h:21px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/aruba.svg" width="115" height="26" alt="HPE Aruba Networking" style="--h:26px" loading="eager" decoding="async"></li>
 			<li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/logos/vertiv.svg" width="109" height="27" alt="Vertiv" style="--h:27px" loading="eager" decoding="async"></li>

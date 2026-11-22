@@ -2,7 +2,7 @@
 
 The website assistant for jiotechuae.com answers enterprise and government buyers' questions about JIO's power and IT services and turns interest into a filled-in quote form. It follows the `cs-chatbot-design` skill (`.claude/skills/cs-chatbot-design/SKILL.md`): intent first, response second.
 
-**Pipeline:** visitor message → rules → model (only if no rule matched) → dialogue manager → reply and quick replies.
+**Pipeline:** bounded visitor message → safety/stop and approved-navigation checks → current public website context → visitor message → rules → model (only if no rule matched) → dialogue manager → reply and quick replies.
 
 1. **Rules (no model call, about 10 ms).**
    - If a quote question is pending and the message answers it (one of the options, "Skip", or free text for the size), the answer fills that slot.
@@ -14,7 +14,7 @@ The website assistant for jiotechuae.com answers enterprise and government buyer
    - An exact example match outranks the model's intent guess.
 3. **Dialogue manager.** Each intent has a handler:
    - `template`: a fixed, verified reply, filled in with contact details from the knowledge file.
-   - `model`: the model's answer, grounded in `knowledge.json`.
+   - `model`: the model's answer, grounded in current public website content and `knowledge.json`.
    - `quote`: slot filling.
    - `fallback`: the miss ladder described under Fallback Strategy.
 
@@ -144,7 +144,11 @@ wp option get jio_chat_misses --format=json
 
 ## Before Launch
 
-- Set `JIO_OPENROUTER_KEY` in `wp-config.php` and rotate the key that was shared in chat.
-- The free tier allows 50 requests a day across all models, and testing alone used it up. Add OpenRouter credits (which raises the limit to 1,000 a day) or switch to a paid model.
+- Configure `GROQ_API_KEY` privately on the server. See `CHAT_SETUP.md` for the private `.env` loader, shared policy and Groq-only fallback.
+- Groq account and model rate limits apply. The assistant keeps its contact fallback if all configured answer models are unavailable.
 - Test with ten or more real buyers, not the team, and review the first week of logs.
-- The static preview and its copy of the chat engine have been removed, so the WordPress endpoint is now the only one. Test it end to end on Local before launch.
+- The WordPress endpoint answered a test message on Local on 22 Nov 2026, before the Groq migration was merged. Test the Groq version end to end on Local before launch.
+
+## Groq integration
+
+Provider configuration and deployment are documented in `CHAT_SETUP.md`. Groq strict structured output preserves the original intent/slot dialogue contract. Unsafe and stop intents clear the pending quote; unrelated requests use a controlled JIO redirect. Approved navigation, all eleven service links, quote prefill, WhatsApp and question-preserving scrolling remain available.

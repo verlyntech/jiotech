@@ -182,4 +182,4 @@ html[data-theme="dark"] { --jio-white: #23272b; --jio-fog: #2d3237; --jio-green-
 [data-theme="dark"] .service-node.is-active svg { stroke: var(--node-accent); }
 
 /* Preserve VMware grey rather than tinting the wordmark with the ribbon. */
-[data-theme="dark"] img[src*="/logos/vmware"] { filter: brightness(0) invert(.42); opacity: 1; background: #f4f6f4; }
+[data-theme="dark"] img[src*="/logos/vmware"] { filter: brightness(0) invert(1); opacity: .92; background: none; } /* white like the other logos in dark mode */

@@ -240,8 +240,11 @@ section { padding-block: var(--section-space); }
 .vendor-stream__logos { --vendor-gap: 3rem; display: flex; align-items: center; gap: var(--vendor-gap); flex: none; list-style: none; margin: 0; padding: 0 calc(var(--vendor-gap) / 2); }
 .vendor-stream__logos li { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; width: auto; height: 3rem; padding: 0; }
 .vendor-stream__logos img { display: block; flex: none; width: auto; height: var(--h, 32px); max-width: none; max-height: 42px; object-fit: contain; }
+/* Elementor's ".elementor img { height: auto; max-width: 100% }" loads after this file; it would size logos from their files and collapse SVG logos to zero width. */
+.elementor .vendor-stream__logos img { height: var(--h, 32px); max-width: none; }
+.elementor .wall__logos img, .elementor .logos img { height: var(--h, 28px); }
 /* Crop only the displayed Brother mark: its tagline begins below source row 79. */
-.vendor-stream__logos .vendor-logo--brother { width: 8rem; height: calc(8rem * 74 / 318); max-height: none; object-fit: cover; object-position: center top; }
+.vendor-stream__logos .vendor-logo--brother, .elementor .vendor-stream__logos .vendor-logo--brother { width: 8rem; height: calc(8rem * 74 / 318); max-height: none; object-fit: cover; object-position: center top; }
 [data-vendor-ready] .vendor-stream { overflow-x: hidden; }
 [data-vendor-ready] .vendor-stream__track { animation: vendor-flow 84s linear infinite; animation-play-state: var(--motion-play, running); }
 @keyframes vendor-flow { to { transform: translateX(-50%); } }
@@ -789,8 +792,8 @@ body:has(#quote) .foot__cta, body:has(#quote-form) .foot__cta, body:has(.jio-no-
 	.strip__row { grid-template-columns: 1fr; }
 	.strip__row > div { border-left: 0 !important; padding-left: 0 !important; border-top: 1px solid var(--rule-night); }
 	.strip__row > div:first-child { border-top: 0; }
-	.foot { grid-template-columns: 1fr; }
-	.foot__bar { grid-template-columns: 1fr; }
+	.foot { grid-template-columns: minmax(0, 1fr); } /* minmax(0) lets the column shrink below the 21rem logo on narrow phones */
+	.foot__bar { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (prefers-reduced-motion: reduce) {
